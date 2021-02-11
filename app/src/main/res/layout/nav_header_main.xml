@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:src="@drawable/jaksic"
-            android:scaleType="fitStart"/>
+            android:scaleType="fitCenter"/>
     </LinearLayout>
 
 </LinearLayout>
