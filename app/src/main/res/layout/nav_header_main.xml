@@ -15,21 +15,12 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="16dp"
-            android:text="Dominik"
-            android:textColor="?attr/colorPrimary"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dominik Doric"
-            android:textColor="?attr/colorPrimary"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/jaksic"
+            android:scaleType="fitStart"/>
     </LinearLayout>
 
     <View

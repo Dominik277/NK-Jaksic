@@ -7,19 +7,23 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/abc_vector_test"
-            android:title="Home"/>
+            android:title="Home"
+            android:iconTint="@color/white"/>
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/abc_vector_test"
-            android:title="Gallery"/>
+            android:title="Gallery"
+            android:iconTint="@color/white"/>
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/abc_vector_test"
-            android:title="Slideshow"/>
+            android:title="Slideshow"
+            android:iconTint="@color/white"/>
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/abc_vector_test"
-            android:title="Tools"/>
+            android:title="Tools"
+            android:iconTint="@color/white"/>
     </group>
 
     <item android:title="Communicate">
@@ -27,11 +31,13 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/abc_vector_test"
-                android:title="Share"/>
+                android:title="Share"
+                android:iconTint="@color/white"/>
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/abc_vector_test"
-                android:title="Send"/>
+                android:title="Send"
+                android:iconTint="@color/white"/>
         </menu>
     </item>
 </menu>
