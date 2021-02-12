@@ -9,5 +9,7 @@ class RasporedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_raspored)
         setSupportActionBar(findViewById(R.id.toolbarRaspored))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        title="Raspored"
     }
 }

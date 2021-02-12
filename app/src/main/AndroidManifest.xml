@@ -10,15 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
         <activity
-            android:name="hr.aktivnosti.VijestiActivity" />
+            android:name="hr.aktivnosti.VijestiActivity"
+            android:parentActivityName="hr.MainActivity"/>
         <activity
-            android:name="hr.aktivnosti.TablicaActivity" />
+            android:name="hr.aktivnosti.TablicaActivity"
+            android:parentActivityName="hr.MainActivity"/>
         <activity
-            android:name="hr.aktivnosti.RezultatiActivity" />
+            android:name="hr.aktivnosti.RezultatiActivity"
+            android:parentActivityName="hr.MainActivity"/>
         <activity
-            android:name="hr.aktivnosti.RasporedActivity" />
+            android:name="hr.aktivnosti.RasporedActivity"
+            android:parentActivityName="hr.MainActivity"/>
         <activity
-            android:name="hr.aktivnosti.MomcadActivity" />
+            android:name="hr.aktivnosti.MomcadActivity"
+            android:parentActivityName="hr.MainActivity"/>
         <activity
             android:name="hr.MainActivity">
             <intent-filter>

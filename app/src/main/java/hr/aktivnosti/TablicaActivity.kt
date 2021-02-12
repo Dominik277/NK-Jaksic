@@ -9,5 +9,7 @@ class TablicaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tablica)
         setSupportActionBar(findViewById(R.id.toolbarTablica))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        title = "Tablica"
     }
 }

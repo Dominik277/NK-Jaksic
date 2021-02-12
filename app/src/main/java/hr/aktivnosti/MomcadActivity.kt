@@ -9,5 +9,7 @@ class MomcadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_momcad)
         setSupportActionBar(findViewById(R.id.toolbarMomcad))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        title = "Momcad"
     }
 }

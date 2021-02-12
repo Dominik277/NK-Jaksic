@@ -9,5 +9,7 @@ class VijestiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vijesti)
         setSupportActionBar(findViewById(R.id.toolbarVijesti))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        title="Vijesti"
     }
 }
