@@ -20,11 +20,35 @@
             app:titleTextColor="@color/white"
             android:fitsSystemWindows="true"
             android:background="?attr/colorPrimary"/>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raspored"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/toolbar"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rezultati"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_toRightOf="@+id/button1" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tablica"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_toRightOf="@+id/button2"/>
+
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/toolbar" />
+            android:layout_below="@id/button2" />
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

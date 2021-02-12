@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         val tablicaFragment = TablicaFragment()
         val vijestiFragment = VijestiFragment()
 
+        supportFragmentManager.beginTransaction().apply {
+
+        }
+
         val drawerToggle = ActionBarDrawerToggle(this,drawer, R.string.open, R.string.close)
         drawer.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
