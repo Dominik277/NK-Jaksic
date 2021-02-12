@@ -22,7 +22,32 @@ class MainActivity : AppCompatActivity() {
         val vijestiFragment = VijestiFragment()
 
         supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frameLayout,rasporedFragment)
+            commit()
+        }
 
+        button1.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.frameLayout,rasporedFragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
+        button2.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.frameLayout,rezultatiFragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
+        button3.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.frameLayout,tablicaFragment)
+                addToBackStack(null)
+                commit()
+            }
         }
 
         val drawerToggle = ActionBarDrawerToggle(this,drawer, R.string.open, R.string.close)
