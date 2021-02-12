@@ -14,7 +14,7 @@ class MomcadFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_raspored, container, false)
+        return inflater.inflate(R.layout.fragment_momcad, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
