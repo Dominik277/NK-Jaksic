@@ -1,4 +1,8 @@
 package hr.database
 
-class Igraci {
-}
+import androidx.room.Entity
+
+@Entity
+data class Igraci (
+
+        )
