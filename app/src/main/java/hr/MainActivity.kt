@@ -1,10 +1,11 @@
-package hr.dominik.nkjaki
+package hr
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        val drawerToggle = ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close)
+        val drawerToggle = ActionBarDrawerToggle(this,drawer, R.string.open, R.string.close)
         drawer.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
@@ -37,5 +38,4 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
-
 }
