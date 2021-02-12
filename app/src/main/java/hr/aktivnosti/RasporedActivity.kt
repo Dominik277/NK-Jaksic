@@ -8,5 +8,6 @@ class RasporedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_raspored)
+        setSupportActionBar(findViewById(R.id.toolbarRaspored))
     }
 }

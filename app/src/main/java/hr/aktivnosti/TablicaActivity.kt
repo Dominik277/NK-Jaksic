@@ -8,5 +8,6 @@ class TablicaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tablica)
+        setSupportActionBar(findViewById(R.id.toolbarTablica))
     }
 }

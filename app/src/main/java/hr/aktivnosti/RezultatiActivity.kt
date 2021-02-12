@@ -8,5 +8,6 @@ class RezultatiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rezultati)
+        setSupportActionBar(findViewById(R.id.toolbarRezultati))
     }
 }
