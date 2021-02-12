@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context="hr.MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -20,7 +20,12 @@
             app:titleTextColor="@color/white"
             android:fitsSystemWindows="true"
             android:background="?attr/colorPrimary"/>
-    </LinearLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar" />
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
@@ -33,5 +38,7 @@
         android:clipToPadding="false"
         app:menu="@menu/main_menu"
         app:headerLayout="@layout/nav_header_main"/>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

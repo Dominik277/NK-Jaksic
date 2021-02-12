@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import hr.dominik.nkjaki.R
+import hr.fragmenti.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        val momcadFragment = MomcadFragment()
+        val rasporedFragment = RasporedFragment()
+        val rezultatiFragment = RezultatiFragment()
+        val tablicaFragment = TablicaFragment()
+        val vijestiFragment = VijestiFragment()
 
         val drawerToggle = ActionBarDrawerToggle(this,drawer, R.string.open, R.string.close)
         drawer.addDrawerListener(drawerToggle)
