@@ -19,15 +19,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-       val datebase = Room.databaseBuilder(
+       val database = Room.databaseBuilder(
                this,NKJaksicDatabase::class.java,"nk_jaksic_baza"
        )
                .allowMainThreadQueries()
                .build()
 
-        datebase.igraciDao().insertIgrac(Igraci(0,"Domagoj","Kovačević",5))
 
-        val igraciUBazi = datebase.igraciDao().getIgraciData()
+        //database.igraciDao().delete(Igraci(8,"Domagoj","Kovačević",5))
+
+        val igraciUBazi = database.igraciDao().getIgraciData()
         igraciUBazi.forEach {
             textViewIme.append(it.ime)
         }

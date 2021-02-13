@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.Igraci
 import hr.dominik.nkjaki.R
+import kotlinx.android.synthetic.main.jedan_red.view.*
 
 class MomcadAdapter(private val sviIgraciUBazi: List<Igraci>) : RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -18,7 +19,9 @@ class MomcadAdapter(private val sviIgraciUBazi: List<Igraci>) : RecyclerView.Ada
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.itemView.brojIgraca.text = sviIgraciUBazi[position].ime
+        holder.itemView.imeIgraca.text = sviIgraciUBazi[position].prezime
+        holder.itemView.prezimeIgraca.text = sviIgraciUBazi[position].broj.toString()
     }
 
     override fun getItemCount() = sviIgraciUBazi.size
