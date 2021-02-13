@@ -29,10 +29,6 @@ class MainActivity : AppCompatActivity() {
         //database.igraciDao().delete(Igraci(8,"Domagoj","Kovačević",5))
         //database.igraciDao().deletePodatke()
 
-        val igraciUBazi = database.igraciDao().getIgraciData()
-        igraciUBazi.forEach {
-            textViewIme.append(it.ime)
-        }
 
         val drawerToggle = ActionBarDrawerToggle(this,drawer, R.string.open, R.string.close)
         drawer.addDrawerListener(drawerToggle)
