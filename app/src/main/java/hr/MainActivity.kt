@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
 
         datebase.igraciDao().insertIgrac(Igraci(0,"Domagoj","Kovačević",5))
 
+        val igraciUBazi = datebase.igraciDao().getIgraciData()
+        igraciUBazi.forEach {
+            textViewIme.append(it.ime)
+        }
+
         val drawerToggle = ActionBarDrawerToggle(this,drawer, R.string.open, R.string.close)
         drawer.addDrawerListener(drawerToggle)
         drawerToggle.syncState()

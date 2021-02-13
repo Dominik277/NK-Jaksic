@@ -16,10 +16,10 @@
         android:fitsSystemWindows="true"
         android:background="?attr/colorPrimary"/>
 
-    <FrameLayout
-        android:id="@+id/frameLayoutMomcad"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewMomcad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarMomcad"/>
+        android:layout_below="@id/toolbarMomcad"/>
 
 </RelativeLayout>
