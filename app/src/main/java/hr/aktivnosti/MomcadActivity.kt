@@ -26,6 +26,7 @@ class MomcadActivity : AppCompatActivity() {
             this,NKJaksicDatabase::class.java,"nk_jaksic_baza"
         )
             .allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
             .build()
 
 /*
