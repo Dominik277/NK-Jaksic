@@ -19,47 +19,47 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-       val database = Room.databaseBuilder(
-               this,NKJaksicDatabase::class.java,"nk_jaksic_baza"
-       )
-               .allowMainThreadQueries()
-               .build()
+        val database = Room.databaseBuilder(
+            this, NKJaksicDatabase::class.java, "nk_jaksic_baza"
+        )
+            .allowMainThreadQueries()
+            .build()
 
 
         //database.igraciDao().delete(Igraci(8,"Domagoj","Kovačević",5))
         //database.igraciDao().deletePodatke()
 
 
-        val drawerToggle = ActionBarDrawerToggle(this,drawer, R.string.open, R.string.close)
+        val drawerToggle = ActionBarDrawerToggle(this, drawer, R.string.open, R.string.close)
         drawer.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         navigation_view.setNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.nav_rezultati ->{
-                    val intent = Intent(this,RezultatiActivity::class.java)
+            when (it.itemId) {
+                R.id.nav_rezultati -> {
+                    val intent = Intent(this, RezultatiActivity::class.java)
                     startActivity(intent)
                     true
                 }
-                R.id.nav_raspored ->{
+                R.id.nav_raspored -> {
                     val intent = Intent(this, RasporedActivity::class.java)
                     startActivity(intent)
                     true
                 }
-                R.id.nav_tablica ->{
+                R.id.nav_tablica -> {
                     val intent = Intent(this, TablicaActivity::class.java)
                     startActivity(intent)
                     true
                 }
-                R.id.nav_vijesti ->{
+                R.id.nav_vijesti -> {
                     val intent = Intent(this, VijestiActivity::class.java)
                     startActivity(intent)
                     true
                 }
-                R.id.nav_momcad ->{
-                    val intent = Intent(this,MomcadActivity::class.java)
+                R.id.nav_momcad -> {
+                    val intent = Intent(this, MomcadActivity::class.java)
                     startActivity(intent)
                     true
                 }
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home ->{
+            android.R.id.home -> {
                 drawer.openDrawer(GravityCompat.START)
                 true
             }
@@ -79,13 +79,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)){
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START)
-        }else{
+        } else {
             super.onBackPressed()
         }
     }
-
 
 
 }

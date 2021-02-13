@@ -9,7 +9,8 @@ import hr.database.Igraci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red.view.*
 
-class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>): RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
+class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) :
+    RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         val brojIgraca: TextView = itemView.brojIgraca
@@ -17,7 +18,7 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>): Recyc
         val prezimeIgraca: TextView = itemView.prezimeIgraca
 
         init {
-            itemView.setOnClickListener {this}
+            itemView.setOnClickListener { this }
         }
 
         override fun onClick(v: View?) {
@@ -26,7 +27,7 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>): Recyc
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red, parent, false)
         return ViewHolder(view)
     }
 
@@ -36,5 +37,6 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>): Recyc
         holder.itemView.prezimeIgraca.text = sviIgraciUBazi[position].broj.toString()
 
     }
+
     override fun getItemCount() = sviIgraciUBazi.size
 }
