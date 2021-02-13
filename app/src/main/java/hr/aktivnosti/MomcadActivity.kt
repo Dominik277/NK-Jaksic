@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import hr.adapteri.MomcadAdapter
 import hr.database.Igraci
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
@@ -28,7 +29,7 @@ class MomcadActivity : AppCompatActivity() {
 
         recyclerviewMomcad.apply {
             layoutManager = LinearLayoutManager(this@MomcadActivity)
-            adapter = FriendAdapter(sviIgraciUBazi)
+            adapter = MomcadAdapter(sviIgraciUBazi)
         }
     }
 }
