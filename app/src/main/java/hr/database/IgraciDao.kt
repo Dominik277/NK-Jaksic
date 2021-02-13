@@ -14,7 +14,7 @@ interface IgraciDao {
     @Insert
     fun insertIgrac(igraci: Igraci): Long
 
-    @Delete
-    fun delete(igraci: Igraci)
+    @Query("DELETE FROM igraci")
+    fun deletePodatke()
 
 }

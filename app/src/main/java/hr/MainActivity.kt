@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //database.igraciDao().delete(Igraci(8,"Domagoj","Kovačević",5))
+        //database.igraciDao().deletePodatke()
 
         val igraciUBazi = database.igraciDao().getIgraciData()
         igraciUBazi.forEach {

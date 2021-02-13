@@ -24,9 +24,10 @@ class MomcadActivity : AppCompatActivity() {
             .allowMainThreadQueries()
             .build()
 
-        //database.igraciDao().delete(Igraci(0,"Domagoj","Kovačević",5))
-        database.igraciDao().insertIgrac(Igraci(9,"Domagoj","Kovačević",5))
-        database.igraciDao().insertIgrac(Igraci(10,"Matko","Kovačević",12))
+
+        database.igraciDao().insertIgrac(Igraci(2,"Domagoj","Kovačević",5))
+        //database.igraciDao().insertIgrac(Igraci(11,"Dominik","Stojanović",12))
+        //database.igraciDao().deletePodatke()
         val sviIgraciUBazi = database.igraciDao().getIgraciData()
 
         recyclerviewMomcad.apply {
