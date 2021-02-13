@@ -8,5 +8,8 @@ class NovaVijestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nova_vijest)
+        setSupportActionBar(findViewById(R.id.toolbarNovaVijest))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        title="Dodajte novu vijest"
     }
 }
