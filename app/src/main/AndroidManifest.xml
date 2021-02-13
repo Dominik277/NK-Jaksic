@@ -9,23 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
+        <activity android:name="hr.DetaljiActivity"></activity>
         <activity
             android:name="hr.aktivnosti.VijestiActivity"
-            android:parentActivityName="hr.MainActivity"/>
+            android:parentActivityName="hr.MainActivity" />
         <activity
             android:name="hr.aktivnosti.TablicaActivity"
-            android:parentActivityName="hr.MainActivity"/>
+            android:parentActivityName="hr.MainActivity" />
         <activity
             android:name="hr.aktivnosti.RezultatiActivity"
-            android:parentActivityName="hr.MainActivity"/>
+            android:parentActivityName="hr.MainActivity" />
         <activity
             android:name="hr.aktivnosti.RasporedActivity"
-            android:parentActivityName="hr.MainActivity"/>
+            android:parentActivityName="hr.MainActivity" />
         <activity
             android:name="hr.aktivnosti.MomcadActivity"
-            android:parentActivityName="hr.MainActivity"/>
-        <activity
-            android:name="hr.MainActivity">
+            android:parentActivityName="hr.MainActivity" />
+        <activity android:name="hr.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
