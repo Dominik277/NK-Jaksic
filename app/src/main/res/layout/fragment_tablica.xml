@@ -1,16 +1,34 @@
-<RelativeLayout
+<TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:stretchColumns="1,2,3"
+    android:layout_margin="8dp"
     tools:context="hr.fragmenti.TablicaFragment">
 
-    <TextView
-        android:id="@+id/tv_tablica"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ovo je tablica"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+    <TableRow>
+        <TextView
+            android:text="ID"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+        <TextView
+            android:text="NAME"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+        <TextView
+            android:text="LAST NAME"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+    </TableRow>
 
-</RelativeLayout>
+</TableLayout>
