@@ -6,6 +6,7 @@
     tools:context="hr.fragmenti.RezultatiFragment">
 
     <TextView
+        android:id="@+id/tv_rezultati"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ovo su rezultati"

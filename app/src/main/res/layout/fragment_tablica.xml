@@ -6,9 +6,10 @@
     tools:context="hr.fragmenti.TablicaFragment">
 
     <TextView
+        android:id="@+id/tv_tablica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ovo su rezultati"
+        android:text="Ovo je tablica"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 

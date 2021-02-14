@@ -6,9 +6,10 @@
     tools:context="hr.fragmenti.StrijelciFragment">
 
     <TextView
+        android:id="@+id/tv_strijelci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ovo su rezultati"
+        android:text="Ovo su strijelci"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 
