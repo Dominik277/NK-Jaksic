@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.Vijesti
 import hr.dominik.nkjaki.R
@@ -25,7 +26,9 @@ class VijestiAdapter constructor(private val sveVijestiUBazi: List<Vijesti>) :
     }
 
     override fun onBindViewHolder(holder: VijestiAdapter.ViewHolder, position: Int) {
+        val trenutniItem = sveVijestiUBazi[position]
         holder.itemView.textViewVijesti.text = sveVijestiUBazi[position].naslov
+        holder.itemView.imageViewVijesti.setImageResource(trenutniItem.slika)
     }
 
     override fun getItemCount() = sveVijestiUBazi.size

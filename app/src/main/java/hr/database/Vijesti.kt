@@ -13,7 +13,7 @@ data class Vijesti (
     @ColumnInfo(name = "naslov")
     val naslov: String,
 
-    @ColumnInfo(name = "clanak")
-    val clanak: String
+    @ColumnInfo(name = "slika")
+    val slika: Int
 
         )
