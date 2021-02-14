@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewVijesti"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/slikavijesti"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/textViewVijesti"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/imageViewVijesti"
+            android:text="@string/vijest_naslov"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

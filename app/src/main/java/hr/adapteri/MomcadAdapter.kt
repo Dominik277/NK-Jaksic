@@ -27,7 +27,7 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_momcad, parent, false)
         return ViewHolder(view)
     }
 
