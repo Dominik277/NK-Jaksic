@@ -21,13 +21,13 @@ class TablicaActivity : AppCompatActivity() {
         val tablicaFragment = TablicaFragment()
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.frameLayoutTablica,tablicaFragment)
+            replace(R.id.frameLayoutTablica, tablicaFragment)
             commit()
         }
 
         gumbTablica.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica,tablicaFragment)
+                replace(R.id.frameLayoutTablica, tablicaFragment)
                 addToBackStack(null)
                 commit()
             }
@@ -35,7 +35,7 @@ class TablicaActivity : AppCompatActivity() {
 
         gumbNajboljiStrijelci.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica,strijelciFragment)
+                replace(R.id.frameLayoutTablica, strijelciFragment)
                 addToBackStack(null)
                 commit()
             }
