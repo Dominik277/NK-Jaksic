@@ -16,10 +16,35 @@
         android:fitsSystemWindows="true"
         android:background="?attr/colorPrimary"/>
 
-    <FrameLayout
-        android:id="@+id/frameLayoutTablica"
+    <LinearLayout
+        android:id="@+id/linearLayoutTablica"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarTablica"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/toolbarTablica">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tablica"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/gumbNajboljiStrijelci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Najbolji strijelci"
+            android:layout_margin="5dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forma"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+            android:id="@+id/frameLayoutTablica"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linearLayoutTablica"/>
 
 </RelativeLayout>

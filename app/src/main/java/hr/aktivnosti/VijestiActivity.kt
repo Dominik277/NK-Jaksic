@@ -35,12 +35,12 @@ class VijestiActivity : AppCompatActivity() {
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
-
+/*
         database.vijestiDao().insertVijest(Vijesti(0,"NK Jakšić pobijedio NK Kuzmicu s rezultatom 4:3",R.drawable.slikavijesti))
         database.vijestiDao().insertVijest(Vijesti(1,"NK Jakšić pobijedio NK Požegu s rezultatom 4:0",R.drawable.slikavijesti))
         database.vijestiDao().insertVijest(Vijesti(2,"NK Jakšić izgubio od NK Kaptol 0:1 ",R.drawable.slikavijesti))
         database.vijestiDao().insertVijest(Vijesti(3,"NK Jakšić remizirao s NK Dinamo Vidovci 2:2",R.drawable.slikavijesti))
-
+*/
         //database.vijestiDao().deletePodatkeVijesti()
 
         val svePohranjeneVijesti = database.vijestiDao().getVijestiData()
