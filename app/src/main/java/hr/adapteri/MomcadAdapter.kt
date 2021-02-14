@@ -12,18 +12,10 @@ import kotlinx.android.synthetic.main.jedan_red_momcad.view.*
 class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) :
     RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val brojIgraca: TextView = itemView.brojIgraca
         val imeIgraca: TextView = itemView.imeIgraca
         val prezimeIgraca: TextView = itemView.prezimeIgraca
-
-        init {
-            itemView.setOnClickListener { this }
-        }
-
-        override fun onClick(v: View?) {
-            TODO("Not yet implemented")
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
