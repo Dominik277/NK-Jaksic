@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.Igraci
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.jedan_red.view.*
+import kotlinx.android.synthetic.main.jedan_red_momcad.view.*
 
 class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) :
     RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
