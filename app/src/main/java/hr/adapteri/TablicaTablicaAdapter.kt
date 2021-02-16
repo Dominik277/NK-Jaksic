@@ -18,7 +18,7 @@ class TablicaTablicaAdapter(private val sveTabliceUBazi: List<TablicaTablica>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.tablica_pozicija.text = sveTabliceUBazi[position].pozicija.toString()
-        holder.itemView.tablica_ime.text = sveTabliceUBazi[position].pozicija.toString()
+        holder.itemView.tablica_ime.text = sveTabliceUBazi[position].imeTima
         holder.itemView.tablica_susreti.text = sveTabliceUBazi[position].odigraniSusreti.toString()
         holder.itemView.tablica_golovi.text = sveTabliceUBazi[position].golRazlika.toString()
         holder.itemView.tablica_bodovi.text = sveTabliceUBazi[position].bodovi.toString()

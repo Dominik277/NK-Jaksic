@@ -34,9 +34,17 @@ class TablicaActivity : AppCompatActivity() {
             .build()
 
         database.tablicaDao().insertTablicaTablica(TablicaTablica(0,1,"NK Jakšić",22,56-23,49))
-        database.tablicaDao().insertTablicaTablica(TablicaTablica(1,2,"NK Jakšić",22,46-29,39))
-        database.tablicaDao().insertTablicaTablica(TablicaTablica(2,3,"NK Jakšić",22,36-13,29))
-        database.tablicaDao().insertTablicaTablica(TablicaTablica(3,4,"NK Jakšić",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(1,2,"NK Požega",22,46-29,39))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(2,3,"NK Lipik",22,36-13,29))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(3,4,"NK Pakrac",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(4,5,"NK Kuzmica",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(5,6,"NK Vidovci",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(6,7,"NK Gradac",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(7,8,"NK Mihaljevci",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(8,9,"NK Buk",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(9,10,"NK Trenkovo",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(10,11,"NK Biškupci",22,16-3,19))
+        database.tablicaDao().insertTablicaTablica(TablicaTablica(11,12,"NK Eminovci",22,16-3,19))
 
         //database.tablicaDao().deleteTablicaTablica()
 

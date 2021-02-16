@@ -8,7 +8,7 @@ import androidx.room.Query
 @Dao
 interface TablicaTablicaDao {
 
-    @Query("SELECT * FROM tablica_tablica ORDER BY pozicija desc")
+    @Query("SELECT * FROM tablica_tablica ORDER BY pozicija asc")
     fun getTablicaTablica(): List<TablicaTablica>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
