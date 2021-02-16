@@ -43,10 +43,10 @@
             android:layout_margin="2.5dp"/>
     </LinearLayout>
 
-    <FrameLayout
-            android:id="@+id/frameLayoutTablica"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/linearLayoutTablica"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTablica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayoutTablica"/>
 
 </RelativeLayout>
