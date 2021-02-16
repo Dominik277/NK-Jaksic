@@ -3,9 +3,6 @@ package hr.aktivnosti
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import hr.dominik.nkjaki.R
-import hr.fragmenti.RezultatiFragment
-import hr.fragmenti.StrijelciFragment
-import hr.fragmenti.TablicaFragment
 import kotlinx.android.synthetic.main.activity_tablica.*
 
 class TablicaActivity : AppCompatActivity() {
