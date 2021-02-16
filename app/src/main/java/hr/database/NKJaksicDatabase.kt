@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Igraci::class,Vijesti::class],version = 4)
+@Database(entities = [Igraci::class,Vijesti::class,TablicaTablica::class],version = 5)
 abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao
