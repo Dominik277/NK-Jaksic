@@ -10,6 +10,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao
     abstract fun vijestiDao(): VijestiDao
+    abstract fun tablicaDao(): TablicaTablicaDao
 
     companion object{
         private var INSTANCE : NKJaksicDatabase? = null
