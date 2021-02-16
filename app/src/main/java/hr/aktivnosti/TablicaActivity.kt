@@ -13,38 +13,6 @@ class TablicaActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         title = "Tablica"
 
-        val rezultatiFragment = RezultatiFragment()
-        val strijelciFragment = StrijelciFragment()
-        val tablicaFragment = TablicaFragment()
-
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.frameLayoutTablica, tablicaFragment)
-            commit()
-        }
-
-        gumbTablica.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica, tablicaFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
-
-        gumbNajboljiStrijelci.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica, strijelciFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
-
-        gumbRezultati.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica,rezultatiFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
 
     }
 }
