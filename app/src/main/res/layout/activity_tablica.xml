@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,87 +8,93 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarTablica"
-        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@color/white"
+        android:background="?attr/colorPrimary"
         android:fitsSystemWindows="true"
-        android:background="?attr/colorPrimary"/>
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/white" />
 
     <LinearLayout
         android:id="@+id/linearLayoutTablica"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/toolbarTablica">
+        android:layout_below="@id/toolbarTablica"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/gumbTablica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tablica"
-            android:layout_margin="2.5dp"/>
+            android:layout_margin="2.5dp"
+            android:text="Tablica" />
+
         <Button
             android:id="@+id/gumbNajboljiStrijelci"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Najbolji strijelci"
-            android:layout_margin="2.5dp"/>
+            android:layout_margin="2.5dp"
+            android:text="Najbolji strijelci" />
+
         <Button
             android:id="@+id/gumbRezultati"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rezultati"
-            android:layout_margin="2.5dp"/>
+            android:layout_margin="2.5dp"
+            android:text="Rezultati" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutPokaznaTraka"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/linearLayoutTablica">
+        android:layout_below="@id/linearLayoutTablica"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="#"
-            android:textStyle="bold"
-            android:textSize="22dp"
             android:layout_marginLeft="20dp"
-            android:textColor="#000"/>
+            android:text="#"
+            android:textColor="#000"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
             android:text="TIM"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:textColor="#000"
-            android:layout_marginLeft="40dp"/>
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
             android:text="OS"
-            android:textStyle="bold"
             android:textColor="#000"
             android:textSize="20dp"
-            android:layout_marginLeft="115dp" />
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
             android:text="G"
-            android:textSize="20dp"
             android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_marginLeft="35dp"/>
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
             android:text="BOD"
-            android:textStyle="bold"
             android:textColor="#000"
             android:textSize="20dp"
-            android:layout_marginLeft="50dp"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -97,6 +102,6 @@
         android:id="@+id/recyclerViewTablica"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayoutPokaznaTraka"/>
+        android:layout_below="@+id/linearLayoutPokaznaTraka" />
 
 </RelativeLayout>

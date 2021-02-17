@@ -14,7 +14,7 @@ interface NajboljiStrijelciDao {
     fun getNajboljiStrijelciData(): List<NajboljiStrijelci>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNajboljiStrijelac(najboljiStrijelac: NajboljiStrijelci): Long
+    fun insertNajboljiStrijelac(najboljiStrijelac: NajboljiStrijelci)
 
     @Query("DELETE FROM najbolji_strijelci")
     fun deleteNajboljiStrijelci()

@@ -11,12 +11,12 @@ import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.*
 
 class NajboljiStrijelciAdapter(private val sviStrijelciUBazi: List<NajboljiStrijelci>) : RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NajboljiStrijelciAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_najbolji_strijelci, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: NajboljiStrijelciAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.strijelci_pozicija.text = sviStrijelciUBazi[position].pozicijaPoGolovima.toString()
         holder.itemView.strijecli_ime.text = sviStrijelciUBazi[position].imeIgraca
         holder.itemView.strijelci_golovi.text = sviStrijelciUBazi[position].brojGolova

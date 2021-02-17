@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context="hr.aktivnosti.NajboljiStrijelciActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarNajboljiStrijelci"
-        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@color/white"
+        android:background="?attr/colorPrimary"
         android:fitsSystemWindows="true"
-        android:background="?attr/colorPrimary"/>
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/white" />
 
     <LinearLayout
         android:id="@+id/linearLayoutNajboljiStrijelci"
@@ -26,29 +25,31 @@
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:text="#"
-            android:textSize="20dp"
             android:textColor="#000"
-            android:textStyle="bold"/>
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text="IME IGRAČA"
-            android:textStyle="bold"
             android:textColor="#000"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:text="GOLOVI"
-            android:textSize="20dp"
             android:textColor="#000"
-            android:textStyle="bold"/>
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewNajboljiStrijelci"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayoutNajboljiStrijelci"/>
+        android:layout_below="@+id/linearLayoutNajboljiStrijelci" />
 
 </RelativeLayout>
