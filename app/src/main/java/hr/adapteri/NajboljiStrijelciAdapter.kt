@@ -1,4 +1,4 @@
 package hr.adapteri
 
-class NajboljiStrijelciAdapter {
+class NajboljiStrijelciAdapterK {
 }
