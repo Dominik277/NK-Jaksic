@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
+        <activity android:name="hr.aktivnosti.NajboljiStrijelciActivity"></activity>
         <activity
             android:name="hr.NovaVijestActivity"
-            android:parentActivityName="hr.aktivnosti.VijestiActivity"/>
+            android:parentActivityName="hr.aktivnosti.VijestiActivity" />
         <activity
             android:name="hr.aktivnosti.VijestiActivity"
             android:parentActivityName="hr.MainActivity" />
