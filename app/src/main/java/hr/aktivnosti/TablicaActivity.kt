@@ -1,5 +1,6 @@
 package hr.aktivnosti
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -20,6 +21,11 @@ class TablicaActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbarTablica))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         title = "Tablica"
+
+        gumbNajboljiStrijelci.setOnClickListener {
+            val intent = Intent(this,NajboljiStrijelciActivity::class.java)
+            startActivity(intent)
+        }
 
         recyclerViewTablica.addItemDecoration(DividerItemDecoration
             (recyclerViewTablica.context,DividerItemDecoration.VERTICAL))

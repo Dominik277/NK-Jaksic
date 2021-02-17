@@ -2,11 +2,25 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hr.aktivnosti.NajboljiStrijelciActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarNajboljiStrijelci"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        android:fitsSystemWindows="true"
+        android:background="?attr/colorPrimary"/>
 
     <LinearLayout
+        android:id="@+id/linearLayoutNajboljiStrijelci"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarNajboljiStrijelci">
 
         <TextView
             android:layout_width="20dp"
@@ -29,7 +43,11 @@
             android:textSize="20dp"
             android:textColor="#000"
             android:textStyle="bold"/>
-
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayoutNajboljiStrijelci"/>
 
 </RelativeLayout>
