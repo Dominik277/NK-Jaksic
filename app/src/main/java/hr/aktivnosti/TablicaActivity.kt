@@ -30,6 +30,8 @@ class TablicaActivity : AppCompatActivity() {
 
         recyclerViewTablica.addItemDecoration(DividerItemDecoration
             (recyclerViewTablica.context,DividerItemDecoration.VERTICAL))
+        recyclerViewTablica.addItemDecoration(DividerItemDecoration
+            (recyclerViewTablica.context,DividerItemDecoration.HORIZONTAL))
 
         val database = Room.databaseBuilder(
             this, NKJaksicDatabase::class.java,"nk_jaksic_baza"

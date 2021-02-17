@@ -4,22 +4,17 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import hr.database.dao.IgraciDao
-import hr.database.dao.NajboljiStrijelciDao
-import hr.database.dao.TablicaTablicaDao
-import hr.database.dao.VijestiDao
-import hr.database.table.Igraci
-import hr.database.table.NajboljiStrijelci
-import hr.database.table.TablicaTablica
-import hr.database.table.Vijesti
+import hr.database.dao.*
+import hr.database.table.*
 
-@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class],version = 6)
+@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class],version = 7)
 abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao
     abstract fun vijestiDao(): VijestiDao
     abstract fun tablicaDao(): TablicaTablicaDao
     abstract fun strijelciDao(): NajboljiStrijelciDao
+    abstract fun rasporedDao(): RasporedDao
 
     companion object{
         private var INSTANCE : NKJaksicDatabase? = null
