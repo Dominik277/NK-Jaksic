@@ -4,8 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import hr.database.dao.IgraciDao
+import hr.database.dao.TablicaTablicaDao
+import hr.database.dao.VijestiDao
+import hr.database.table.Igraci
+import hr.database.table.TablicaTablica
+import hr.database.table.Vijesti
 
-@Database(entities = [Igraci::class,Vijesti::class,TablicaTablica::class],version = 5)
+@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class],version = 5)
 abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao

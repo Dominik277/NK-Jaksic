@@ -5,10 +5,8 @@ import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import hr.adapteri.MomcadAdapter
 import hr.adapteri.TablicaTablicaAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.TablicaTablica
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.activity_momcad.*
 import kotlinx.android.synthetic.main.activity_tablica.*

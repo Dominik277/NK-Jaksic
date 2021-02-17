@@ -5,9 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import hr.database.Vijesti
+import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_vijesti.view.*
 

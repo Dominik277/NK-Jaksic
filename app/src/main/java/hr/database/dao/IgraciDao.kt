@@ -1,6 +1,7 @@
-package hr.database
+package hr.database.dao
 
 import androidx.room.*
+import hr.database.table.Igraci
 
 @Dao
 interface IgraciDao {

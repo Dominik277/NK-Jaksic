@@ -1,4 +1,4 @@
-package hr.database
+package hr.database.table
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

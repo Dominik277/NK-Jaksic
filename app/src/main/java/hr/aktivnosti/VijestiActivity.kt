@@ -10,10 +10,8 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.NovaVijestActivity
-import hr.adapteri.MomcadAdapter
 import hr.adapteri.VijestiAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.Vijesti
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.activity_momcad.*
 import kotlinx.android.synthetic.main.activity_vijesti.*
