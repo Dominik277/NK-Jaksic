@@ -29,6 +29,5 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) :
         holder.itemView.prezimeIgraca.text = sviIgraciUBazi[position].broj.toString()
 
     }
-
     override fun getItemCount() = sviIgraciUBazi.size
 }
