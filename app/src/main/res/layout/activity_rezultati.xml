@@ -16,8 +16,8 @@
         android:fitsSystemWindows="true"
         android:background="?attr/colorPrimary"/>
 
-    <FrameLayout
-        android:id="@+id/frameLayoutRezultati"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewRezultati"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbarRezultati"/>
