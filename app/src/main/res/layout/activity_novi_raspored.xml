@@ -17,4 +17,28 @@
         android:fitsSystemWindows="true"
         android:background="?attr/colorPrimary"/>
 
+    <EditText
+        android:id="@+id/noviRasporedDatumSusreta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Ovdje unesite datum odigravanja susreta"/>
+    <EditText
+        android:id="@+id/noviRasporedProtivnici"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Ovdje unesite klubove (koristite - između)"/>
+    <Button
+        android:id="@+id/gumbSpremiNoviRaspored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spremi"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"/>
+
 </LinearLayout>
