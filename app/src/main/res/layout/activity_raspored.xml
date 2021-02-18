@@ -16,10 +16,10 @@
         android:fitsSystemWindows="true"
         android:background="?attr/colorPrimary"/>
 
-    <FrameLayout
-        android:id="@+id/frameLayoutRaspored"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewRaspored"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarRaspored"/>
+        android:layout_below="@id/toolbarRaspored"/>
 
 </RelativeLayout>
