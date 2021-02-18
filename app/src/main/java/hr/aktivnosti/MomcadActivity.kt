@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.MomcadAdapter
 import hr.database.NKJaksicDatabase
+import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.activity_momcad.*
 

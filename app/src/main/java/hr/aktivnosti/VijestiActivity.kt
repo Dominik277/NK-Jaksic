@@ -12,6 +12,7 @@ import androidx.room.Room
 import hr.NovaVijestActivity
 import hr.adapteri.VijestiAdapter
 import hr.database.NKJaksicDatabase
+import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.activity_momcad.*
 import kotlinx.android.synthetic.main.activity_vijesti.*
@@ -38,6 +39,11 @@ class VijestiActivity : AppCompatActivity() {
         database.vijestiDao().insertVijest(Vijesti(1,"NK Jakšić pobijedio NK Požegu s rezultatom 4:0",R.drawable.slikavijesti))
         database.vijestiDao().insertVijest(Vijesti(2,"NK Jakšić izgubio od NK Kaptol 0:1 ",R.drawable.slikavijesti))
         database.vijestiDao().insertVijest(Vijesti(3,"NK Jakšić remizirao s NK Dinamo Vidovci 2:2",R.drawable.slikavijesti))
+        database.vijestiDao().insertVijest(Vijesti(4,"NK Jakšić pobijedio NK Mihaljevce s rezultatom 2:1",R.drawable.slikavijesti))
+        database.vijestiDao().insertVijest(Vijesti(5,"NK Jakšić pobijedio NK Kutjevo s rezultatom 4:0",R.drawable.slikavijesti))
+        database.vijestiDao().insertVijest(Vijesti(6,"NK Jakšić izgubio od NK Trenkovo 0:1 ",R.drawable.slikavijesti))
+        database.vijestiDao().insertVijest(Vijesti(7,"NK Jakšić remizirao s NK Buk 1:1",R.drawable.slikavijesti))
+        database.vijestiDao().insertVijest(Vijesti(8,"NK Jakšić pobijedio NK Zagrađe s rezultatom 4:0",R.drawable.slikavijesti))
 */
         //database.vijestiDao().deletePodatkeVijesti()
 
