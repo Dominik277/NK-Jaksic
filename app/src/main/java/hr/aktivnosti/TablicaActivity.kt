@@ -23,10 +23,6 @@ class TablicaActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         title = "Tablica"
 
-        gumbNajboljiStrijelci.setOnClickListener {
-            val intent = Intent(this,NajboljiStrijelciActivity::class.java)
-            startActivity(intent)
-        }
 
         recyclerViewTablica.addItemDecoration(DividerItemDecoration
             (recyclerViewTablica.context,DividerItemDecoration.VERTICAL))
