@@ -23,6 +23,10 @@ class TablicaActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         title = "Tablica"
 
+        gumbNajboljiStrijelci.setOnClickListener {
+            val intent = Intent(this,NajboljiStrijelciActivity::class.java)
+            startActivity(intent)
+        }
 
         recyclerViewTablica.addItemDecoration(DividerItemDecoration
             (recyclerViewTablica.context,DividerItemDecoration.VERTICAL))
@@ -37,6 +41,7 @@ class TablicaActivity : AppCompatActivity() {
             .build()
 
         /*
+
         database.tablicaDao().insertTablicaTablica(TablicaTablica(0,1,"NK Jakšić",22,56-23,49))
         database.tablicaDao().insertTablicaTablica(TablicaTablica(1,2,"NK Požega",22,46-29,39))
         database.tablicaDao().insertTablicaTablica(TablicaTablica(2,3,"NK Lipik",22,36-13,29))

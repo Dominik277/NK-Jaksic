@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
         <activity
+            android:name="hr.aktivnosti.NajboljiStrijelciActivity"
+            android:parentActivityName="hr.aktivnosti.TablicaActivity"></activity>
+        <activity
             android:name="hr.aktivnosti.NoviRezultatActivity"
-            android:parentActivityName="hr.aktivnosti.RezultatiActivity"/>
+            android:parentActivityName="hr.aktivnosti.RezultatiActivity" />
         <activity
             android:name="hr.aktivnosti.NoviRasporedActivity"
-            android:parentActivityName="hr.aktivnosti.RasporedActivity"/>
-        <activity
-            android:name="hr.aktivnosti.NajboljiStrijelciActivity"
-            android:parentActivityName="hr.aktivnosti.TablicaActivity" />
+            android:parentActivityName="hr.aktivnosti.RasporedActivity" />
         <activity
             android:name="hr.NovaVijestActivity"
             android:parentActivityName="hr.aktivnosti.VijestiActivity" />
