@@ -5,6 +5,9 @@ import android.os.Bundle
 import hr.dominik.nkjaki.R
 
 class NajboljiStrijelciActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_najbolji_strijelci)
