@@ -34,7 +34,7 @@ class FirstFragment : Fragment() {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
-        val exampleList = generateDummyList(500)
+        val exampleList = generateDummyList(50)
 
         recycler_view.adapter = ExampleAdapter(exampleList)
         recycler_view.layoutManager = LinearLayoutManager(context)
