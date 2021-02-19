@@ -13,7 +13,7 @@ interface NajboljiStrijelciDao {
     @Query("SELECT * FROM najbolji_strijelci ORDER BY pozicija_po_golovima asc")
     fun getNajboljiStrijelciData(): List<NajboljiStrijelci>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertNajboljiStrijelac(najboljiStrijelac: NajboljiStrijelci)
 
     @Query("DELETE FROM najbolji_strijelci")

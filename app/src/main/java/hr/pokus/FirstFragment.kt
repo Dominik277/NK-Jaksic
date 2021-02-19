@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
@@ -17,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
 
-    private lateinit var recyclerViewNajboljiStrijelci: RecyclerView
+    //private lateinit var recyclerViewNajboljiStrijelci: RecyclerView
     private lateinit var adapter: ExampleAdapter
 
     override fun onCreateView(
@@ -46,8 +47,11 @@ class FirstFragment : Fragment() {
                 .build()
         }
 
-        //val exampleList = generateDummyList(50)
+        recyclerViewNajboljiStrijelci.addItemDecoration(DividerItemDecoration
+            (recyclerViewNajboljiStrijelci.context,DividerItemDecoration.VERTICAL))
 
+        //val exampleList = generateDummyList(50)
+/*
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(0,1,"Domagoj Kovačević","17"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(1,2,"Tomislav Žuljević","14"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(2,3,"Mile Pavelić","13"))
@@ -55,7 +59,7 @@ class FirstFragment : Fragment() {
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(4,5,"Ivan Brus","12"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(5,6,"Marko Marić","11"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(6,7,"Pero Perić","8"))
-
+*/
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val exampleList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
 

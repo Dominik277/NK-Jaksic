@@ -13,7 +13,6 @@ abstract class NKJaksicDatabase: RoomDatabase() {
     abstract fun igraciDao(): IgraciDao
     abstract fun vijestiDao(): VijestiDao
     abstract fun tablicaDao(): TablicaTablicaDao
-    abstract fun strijelciDao(): NajboljiStrijelciDao
     abstract fun rasporedDao(): RasporedDao
     abstract fun rezultatiDao(): RezultatDao
     abstract fun najboljiStrijelciDao(): NajboljiStrijelciDao
