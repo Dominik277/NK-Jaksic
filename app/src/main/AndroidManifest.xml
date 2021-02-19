@@ -11,7 +11,7 @@
         android:theme="@style/Theme.NKJakšić">
         <activity
             android:name="hr.pokus.NajboljiStrijelciActivity"
-            android:parentActivityName="hr.aktivnosti.TablicaActivity" />
+            android:parentActivityName="hr.aktivnosti.TablicaActivity"></activity>
         <activity
             android:name="hr.aktivnosti.NoviRezultatActivity"
             android:parentActivityName="hr.aktivnosti.RezultatiActivity" />
