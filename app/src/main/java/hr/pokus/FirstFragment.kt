@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
+import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_first.*
 
@@ -34,14 +36,25 @@ class FirstFragment : Fragment() {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
-        val exampleList = generateDummyList(50)
+        val database = getActivity()?.let {
+            Room.databaseBuilder(
+                it, NKJaksicDatabase::class.java,"nk_jaksic_baza"
+            )
+                .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
+                .build()
+        }
 
-        recycler_view.adapter = ExampleAdapter(exampleList)
+        //val exampleList = generateDummyList(50)
+
+        val exampleList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
+
+        recycler_view.adapter = exampleList?.let { ExampleAdapter(it) }
         recycler_view.layoutManager = LinearLayoutManager(context)
         recycler_view.setHasFixedSize(true)
 
     }
-
+/*
     private fun generateDummyList(size: Int): List<ExampleItem> {
         val list = ArrayList<ExampleItem>()
         for (i in 0 until size) {
@@ -55,5 +68,7 @@ class FirstFragment : Fragment() {
         }
         return list
     }
+
+ */
 
 }

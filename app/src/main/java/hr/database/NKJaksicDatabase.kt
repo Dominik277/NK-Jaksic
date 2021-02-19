@@ -16,6 +16,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
     abstract fun strijelciDao(): NajboljiStrijelciDao
     abstract fun rasporedDao(): RasporedDao
     abstract fun rezultatiDao(): RezultatDao
+    abstract fun najboljiStrijelciDao(): NajboljiStrijelciDao
 
     companion object{
         private var INSTANCE : NKJaksicDatabase? = null
