@@ -1,42 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="4dp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp">
-
-
-        <ImageView
-            android:id="@+id/image_view"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_launcher_background" />
+    android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/text_view_1"
+            android:id="@+id/najboljiStrijelciPozicija"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/image_view"
-            android:text="1 Line"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:text="1"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="22dp"/>
+
+        <TextView
+            android:id="@+id/najboljiStrijelciIme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Domagoj Kovačević"
+            android:textColor="#000"
+            android:textSize="22dp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/text_view_2"
+            android:id="@+id/najboljiStrijelciGolovi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_1"
-            android:layout_toEndOf="@id/image_view"
-            android:text="2 Line"/>
+            android:text="17"
+            android:textColor="#000"
+            android:textSize="22dp"
+            android:textStyle="bold"/>
 
-
-    </RelativeLayout>
-
-</androidx.cardview.widget.CardView>
+</LinearLayout>

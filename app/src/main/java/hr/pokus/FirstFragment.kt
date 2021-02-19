@@ -11,12 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import hr.database.NKJaksicDatabase
+import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_first.*
 
 class FirstFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
+    private lateinit var recyclerViewNajboljiStrijelci: RecyclerView
     private lateinit var adapter: ExampleAdapter
 
     override fun onCreateView(
@@ -47,11 +48,20 @@ class FirstFragment : Fragment() {
 
         //val exampleList = generateDummyList(50)
 
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(0,1,"Domagoj Kovačević","17"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(1,2,"Tomislav Žuljević","14"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(2,3,"Mile Pavelić","13"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(3,4,"Stjepan Šilhan","12"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(4,5,"Ivan Brus","12"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(5,6,"Marko Marić","11"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(6,7,"Pero Perić","8"))
+
+        //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val exampleList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
 
-        recycler_view.adapter = exampleList?.let { ExampleAdapter(it) }
-        recycler_view.layoutManager = LinearLayoutManager(context)
-        recycler_view.setHasFixedSize(true)
+        recyclerViewNajboljiStrijelci.adapter = exampleList?.let { ExampleAdapter(it) }
+        recyclerViewNajboljiStrijelci.layoutManager = LinearLayoutManager(context)
+        recyclerViewNajboljiStrijelci.setHasFixedSize(true)
 
     }
 /*
