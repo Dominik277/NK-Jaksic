@@ -17,23 +17,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-
-        val database = Room.databaseBuilder(
-            this, NKJaksicDatabase::class.java, "nk_jaksic_baza"
-        )
-            .allowMainThreadQueries()
-            .build()
-
-
-        //database.igraciDao().delete(Igraci(8,"Domagoj","Kovačević",5))
-        //database.igraciDao().deletePodatke()
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val drawerToggle = ActionBarDrawerToggle(this, drawer, R.string.open, R.string.close)
         drawer.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         navigation_view.setNavigationItemSelectedListener {
             when (it.itemId) {

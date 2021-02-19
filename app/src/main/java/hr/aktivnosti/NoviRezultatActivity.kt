@@ -1,12 +1,7 @@
 package hr.aktivnosti
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import hr.NovaVijestActivity
 import hr.dominik.nkjaki.R
 
 class NoviRezultatActivity : AppCompatActivity() {

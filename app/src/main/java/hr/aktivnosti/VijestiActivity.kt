@@ -9,10 +9,8 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import hr.NovaVijestActivity
 import hr.adapteri.VijestiAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.activity_momcad.*
 import kotlinx.android.synthetic.main.activity_vijesti.*
@@ -65,7 +63,7 @@ class VijestiActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.vijestiMenu -> {
-                val intent = Intent(this,NovaVijestActivity::class.java)
+                val intent = Intent(this, NovaVijestActivity::class.java)
                 startActivity(intent)
                 return true
             }
