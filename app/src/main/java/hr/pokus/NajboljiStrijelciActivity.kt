@@ -10,5 +10,6 @@ class NajboljiStrijelciActivity : AppCompatActivity() {
         setContentView(R.layout.activity_najbolji_strijelci)
         setSupportActionBar(findViewById(R.id.toolbarNajboljiStrijelci))
         title = "Najbolji Strijelci"
+
     }
 }

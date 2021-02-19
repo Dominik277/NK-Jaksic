@@ -15,6 +15,7 @@ import hr.database.NKJaksicDatabase
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_first.*
+import kotlinx.android.synthetic.main.fragment_second.*
 
 class FirstFragment : Fragment() {
 
@@ -33,9 +34,16 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+/*
         view.findViewById<Button>(R.id.button_first).setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+*/
+
+        val firstFragment = SecondFragment()
+        button_first.setOnClickListener {
+            getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment,firstFragment)
+                ?.commit()
         }
 
         val database = getActivity()?.let {

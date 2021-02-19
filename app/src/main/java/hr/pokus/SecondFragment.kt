@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import hr.dominik.nkjaki.R
+import kotlinx.android.synthetic.main.fragment_second.*
 
 class SecondFragment : Fragment() {
 
@@ -21,10 +22,17 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+/*
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
+ */
+        val secondFragment = FirstFragment()
+        button_second.setOnClickListener {
+            getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment,secondFragment)
+                ?.commit()
+        }
+
     }
 
 }
