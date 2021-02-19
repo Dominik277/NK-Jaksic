@@ -1,4 +1,9 @@
 package hr.pokus
 
-class FirstFragment {
+import androidx.fragment.app.Fragment
+
+class FirstFragment : Fragment(){
+
+
+
 }
