@@ -1,8 +1,9 @@
-package hr.aktivnosti
+package hr.pokus
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import hr.dominik.nkjaki.R
+import hr.dominik.nkjaki.databinding.ActivityMainBinding
 
 class NajboljiStrijelciActivity : AppCompatActivity() {
 

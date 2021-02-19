@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
         <activity
-            android:name="hr.aktivnosti.NajboljiStrijelciActivity"
+            android:name="hr.pokus.NajboljiStrijelciActivity"
             android:parentActivityName="hr.aktivnosti.TablicaActivity" />
         <activity
             android:name="hr.aktivnosti.NoviRezultatActivity"
