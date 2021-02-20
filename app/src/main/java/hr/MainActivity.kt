@@ -10,6 +10,7 @@ import androidx.room.Room
 import hr.aktivnosti.*
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
+import hr.pokusVijesti.PokusVijestiActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_vijesti -> {
-                    val intent = Intent(this, VijestiActivity::class.java)
+                    val intent = Intent(this, PokusVijestiActivity::class.java)
                     startActivity(intent)
                     true
                 }
