@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
-        <activity android:name="hr.pokusRaspored.PokusRasporedActivity"></activity>
+        <activity android:name="hr.pokusRezultati.PokusRezultatiActivity"></activity>
+        <activity android:name="hr.pokusRaspored.PokusRasporedActivity" />
         <activity android:name="hr.pokusVijesti.PokusVijestiActivity" />
         <activity
             android:name="hr.pokus.NajboljiStrijelciActivity"
