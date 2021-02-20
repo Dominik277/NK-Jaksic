@@ -62,9 +62,9 @@ class PokusVijestiFragment : Fragment() {
         database?.vijestiDao()?.insertVijest(Vijesti(6,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
 
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
-        val exampleList = database?.vijestiDao()?.getVijestiData()
+        val examplePokusList = database?.vijestiDao()?.getVijestiData()
 
-        recyclerViewPokusVijesti.adapter = exampleList?.let { PokusVijestiAdapter(it) }
+        recyclerViewPokusVijesti.adapter = examplePokusList?.let { PokusVijestiAdapter(it) }
         recyclerViewPokusVijesti.layoutManager = LinearLayoutManager(context)
         recyclerViewPokusVijesti.setHasFixedSize(true)
 

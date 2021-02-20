@@ -21,8 +21,8 @@ class PokusVijestiAdapter(private val svePokusVijestiUBazi: List<Vijesti>): Recy
 
     override fun onBindViewHolder(holder: PokusVijestiAdapter.ViewHolder, position: Int) {
         val trenutniItem = svePokusVijestiUBazi[position]
-        holder.itemView.textViewVijesti.text = svePokusVijestiUBazi[position].naslov
-        holder.itemView.imageViewVijesti.setImageResource(trenutniItem.slika)
+        holder.itemView.textViewPokusVijesti.text = svePokusVijestiUBazi[position].naslov
+        holder.itemView.imageViewPokusVijesti.setImageResource(trenutniItem.slika)
     }
 
     override fun getItemCount() = svePokusVijestiUBazi.size
