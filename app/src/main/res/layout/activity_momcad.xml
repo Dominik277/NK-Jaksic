@@ -5,19 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hr.aktivnosti.PokusVijestiActivity">
+    tools:context="hr.aktivnosti.PokusMomcadActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarPokusVijesti"
+            android:id="@+id/toolbarMomcad"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main_pokus_vijesti" />
+    <include layout="@layout/content_main_momcad" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -12,18 +12,18 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageViewPokusVijesti"
+            android:id="@+id/imageViewVijesti"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="5dp"
             android:src="@drawable/slikavijesti"
             android:scaleType="centerCrop"/>
         <TextView
-            android:id="@+id/textViewPokusVijesti"
+            android:id="@+id/textViewVijesti"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="5dp"
-            android:layout_below="@+id/imageViewPokusVijesti"
+            android:layout_below="@+id/imageViewVijesti"
             android:text="@string/vijest_naslov"
             android:textColor="#000"
             android:textStyle="bold"

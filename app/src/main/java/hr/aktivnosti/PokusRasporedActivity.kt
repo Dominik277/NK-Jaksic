@@ -7,8 +7,8 @@ import hr.dominik.nkjaki.R
 class PokusRasporedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pokus_raspored)
-        setSupportActionBar(findViewById(R.id.toolbarPokusRaspored))
+        setContentView(R.layout.activity_raspored)
+        setSupportActionBar(findViewById(R.id.toolbarRaspored))
         title = "Pokus Raspored"
     }
 }

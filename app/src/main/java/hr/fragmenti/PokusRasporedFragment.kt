@@ -12,7 +12,7 @@ import hr.adapteri.PokusRasporedAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.fragment_pokus_raspored.*
+import kotlinx.android.synthetic.main.fragment_raspored.*
 
 class PokusRasporedFragment: Fragment() {
 
@@ -24,7 +24,7 @@ class PokusRasporedFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokus_raspored, container, false)
+        return inflater.inflate(R.layout.fragment_raspored, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,8 +39,8 @@ class PokusRasporedFragment: Fragment() {
                 .build()
         }
 
-        recyclerViewPokusRaspored.addItemDecoration(DividerItemDecoration
-            (recyclerViewPokusRaspored.context,DividerItemDecoration.VERTICAL))
+        recyclerViewRaspored.addItemDecoration(DividerItemDecoration
+            (recyclerViewRaspored.context,DividerItemDecoration.VERTICAL))
 
         database?.rasporedDao()?.insertRaspored(Raspored(0,"21.02","NK Jakšić-NK Kuzmica"))
         database?.rasporedDao()?.insertRaspored(Raspored(1,"21.02","NK Jakšić-NK Kuzmica"))
@@ -55,9 +55,9 @@ class PokusRasporedFragment: Fragment() {
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
 
-        recyclerViewPokusRaspored.adapter = examplePokusRasporedList?.let { PokusRasporedAdapter(it) }
-        recyclerViewPokusRaspored.layoutManager = LinearLayoutManager(context)
-        recyclerViewPokusRaspored.setHasFixedSize(true)
+        recyclerViewRaspored.adapter = examplePokusRasporedList?.let { PokusRasporedAdapter(it) }
+        recyclerViewRaspored.layoutManager = LinearLayoutManager(context)
+        recyclerViewRaspored.setHasFixedSize(true)
 
     }
 

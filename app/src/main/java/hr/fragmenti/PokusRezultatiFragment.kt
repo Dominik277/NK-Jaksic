@@ -12,7 +12,7 @@ import hr.adapteri.PokusRezultatiAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.fragment_pokus_rezultati.*
+import kotlinx.android.synthetic.main.fragment_rezultati.*
 
 class PokusRezultatiFragment: Fragment() {
 
@@ -24,7 +24,7 @@ class PokusRezultatiFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokus_rezultati, container, false)
+        return inflater.inflate(R.layout.fragment_rezultati, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,8 +39,8 @@ class PokusRezultatiFragment: Fragment() {
                 .build()
         }
 
-        recyclerViewPokusRezultati.addItemDecoration(DividerItemDecoration
-            (recyclerViewPokusRezultati.context,DividerItemDecoration.VERTICAL))
+        recyclerViewRezultati.addItemDecoration(DividerItemDecoration
+            (recyclerViewRezultati.context,DividerItemDecoration.VERTICAL))
 
         database?.rezultatiDao()?.insertRezultat(Rezultat(0,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
         database?.rezultatiDao()?.insertRezultat(Rezultat(1,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
@@ -52,9 +52,9 @@ class PokusRezultatiFragment: Fragment() {
         //database?.rezultatiDao()?.deletePodatkeRezultat()
         val examplePokusRezultatiList = database?.rezultatiDao()?.getRezultatData()
 
-        recyclerViewPokusRezultati.adapter = examplePokusRezultatiList?.let { PokusRezultatiAdapter(it) }
-        recyclerViewPokusRezultati.layoutManager = LinearLayoutManager(context)
-        recyclerViewPokusRezultati.setHasFixedSize(true)
+        recyclerViewRezultati.adapter = examplePokusRezultatiList?.let { PokusRezultatiAdapter(it) }
+        recyclerViewRezultati.layoutManager = LinearLayoutManager(context)
+        recyclerViewRezultati.setHasFixedSize(true)
 
     }
 

@@ -12,7 +12,7 @@ import hr.adapteri.PokusMomcadAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.fragment_pokus_momcad.*
+import kotlinx.android.synthetic.main.fragment_momcad.*
 
 class PokusMomcadFragment: Fragment() {
 
@@ -24,7 +24,7 @@ class PokusMomcadFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokus_momcad, container, false)
+        return inflater.inflate(R.layout.fragment_momcad, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,8 +39,8 @@ class PokusMomcadFragment: Fragment() {
                 .build()
         }
 
-        recyclerViewPokusMomcad.addItemDecoration(DividerItemDecoration
-            (recyclerViewPokusMomcad.context,DividerItemDecoration.VERTICAL))
+        recyclerViewMomcad.addItemDecoration(DividerItemDecoration
+            (recyclerViewMomcad.context,DividerItemDecoration.VERTICAL))
 
         database?.igraciDao()?.insertIgrac(Igraci(0,"Domagoj","Kovačević",5))
         database?.igraciDao()?.insertIgrac(Igraci(1,"Matko","Kovačević",5))
@@ -53,9 +53,9 @@ class PokusMomcadFragment: Fragment() {
 
         val examplePokusMomcadList = database?.igraciDao()?.getIgraciData()
 
-        recyclerViewPokusMomcad.adapter = examplePokusMomcadList?.let { PokusMomcadAdapter(it) }
-        recyclerViewPokusMomcad.layoutManager = LinearLayoutManager(context)
-        recyclerViewPokusMomcad.setHasFixedSize(true)
+        recyclerViewMomcad.adapter = examplePokusMomcadList?.let { PokusMomcadAdapter(it) }
+        recyclerViewMomcad.layoutManager = LinearLayoutManager(context)
+        recyclerViewMomcad.setHasFixedSize(true)
 
     }
 

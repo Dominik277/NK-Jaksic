@@ -7,8 +7,8 @@ import hr.dominik.nkjaki.R
 class PokusRezultatiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pokus_rezultati)
-        setSupportActionBar(findViewById(R.id.toolbarPokusRezultat))
+        setContentView(R.layout.activity_rezultati)
+        setSupportActionBar(findViewById(R.id.toolbarRezultat))
         title = "Pokus Rezultati"
     }
 }
