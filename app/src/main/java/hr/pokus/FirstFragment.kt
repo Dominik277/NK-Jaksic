@@ -4,18 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import hr.database.NKJaksicDatabase
-import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_first.*
-import kotlinx.android.synthetic.main.fragment_second.*
 
 class FirstFragment : Fragment() {
 
@@ -42,7 +37,7 @@ class FirstFragment : Fragment() {
 
         val firstFragment = SecondFragment()
         button_first.setOnClickListener {
-            getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment,firstFragment)
+            getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment_najboljiStrijelci,firstFragment)
                 ?.commit()
         }
 

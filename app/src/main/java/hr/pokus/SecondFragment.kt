@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_second.*
 
@@ -29,7 +27,7 @@ class SecondFragment : Fragment() {
  */
         val secondFragment = FirstFragment()
         button_second.setOnClickListener {
-            getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment,secondFragment)
+            getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment_najboljiStrijelci,secondFragment)
                 ?.commit()
         }
 
