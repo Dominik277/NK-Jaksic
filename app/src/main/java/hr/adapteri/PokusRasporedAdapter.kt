@@ -1,4 +1,4 @@
-package hr.pokusRaspored
+package hr.adapteri
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_pokus_raspored.view.*
-import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
 class PokusRasporedAdapter(private val sviPokusRasporediUBazi: List<Raspored>): RecyclerView.Adapter<PokusRasporedAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_pokus_raspored, parent, false)
         return ViewHolder(view)
     }

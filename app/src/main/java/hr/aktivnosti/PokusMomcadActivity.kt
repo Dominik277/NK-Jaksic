@@ -1,4 +1,4 @@
-package hr.pokusMomcad
+package hr.aktivnosti
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

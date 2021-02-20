@@ -1,4 +1,4 @@
-package hr.pokusRezultati
+package hr.fragmenti
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import hr.adapteri.PokusRezultatiAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.table.Raspored
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
-import hr.pokusRaspored.PokusRasporedAdapter
-import kotlinx.android.synthetic.main.fragment_pokus_raspored.*
 import kotlinx.android.synthetic.main.fragment_pokus_rezultati.*
 
 class PokusRezultatiFragment: Fragment() {

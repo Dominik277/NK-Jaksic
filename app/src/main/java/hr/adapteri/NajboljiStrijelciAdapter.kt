@@ -1,4 +1,4 @@
-package hr.pokus
+package hr.adapteri
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.*
 
-class ExampleAdapter(private val sviNajboljiStrijelciUBazi: List<NajboljiStrijelci>): RecyclerView.Adapter<ExampleAdapter.ExampleViewHolder>() {
+class NajboljiStrijelciAdapter(private val sviNajboljiStrijelciUBazi: List<NajboljiStrijelci>): RecyclerView.Adapter<NajboljiStrijelciAdapter.ExampleViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExampleViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_najbolji_strijelci, parent, false)
         return ExampleViewHolder(itemView)

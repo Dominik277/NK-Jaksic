@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
-        <activity android:name="hr.pokusMomcad.PokusMomcadActivity"></activity>
-        <activity android:name="hr.pokusRezultati.PokusRezultatiActivity" />
-        <activity android:name="hr.pokusRaspored.PokusRasporedActivity" />
-        <activity android:name="hr.pokusVijesti.PokusVijestiActivity" />
+        <activity android:name="hr.aktivnosti.PokusMomcadActivity"></activity>
+        <activity android:name="hr.aktivnosti.PokusRezultatiActivity" />
+        <activity android:name="hr.aktivnosti.PokusRasporedActivity" />
+        <activity android:name="hr.aktivnosti.PokusVijestiActivity" />
         <activity
-            android:name="hr.pokus.NajboljiStrijelciActivity"
+            android:name="hr.aktivnosti.NajboljiStrijelciActivity"
             android:parentActivityName="hr.aktivnosti.TablicaActivity" />
         <activity
             android:name="hr.aktivnosti.NoviRezultatActivity"

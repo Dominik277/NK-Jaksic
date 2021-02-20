@@ -1,4 +1,4 @@
-package hr.pokusVijesti
+package hr.fragmenti
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import hr.adapteri.PokusVijestiAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
-import hr.pokus.ExampleAdapter
-import hr.pokus.SecondFragment
-import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.*
 import kotlinx.android.synthetic.main.fragment_pokus_vijesti.*
 
 class PokusVijestiFragment : Fragment() {

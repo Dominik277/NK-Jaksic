@@ -1,4 +1,4 @@
-package hr.pokusRezultati
+package hr.adapteri
 
 import android.view.LayoutInflater
 import android.view.View

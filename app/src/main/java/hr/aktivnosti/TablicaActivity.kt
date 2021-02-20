@@ -9,8 +9,6 @@ import androidx.room.Room
 import hr.adapteri.TablicaTablicaAdapter
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
-import hr.pokus.NajboljiStrijelciActivity
-import kotlinx.android.synthetic.main.activity_momcad.*
 import kotlinx.android.synthetic.main.activity_tablica.*
 
 class TablicaActivity : AppCompatActivity() {

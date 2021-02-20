@@ -1,4 +1,4 @@
-package hr.pokusMomcad
+package hr.fragmenti
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import hr.adapteri.PokusMomcadAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Igraci
-import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import hr.pokusRaspored.PokusRasporedAdapter
 import kotlinx.android.synthetic.main.fragment_pokus_momcad.*
-import kotlinx.android.synthetic.main.fragment_pokus_raspored.*
 
 class PokusMomcadFragment: Fragment() {
 

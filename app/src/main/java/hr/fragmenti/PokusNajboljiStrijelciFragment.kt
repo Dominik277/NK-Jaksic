@@ -1,4 +1,4 @@
-package hr.pokus
+package hr.fragmenti
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,14 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import hr.adapteri.NajboljiStrijelciAdapter
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.*
 
-class FirstFragment : Fragment() {
+class PokusNajboljiStrijelciFragment : Fragment() {
 
     //private lateinit var recyclerViewNajboljiStrijelci: RecyclerView
-    private lateinit var adapter: ExampleAdapter
+    private lateinit var adapter: NajboljiStrijelciAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -66,7 +67,7 @@ class FirstFragment : Fragment() {
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val exampleList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
 
-        recyclerViewNajboljiStrijelci.adapter = exampleList?.let { ExampleAdapter(it) }
+        recyclerViewNajboljiStrijelci.adapter = exampleList?.let { NajboljiStrijelciAdapter(it) }
         recyclerViewNajboljiStrijelci.layoutManager = LinearLayoutManager(context)
         recyclerViewNajboljiStrijelci.setHasFixedSize(true)
 
