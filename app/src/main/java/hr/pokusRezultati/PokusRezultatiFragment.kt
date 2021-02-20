@@ -10,13 +10,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.database.NKJaksicDatabase
 import hr.database.table.Raspored
+import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
 import hr.pokusRaspored.PokusRasporedAdapter
 import kotlinx.android.synthetic.main.fragment_pokus_raspored.*
+import kotlinx.android.synthetic.main.fragment_pokus_rezultati.*
 
 class PokusRezultatiFragment: Fragment() {
 
-    private lateinit var adapter: PokusRasporedAdapter
+    private lateinit var adapter: PokusRezultatiAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,7 +26,7 @@ class PokusRezultatiFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokus_raspored, container, false)
+        return inflater.inflate(R.layout.fragment_pokus_rezultati, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,24 +41,22 @@ class PokusRezultatiFragment: Fragment() {
                 .build()
         }
 
-        recyclerViewPokusRaspored.addItemDecoration(DividerItemDecoration)
+        recyclerViewPokusRezultati.addItemDecoration(DividerItemDecoration
+            (recyclerViewPokusRezultati.context,DividerItemDecoration.VERTICAL))
 
-        database?.rasporedDao()?.insertRaspored(Raspored(0,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(1,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(2,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(3,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(4,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(5,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(6,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(7,"21.02","NK Jakšić-NK Kuzmica"))
-        database?.rasporedDao()?.insertRaspored(Raspored(8,"21.02","NK Jakšić-NK Kuzmica"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(0,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(1,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(2,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(3,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(4,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(5,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
 
-        //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
-        val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
+        //database?.rezultatiDao()?.deletePodatkeRezultat()
+        val examplePokusRezultatiList = database?.rezultatiDao()?.getRezultatData()
 
-        recyclerViewPokusRaspored.adapter = examplePokusRasporedList?.let { PokusRasporedAdapter(it) }
-        recyclerViewPokusRaspored.layoutManager = LinearLayoutManager(context)
-        recyclerViewPokusRaspored.setHasFixedSize(true)
+        recyclerViewPokusRezultati.adapter = examplePokusRezultatiList?.let { PokusRezultatiAdapter(it) }
+        recyclerViewPokusRezultati.layoutManager = LinearLayoutManager(context)
+        recyclerViewPokusRezultati.setHasFixedSize(true)
 
     }
 

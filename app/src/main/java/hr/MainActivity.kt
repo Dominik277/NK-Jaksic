@@ -11,6 +11,7 @@ import hr.aktivnosti.*
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import hr.pokusRaspored.PokusRasporedActivity
+import hr.pokusRezultati.PokusRezultatiActivity
 import hr.pokusVijesti.PokusVijestiActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         navigation_view.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_rezultati -> {
-                    val intent = Intent(this, RezultatiActivity::class.java)
+                    val intent = Intent(this, PokusRezultatiActivity::class.java)
                     startActivity(intent)
                     true
                 }
