@@ -1,28 +1,35 @@
 package hr.pokusVijesti
 
+import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import hr.adapteri.VijestiAdapter
 import hr.database.table.Vijesti
+import hr.dominik.nkjaki.R
+import kotlinx.android.synthetic.main.jedan_red_pokus_vijesti.view.*
+import kotlinx.android.synthetic.main.jedan_red_vijesti.view.*
 
 class PokusVijestiAdapter(private val svePokusVijestiUBazi: List<Vijesti>): RecyclerView.Adapter<PokusVijestiAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): PokusVijestiAdapter.ViewHolder {
-        TODO("Not yet implemented")
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_pokus_vijesti, parent, false)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PokusVijestiAdapter.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val trenutniItem = svePokusVijestiUBazi[position]
+        holder.itemView.textViewVijesti.text = svePokusVijestiUBazi[position].naslov
+        holder.itemView.imageViewVijesti.setImageResource(trenutniItem.slika)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = svePokusVijestiUBazi.size
 
-    class ViewHolder {
-
+    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        val textViewPokusVijesti: TextView = itemView.textViewPokusVijesti
+        val imageViewPokusVijesti: ImageView = itemView.imageViewPokusVijesti
     }
 
 
