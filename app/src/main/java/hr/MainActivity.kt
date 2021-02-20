@@ -10,6 +10,7 @@ import androidx.room.Room
 import hr.aktivnosti.*
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
+import hr.pokusMomcad.PokusMomcadActivity
 import hr.pokusRaspored.PokusRasporedActivity
 import hr.pokusRezultati.PokusRezultatiActivity
 import hr.pokusVijesti.PokusVijestiActivity
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_momcad -> {
-                    val intent = Intent(this, MomcadActivity::class.java)
+                    val intent = Intent(this, PokusMomcadActivity::class.java)
                     startActivity(intent)
                     true
                 }

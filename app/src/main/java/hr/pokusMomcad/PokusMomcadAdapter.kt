@@ -9,28 +9,26 @@ import hr.adapteri.MomcadAdapter
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_momcad.view.*
+import kotlinx.android.synthetic.main.jedan_red_pokus_momcad.view.*
 
-class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) :
-    RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
+class PokusMomcadAdapter constructor(private val sviPokusIgraciUBazi: List<Igraci>) : RecyclerView.Adapter<PokusMomcadAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val brojIgraca: TextView = itemView.brojIgraca
-        val imeIgraca: TextView = itemView.imeIgraca
-        val prezimeIgraca: TextView = itemView.prezimeIgraca
+        val brojIgracaPokus: TextView = itemView.brojIgracaPokus
+        val imeIgracaPokus: TextView = itemView.imeIgracaPokus
+        val prezimeIgracaPokus: TextView = itemView.prezimeIgracaPokus
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_momcad, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_pokus_momcad, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.brojIgraca.text = sviIgraciUBazi[position].ime
-        holder.itemView.imeIgraca.text = sviIgraciUBazi[position].prezime
-        holder.itemView.prezimeIgraca.text = sviIgraciUBazi[position].broj.toString()
+        holder.itemView.brojIgracaPokus.text = sviPokusIgraciUBazi[position].ime
+        holder.itemView.imeIgracaPokus.text = sviPokusIgraciUBazi[position].prezime
+        holder.itemView.prezimeIgracaPokus.text = sviPokusIgraciUBazi[position].broj.toString()
 
     }
-
-    override fun getItemCount() = sviIgraciUBazi.size
+    override fun getItemCount() = sviPokusIgraciUBazi.size
 }
