@@ -10,6 +10,7 @@ import androidx.room.Room
 import hr.aktivnosti.*
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
+import hr.pokusRaspored.PokusRasporedActivity
 import hr.pokusVijesti.PokusVijestiActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_raspored -> {
-                    val intent = Intent(this, RasporedActivity::class.java)
+                    val intent = Intent(this, PokusRasporedActivity::class.java)
                     startActivity(intent)
                     true
                 }
