@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.fragment_first.*
+import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.*
 
 class FirstFragment : Fragment() {
 
@@ -23,7 +23,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        return inflater.inflate(R.layout.fragment_najbolji_strijelci, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
