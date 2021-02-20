@@ -25,7 +25,7 @@ class PokusRasporedAdapter(private val sviPokusRasporediUBazi: List<Raspored>): 
     override fun getItemCount() = sviPokusRasporediUBazi.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val datumRasporedPokus: TextView = itemView.datumRaspored
-        val ogledRasporedPokus: TextView = itemView.ogledRaspored
+        val datumRasporedPokus: TextView = itemView.datumRasporedPokus
+        val ogledRasporedPokus: TextView = itemView.ogledRasporedPokus
     }
 }
