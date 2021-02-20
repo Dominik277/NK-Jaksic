@@ -19,5 +19,5 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main_najboljiStrijelci" />
+    <include layout="@layout/content_main_najbolji_strijelci" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
