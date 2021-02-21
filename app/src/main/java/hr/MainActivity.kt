@@ -6,13 +6,12 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
-import hr.aktivnosti.*
 import hr.dominik.nkjaki.R
 import hr.aktivnosti.MomcadActivity
 import hr.aktivnosti.RasporedActivity
 import hr.aktivnosti.RezultatiActivity
 import hr.aktivnosti.VijestiActivity
-import hr.pokusTablicaFragmenti.PokusTablicaActivity
+import hr.aktivnosti.PokusTablicaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
