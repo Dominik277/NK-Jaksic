@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
+        <activity android:name="hr.pokusTablicaFragmenti.PokusTablicaActivity"></activity>
         <activity
             android:name="hr.aktivnosti.NajboljiStrijelciActivity"
             android:parentActivityName="hr.aktivnosti.TablicaActivity" />
