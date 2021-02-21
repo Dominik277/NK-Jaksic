@@ -7,12 +7,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.pokus_jedan_red_tablica.view.*
+import kotlinx.android.synthetic.main.jedan_red_tablica_tablica.view.*
 
 class TablicaTablicaAdapter (private val sveTabliceUBazi: List<TablicaTablica>) : RecyclerView.Adapter<TablicaTablicaAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.pokus_jedan_red_tablica, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_tablica_tablica, parent, false)
         return ViewHolder(view)
     }
 

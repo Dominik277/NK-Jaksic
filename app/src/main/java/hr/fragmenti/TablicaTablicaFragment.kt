@@ -10,9 +10,9 @@ import hr.adapteri.TablicaTablicaAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.pokus_fragment_tablica.*
+import kotlinx.android.synthetic.main.tablica_fragment_tablica.*
 
-class TablicaTablicaFragment : Fragment(R.layout.pokus_fragment_tablica) {
+class TablicaTablicaFragment : Fragment(R.layout.tablica_fragment_tablica) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -12,9 +12,9 @@ import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import hr.adapteri.TablicaRasporedAdapter
-import kotlinx.android.synthetic.main.pokus_fragment_raspored.*
+import kotlinx.android.synthetic.main.tablica_fragment_raspored.*
 
-class TablicaRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
+class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
 
     private lateinit var adapter: RasporedAdapter
 
@@ -24,7 +24,7 @@ class TablicaRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.pokus_fragment_raspored, container, false)
+        return inflater.inflate(R.layout.tablica_fragment_raspored, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
