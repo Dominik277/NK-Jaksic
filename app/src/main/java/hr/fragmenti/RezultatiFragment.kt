@@ -50,9 +50,9 @@ class RezultatiFragment: Fragment() {
         database?.rezultatiDao()?.insertRezultat(Rezultat(5,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
 
         //database?.rezultatiDao()?.deletePodatkeRezultat()
-        val examplePokusRezultatiList = database?.rezultatiDao()?.getRezultatData()
+        val exampleRezultatiList = database?.rezultatiDao()?.getRezultatData()
 
-        recyclerViewRezultati.adapter = examplePokusRezultatiList?.let { RezultatiAdapter(it) }
+        recyclerViewRezultati.adapter = exampleRezultatiList?.let { RezultatiAdapter(it) }
         recyclerViewRezultati.layoutManager = LinearLayoutManager(context)
         recyclerViewRezultati.setHasFixedSize(true)
 

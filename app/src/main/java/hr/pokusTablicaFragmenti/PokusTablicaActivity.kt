@@ -5,6 +5,7 @@ import android.os.Bundle
 import hr.dominik.nkjaki.R
 import hr.fragmenti.PokusNajboljiStrijelciFragment
 import hr.fragmenti.PokusRasporedFragment
+import hr.fragmenti.PokusRezultatiFragment
 import kotlinx.android.synthetic.main.activity_pokus_tablica.*
 
 class PokusTablicaActivity : AppCompatActivity() {

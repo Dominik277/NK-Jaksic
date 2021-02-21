@@ -42,7 +42,7 @@ class PokusRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
 
         pokusRecyclerViewRaspored.addItemDecoration(DividerItemDecoration
             (pokusRecyclerViewRaspored.context,DividerItemDecoration.VERTICAL))
-
+/*
         database?.rasporedDao()?.insertRaspored(Raspored(0,"21.02","NK Jakšić-NK Kuzmica"))
         database?.rasporedDao()?.insertRaspored(Raspored(1,"21.02","NK Jakšić-NK Požega"))
         database?.rasporedDao()?.insertRaspored(Raspored(2,"21.02","NK Jakšić-NK Mihaljevci"))
@@ -52,7 +52,7 @@ class PokusRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
         database?.rasporedDao()?.insertRaspored(Raspored(6,"21.02","NK Jakšić-NK Eminovci"))
         database?.rasporedDao()?.insertRaspored(Raspored(7,"21.02","NK Jakšić-NK Rajsavac"))
         database?.rasporedDao()?.insertRaspored(Raspored(8,"21.02","NK Jakšić-NK Buk"))
-
+*/
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
 
