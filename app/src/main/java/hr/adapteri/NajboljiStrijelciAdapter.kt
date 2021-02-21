@@ -9,14 +9,14 @@ import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.*
 
-class NajboljiStrijelciAdapter(private val sviNajboljiStrijelciUBazi: List<NajboljiStrijelci>): RecyclerView.Adapter<NajboljiStrijelciAdapter.ExampleViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExampleViewHolder {
+class NajboljiStrijelciAdapter(private val sviNajboljiStrijelciUBazi: List<NajboljiStrijelci>): RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_najbolji_strijelci, parent, false)
-        return ExampleViewHolder(itemView)
+        return ViewHolder(itemView)
     }
 
 
-    override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.najboljiStrijelciPozicija.text = sviNajboljiStrijelciUBazi[position].pozicijaPoGolovima.toString()
         holder.najboljiStrijelciIme.text = sviNajboljiStrijelciUBazi[position].imeIgraca
         holder.najboljiStrijelciGolovi.text = sviNajboljiStrijelciUBazi[position].brojGolova
@@ -24,7 +24,7 @@ class NajboljiStrijelciAdapter(private val sviNajboljiStrijelciUBazi: List<Najbo
 
     override fun getItemCount() = sviNajboljiStrijelciUBazi.size
 
-    class ExampleViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val najboljiStrijelciPozicija: TextView = itemView.najboljiStrijelciPozicija
         val najboljiStrijelciIme: TextView = itemView.najboljiStrijelciIme
         val najboljiStrijelciGolovi: TextView = itemView.najboljiStrijelciGolovi

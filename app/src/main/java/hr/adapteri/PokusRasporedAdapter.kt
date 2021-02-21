@@ -1,4 +1,4 @@
-package hr.pokusTablicaFragmenti
+package hr.adapteri
 
 import android.view.LayoutInflater
 import android.view.View

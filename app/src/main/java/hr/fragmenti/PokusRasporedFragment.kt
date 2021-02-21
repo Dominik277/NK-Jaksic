@@ -1,4 +1,4 @@
-package hr.pokusTablicaFragmenti
+package hr.fragmenti
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +12,7 @@ import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
+import hr.adapteri.PokusRasporedAdapter
 import kotlinx.android.synthetic.main.pokus_fragment_raspored.*
 
 class PokusRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
