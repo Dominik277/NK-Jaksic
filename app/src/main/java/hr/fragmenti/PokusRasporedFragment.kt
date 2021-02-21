@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import hr.adapteri.PokusRasporedAdapter
+import hr.adapteri.TablicaRasporedAdapter
 import kotlinx.android.synthetic.main.pokus_fragment_raspored.*
 
 class PokusRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
@@ -56,7 +55,7 @@ class PokusRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
 
-        pokusRecyclerViewRaspored.adapter = examplePokusRasporedList?.let { PokusRasporedAdapter(it) }
+        pokusRecyclerViewRaspored.adapter = examplePokusRasporedList?.let { TablicaRasporedAdapter(it) }
         pokusRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
         pokusRecyclerViewRaspored.setHasFixedSize(true)
 

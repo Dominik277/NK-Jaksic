@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import hr.adapteri.PokusRezultatiAdapter
+import hr.adapteri.TablicaRezultatiAdapter
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.pokus_fragment_rezultati.*
@@ -38,7 +38,7 @@ class PokusRezultatiFragment : Fragment(R.layout.pokus_fragment_rezultati) {
         //database?.rezultatiDao()?.deletePodatkeRezultat()
         val examplePokusRezultatiList = database?.rezultatiDao()?.getRezultatData()
 
-        pokusRecyclerViewRezultati.adapter = examplePokusRezultatiList?.let { PokusRezultatiAdapter(it) }
+        pokusRecyclerViewRezultati.adapter = examplePokusRezultatiList?.let { TablicaRezultatiAdapter(it) }
         pokusRecyclerViewRezultati.layoutManager = LinearLayoutManager(context)
         pokusRecyclerViewRezultati.setHasFixedSize(true)
 
