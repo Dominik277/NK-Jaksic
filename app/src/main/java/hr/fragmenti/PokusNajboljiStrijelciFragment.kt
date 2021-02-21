@@ -1,4 +1,4 @@
-package hr.pokusTablicaFragmenti
+package hr.fragmenti
 
 
 import android.os.Bundle
@@ -8,11 +8,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.NajboljiStrijelciAdapter
+import hr.adapteri.PokusNajboljiStrijelciAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
-import hr.fragmenti.SecondFragment
-import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.*
 import kotlinx.android.synthetic.main.pokus_fragment_najbolji_strijelci.*
 
 class PokusNajboljiStrijelciFragment : Fragment(R.layout.pokus_fragment_najbolji_strijelci) {

@@ -1,4 +1,4 @@
-package hr.pokusTablicaFragmenti
+package hr.adapteri
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,12 +7,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.*
-import kotlinx.android.synthetic.main.pokus_jedan_red_najbolji_strijelci.view.*
 import kotlinx.android.synthetic.main.pokus_jedan_red_najbolji_strijelci.view.pokusNajboljiStrijelciGolovi
 import kotlinx.android.synthetic.main.pokus_jedan_red_najbolji_strijelci.view.pokusNajboljiStrijelciIme
 import kotlinx.android.synthetic.main.pokus_jedan_red_najbolji_strijelci.view.pokusNajboljiStrijelciPozicija
-import kotlinx.android.synthetic.main.pokus_jedan_red_strijelci.view.*
 
 class PokusNajboljiStrijelciAdapter(private val sviPokusNajboljiStrijelciUBazi: List<NajboljiStrijelci>): RecyclerView.Adapter<PokusNajboljiStrijelciAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

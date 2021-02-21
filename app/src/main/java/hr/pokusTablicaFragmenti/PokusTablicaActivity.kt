@@ -3,6 +3,7 @@ package hr.pokusTablicaFragmenti
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import hr.dominik.nkjaki.R
+import hr.fragmenti.PokusNajboljiStrijelciFragment
 import hr.fragmenti.PokusRasporedFragment
 import kotlinx.android.synthetic.main.activity_pokus_tablica.*
 
