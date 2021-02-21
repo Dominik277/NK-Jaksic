@@ -11,7 +11,7 @@ import hr.aktivnosti.MomcadActivity
 import hr.aktivnosti.RasporedActivity
 import hr.aktivnosti.RezultatiActivity
 import hr.aktivnosti.VijestiActivity
-import hr.aktivnosti.PokusTablicaActivity
+import hr.aktivnosti.TablicaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_tablica -> {
-                    val intent = Intent(this, PokusTablicaActivity::class.java)
+                    val intent = Intent(this, TablicaActivity::class.java)
                     startActivity(intent)
                     true
                 }

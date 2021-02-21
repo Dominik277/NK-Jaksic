@@ -11,7 +11,7 @@ import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.pokus_fragment_rezultati.*
 
-class PokusRezultatiFragment : Fragment(R.layout.pokus_fragment_rezultati) {
+class TablicaRezultatiFragment : Fragment(R.layout.pokus_fragment_rezultati) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

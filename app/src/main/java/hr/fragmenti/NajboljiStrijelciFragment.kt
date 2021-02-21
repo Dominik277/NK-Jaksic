@@ -12,7 +12,7 @@ import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.pokus_fragment_najbolji_strijelci.*
 
-class PokusNajboljiStrijelciFragment : Fragment(R.layout.pokus_fragment_najbolji_strijelci) {
+class NajboljiStrijelciFragment : Fragment(R.layout.pokus_fragment_najbolji_strijelci) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -14,7 +14,7 @@ import hr.dominik.nkjaki.R
 import hr.adapteri.TablicaRasporedAdapter
 import kotlinx.android.synthetic.main.pokus_fragment_raspored.*
 
-class PokusRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
+class TablicaRasporedFragment : Fragment(R.layout.pokus_fragment_raspored) {
 
     private lateinit var adapter: RasporedAdapter
 
