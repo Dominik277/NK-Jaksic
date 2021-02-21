@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import hr.dominik.nkjaki.R
-import hr.fragmenti.PokusNajboljiStrijelciFragment
 import kotlinx.android.synthetic.main.fragment_second.*
 
 class SecondFragment : Fragment() {
@@ -26,7 +25,7 @@ class SecondFragment : Fragment() {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
  */
-        val secondFragment = PokusNajboljiStrijelciFragment()
+        val secondFragment = NajboljiStrijelciFragment()
         button_second.setOnClickListener {
             getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment_najboljiStrijelci,secondFragment)
                 ?.commit()

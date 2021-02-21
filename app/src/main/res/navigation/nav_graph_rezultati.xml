@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/pokusRezultatiFragment"
-        android:name="hr.fragmenti.PokusRezultatiFragment"
+        android:name="hr.fragmenti.RezultatiFragment"
         android:label="PokusRezultatiFragment" />
 </navigation>

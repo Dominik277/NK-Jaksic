@@ -8,15 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import hr.adapteri.PokusVijestiAdapter
+import hr.adapteri.NajboljiStrijelciAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.fragment_vijesti.*
+import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.*
 
-class PokusVijestiFragment : Fragment() {
+class NajboljiStrijelciFragment : Fragment() {
 
-    private lateinit var adapter: PokusVijestiAdapter
+    //private lateinit var recyclerViewNajboljiStrijelci: RecyclerView
+    private lateinit var adapter: NajboljiStrijelciAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,11 +24,23 @@ class PokusVijestiFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vijesti, container, false)
+        return inflater.inflate(R.layout.fragment_najbolji_strijelci, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+/*
+        view.findViewById<Button>(R.id.button_first).setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+*/
+
+        val firstFragment = SecondFragment()
+        button_first.setOnClickListener {
+            getFragmentManager()?.beginTransaction()?.replace(R.id.nav_host_fragment_najboljiStrijelci,firstFragment)
+                ?.commit()
+        }
 
         val database = getActivity()?.let {
             Room.databaseBuilder(
@@ -39,8 +51,10 @@ class PokusVijestiFragment : Fragment() {
                 .build()
         }
 
-        recyclerViewVijesti.addItemDecoration(DividerItemDecoration
-            (recyclerViewVijesti.context,DividerItemDecoration.VERTICAL))
+        recyclerViewNajboljiStrijelci.addItemDecoration(DividerItemDecoration
+            (recyclerViewNajboljiStrijelci.context,DividerItemDecoration.VERTICAL))
+
+        //val exampleList = generateDummyList(50)
 /*
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(0,1,"Domagoj Kovačević","17"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(1,2,"Tomislav Žuljević","14"))
@@ -50,22 +64,29 @@ class PokusVijestiFragment : Fragment() {
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(5,6,"Marko Marić","11"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(6,7,"Pero Perić","8"))
 */
-
-        database?.vijestiDao()?.insertVijest(Vijesti(0,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(1,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(2,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(3,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(4,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(5,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(6,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
-        val examplePokusList = database?.vijestiDao()?.getVijestiData()
+        val exampleList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
 
-        recyclerViewVijesti.adapter = examplePokusList?.let { PokusVijestiAdapter(it) }
-        recyclerViewVijesti.layoutManager = LinearLayoutManager(context)
-        recyclerViewVijesti.setHasFixedSize(true)
+        recyclerViewNajboljiStrijelci.adapter = exampleList?.let { NajboljiStrijelciAdapter(it) }
+        recyclerViewNajboljiStrijelci.layoutManager = LinearLayoutManager(context)
+        recyclerViewNajboljiStrijelci.setHasFixedSize(true)
 
     }
+/*
+    private fun generateDummyList(size: Int): List<ExampleItem> {
+        val list = ArrayList<ExampleItem>()
+        for (i in 0 until size) {
+            val drawable = when (i % 3) {
+                0 -> R.drawable.ic_launcher_background
+                1 -> R.drawable.ic_launcher_background
+                else -> R.drawable.ic_launcher_background
+            }
+            val item = ExampleItem(drawable, "Item $i", "Line 2")
+            list += item
+        }
+        return list
+    }
+
+ */
 
 }

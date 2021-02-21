@@ -8,15 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import hr.adapteri.PokusRasporedAdapter
+import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_raspored.*
 
-class PokusRasporedFragment: Fragment() {
+class RasporedFragment: Fragment() {
 
-    private lateinit var adapter: PokusRasporedAdapter
+    private lateinit var adapter: RasporedAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -55,7 +55,7 @@ class PokusRasporedFragment: Fragment() {
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
 
-        recyclerViewRaspored.adapter = examplePokusRasporedList?.let { PokusRasporedAdapter(it) }
+        recyclerViewRaspored.adapter = examplePokusRasporedList?.let { RasporedAdapter(it) }
         recyclerViewRaspored.layoutManager = LinearLayoutManager(context)
         recyclerViewRaspored.setHasFixedSize(true)
 

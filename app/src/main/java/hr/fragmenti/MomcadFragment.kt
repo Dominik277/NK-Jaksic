@@ -8,15 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import hr.adapteri.PokusMomcadAdapter
+import hr.adapteri.MomcadAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_momcad.*
 
-class PokusMomcadFragment: Fragment() {
+class MomcadFragment: Fragment() {
 
-    private lateinit var adapter: PokusMomcadAdapter
+    private lateinit var adapter: MomcadAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,19 +41,19 @@ class PokusMomcadFragment: Fragment() {
 
         recyclerViewMomcad.addItemDecoration(DividerItemDecoration
             (recyclerViewMomcad.context,DividerItemDecoration.VERTICAL))
-
+/*
         database?.igraciDao()?.insertIgrac(Igraci(0,"Domagoj","Kovačević",5))
         database?.igraciDao()?.insertIgrac(Igraci(1,"Matko","Kovačević",5))
         database?.igraciDao()?.insertIgrac(Igraci(2,"Ivan","Karača",5))
         database?.igraciDao()?.insertIgrac(Igraci(3,"Ivan","Brus",5))
         database?.igraciDao()?.insertIgrac(Igraci(4,"Stjepan","Šilhan",5))
         database?.igraciDao()?.insertIgrac(Igraci(5,"Maurizio","Rezo",5))
-
+*/
         //database?.igraciDao()?.deletePodatke()
 
         val examplePokusMomcadList = database?.igraciDao()?.getIgraciData()
 
-        recyclerViewMomcad.adapter = examplePokusMomcadList?.let { PokusMomcadAdapter(it) }
+        recyclerViewMomcad.adapter = examplePokusMomcadList?.let { MomcadAdapter(it) }
         recyclerViewMomcad.layoutManager = LinearLayoutManager(context)
         recyclerViewMomcad.setHasFixedSize(true)
 

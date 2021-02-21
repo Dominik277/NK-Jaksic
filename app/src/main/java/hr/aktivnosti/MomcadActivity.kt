@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import hr.dominik.nkjaki.R
 
-class PokusRasporedActivity : AppCompatActivity() {
+class MomcadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_raspored)
-        setSupportActionBar(findViewById(R.id.toolbarRaspored))
-        title = "Pokus Raspored"
+        setContentView(R.layout.activity_momcad)
+        setSupportActionBar(findViewById(R.id.toolbarMomcad))
+        title = "Pokus Momcad"
     }
 }

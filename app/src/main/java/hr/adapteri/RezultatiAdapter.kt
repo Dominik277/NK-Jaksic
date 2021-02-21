@@ -9,7 +9,7 @@ import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_rezultati.view.*
 
-class PokusRezultatiAdapter(private val sviPokusRezultatiUBazi: List<Rezultat>): RecyclerView.Adapter<PokusRezultatiAdapter.ViewHolder>() {
+class RezultatiAdapter(private val sviPokusRezultatiUBazi: List<Rezultat>): RecyclerView.Adapter<RezultatiAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_rezultati, parent, false)

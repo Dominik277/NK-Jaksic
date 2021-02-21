@@ -10,7 +10,7 @@ import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_vijesti.view.*
 
-class PokusVijestiAdapter(private val svePokusVijestiUBazi: List<Vijesti>): RecyclerView.Adapter<PokusVijestiAdapter.ViewHolder>() {
+class VijestiAdapter(private val svePokusVijestiUBazi: List<Vijesti>): RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_vijesti, parent, false)

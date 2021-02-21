@@ -9,7 +9,7 @@ import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
-class PokusRasporedAdapter(private val sviPokusRasporediUBazi: List<Raspored>): RecyclerView.Adapter<PokusRasporedAdapter.ViewHolder>() {
+class RasporedAdapter(private val sviPokusRasporediUBazi: List<Raspored>): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_raspored, parent, false)

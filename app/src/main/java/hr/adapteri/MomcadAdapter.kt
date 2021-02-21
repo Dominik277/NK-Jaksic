@@ -9,7 +9,7 @@ import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_momcad.view.*
 
-class PokusMomcadAdapter constructor(private val sviPokusIgraciUBazi: List<Igraci>) : RecyclerView.Adapter<PokusMomcadAdapter.ViewHolder>() {
+class MomcadAdapter constructor(private val sviPokusIgraciUBazi: List<Igraci>) : RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val brojIgracaPokus: TextView = itemView.brojIgraca

@@ -8,10 +8,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import hr.aktivnosti.*
 import hr.dominik.nkjaki.R
-import hr.aktivnosti.PokusMomcadActivity
-import hr.aktivnosti.PokusRasporedActivity
-import hr.aktivnosti.PokusRezultatiActivity
-import hr.aktivnosti.PokusVijestiActivity
+import hr.aktivnosti.MomcadActivity
+import hr.aktivnosti.RasporedActivity
+import hr.aktivnosti.RezultatiActivity
+import hr.aktivnosti.VijestiActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,12 +28,12 @@ class MainActivity : AppCompatActivity() {
         navigation_view.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_rezultati -> {
-                    val intent = Intent(this, PokusRezultatiActivity::class.java)
+                    val intent = Intent(this, RezultatiActivity::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.nav_raspored -> {
-                    val intent = Intent(this, PokusRasporedActivity::class.java)
+                    val intent = Intent(this, RasporedActivity::class.java)
                     startActivity(intent)
                     true
                 }
@@ -43,12 +43,12 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_vijesti -> {
-                    val intent = Intent(this, PokusVijestiActivity::class.java)
+                    val intent = Intent(this, VijestiActivity::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.nav_momcad -> {
-                    val intent = Intent(this, PokusMomcadActivity::class.java)
+                    val intent = Intent(this, MomcadActivity::class.java)
                     startActivity(intent)
                     true
                 }

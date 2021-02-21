@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/firstFragment"
-        android:name="hr.fragmenti.PokusNajboljiStrijelciFragment"
+        android:name="hr.fragmenti.NajboljiStrijelciFragment"
         android:label="FirstFragment"
         tools:layout="@layout/fragment_najboljiStrijelci">
         <action
