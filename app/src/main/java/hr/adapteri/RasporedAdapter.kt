@@ -9,7 +9,7 @@ import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
-class RasporedAdapter(private val sviPokusRasporediUBazi: List<Raspored>): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
+class RasporedAdapter(private val sviRasporediUBazi: List<Raspored>): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_raspored, parent, false)
@@ -17,14 +17,14 @@ class RasporedAdapter(private val sviPokusRasporediUBazi: List<Raspored>): Recyc
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.datumRaspored.text = sviPokusRasporediUBazi[position].datum
-        holder.itemView.ogledRaspored.text = sviPokusRasporediUBazi[position].ogled
+        holder.itemView.datumRaspored.text = sviRasporediUBazi[position].datum
+        holder.itemView.ogledRaspored.text = sviRasporediUBazi[position].ogled
     }
 
-    override fun getItemCount() = sviPokusRasporediUBazi.size
+    override fun getItemCount() = sviRasporediUBazi.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val datumRasporedPokus: TextView = itemView.datumRaspored
-        val ogledRasporedPokus: TextView = itemView.ogledRaspored
+        val datumRaspored: TextView = itemView.datumRaspored
+        val ogledRaspored: TextView = itemView.ogledRaspored
     }
 }
