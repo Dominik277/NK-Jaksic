@@ -53,9 +53,9 @@ class RasporedFragment: Fragment() {
         database?.rasporedDao()?.insertRaspored(Raspored(8,"21.02","NK Jakšić-NK Kuzmica"))
 
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
-        val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
+        val exampleRasporedList = database?.rasporedDao()?.getRasporedData()
 
-        recyclerViewRaspored.adapter = examplePokusRasporedList?.let { RasporedAdapter(it) }
+        recyclerViewRaspored.adapter = exampleRasporedList?.let { RasporedAdapter(it) }
         recyclerViewRaspored.layoutManager = LinearLayoutManager(context)
         recyclerViewRaspored.setHasFixedSize(true)
 
