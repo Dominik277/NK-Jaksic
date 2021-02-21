@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hr.aktivnosti.MomcadActivity">
+    tools:context="hr.pokusTablicaFragmenti.PokusTablicaActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -18,4 +18,7 @@
             android:background="?attr/colorPrimary" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/pokus_content_main_tablica" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
