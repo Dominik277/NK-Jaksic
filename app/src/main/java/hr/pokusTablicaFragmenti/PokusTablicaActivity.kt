@@ -8,5 +8,7 @@ class PokusTablicaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pokus_tablica)
+        setSupportActionBar(findViewById(R.id.toolbarPokusTablica))
+        title = "Pokus tablica"
     }
 }

@@ -9,6 +9,6 @@ class MomcadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_momcad)
         setSupportActionBar(findViewById(R.id.toolbarMomcad))
-        title = "Pokus Momcad"
+        title = "Momcad"
     }
 }
