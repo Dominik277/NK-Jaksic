@@ -19,7 +19,7 @@ data class TablicaRaspored (
     val prvaUtakmicaDomacin: String,
     @ColumnInfo(name = "prva_utakmica_gost")
     val prvaUtakmicaGost: String,
-    @ColumnInfo(name = "")
+    @ColumnInfo(name = "prva_utakmica_vrijeme")
     val prvaUtakmicaVrijeme: String,
 
 

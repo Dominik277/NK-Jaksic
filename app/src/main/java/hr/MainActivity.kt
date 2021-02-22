@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         val pocetniFragment = PocetnaStranicaFragment()
         val tablicaFragment = TablicaFragment()
 
+        val pokus = TablicaRasporedFragment()
+
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.frameLayoutMainActivity,pocetniFragment)
             commit()

@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import hr.database.dao.*
 import hr.database.table.*
 
-@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class],version = 8)
+@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class],version = 9)
 abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao
@@ -16,6 +16,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
     abstract fun rasporedDao(): RasporedDao
     abstract fun rezultatiDao(): RezultatDao
     abstract fun najboljiStrijelciDao(): NajboljiStrijelciDao
+    abstract fun tablicaRasporedDao(): TablicaRasporedDao
 
     companion object{
         private var INSTANCE : NKJaksicDatabase? = null

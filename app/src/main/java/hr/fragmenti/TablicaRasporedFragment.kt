@@ -8,24 +8,18 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import hr.adapteri.NoviRasporedAdapter
 import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
 import hr.adapteri.TablicaRasporedAdapter
+import hr.database.table.TablicaRaspored
 import kotlinx.android.synthetic.main.tablica_fragment_raspored.*
 
 class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
 
     private lateinit var adapter: RasporedAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.tablica_fragment_raspored, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,12 +47,37 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
         database?.rasporedDao()?.insertRaspored(Raspored(8,"21.02","NK Jakšić-NK Buk"))
 */
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
-        val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
+        //val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
 
-        tablicaRecyclerViewRaspored.adapter = examplePokusRasporedList?.let { TablicaRasporedAdapter(it) }
+        //tablicaRecyclerViewRaspored.adapter = examplePokusRasporedList?.let { TablicaRasporedAdapter(it) }
+        //tablicaRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
+        //tablicaRecyclerViewRaspored.setHasFixedSize(true)
+
+/*
+        database?.tablicaRasporedDao()?.insertRaspored(TablicaRaspored(0,1,
+            "19.09","NK Jakšić","NK Kuzmica","15:30",
+            "19.09","NK Vidovci","NK Požega","15:30",
+            "20.09","NK Mihaljevci","NK Trenkovo","16:00",
+            "20.09","NK Buk","NK Rajsavac","16:15",
+            "19.09","NK Papuk","NK Gradac","14:30",
+            "19.09","NK Eminovci","NK Drenovac","15:00",
+            "21.09","NK Zagrađe","NK Bučje","14:15"))
+*/
+/*
+        database?.tablicaRasporedDao()?.insertRaspored(TablicaRaspored(1,2,
+            "19.09","NK Jakšić","NK Kuzmica","15:30",
+            "19.09","NK Vidovci","NK Požega","15:30",
+            "20.09","NK Mihaljevci","NK Trenkovo","16:00",
+            "20.09","NK Buk","NK Rajsavac","16:15",
+            "19.09","NK Papuk","NK Gradac","14:30",
+            "19.09","NK Eminovci","NK Drenovac","15:00",
+            "21.09","NK Zagrađe","NK Bučje","14:15"))
+*/
+        //database?.tablicaRasporedDao()?.deletePodatkeRaspored()
+        val sviTablicaRasporedObjekti = database?.tablicaRasporedDao()?.getRasporedData()
+        tablicaRecyclerViewRaspored.adapter = sviTablicaRasporedObjekti?.let {NoviRasporedAdapter(it)}
         tablicaRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
         tablicaRecyclerViewRaspored.setHasFixedSize(true)
-
     }
 
 }
