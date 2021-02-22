@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         drawer.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
+
         val rasporedFragment = RasporedFragment()
         val rezultatiFragment = RezultatiFragment()
         val momcadFragment = MomcadFragment()
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,rezultatiFragment)
                         commit()
+                        drawer.closeDrawer(GravityCompat.START)
                     }
                     true
                 }
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,rasporedFragment)
                         commit()
+                        drawer.closeDrawer(GravityCompat.START)
                     }
                     true
                 }
@@ -61,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,vijestiFragment)
                         commit()
+                        drawer.closeDrawer(GravityCompat.START)
                     }
                     true
                 }
@@ -68,6 +72,7 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,momcadFragment)
                         commit()
+                        drawer.closeDrawer(GravityCompat.START)
                     }
                     true
                 }
