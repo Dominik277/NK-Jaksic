@@ -12,6 +12,7 @@ import hr.aktivnosti.RasporedActivity
 import hr.aktivnosti.RezultatiActivity
 import hr.aktivnosti.VijestiActivity
 import hr.aktivnosti.TablicaActivity
+import hr.fragmenti.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,16 +26,30 @@ class MainActivity : AppCompatActivity() {
         drawer.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
+        val rasporedFragment = RasporedFragment()
+        val rezultatiFragment = RezultatiFragment()
+        val momcadFragment = MomcadFragment()
+        val vijestiFragment = VijestiFragment()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frameLayoutMainActivity,rasporedFragment)
+            commit()
+        }
+
         navigation_view.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_rezultati -> {
-                    val intent = Intent(this, RezultatiActivity::class.java)
-                    startActivity(intent)
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.frameLayoutMainActivity,rezultatiFragment)
+                        commit()
+                    }
                     true
                 }
                 R.id.nav_raspored -> {
-                    val intent = Intent(this, RasporedActivity::class.java)
-                    startActivity(intent)
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.frameLayoutMainActivity,rasporedFragment)
+                        commit()
+                    }
                     true
                 }
                 R.id.nav_tablica -> {
@@ -43,13 +58,17 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_vijesti -> {
-                    val intent = Intent(this, VijestiActivity::class.java)
-                    startActivity(intent)
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.frameLayoutMainActivity,vijestiFragment)
+                        commit()
+                    }
                     true
                 }
                 R.id.nav_momcad -> {
-                    val intent = Intent(this, MomcadActivity::class.java)
-                    startActivity(intent)
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.frameLayoutMainActivity,momcadFragment)
+                        commit()
+                    }
                     true
                 }
                 else -> false

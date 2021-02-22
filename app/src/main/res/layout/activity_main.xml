@@ -20,43 +20,12 @@
             app:titleTextColor="@color/white"
             android:fitsSystemWindows="true"
             android:background="?attr/colorPrimary"/>
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Raspored"
-            android:layout_margin="10dp"
-            android:layout_below="@+id/toolbar"/>
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rezultati"
-            android:layout_margin="10dp"
-            android:layout_below="@+id/toolbar"
-            android:layout_toRightOf="@+id/button1" />
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tablica"
-            android:layout_margin="10dp"
-            android:layout_below="@+id/toolbar"
-            android:layout_toRightOf="@+id/button2"/>
-
-        <TextView
-            android:id="@+id/textViewIme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/button1"/>
 
         <FrameLayout
-            android:id="@+id/frameLayout"
+            android:id="@+id/frameLayoutMainActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/textViewIme" />
+            android:layout_below="@id/toolbar" />
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -70,7 +39,5 @@
         android:clipToPadding="false"
         app:menu="@menu/navigation_drawer_menu"
         app:headerLayout="@layout/nav_header_main"/>
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>
