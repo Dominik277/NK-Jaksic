@@ -10,6 +10,9 @@ data class TablicaRaspored (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
 
+    @ColumnInfo(name = "broj_kola")
+    val brojKola: Int,
+
     @ColumnInfo(name = "prva_utakmica_datum")
     val prvaUtakmicaDatum: String,
     @ColumnInfo(name = "prva_utakmica_domacin")
