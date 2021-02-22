@@ -7,10 +7,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import hr.dominik.nkjaki.R
-import hr.aktivnosti.MomcadActivity
-import hr.aktivnosti.RasporedActivity
-import hr.aktivnosti.RezultatiActivity
-import hr.aktivnosti.VijestiActivity
 import hr.aktivnosti.TablicaActivity
 import hr.fragmenti.*
 import kotlinx.android.synthetic.main.activity_main.*
