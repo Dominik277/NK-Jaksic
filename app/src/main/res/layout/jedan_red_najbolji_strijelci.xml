@@ -6,7 +6,7 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/pokusNajboljiStrijelciPozicija"
+        android:id="@+id/najboljiStrijelciPozicija"
         android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -17,7 +17,7 @@
         android:textSize="22dp"/>
 
     <TextView
-        android:id="@+id/pokusNajboljiStrijelciIme"
+        android:id="@+id/najboljiStrijelciIme"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -28,7 +28,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/pokusNajboljiStrijelciGolovi"
+        android:id="@+id/najboljiStrijelciGolovi"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"

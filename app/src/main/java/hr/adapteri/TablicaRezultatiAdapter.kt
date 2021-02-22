@@ -9,7 +9,7 @@ import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_tablica_rezultati.view.*
 
-class TablicaRezultatiAdapter(private val sviPokusRezultatiUBazi: List<Rezultat>): RecyclerView.Adapter<TablicaRezultatiAdapter.ViewHolder>() {
+class TablicaRezultatiAdapter(private val sviRezultatiUBazi: List<Rezultat>): RecyclerView.Adapter<TablicaRezultatiAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_tablica_rezultati, parent, false)
@@ -17,18 +17,18 @@ class TablicaRezultatiAdapter(private val sviPokusRezultatiUBazi: List<Rezultat>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.pokusDatumRezultat.text = sviPokusRezultatiUBazi[position].datumRezultat
-        holder.itemView.pokusProtivniciRezultat.text = sviPokusRezultatiUBazi[position].ogledRezultat
-        holder.itemView.pokusRezultatUtakmice.text = sviPokusRezultatiUBazi[position].rezultatUtakmice
-        holder.itemView.pokusIshodRezultat.text = sviPokusRezultatiUBazi[position].ishodRezultat
+        holder.itemView.tablicaDatumRezultat.text = sviRezultatiUBazi[position].datumRezultat
+        holder.itemView.tablicaProtivniciRezultat.text = sviRezultatiUBazi[position].ogledRezultat
+        holder.itemView.tablicaRezultatUtakmice.text = sviRezultatiUBazi[position].rezultatUtakmice
+        holder.itemView.tablicaIshodRezultat.text = sviRezultatiUBazi[position].ishodRezultat
     }
 
-    override fun getItemCount() = sviPokusRezultatiUBazi.size
+    override fun getItemCount() = sviRezultatiUBazi.size
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val datumRezultatPokus: TextView = itemView.pokusDatumRezultat
-        val protivniciRezultatPokus: TextView = itemView.pokusProtivniciRezultat
-        val rezultatUtakmicePokus: TextView = itemView.pokusRezultatUtakmice
-        val ishodRezultatPokus: TextView = itemView.pokusIshodRezultat
+        val datumRezultat: TextView = itemView.tablicaDatumRezultat
+        val protivniciRezultat: TextView = itemView.tablicaProtivniciRezultat
+        val rezultatUtakmice: TextView = itemView.tablicaRezultatUtakmice
+        val ishodRezultat: TextView = itemView.tablicaIshodRezultat
     }
 }

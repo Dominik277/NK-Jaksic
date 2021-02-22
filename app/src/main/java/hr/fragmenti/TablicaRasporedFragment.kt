@@ -39,8 +39,8 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
                 .build()
         }
 
-        pokusRecyclerViewRaspored.addItemDecoration(DividerItemDecoration
-            (pokusRecyclerViewRaspored.context,DividerItemDecoration.VERTICAL))
+        tablicaRecyclerViewRaspored.addItemDecoration(DividerItemDecoration
+            (tablicaRecyclerViewRaspored.context,DividerItemDecoration.VERTICAL))
 /*
         database?.rasporedDao()?.insertRaspored(Raspored(0,"21.02","NK Jakšić-NK Kuzmica"))
         database?.rasporedDao()?.insertRaspored(Raspored(1,"21.02","NK Jakšić-NK Požega"))
@@ -55,9 +55,9 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val examplePokusRasporedList = database?.rasporedDao()?.getRasporedData()
 
-        pokusRecyclerViewRaspored.adapter = examplePokusRasporedList?.let { TablicaRasporedAdapter(it) }
-        pokusRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
-        pokusRecyclerViewRaspored.setHasFixedSize(true)
+        tablicaRecyclerViewRaspored.adapter = examplePokusRasporedList?.let { TablicaRasporedAdapter(it) }
+        tablicaRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
+        tablicaRecyclerViewRaspored.setHasFixedSize(true)
 
     }
 

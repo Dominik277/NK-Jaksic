@@ -32,8 +32,8 @@ class NajboljiStrijelciFragment : Fragment(R.layout.fragment_najbolji_strijelci)
                 .build()
         }
 
-        pokusRecyclerViewNajboljiStrijelci.addItemDecoration(DividerItemDecoration
-            (pokusRecyclerViewNajboljiStrijelci.context,DividerItemDecoration.VERTICAL))
+        recyclerViewNajboljiStrijelci.addItemDecoration(DividerItemDecoration
+            (recyclerViewNajboljiStrijelci.context,DividerItemDecoration.VERTICAL))
 
 /*
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(0,1,"Domagoj Kovačević","17"))
@@ -47,9 +47,9 @@ class NajboljiStrijelciFragment : Fragment(R.layout.fragment_najbolji_strijelci)
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val pokusStrijelciList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
 
-        pokusRecyclerViewNajboljiStrijelci.adapter = pokusStrijelciList?.let { NajboljiStrijelciAdapter(it) }
-        pokusRecyclerViewNajboljiStrijelci.layoutManager = LinearLayoutManager(context)
-        pokusRecyclerViewNajboljiStrijelci.setHasFixedSize(true)
+        recyclerViewNajboljiStrijelci.adapter = pokusStrijelciList?.let { NajboljiStrijelciAdapter(it) }
+        recyclerViewNajboljiStrijelci.layoutManager = LinearLayoutManager(context)
+        recyclerViewNajboljiStrijelci.setHasFixedSize(true)
 
     }
 

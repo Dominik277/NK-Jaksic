@@ -25,8 +25,8 @@ class TablicaRezultatiFragment : Fragment(R.layout.tablica_fragment_rezultati) {
                 .build()
         }
 
-        pokusRecyclerViewRezultati.addItemDecoration(DividerItemDecoration
-            (pokusRecyclerViewRezultati.context,DividerItemDecoration.VERTICAL))
+        tablicaRecyclerViewRezultati.addItemDecoration(DividerItemDecoration
+            (tablicaRecyclerViewRezultati.context,DividerItemDecoration.VERTICAL))
 /*
         database?.rezultatiDao()?.insertRezultat(Rezultat(0,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
         database?.rezultatiDao()?.insertRezultat(Rezultat(1,"21.02","NK Jakšić-NK Požega","4:1","P"))
@@ -38,9 +38,9 @@ class TablicaRezultatiFragment : Fragment(R.layout.tablica_fragment_rezultati) {
         //database?.rezultatiDao()?.deletePodatkeRezultat()
         val examplePokusRezultatiList = database?.rezultatiDao()?.getRezultatData()
 
-        pokusRecyclerViewRezultati.adapter = examplePokusRezultatiList?.let { TablicaRezultatiAdapter(it) }
-        pokusRecyclerViewRezultati.layoutManager = LinearLayoutManager(context)
-        pokusRecyclerViewRezultati.setHasFixedSize(true)
+        tablicaRecyclerViewRezultati.adapter = examplePokusRezultatiList?.let { TablicaRezultatiAdapter(it) }
+        tablicaRecyclerViewRezultati.layoutManager = LinearLayoutManager(context)
+        tablicaRecyclerViewRezultati.setHasFixedSize(true)
 
     }
 

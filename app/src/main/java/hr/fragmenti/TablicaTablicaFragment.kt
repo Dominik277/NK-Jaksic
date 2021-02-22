@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.TablicaTablicaAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.tablica_fragment_tablica.*
 
@@ -26,9 +25,9 @@ class TablicaTablicaFragment : Fragment(R.layout.tablica_fragment_tablica) {
                 .build()
         }
 
-        pokusRecyclerViewTablica.addItemDecoration(DividerItemDecoration
-            (pokusRecyclerViewTablica.context, DividerItemDecoration.VERTICAL))
-
+        tablicaRecyclerViewTablica.addItemDecoration(DividerItemDecoration
+            (tablicaRecyclerViewTablica.context, DividerItemDecoration.VERTICAL))
+/*
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(0,1,"NK Jakšić",22,56-23,49))
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(1,2,"NK Požega",22,46-29,39))
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(2,3,"NK Lipik",22,36-13,29))
@@ -41,14 +40,14 @@ class TablicaTablicaFragment : Fragment(R.layout.tablica_fragment_tablica) {
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(9,10,"NK Trenkovo",22,16-3,19))
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(10,11,"NK Biškupci",22,16-3,19))
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(11,12,"NK Eminovci",22,16-3,19))
-
+*/
         //database.tablicaDao().deleteTablicaTablica()
 
         val svePokusTabliceUBazi = database?.tablicaDao()?.getTablicaTablica()
 
-        pokusRecyclerViewTablica.adapter = svePokusTabliceUBazi?.let { TablicaTablicaAdapter(it) }
-        pokusRecyclerViewTablica.layoutManager = LinearLayoutManager(context)
-        pokusRecyclerViewTablica.setHasFixedSize(true)
+        tablicaRecyclerViewTablica.adapter = svePokusTabliceUBazi?.let { TablicaTablicaAdapter(it) }
+        tablicaRecyclerViewTablica.layoutManager = LinearLayoutManager(context)
+        tablicaRecyclerViewTablica.setHasFixedSize(true)
 
     }
 

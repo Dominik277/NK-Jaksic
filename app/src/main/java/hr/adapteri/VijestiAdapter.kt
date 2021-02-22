@@ -10,7 +10,7 @@ import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_vijesti.view.*
 
-class VijestiAdapter(private val svePokusVijestiUBazi: List<Vijesti>): RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
+class VijestiAdapter(private val sveVijestiUBazi: List<Vijesti>): RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_vijesti, parent, false)
@@ -18,12 +18,12 @@ class VijestiAdapter(private val svePokusVijestiUBazi: List<Vijesti>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val trenutniItem = svePokusVijestiUBazi[position]
-        holder.itemView.textViewVijesti.text = svePokusVijestiUBazi[position].naslov
+        val trenutniItem = sveVijestiUBazi[position]
+        holder.itemView.textViewVijesti.text = sveVijestiUBazi[position].naslov
         holder.itemView.imageViewVijesti.setImageResource(trenutniItem.slika)
     }
 
-    override fun getItemCount() = svePokusVijestiUBazi.size
+    override fun getItemCount() = sveVijestiUBazi.size
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val textViewPokusVijesti: TextView = itemView.textViewVijesti

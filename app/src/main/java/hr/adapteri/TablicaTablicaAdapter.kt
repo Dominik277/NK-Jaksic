@@ -17,22 +17,22 @@ class TablicaTablicaAdapter (private val sveTabliceUBazi: List<TablicaTablica>) 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.pokus_tablica_pozicija.text = sveTabliceUBazi[position].pozicija.toString()
-        holder.itemView.pokus_tablica_ime.text = sveTabliceUBazi[position].imeTima
-        holder.itemView.pokus_tablica_susreti.text = sveTabliceUBazi[position].odigraniSusreti.toString()
-        holder.itemView.pokus_tablica_golovi.text = sveTabliceUBazi[position].golRazlika.toString()
-        holder.itemView.pokus_tablica_bodovi.text = sveTabliceUBazi[position].bodovi.toString()
+        holder.itemView.tablica_tablica_pozicija.text = sveTabliceUBazi[position].pozicija.toString()
+        holder.itemView.tablica_tablica_ime.text = sveTabliceUBazi[position].imeTima
+        holder.itemView.tablica_tablica_susreti.text = sveTabliceUBazi[position].odigraniSusreti.toString()
+        holder.itemView.tablica_tablica_golovi.text = sveTabliceUBazi[position].golRazlika.toString()
+        holder.itemView.tablica_tablica_bodovi.text = sveTabliceUBazi[position].bodovi.toString()
     }
 
     override fun getItemCount() = sveTabliceUBazi.size
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tablicaPozicija: TextView = itemView.pokus_tablica_pozicija
-        val tablicaIme: TextView = itemView.pokus_tablica_ime
-        val tablicaSusreti: TextView = itemView.pokus_tablica_susreti
-        val tablicaGolovi: TextView = itemView.pokus_tablica_golovi
-        val tablicaBodovi: TextView = itemView.pokus_tablica_bodovi
+        val tablicaPozicija: TextView = itemView.tablica_tablica_pozicija
+        val tablicaIme: TextView = itemView.tablica_tablica_ime
+        val tablicaSusreti: TextView = itemView.tablica_tablica_susreti
+        val tablicaGolovi: TextView = itemView.tablica_tablica_golovi
+        val tablicaBodovi: TextView = itemView.tablica_tablica_bodovi
     }
 
 }
