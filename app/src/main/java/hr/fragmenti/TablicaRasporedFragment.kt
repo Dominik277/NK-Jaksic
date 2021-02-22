@@ -9,6 +9,7 @@ import androidx.room.Room
 import hr.adapteri.TablicaRasporedAdapter
 import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
+import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.tablica_fragment_raspored.*
 
@@ -61,6 +62,27 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
 */
 /*
         database?.tablicaRasporedDao()?.insertRaspored(TablicaRaspored(1,2,
+            "19.09","NK Jakšić","NK Kuzmica","15:30",
+            "19.09","NK Vidovci","NK Požega","15:30",
+            "20.09","NK Mihaljevci","NK Trenkovo","16:00",
+            "20.09","NK Buk","NK Rajsavac","16:15",
+            "19.09","NK Papuk","NK Gradac","14:30",
+            "19.09","NK Eminovci","NK Drenovac","15:00",
+            "21.09","NK Zagrađe","NK Bučje","14:15"))
+
+
+        database?.tablicaRasporedDao()?.insertRaspored(
+            TablicaRaspored(2,3,
+            "19.09","NK Jakšić","NK Kuzmica","15:30",
+            "19.09","NK Vidovci","NK Požega","15:30",
+            "20.09","NK Mihaljevci","NK Trenkovo","16:00",
+            "20.09","NK Buk","NK Rajsavac","16:15",
+            "19.09","NK Papuk","NK Gradac","14:30",
+            "19.09","NK Eminovci","NK Drenovac","15:00",
+            "21.09","NK Zagrađe","NK Bučje","14:15")
+        )
+
+        database?.tablicaRasporedDao()?.insertRaspored(TablicaRaspored(3,4,
             "19.09","NK Jakšić","NK Kuzmica","15:30",
             "19.09","NK Vidovci","NK Požega","15:30",
             "20.09","NK Mihaljevci","NK Trenkovo","16:00",
