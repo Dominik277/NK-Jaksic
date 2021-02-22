@@ -1,13 +1,11 @@
 package hr
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import hr.dominik.nkjaki.R
-import hr.aktivnosti.TablicaActivity
 import hr.fragmenti.*
 import kotlinx.android.synthetic.main.activity_main.*
 

@@ -4,8 +4,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/linearLayoutTrakaStrijelci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/design_default_color_error">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="#"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IGRAČ"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:layout_marginLeft="37dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOLOVI"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:layout_marginLeft="190dp"/>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewNajboljiStrijelci"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearLayoutTrakaStrijelci"/>
 </RelativeLayout>
