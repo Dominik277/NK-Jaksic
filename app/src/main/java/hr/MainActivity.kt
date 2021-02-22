@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val momcadFragment = MomcadFragment()
         val vijestiFragment = VijestiFragment()
         val pocetniFragment = PocetnaStranicaFragment()
+        val tablicaFragment = TablicaFragment()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.frameLayoutMainActivity,pocetniFragment)
@@ -55,8 +56,12 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_tablica -> {
-                    val intent = Intent(this, TablicaActivity::class.java)
-                    startActivity(intent)
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.frameLayoutMainActivity, tablicaFragment)
+                        addToBackStack(null)
+                        commit()
+                        drawer.closeDrawer(GravityCompat.START)
+                    }
                     true
                 }
                 R.id.nav_vijesti -> {
