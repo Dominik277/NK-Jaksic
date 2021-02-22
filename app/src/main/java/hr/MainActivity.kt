@@ -27,9 +27,10 @@ class MainActivity : AppCompatActivity() {
         val rezultatiFragment = RezultatiFragment()
         val momcadFragment = MomcadFragment()
         val vijestiFragment = VijestiFragment()
+        val pocetniFragment = PocetnaStranicaFragment()
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.frameLayoutMainActivity,rasporedFragment)
+            replace(R.id.frameLayoutMainActivity,pocetniFragment)
             commit()
         }
 
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_rezultati -> {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,rezultatiFragment)
+                        addToBackStack(null)
                         commit()
                         drawer.closeDrawer(GravityCompat.START)
                     }
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_raspored -> {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,rasporedFragment)
+                        addToBackStack(null)
                         commit()
                         drawer.closeDrawer(GravityCompat.START)
                     }
@@ -59,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_vijesti -> {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,vijestiFragment)
+                        addToBackStack(null)
                         commit()
                         drawer.closeDrawer(GravityCompat.START)
                     }
@@ -67,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_momcad -> {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,momcadFragment)
+                        addToBackStack(null)
                         commit()
                         drawer.closeDrawer(GravityCompat.START)
                     }
