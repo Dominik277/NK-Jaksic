@@ -1,19 +1,15 @@
 package hr.fragmenti
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import hr.adapteri.NoviRasporedAdapter
+import hr.adapteri.TablicaRasporedAdapter
 import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
-import hr.adapteri.TablicaRasporedAdapter
-import hr.database.table.TablicaRaspored
 import kotlinx.android.synthetic.main.tablica_fragment_raspored.*
 
 class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
@@ -75,7 +71,7 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
 */
         //database?.tablicaRasporedDao()?.deletePodatkeRaspored()
         val sviTablicaRasporedObjekti = database?.tablicaRasporedDao()?.getRasporedData()
-        tablicaRecyclerViewRaspored.adapter = sviTablicaRasporedObjekti?.let {NoviRasporedAdapter(it)}
+        tablicaRecyclerViewRaspored.adapter = sviTablicaRasporedObjekti?.let {TablicaRasporedAdapter(it)}
         tablicaRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
         tablicaRecyclerViewRaspored.setHasFixedSize(true)
     }
