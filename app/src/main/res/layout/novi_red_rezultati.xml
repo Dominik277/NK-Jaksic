@@ -1,6 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutKolo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background">
+        <TextView
+            android:id="@+id/novi_tv_brojKola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="1.KOLO"
+            android:textSize="22dp"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=".KOLO"
+            android:textSize="22dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutPrvaUKolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/novi_tv_prvaUtakmica_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="09.09"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_domacinPrvaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Jakšić"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_gostPrvaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Kuzmica"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_rezultatPrvaUtakmica"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="4:1"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutDrugaUKolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/novi_tv_drugaUtakmica_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="09.09"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_domacinDrugaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Jakšić"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_gostDrugaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Kuzmica"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_vrijemeDrugaUtakmica"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="4:1"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutTrecaUKolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/novi_tv_trecaUtakmica_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="09.09"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_domacinTrecaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Jakšić"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_gostTrecaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Kuzmica"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_vrijemeTrecaUtakmica"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="4:1"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutCetvrtaUKolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_cetvrtaUtakmica_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="09.09"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_domacinCetvrtaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Jakšić"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_gostCetvrtaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Kuzmica"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_vrijemeCetvrtaUtakmica"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="4:1"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutPetaUKolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/novi_tv_PetaUtakmica_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="09.09"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_domacinPetaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Jakšić"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_gostPetaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Kuzmica"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_vrijemePetaUtakmica"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="4:1"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutSestaUKolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/novi_tv_SestaUtakmica_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="09.09"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_domacinSestaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Jakšić"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_gostSestaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Kuzmica"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_vrijemeSestaUtakmica"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="4:1"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/noviLinearLayoutSedmaUKolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/novi_tv_SedmaUtakmica_datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="09.09"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_domacinSedmaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Jakšić"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_gostSedmaUtakmica"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="NK Kuzmica"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/novi_tv_vrijemeSedmaUtakmica"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="3:2"
+            android:textSize="18dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+</LinearLayout>
