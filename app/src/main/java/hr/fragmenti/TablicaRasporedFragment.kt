@@ -59,8 +59,8 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
             "19.09","NK Papuk","NK Gradac","14:30",
             "19.09","NK Eminovci","NK Drenovac","15:00",
             "21.09","NK Zagrađe","NK Bučje","14:15"))
-*/
-/*
+
+
         database?.tablicaRasporedDao()?.insertRaspored(TablicaRaspored(1,2,
             "19.09","NK Jakšić","NK Kuzmica","15:30",
             "19.09","NK Vidovci","NK Požega","15:30",

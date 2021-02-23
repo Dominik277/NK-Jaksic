@@ -15,6 +15,7 @@ class TablicaFragment: Fragment(R.layout.fragment_tablica) {
         val strijelciFragment = NajboljiStrijelciFragment()
         val tablicaRezultatiFragment = TablicaRezultatiFragment()
         val tablicaRasporedFragment = TablicaRasporedFragment()
+        val noviRezultatiFragment = NoviRezultatiFragment()
 
         childFragmentManager.beginTransaction().apply {
             replace(R.id.frameLayoutTablica, tablicaTablicaFragment)
@@ -47,7 +48,7 @@ class TablicaFragment: Fragment(R.layout.fragment_tablica) {
 
         gumbRezultati.setOnClickListener {
             childFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica, tablicaRezultatiFragment)
+                replace(R.id.frameLayoutTablica, noviRezultatiFragment)
                 addToBackStack(null)
                 commit()
             }
