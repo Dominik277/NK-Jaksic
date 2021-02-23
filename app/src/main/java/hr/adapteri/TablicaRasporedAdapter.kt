@@ -12,7 +12,7 @@ class TablicaRasporedAdapter(private val sviNoviRasporediUBazi: List<TablicaRasp
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TablicaRasporedAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_tablica_raspored, parent, false)
-        return TablicaRasporedAdapter.ViewHolder(view)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TablicaRasporedAdapter.ViewHolder, position: Int) {

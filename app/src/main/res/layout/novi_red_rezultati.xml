@@ -95,7 +95,7 @@
             android:textSize="18dp"
             android:textColor="#000"/>
         <TextView
-            android:id="@+id/novi_tv_vrijemeDrugaUtakmica"
+            android:id="@+id/novi_tv_rezultatDrugaUtakmica"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -134,7 +134,7 @@
             android:textSize="18dp"
             android:textColor="#000"/>
         <TextView
-            android:id="@+id/novi_tv_vrijemeTrecaUtakmica"
+            android:id="@+id/novi_tv_rezultatTrecaUtakmica"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -149,7 +149,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tv_cetvrtaUtakmica_datum"
+            android:id="@+id/novi_tv_cetvrtaUtakmica_datum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -173,7 +173,7 @@
             android:textSize="18dp"
             android:textColor="#000"/>
         <TextView
-            android:id="@+id/novi_tv_vrijemeCetvrtaUtakmica"
+            android:id="@+id/novi_tv_rezultatCetvrtaUtakmica"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -188,7 +188,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/novi_tv_PetaUtakmica_datum"
+            android:id="@+id/novi_tv_petaUtakmica_datum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -212,7 +212,7 @@
             android:textSize="18dp"
             android:textColor="#000"/>
         <TextView
-            android:id="@+id/novi_tv_vrijemePetaUtakmica"
+            android:id="@+id/novi_tv_rezultatPetaUtakmica"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -227,7 +227,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/novi_tv_SestaUtakmica_datum"
+            android:id="@+id/novi_tv_sestaUtakmica_datum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -251,7 +251,7 @@
             android:textSize="18dp"
             android:textColor="#000"/>
         <TextView
-            android:id="@+id/novi_tv_vrijemeSestaUtakmica"
+            android:id="@+id/novi_tv_rezultatSestaUtakmica"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -266,7 +266,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/novi_tv_SedmaUtakmica_datum"
+            android:id="@+id/novi_tv_sedmaUtakmica_datum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -290,7 +290,7 @@
             android:textSize="18dp"
             android:textColor="#000"/>
         <TextView
-            android:id="@+id/novi_tv_vrijemeSedmaUtakmica"
+            android:id="@+id/novi_tv_rezultatSedmaUtakmica"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
