@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.NoviRezultati
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_tablica_raspored.view.*
-import kotlinx.android.synthetic.main.novi_red_rezultati.view.*
+import kotlinx.android.synthetic.main.jedan_red_tablica_rezultati.view.*
 
 class TablicaRezultatiAdapter(private val sviNoviRezultatiUBazi: List<NoviRezultati>): RecyclerView.Adapter<TablicaRezultatiAdapter.ViewHolder>() {
 

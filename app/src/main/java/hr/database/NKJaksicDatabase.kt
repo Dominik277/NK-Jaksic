@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import hr.database.dao.*
 import hr.database.table.*
 
-@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class,NoviRezultati::class],version = 10)
+@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class,NoviRezultati::class],version = 11)
 abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao
