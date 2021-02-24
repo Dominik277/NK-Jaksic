@@ -20,7 +20,7 @@ class TablicaTablicaAdapter (private val sveTabliceUBazi: List<TablicaTablica>) 
         holder.itemView.tablica_tablica_pozicija.text = sveTabliceUBazi[position].pozicija.toString()
         holder.itemView.tablica_tablica_ime.text = sveTabliceUBazi[position].imeTima
         holder.itemView.tablica_tablica_susreti.text = sveTabliceUBazi[position].odigraniSusreti.toString()
-        holder.itemView.tablica_tablica_golovi.text = sveTabliceUBazi[position].golRazlika.toString()
+        holder.itemView.tablica_tablica_golovi.text = sveTabliceUBazi[position].golRazlika
         holder.itemView.tablica_tablica_bodovi.text = sveTabliceUBazi[position].bodovi.toString()
     }
 

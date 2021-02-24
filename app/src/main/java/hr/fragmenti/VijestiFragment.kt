@@ -50,7 +50,7 @@ class VijestiFragment : Fragment() {
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(5,6,"Marko Marić","11"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(6,7,"Pero Perić","8"))
 */
-
+/*
         database?.vijestiDao()?.insertVijest(Vijesti(0,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
         database?.vijestiDao()?.insertVijest(Vijesti(1,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
         database?.vijestiDao()?.insertVijest(Vijesti(2,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
@@ -58,7 +58,7 @@ class VijestiFragment : Fragment() {
         database?.vijestiDao()?.insertVijest(Vijesti(4,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
         database?.vijestiDao()?.insertVijest(Vijesti(5,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
         database?.vijestiDao()?.insertVijest(Vijesti(6,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-
+*/
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val examplePokusList = database?.vijestiDao()?.getVijestiData()
 

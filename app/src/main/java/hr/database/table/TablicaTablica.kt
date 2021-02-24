@@ -20,7 +20,7 @@ data class TablicaTablica (
     val odigraniSusreti: Int,
 
     @ColumnInfo(name = "gol_razlika")
-    val golRazlika: Int,
+    val golRazlika: String,
 
     @ColumnInfo(name = "bodovi")
     val bodovi: Int,

@@ -51,7 +51,7 @@ class NajboljiStrijelciFragment : Fragment(R.layout.fragment_najbolji_strijelci)
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(11,12,"Ivan Brus","12"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(12,13,"Marko Marić","11"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(13,14,"Pero Perić","8"))
- */
+*/
 
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val pokusStrijelciList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
