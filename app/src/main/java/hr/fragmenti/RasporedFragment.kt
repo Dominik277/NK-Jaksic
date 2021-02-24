@@ -41,7 +41,7 @@ class RasporedFragment: Fragment() {
 
         recyclerViewRaspored.addItemDecoration(DividerItemDecoration
             (recyclerViewRaspored.context,DividerItemDecoration.VERTICAL))
-
+/*
         database?.rasporedDao()?.insertRaspored(Raspored(0,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","15:30"))
         database?.rasporedDao()?.insertRaspored(Raspored(1,"Liga","21.09","NK Jakšić","NK Kuzmica","15:30"))
         database?.rasporedDao()?.insertRaspored(Raspored(2,"Kup","21.09","NK Kuzmica","NK Jakšić","15:30"))
@@ -51,7 +51,7 @@ class RasporedFragment: Fragment() {
         database?.rasporedDao()?.insertRaspored(Raspored(6,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","15:30"))
         database?.rasporedDao()?.insertRaspored(Raspored(7,"Liga","21.09","NK Kuzmica","NK Jakšić","15:30"))
         database?.rasporedDao()?.insertRaspored(Raspored(8,"Prijateljska","21.09","NK Kuzmica","NK Jakšić","15:30"))
-
+*/
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val exampleRasporedList = database?.rasporedDao()?.getRasporedData()
 
