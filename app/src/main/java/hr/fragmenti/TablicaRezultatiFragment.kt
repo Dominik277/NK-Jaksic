@@ -9,38 +9,64 @@ import androidx.room.Room
 import hr.adapteri.TablicaRezultatiAdapter
 import hr.database.NKJaksicDatabase
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.tablica_fragment_rezultati.*
+import kotlinx.android.synthetic.main.novi_fragment_rezultati.*
 
-class TablicaRezultatiFragment : Fragment(R.layout.tablica_fragment_rezultati) {
+class TablicaRezultatiFragment: Fragment(R.layout.novi_fragment_rezultati) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val database = getActivity()?.let {
             Room.databaseBuilder(
-                it, NKJaksicDatabase::class.java,"nk_jaksic_baza"
+                it, NKJaksicDatabase::class.java, "nk_jaksic_baza"
             )
                 .allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build()
         }
 
-        tablicaRecyclerViewRezultati.addItemDecoration(DividerItemDecoration
-            (tablicaRecyclerViewRezultati.context,DividerItemDecoration.VERTICAL))
-/*
-        database?.rezultatiDao()?.insertRezultat(Rezultat(0,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(1,"21.02","NK Jakšić-NK Požega","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(2,"21.02","NK Jakšić-NK Vidovci","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(3,"21.02","NK Jakšić-NK Rajsavac","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(4,"21.02","NK Jakšić-NK Eminovci","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(5,"21.02","NK Jakšić-NK Buk","4:1","P"))
-*/
-        //database?.rezultatiDao()?.deletePodatkeRezultat()
-        val examplePokusRezultatiList = database?.rezultatiDao()?.getRezultatData()
+        noviRecyclerViewRezultati.addItemDecoration(DividerItemDecoration
+            (noviRecyclerViewRezultati.context,DividerItemDecoration.VERTICAL))
 
-        tablicaRecyclerViewRezultati.adapter = examplePokusRezultatiList?.let { TablicaRezultatiAdapter(it) }
-        tablicaRecyclerViewRezultati.layoutManager = LinearLayoutManager(context)
-        tablicaRecyclerViewRezultati.setHasFixedSize(true)
+/*
+        database?.noviRezultatiDao()?.insertNoviRezultati(NoviRezultati(0,1,
+            "19.09","NK Jakšić","NK Kuzmica","4:1",
+            "19.09","NK Vidovci","NK Požega","1:1",
+            "20.09","NK Mihaljevci","NK Trenkovo","2:0",
+            "20.09","NK Buk","NK Rajsavac","1:2",
+            "19.09","NK Papuk","NK Gradac","3:3",
+            "19.09","NK Eminovci","NK Drenovac","1:4",
+            "21.09","NK Zagrađe","NK Bučje","6:2"))
+        database?.noviRezultatiDao()?.insertNoviRezultati(NoviRezultati(1,2,
+            "19.09","NK Jakšić","NK Kuzmica","4:1",
+            "19.09","NK Vidovci","NK Požega","1:1",
+            "20.09","NK Mihaljevci","NK Trenkovo","2:0",
+            "20.09","NK Buk","NK Rajsavac","1:2",
+            "19.09","NK Papuk","NK Gradac","3:3",
+            "19.09","NK Eminovci","NK Drenovac","1:4",
+            "21.09","NK Zagrađe","NK Bučje","6:2"))
+        database?.noviRezultatiDao()?.insertNoviRezultati(NoviRezultati(2,3,
+            "19.09","NK Jakšić","NK Kuzmica","4:1",
+            "19.09","NK Vidovci","NK Požega","1:1",
+            "20.09","NK Mihaljevci","NK Trenkovo","2:0",
+            "20.09","NK Buk","NK Rajsavac","1:2",
+            "19.09","NK Papuk","NK Gradac","3:3",
+            "19.09","NK Eminovci","NK Drenovac","1:4",
+            "21.09","NK Zagrađe","NK Bučje","6:2"))
+        database?.noviRezultatiDao()?.insertNoviRezultati(NoviRezultati(3,4,
+            "19.09","NK Jakšić","NK Kuzmica","4:1",
+            "19.09","NK Vidovci","NK Požega","1:1",
+            "20.09","NK Mihaljevci","NK Trenkovo","2:0",
+            "20.09","NK Buk","NK Rajsavac","1:2",
+            "19.09","NK Papuk","NK Gradac","3:3",
+            "19.09","NK Eminovci","NK Drenovac","1:4",
+            "21.09","NK Zagrađe","NK Bučje","6:2"))
+*/
+        //database?.noviRezultatiDao()?.deleteNoviRezultati()
+        val sviTablicaRasporedObjekti = database?.noviRezultatiDao()?.getNoviRezultatiData()
+        noviRecyclerViewRezultati.adapter = sviTablicaRasporedObjekti?.let { TablicaRezultatiAdapter(it) }
+        noviRecyclerViewRezultati.layoutManager = LinearLayoutManager(context)
+        noviRecyclerViewRezultati.setHasFixedSize(true)
 
     }
 

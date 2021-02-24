@@ -13,9 +13,8 @@ class TablicaFragment: Fragment(R.layout.fragment_tablica) {
 
         val tablicaTablicaFragment = TablicaTablicaFragment()
         val strijelciFragment = NajboljiStrijelciFragment()
-        val tablicaRezultatiFragment = TablicaRezultatiFragment()
         val tablicaRasporedFragment = TablicaRasporedFragment()
-        val noviRezultatiFragment = NoviRezultatiFragment()
+        val noviRezultatiFragment = TablicaRezultatiFragment()
 
         childFragmentManager.beginTransaction().apply {
             replace(R.id.frameLayoutTablica, tablicaTablicaFragment)
