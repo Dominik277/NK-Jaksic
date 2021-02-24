@@ -1,52 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="10dp">
+    android:layout_height="100dp"
+    android:orientation="horizontal">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/brojIgraca"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="5"
-            android:textColor="#000"
-            android:textSize="22dp" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IME: "
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Domagoj"
+                android:textSize="18dp"
+                android:textColor="#000"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/imeIgraca"
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/brojIgraca"
-            android:layout_marginLeft="20dp"
-            android:text="Domagoj"
-            android:textColor="#000"
-            android:textSize="22dp" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="PREZIME: "
+                android:textColor="#000"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kovačević"
+                android:textSize="18dp"
+                android:textColor="#000"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/prezimeIgraca"
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imeIgraca"
-            android:layout_marginLeft="20dp"
-            android:text="Kovačević"
-            android:textColor="#000"
-            android:textSize="22dp" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="BROJ: "
+                android:textColor="#000"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="18dp"
+                android:textColor="#000"/>
+        </LinearLayout>
 
-        <ImageView
-            android:layout_width="140dp"
-            android:layout_height="120dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="30dp"
-            android:src="@drawable/face"/>
 
-    </RelativeLayout>
-</androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/face"/>
+</LinearLayout>
