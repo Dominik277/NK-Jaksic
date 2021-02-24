@@ -50,6 +50,9 @@ class RezultatiFragment: Fragment() {
         database?.rezultatiDao()?.insertRezultat(Rezultat(5,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","0:0","N"))
         database?.rezultatiDao()?.insertRezultat(Rezultat(6,"Kup","21.09","NK Jakšić","NK Kuzmica","3:0","P"))
         database?.rezultatiDao()?.insertRezultat(Rezultat(7,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","1:0","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(8,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","0:0","N"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(9,"Kup","21.09","NK Jakšić","NK Kuzmica","3:0","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(10,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","1:0","P"))
 */
         //database?.rezultatiDao()?.deletePodatkeRezultat()
         val exampleRezultatiList = database?.rezultatiDao()?.getRezultatData()

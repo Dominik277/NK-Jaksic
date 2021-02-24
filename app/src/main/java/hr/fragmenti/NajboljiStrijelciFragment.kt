@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.NajboljiStrijelciAdapter
 import hr.database.NKJaksicDatabase
+import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.*
 
@@ -43,7 +44,15 @@ class NajboljiStrijelciFragment : Fragment(R.layout.fragment_najbolji_strijelci)
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(4,5,"Ivan Brus","12"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(5,6,"Marko Marić","11"))
         database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(6,7,"Pero Perić","8"))
-*/
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(7,8,"Stjepan Šilhan","12"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(8,9,"Ivan Brus","12"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(9,10,"Marko Marić","11"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(10,11,"Pero Perić","8"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(11,12,"Ivan Brus","12"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(12,13,"Marko Marić","11"))
+        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(13,14,"Pero Perić","8"))
+ */
+
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
         val pokusStrijelciList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
 
