@@ -41,14 +41,16 @@ class RezultatiFragment: Fragment() {
 
         recyclerViewRezultati.addItemDecoration(DividerItemDecoration
             (recyclerViewRezultati.context,DividerItemDecoration.VERTICAL))
-
-        database?.rezultatiDao()?.insertRezultat(Rezultat(0,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(1,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(2,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(3,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(4,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
-        database?.rezultatiDao()?.insertRezultat(Rezultat(5,"21.02","NK Jakšić-NK Kuzmica","4:1","P"))
-
+/*
+        database?.rezultatiDao()?.insertRezultat(Rezultat(0,"Liga","21.09","NK Jakšić","NK Kuzmica","3:1","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(1,"Liga","21.09","NK Jakšić","NK Kuzmica","2:0","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(2,"kup","21.09","NK Jakšić","NK Kuzmica","2:2","N"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(3,"Liga","21.09","NK Jakšić","NK Kuzmica","1:3","I"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(4,"Kup","21.09","NK Jakšić","NK Kuzmica","0:1","I"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(5,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","0:0","N"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(6,"Kup","21.09","NK Jakšić","NK Kuzmica","3:0","P"))
+        database?.rezultatiDao()?.insertRezultat(Rezultat(7,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","1:0","P"))
+*/
         //database?.rezultatiDao()?.deletePodatkeRezultat()
         val exampleRezultatiList = database?.rezultatiDao()?.getRezultatData()
 

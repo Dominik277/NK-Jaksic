@@ -10,11 +10,17 @@ data class Rezultat (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
 
+    @ColumnInfo(name = "natjecanje_rezultat")
+    val natjecanjeRezultat: String,
+
     @ColumnInfo(name = "datum_rezultat")
     val datumRezultat: String,
 
-    @ColumnInfo(name = "ogled_rezultat")
-    val ogledRezultat: String,
+    @ColumnInfo(name = "domacin_rezultat")
+    val domacinRezultat: String,
+
+    @ColumnInfo(name = "gost_rezultat")
+    val gostRezultat: String,
 
     @ColumnInfo(name = "rezultat_utakmice")
     val rezultatUtakmice: String,

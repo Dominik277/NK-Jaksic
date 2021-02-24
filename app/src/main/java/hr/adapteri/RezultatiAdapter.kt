@@ -17,18 +17,17 @@ class RezultatiAdapter(private val sviRezultatiUBazi: List<Rezultat>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.datumRezultat.text = sviRezultatiUBazi[position].datumRezultat
-        holder.itemView.protivniciRezultat.text = sviRezultatiUBazi[position].ogledRezultat
-        holder.itemView.rezultatUtakmice.text = sviRezultatiUBazi[position].rezultatUtakmice
-        holder.itemView.ishodRezultat.text = sviRezultatiUBazi[position].ishodRezultat
+        holder.itemView.bzvz_natjecanjeRezultati.text = sviRezultatiUBazi[position].natjecanjeRezultat
+        holder.itemView.bzvz_datumRezultati.text = sviRezultatiUBazi[position].datumRezultat
+        holder.itemView.bzvz_domacinRezultati.text = sviRezultatiUBazi[position].domacinRezultat
+        holder.itemView.bzvz_gostRezultati.text = sviRezultatiUBazi[position].gostRezultat
+        holder.itemView.bzvz_rezultatRezultati.text = sviRezultatiUBazi[position].rezultatUtakmice
+        holder.itemView.bzvz_ishodRezultati.text = sviRezultatiUBazi[position].ishodRezultat
     }
 
     override fun getItemCount() = sviRezultatiUBazi.size
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val datumRezultat: TextView = itemView.datumRezultat
-        val protivniciRezultat: TextView = itemView.protivniciRezultat
-        val rezultatUtakmice: TextView = itemView.rezultatUtakmice
-        val ishodRezultat: TextView = itemView.ishodRezultat
+
     }
 }

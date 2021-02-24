@@ -5,9 +5,10 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/colorSiva">
 
         <TextView
             android:layout_width="wrap_content"
@@ -17,6 +18,7 @@
             android:textSize="22dp"/>
 
         <TextView
+            android:id="@+id/bzvz_natjecanjeRezultati"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Liga"
@@ -28,20 +30,45 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <TextView
-            android:layout_width=""
-            android:layout_height=""/>
+            android:id="@+id/bzvz_datumRezultati"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="21.09."
+            android:layout_marginLeft="5dp"
+            android:textColor="#000"
+            android:textSize="19dp"/>
         <TextView
-            android:layout_width=""
-            android:layout_height=""/>
+            android:id="@+id/bzvz_domacinRezultati"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="NK Jakšić"
+            android:textColor="#000"
+            android:textSize="19dp"/>
         <TextView
-            android:layout_width=""
-            android:layout_height=""/>
+            android:id="@+id/bzvz_gostRezultati"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="NK Kuzmica"
+            android:textColor="#000"
+            android:textSize="19dp"/>
         <TextView
-            android:layout_width=""
-            android:layout_height=""/>
+            android:id="@+id/bzvz_rezultatRezultati"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="4:1"
+            android:textColor="#000"
+            android:textSize="19dp"/>
+        <TextView
+            android:id="@+id/bzvz_ishodRezultati"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="P"
+            android:textColor="#000"
+            android:textSize="19dp"/>
 
     </LinearLayout>
 
