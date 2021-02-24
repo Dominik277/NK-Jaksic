@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.TablicaTablicaAdapter
 import hr.database.NKJaksicDatabase
+import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.tablica_fragment_tablica.*
 
@@ -40,6 +41,8 @@ class TablicaTablicaFragment : Fragment(R.layout.tablica_fragment_tablica) {
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(9,10,"NK Trenkovo",22,16-3,19))
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(10,11,"NK Biškupci",22,16-3,19))
         database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(11,12,"NK Eminovci",22,16-3,19))
+        database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(12,13,"NK Biškupci",22,16-3,19))
+        database?.tablicaDao()?.insertTablicaTablica(TablicaTablica(13,14,"NK Eminovci",22,16-3,19))
 */
         //database.tablicaDao().deleteTablicaTablica()
 
