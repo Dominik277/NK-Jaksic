@@ -41,7 +41,7 @@ class MomcadFragment: Fragment() {
 
         recyclerViewMomcad.addItemDecoration(DividerItemDecoration
             (recyclerViewMomcad.context,DividerItemDecoration.VERTICAL))
-
+/*
         database?.igraciDao()?.insertIgrac(Igraci(0,"Domagoj","Kovačević",5,R.drawable.face))
         database?.igraciDao()?.insertIgrac(Igraci(1,"Matko","Kovačević",6,R.drawable.face))
         database?.igraciDao()?.insertIgrac(Igraci(2,"Ivan","Karača",15,R.drawable.face))
@@ -54,7 +54,7 @@ class MomcadFragment: Fragment() {
         database?.igraciDao()?.insertIgrac(Igraci(9,"Marko","Grbeš",8,R.drawable.face))
         database?.igraciDao()?.insertIgrac(Igraci(10,"Stjepan","Stjepić",3,R.drawable.face))
         database?.igraciDao()?.insertIgrac(Igraci(11,"Luka","Obradović",11,R.drawable.face))
-
+*/
         //database?.igraciDao()?.deletePodatke()
 
         val examplePokusMomcadList = database?.igraciDao()?.getIgraciData()
