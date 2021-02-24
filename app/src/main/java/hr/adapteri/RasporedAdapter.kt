@@ -17,14 +17,17 @@ class RasporedAdapter(private val sviRasporediUBazi: List<Raspored>): RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.datumRaspored.text = sviRasporediUBazi[position].datum
-        holder.itemView.ogledRaspored.text = sviRasporediUBazi[position].ogled
+        holder.itemView.svastara_rasporedNatjecanje.text = sviRasporediUBazi[position].natjecanje
+        holder.itemView.svastara_rasporedDatum.text = sviRasporediUBazi[position].datum
+        holder.itemView.svastara_rasporedDomacin.text = sviRasporediUBazi[position].domacin
+        holder.itemView.svastara_rasporedGost.text = sviRasporediUBazi[position].gost
+        holder.itemView.svastara_rasporedVrijeme.text = sviRasporediUBazi[position].vrijeme
+
     }
 
     override fun getItemCount() = sviRasporediUBazi.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val datumRaspored: TextView = itemView.datumRaspored
-        val ogledRaspored: TextView = itemView.ogledRaspored
+
     }
 }
