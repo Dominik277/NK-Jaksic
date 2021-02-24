@@ -23,6 +23,7 @@
                 android:textColor="#000"
                 android:textSize="18dp"/>
             <TextView
+                android:id="@+id/momcadIme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Domagoj"
@@ -42,6 +43,7 @@
                 android:textColor="#000"
                 android:textSize="18dp"/>
             <TextView
+                android:id="@+id/momcadPrezime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kovačević"
@@ -61,6 +63,7 @@
                 android:textColor="#000"
                 android:textSize="18dp"/>
             <TextView
+                android:id="@+id/momcadBroj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
@@ -72,6 +75,7 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/momcadSlika"
         android:layout_width="140dp"
         android:layout_height="95dp"
         android:layout_marginLeft="80dp"

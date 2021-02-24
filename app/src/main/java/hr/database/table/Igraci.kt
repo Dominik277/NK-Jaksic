@@ -16,5 +16,8 @@ data class Igraci (
         val prezime: String,
 
         @ColumnInfo(name = "broj")
-        val broj: Int
+        val broj: Int,
+
+        @ColumnInfo(name = "slika")
+        val slika: Int
         )

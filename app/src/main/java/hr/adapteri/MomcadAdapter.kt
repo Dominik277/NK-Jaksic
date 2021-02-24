@@ -12,9 +12,7 @@ import kotlinx.android.synthetic.main.jedan_red_momcad.view.*
 class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) : RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val brojIgraca: TextView = itemView.brojIgraca
-        val imeIgraca: TextView = itemView.imeIgraca
-        val prezimeIgraca: TextView = itemView.prezimeIgraca
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,9 +21,10 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) : Recy
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.brojIgraca.text = sviIgraciUBazi[position].ime
-        holder.itemView.imeIgraca.text = sviIgraciUBazi[position].prezime
-        holder.itemView.prezimeIgraca.text = sviIgraciUBazi[position].broj.toString()
+        holder.itemView.momcadBroj.text = sviIgraciUBazi[position].broj.toString()
+        holder.itemView.momcadIme.text = sviIgraciUBazi[position].ime
+        holder.itemView.momcadPrezime.text = sviIgraciUBazi[position].prezime
+        holder.itemView.momcadSlika.setImageResource(sviIgraciUBazi[position].slika)
 
     }
     override fun getItemCount() = sviIgraciUBazi.size
