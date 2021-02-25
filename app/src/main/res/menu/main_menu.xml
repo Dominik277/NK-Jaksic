@@ -11,16 +11,12 @@
         android:title="Dodaj novi raspored">
     </item>
     <item
+        android:id="@+id/dodajNovogIgraca"
+        android:title="Dodaj igraca">
+    </item>
+    <item
         android:id="@+id/dodajNovuVijest"
         android:title="Dodaj novu vijest">
-    </item>
-    <item
-        android:id="@+id/urediTablicu"
-        android:title="Uredi tablicu">
-    </item>
-    <item
-        android:id="@+id/urediStrijelce"
-        android:title="Uredi strijelce">
     </item>
     <item
         android:id="@+id/dodajTablicuRapored"
@@ -31,14 +27,18 @@
         android:title="Dodaj rezultat za ligu">
     </item>
     <item
-        android:id="@+id/dodajNovogIgraca"
-        android:title="Dodaj igraca">
-    </item>
-    <item
         android:id="@+id/pretrazivac"
         android:title="Pretrazi"
         android:icon="@drawable/ic_search"
         app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/urediTablicu"
+        android:title="Uredi tablicu">
+    </item>
+    <item
+        android:id="@+id/urediStrijelce"
+        android:title="Uredi strijelce">
     </item>
 
 </menu>

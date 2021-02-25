@@ -10,6 +10,8 @@ import androidx.core.view.GravityCompat
 import hr.dominik.nkjaki.R
 import hr.fragmenti.*
 import hr.novoDodavanje.DodajNoviRaspored
+import hr.novoDodavanje.DodajNoviRasporedLiga
+import hr.novoDodavanje.DodajNoviRezultat
 import hr.novoDodavanje.DodajNovogIgraca
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -17,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     val noviIgrac = DodajNovogIgraca()
     val noviRaspored = DodajNoviRaspored()
+    val noviRezultat = DodajNoviRezultat()
+    val noviRasporedLiga = DodajNoviRasporedLiga()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,6 +123,22 @@ class MainActivity : AppCompatActivity() {
             R.id.dodajNoviRaspored -> {
                 supportFragmentManager.beginTransaction().apply {
                     replace(R.id.frameLayoutMainActivity, noviRaspored)
+                    addToBackStack(null)
+                    commit()
+                }
+                true
+            }
+            R.id.dodajNoviRezultat -> {
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.frameLayoutMainActivity, noviRezultat)
+                    addToBackStack(null)
+                    commit()
+                }
+                true
+            }
+            R.id.dodajTablicuRapored -> {
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.frameLayoutMainActivity, noviRasporedLiga)
                     addToBackStack(null)
                     commit()
                 }
