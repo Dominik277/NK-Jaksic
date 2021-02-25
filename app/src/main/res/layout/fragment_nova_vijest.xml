@@ -7,11 +7,13 @@
     android:padding="20dp">
 
     <EditText
+        android:id="@+id/novaVijestNaslov"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:hint="Ovdje unesite naslov vijesti"/>
     <EditText
+        android:id="@+id/novaVijestClanak"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -19,12 +21,14 @@
         android:gravity="bottom"
         android:hint="Ovdje unesite tekst članka"/>
     <TextView
+        android:id="@+id/novaVijestUmetanjeSlike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ovdje ce trebati umetnuti sliku, ali to kasnije"
         android:textColor="#000"
         android:textSize="22dp"/>
     <Button
+        android:id="@+id/novaVijestGumbSpremi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
