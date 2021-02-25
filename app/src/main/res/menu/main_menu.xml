@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dodajNoviRezultat"
+        android:title="Dodaj novi rezultat">
+    </item>
+    <item
+        android:id="@+id/dodajNoviRaspored"
+        android:title="Dodaj novi raspored">
+    </item>
+    <item
+        android:id="@+id/dodajNovuVijest"
+        android:title="Dodaj novu vijest">
+    </item>
+</menu>
