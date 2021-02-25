@@ -32,13 +32,5 @@
         android:icon="@drawable/ic_search"
         app:showAsAction="always">
     </item>
-    <item
-        android:id="@+id/urediTablicu"
-        android:title="Uredi tablicu">
-    </item>
-    <item
-        android:id="@+id/urediStrijelce"
-        android:title="Uredi strijelce">
-    </item>
 
 </menu>
