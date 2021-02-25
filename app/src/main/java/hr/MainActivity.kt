@@ -9,10 +9,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import hr.dominik.nkjaki.R
 import hr.fragmenti.*
+import hr.novoDodavanje.DodajNovogIgraca
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.zip.Inflater
 
 class MainActivity : AppCompatActivity() {
+
+    val noviIgrac = DodajNovogIgraca()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -99,21 +102,25 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
-                drawer.openDrawer(GravityCompat.START)
+            R.id.dodajNovogIgraca -> {
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.frameLayoutMainActivity,noviIgrac)
+                    addToBackStack(null)
+                    commit()
+                    drawer.closeDrawer(GravityCompat.START)
+                }
                 true
             }
-            else -> super.onOptionsItemSelected(item)
+            else -> false
         }
     }
 
-    override fun onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
+        override fun onBackPressed() {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START)
+            } else {
+                super.onBackPressed()
+            }
         }
+
     }
-
-
-}
