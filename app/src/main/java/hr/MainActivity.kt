@@ -2,12 +2,15 @@ package hr
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import hr.dominik.nkjaki.R
 import hr.fragmenti.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.zip.Inflater
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,6 +89,12 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.main_menu,menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

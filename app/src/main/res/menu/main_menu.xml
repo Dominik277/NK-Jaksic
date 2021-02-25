@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/dodajNoviRezultat"
@@ -13,4 +14,11 @@
         android:id="@+id/dodajNovuVijest"
         android:title="Dodaj novu vijest">
     </item>
+    <item
+        android:id="@+id/pretrazivac"
+        android:title="Pretrazi"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always">
+    </item>
+
 </menu>
