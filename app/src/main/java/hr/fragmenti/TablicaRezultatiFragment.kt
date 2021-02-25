@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.TablicaRezultatiAdapter
 import hr.database.NKJaksicDatabase
-import hr.database.table.NoviRezultati
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.novi_fragment_rezultati.*
 

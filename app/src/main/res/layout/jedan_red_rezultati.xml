@@ -19,7 +19,7 @@
             android:textSize="22dp"/>
 
         <TextView
-            android:id="@+id/bzvz_natjecanjeRezultati"
+            android:id="@+id/natjecanjeRezultati"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Liga"
@@ -35,7 +35,7 @@
         android:layout_marginBottom="10dp">
 
         <TextView
-            android:id="@+id/bzvz_datumRezultati"
+            android:id="@+id/datumRezultati"
             android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:text="21.09."
@@ -43,28 +43,28 @@
             android:textColor="#000"
             android:textSize="19dp"/>
         <TextView
-            android:id="@+id/bzvz_domacinRezultati"
+            android:id="@+id/domacinRezultati"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="NK Jakšić"
             android:textColor="#000"
             android:textSize="19dp"/>
         <TextView
-            android:id="@+id/bzvz_gostRezultati"
+            android:id="@+id/gostRezultati"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="NK Kuzmica"
             android:textColor="#000"
             android:textSize="19dp"/>
         <TextView
-            android:id="@+id/bzvz_rezultatRezultati"
+            android:id="@+id/rezultatRezultati"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:text="4:1"
             android:textColor="#000"
             android:textSize="19dp"/>
         <TextView
-            android:id="@+id/bzvz_ishodRezultati"
+            android:id="@+id/ishodRezultati"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:text="P"

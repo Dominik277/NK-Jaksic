@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "novi_rezultati")
-data class NoviRezultati (
+data class TablicaRezultati (
 
     @PrimaryKey(autoGenerate = true)
     val novi_id: Int,

@@ -3,7 +3,6 @@ package hr.adapteri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
@@ -17,11 +16,11 @@ class RasporedAdapter(private val sviRasporediUBazi: List<Raspored>): RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.svastara_rasporedNatjecanje.text = sviRasporediUBazi[position].natjecanje
-        holder.itemView.svastara_rasporedDatum.text = sviRasporediUBazi[position].datum
-        holder.itemView.svastara_rasporedDomacin.text = sviRasporediUBazi[position].domacin
-        holder.itemView.svastara_rasporedGost.text = sviRasporediUBazi[position].gost
-        holder.itemView.svastara_rasporedVrijeme.text = sviRasporediUBazi[position].vrijeme
+        holder.itemView.rasporedNatjecanje.text = sviRasporediUBazi[position].natjecanje
+        holder.itemView.rasporedDatum.text = sviRasporediUBazi[position].datum
+        holder.itemView.rasporedDomacin.text = sviRasporediUBazi[position].domacin
+        holder.itemView.rasporedGost.text = sviRasporediUBazi[position].gost
+        holder.itemView.rasporedVrijeme.text = sviRasporediUBazi[position].vrijeme
 
     }
 
