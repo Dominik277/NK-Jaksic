@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp">
 
-    <TextView
+
+    <EditText
+        android:id="@+id/noviIgracIme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="Ovdje upišite ime igrača" />
+
+    <EditText
+        android:id="@+id/noviIgracPrezime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Ovdje upišite prezime igrača" />
+
+    <EditText
+        android:id="@+id/noviIgracBroj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Ovdje upišite broj igrača"
+        android:inputType="number" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Novi igrac"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="Spremi" />
 
 </LinearLayout>
