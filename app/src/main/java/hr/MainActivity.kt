@@ -102,18 +102,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            android.R.id.home -> {
+                drawer.openDrawer(GravityCompat.START)
+                true
+            }
             R.id.dodajNovogIgraca -> {
                 supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.frameLayoutMainActivity,noviIgrac)
+                    replace(R.id.frameLayoutMainActivity, noviIgrac)
                     addToBackStack(null)
                     commit()
-                    drawer.closeDrawer(GravityCompat.START)
                 }
                 true
             }
             else -> false
         }
+
     }
+
 
         override fun onBackPressed() {
             if (drawer.isDrawerOpen(GravityCompat.START)) {
