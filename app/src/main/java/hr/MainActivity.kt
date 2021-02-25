@@ -9,12 +9,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import hr.dominik.nkjaki.R
 import hr.fragmenti.*
+import hr.novoDodavanje.DodajNoviRaspored
 import hr.novoDodavanje.DodajNovogIgraca
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     val noviIgrac = DodajNovogIgraca()
+    val noviRaspored = DodajNoviRaspored()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,6 +111,14 @@ class MainActivity : AppCompatActivity() {
             R.id.dodajNovogIgraca -> {
                 supportFragmentManager.beginTransaction().apply {
                     replace(R.id.frameLayoutMainActivity, noviIgrac)
+                    addToBackStack(null)
+                    commit()
+                }
+                true
+            }
+            R.id.dodajNoviRaspored -> {
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.frameLayoutMainActivity, noviRaspored)
                     addToBackStack(null)
                     commit()
                 }

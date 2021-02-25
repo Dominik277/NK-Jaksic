@@ -42,15 +42,6 @@ class VijestiFragment : Fragment() {
         recyclerViewVijesti.addItemDecoration(DividerItemDecoration
             (recyclerViewVijesti.context,DividerItemDecoration.VERTICAL))
 /*
-        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(0,1,"Domagoj Kovačević","17"))
-        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(1,2,"Tomislav Žuljević","14"))
-        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(2,3,"Mile Pavelić","13"))
-        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(3,4,"Stjepan Šilhan","12"))
-        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(4,5,"Ivan Brus","12"))
-        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(5,6,"Marko Marić","11"))
-        database?.najboljiStrijelciDao()?.insertNajboljiStrijelac(NajboljiStrijelci(6,7,"Pero Perić","8"))
-*/
-/*
         database?.vijestiDao()?.insertVijest(Vijesti(0,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
         database?.vijestiDao()?.insertVijest(Vijesti(1,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
         database?.vijestiDao()?.insertVijest(Vijesti(2,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
@@ -59,7 +50,7 @@ class VijestiFragment : Fragment() {
         database?.vijestiDao()?.insertVijest(Vijesti(5,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
         database?.vijestiDao()?.insertVijest(Vijesti(6,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
 */
-        //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
+        //database?.vijestiDao()?.deletePodatkeVijesti()
         val examplePokusList = database?.vijestiDao()?.getVijestiData()
 
         recyclerViewVijesti.adapter = examplePokusList?.let { VijestiAdapter(it) }
