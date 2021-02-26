@@ -1,11 +1,14 @@
 package hr.novoDodavanje
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
 import hr.viewModel.TablicaRasporedViewModel
 import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.*
@@ -34,6 +37,7 @@ class DodajNoviRasporedLigaFragment: Fragment() {
         return view
     }
 
+    @InternalCoroutinesApi
     private fun insertDataToDatabase() {
 
         val noviRasporedLigaBrojKola = noviRasporedLigaBrojKola.text.toString()
@@ -74,9 +78,42 @@ class DodajNoviRasporedLigaFragment: Fragment() {
         val noviRasporedLigaSedmiGost = noviRasporedLigaSedmiGost.text.toString()
         val noviRasporedLigaSedmiVrijeme = noviRasporedLigaSedmoVrijeme.text.toString()
 
+        if (inputCheck(noviRasporedLigaBrojKola,
+                noviRasporedLigaPrviDatum,noviRasporedLigaPrviDomacin,noviRasporedLigaPrviGost,noviRasporedLigaPrvoVrijeme,
+                noviRasporedLigaDrugiDatum,noviRasporedLigaDrugiDomacin,noviRasporedLigaDrugiGost,noviRasporedLigaDrugiVrijeme,
+                noviRasporedLigaTreciDatum,noviRasporedLigaTreciDomacin,noviRasporedLigaTreciGost,noviRasporedLigaTreciVrijeme,
+                noviRasporedLigaCetvrtiDatum,noviRasporedLigaCetvrtiDomacin,noviRasporedLigaCetvrtiGost,noviRasporedLigaCetvrtiVrijeme,
+                noviRasporedLigaPetiDatum,noviRasporedLigaPetiDomacin,noviRasporedLigaPetiGost,noviRasporedLigaPetiVrijeme,
+                noviRasporedLigaSestiDatum,noviRasporedLigaSestiDomacin,noviRasporedLigaSestiGost,noviRasporedLigaSestiVrijeme,
+                noviRasporedLigaSedmiDatum,noviRasporedLigaSedmiDomacin,noviRasporedLigaSedmiGost,noviRasporedLigaSedmiVrijeme)){
+
+            //Create object
+            val tablicaRaspored = TablicaRaspored()
+            mTablicaRasporedViewModel.addTablicaRaspored(tablicaRaspored)
+            Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
+        }else{
+            Toast.makeText(requireContext(),"Molimo unesite tekst u sva polja,",Toast.LENGTH_LONG).show()
+        }
+
     }
 
-    private fun inputCheck(){
+    private fun inputCheck(noviRasporedLigaBrojKola:String,
+                           noviRasporedLigaPrviDatum: String,noviRasporedLigaPrviDomacin:String,noviRasporedLigaPrviGost:String,noviRasporedLigaPrvoVrijeme:String,
+                           noviRasporedLigaDrugiDatum: String,noviRasporedLigaDrugiDomacin:String,noviRasporedLigaDrugiGost:String,noviRasporedLigaDrugoVrijeme:String,
+                           noviRasporedLigaTreciDatum: String,noviRasporedLigaTreciDomacin:String,noviRasporedLigaTreciGost:String,noviRasporedLigaTreceVrijeme:String,
+                           noviRasporedLigaCetvrtiDatum: String,noviRasporedLigaCetvrtiDomacin:String,noviRasporedLigaCetvrtiGost:String,noviRasporedLigaCetvrtoVrijeme:String,
+                           noviRasporedLigaPetiDatum: String,noviRasporedLigaPetiDomacin:String,noviRasporedLigaPetiGost:String,noviRasporedLigaPetoVrijeme:String,
+                           noviRasporedLigaSestiDatum: String,noviRasporedLigaSestiDomacin:String,noviRasporedLigaSestiGost:String,noviRasporedLigaSestoVrijeme:String,
+                           noviRasporedLigaSedmiDatum: String,noviRasporedLigaSedmiDomacin:String,noviRasporedLigaSedmiGost:String,noviRasporedLigaSedmoVrijeme:String): Boolean{
+
+        return !(TextUtils.isEmpty(noviRasporedLigaBrojKola)
+                && TextUtils.isEmpty(noviRasporedLigaPrviDatum) && TextUtils.isEmpty(noviRasporedLigaPrviDomacin) && TextUtils.isEmpty(noviRasporedLigaPrviGost) && TextUtils.isEmpty(noviRasporedLigaPrvoVrijeme)
+                && TextUtils.isEmpty(noviRasporedLigaDrugiDatum) && TextUtils.isEmpty(noviRasporedLigaDrugiDomacin) && TextUtils.isEmpty(noviRasporedLigaDrugiGost) && TextUtils.isEmpty(noviRasporedLigaDrugoVrijeme)
+                && TextUtils.isEmpty(noviRasporedLigaTreciDatum) && TextUtils.isEmpty(noviRasporedLigaTreciDomacin) && TextUtils.isEmpty(noviRasporedLigaTreciGost) && TextUtils.isEmpty(noviRasporedLigaTreceVrijeme)
+                && TextUtils.isEmpty(noviRasporedLigaCetvrtiDatum) && TextUtils.isEmpty(noviRasporedLigaCetvrtiDomacin) && TextUtils.isEmpty(noviRasporedLigaCetvrtiGost) && TextUtils.isEmpty(noviRasporedLigaCetvrtoVrijeme)
+                && TextUtils.isEmpty(noviRasporedLigaPetiDatum) && TextUtils.isEmpty(noviRasporedLigaPetiDomacin) && TextUtils.isEmpty(noviRasporedLigaPetiGost) && TextUtils.isEmpty(noviRasporedLigaPetoVrijeme)
+                && TextUtils.isEmpty(noviRasporedLigaSestiDatum) && TextUtils.isEmpty(noviRasporedLigaSestiDomacin) && TextUtils.isEmpty(noviRasporedLigaSestiGost) && TextUtils.isEmpty(noviRasporedLigaSestoVrijeme)
+                && TextUtils.isEmpty(noviRasporedLigaSedmiDatum) && TextUtils.isEmpty(noviRasporedLigaSedmiDomacin) && TextUtils.isEmpty(noviRasporedLigaSedmiGost) && TextUtils.isEmpty(noviRasporedLigaSedmoVrijeme))
 
     }
 
