@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_novi_raspored.view.*
 import kotlinx.android.synthetic.main.fragment_novi_rezultat.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
-class DodajNoviRasporedFragment: Fragment(R.layout.fragment_novi_raspored) {
+class DodajNoviRasporedFragment: Fragment() {
 
     @InternalCoroutinesApi
     private lateinit var mRasporedViewModel: RasporedViewModel
