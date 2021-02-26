@@ -3,12 +3,15 @@ package hr.adapteri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
-class RasporedAdapter(private val sviRasporediUBazi: List<Raspored>): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
+class RasporedAdapter(): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
+
+    private var rasporedList = emptyList<Raspored>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_raspored, parent, false)
@@ -16,17 +19,26 @@ class RasporedAdapter(private val sviRasporediUBazi: List<Raspored>): RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.rasporedNatjecanje.text = sviRasporediUBazi[position].natjecanje
-        holder.itemView.rasporedDatum.text = sviRasporediUBazi[position].datum
-        holder.itemView.rasporedDomacin.text = sviRasporediUBazi[position].domacin
-        holder.itemView.rasporedGost.text = sviRasporediUBazi[position].gost
-        holder.itemView.rasporedVrijeme.text = sviRasporediUBazi[position].vrijeme
+        val currentItem = rasporedList[position]
+        holder.itemView.rasporedNatjecanje.text = currentItem.natjecanje
+        holder.itemView.rasporedDatum.text = currentItem.datum
+        holder.itemView.rasporedDomacin.text = currentItem.domacin
+        holder.itemView.rasporedGost.text = currentItem.gost
+        holder.itemView.rasporedVrijeme.text = currentItem.vrijeme
 
     }
 
-    override fun getItemCount() = sviRasporediUBazi.size
+    override fun getItemCount(): Int{
+        return rasporedList.size
+    }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
+
+    fun setData(raspored: List<Raspored>){
+        this.rasporedList = raspored
+        notifyDataSetChanged()
+    }
+
 }

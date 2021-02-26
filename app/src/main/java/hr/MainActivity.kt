@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val noviIgrac = DodajNovogIgraca()
-    val noviRaspored = DodajNoviRaspored()
+    val noviRaspored = DodajNoviRasporedFragment()
     val noviRezultat = DodajNoviRezultat()
     val noviRasporedLiga = DodajNoviRasporedLiga()
     val noviRezultatiLiga = DodajNoviRezultatLiga()
@@ -163,8 +163,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-
         override fun onBackPressed() {
             if (drawer.isDrawerOpen(GravityCompat.START)) {
                 drawer.closeDrawer(GravityCompat.START)

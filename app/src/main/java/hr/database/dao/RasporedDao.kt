@@ -1,5 +1,6 @@
 package hr.database.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -11,10 +12,10 @@ import hr.database.table.Vijesti
 interface RasporedDao {
 
     @Query("SELECT * FROM raspored ORDER BY id asc")
-    fun getRasporedData(): List<Raspored>
+    fun getRasporedData(): LiveData<List<Raspored>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertRaspored(raspored: Raspored)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertRaspored(raspored: Raspored)
 
     @Query("DELETE FROM raspored")
     fun deletePodatkeRaspored()
