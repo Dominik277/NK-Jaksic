@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     val noviRaspored = DodajNoviRasporedFragment()
     val noviRezultat = DodajNoviRezultatFragment()
     val noviRasporedLiga = DodajNoviRasporedLigaFragment()
-    val noviRezultatiLiga = DodajNoviRezultatLiga()
+    val noviRezultatiLiga = DodajNoviRezultatLigaFragment()
     val novaVijest = DodajNovuVijest()
 
     override fun onCreate(savedInstanceState: Bundle?) {
