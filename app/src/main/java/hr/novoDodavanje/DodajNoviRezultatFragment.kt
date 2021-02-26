@@ -13,11 +13,14 @@ import hr.dominik.nkjaki.R
 import hr.viewModel.RezultatViewModel
 import kotlinx.android.synthetic.main.fragment_novi_rezultat.*
 import kotlinx.android.synthetic.main.fragment_novi_rezultat.view.*
+import kotlinx.coroutines.InternalCoroutinesApi
 
 class DodajNoviRezultatFragment: Fragment() {
 
+    @InternalCoroutinesApi
     private lateinit var mRezultatiViewModel: RezultatViewModel
 
+    @InternalCoroutinesApi
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,6 +36,7 @@ class DodajNoviRezultatFragment: Fragment() {
         return view
     }
 
+    @InternalCoroutinesApi
     private fun insertDataToDatabase() {
         val noviRezultatNatjecanje = noviRezultatNatjecanje.text.toString()
         val noviRezultatDatum = noviRezultatDatum.text.toString()
