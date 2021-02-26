@@ -65,7 +65,7 @@ class TablicaRezultatiFragment: Fragment(R.layout.novi_fragment_rezultati) {
         )
 */
         //database?.noviRezultatiDao()?.deleteNoviRezultati()
-        val sviTablicaRasporedObjekti = database?.noviRezultatiDao()?.getNoviRezultatiData()
+        val sviTablicaRasporedObjekti = database?.tablicaRezultatiDao()?.getNoviRezultatiData()
         noviRecyclerViewRezultati.adapter = sviTablicaRasporedObjekti?.let { TablicaRezultatiAdapter(it) }
         noviRecyclerViewRezultati.layoutManager = LinearLayoutManager(context)
         noviRecyclerViewRezultati.setHasFixedSize(true)

@@ -19,7 +19,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
     abstract fun rezultatiDao(): RezultatDao
     abstract fun najboljiStrijelciDao(): NajboljiStrijelciDao
     abstract fun tablicaRasporedDao(): TablicaRasporedDao
-    abstract fun noviRezultatiDao(): TablicaRezultatiDao
+    abstract fun tablicaRezultatiDao(): TablicaRezultatiDao
 
     companion object {
         @Volatile
