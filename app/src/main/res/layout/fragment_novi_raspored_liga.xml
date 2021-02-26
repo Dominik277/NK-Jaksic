@@ -24,8 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="Datum"
-            android:inputType="text" />
+            android:hint="Datum"/>
 
         <EditText
             android:id="@+id/noviRasporedLigaPrviDomacin"
@@ -60,8 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="Datum"
-            android:inputType="number" />
+            android:hint="Datum"/>
 
         <EditText
             android:id="@+id/noviRasporedLigaDrugiDomacin"
@@ -96,8 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="Datum"
-            android:inputType="number" />
+            android:hint="Datum" />
 
         <EditText
             android:id="@+id/noviRasporedLigaTreciDomacin"
@@ -132,8 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="Datum"
-            android:inputType="number" />
+            android:hint="Datum"/>
 
         <EditText
             android:id="@+id/noviRasporedLigaCetvrtiDomacin"
@@ -168,8 +164,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="Datum"
-            android:inputType="number" />
+            android:hint="Datum" />
 
         <EditText
             android:id="@+id/noviRasporedLigaPetiDomacin"
@@ -204,8 +199,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="Datum"
-            android:inputType="number" />
+            android:hint="Datum" />
 
         <EditText
             android:id="@+id/noviRasporedLigaSestiDomacin"
@@ -240,8 +234,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="Datum"
-            android:inputType="number" />
+            android:hint="Datum" />
 
         <EditText
             android:id="@+id/noviRasporedLigaSedmiDomacin"

@@ -11,7 +11,7 @@ data class TablicaRezultati (
     val novi_id: Int,
 
     @ColumnInfo(name = "novi_broj_kola")
-    val novi_brojKola: Int,
+    val novi_brojKola: String,
 
     @ColumnInfo(name = "novi_prva_utakmica_datum")
     val novi_prvaUtakmicaDatum: String,
