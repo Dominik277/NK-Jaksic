@@ -19,7 +19,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
     abstract fun rezultatiDao(): RezultatDao
     abstract fun najboljiStrijelciDao(): NajboljiStrijelciDao
     abstract fun tablicaRasporedDao(): TablicaRasporedDao
-    abstract fun noviRezultatiDao(): NoviRezultatiDao
+    abstract fun noviRezultatiDao(): TablicaRezultatiDao
 
     companion object {
         @Volatile
@@ -48,9 +48,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
                     context.applicationContext,
                     NKJaksicDatabase::class.java,
                     "nk_jaksic_baza"
-                    ).fallbackToDestructiveMigration()
-                    .allowMainThreadQueries()
-                    .build()
+                    ).build()
                 INSTANCE = instance
                 return instance
             }

@@ -7,7 +7,7 @@ import androidx.room.Query
 import hr.database.table.TablicaRezultati
 
 @Dao
-interface NoviRezultatiDao {
+interface TablicaRezultatiDao {
 
     @Query("SELECT * FROM novi_rezultati ORDER BY novi_broj_kola asc")
     fun getNoviRezultatiData(): List<TablicaRezultati>
