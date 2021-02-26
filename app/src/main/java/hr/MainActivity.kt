@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     val noviIgrac = DodajNovogIgraca()
     val noviRaspored = DodajNoviRasporedFragment()
     val noviRezultat = DodajNoviRezultatFragment()
-    val noviRasporedLiga = DodajNoviRasporedLiga()
+    val noviRasporedLiga = DodajNoviRasporedLigaFragment()
     val noviRezultatiLiga = DodajNoviRezultatLiga()
     val novaVijest = DodajNovuVijest()
 

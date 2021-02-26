@@ -20,7 +20,7 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+/*
         val database = getActivity()?.let {
             Room.databaseBuilder(
                 it, NKJaksicDatabase::class.java,"nk_jaksic_baza"
@@ -29,7 +29,7 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
                 .fallbackToDestructiveMigration()
                 .build()
         }
-
+*/
         tablicaRecyclerViewRaspored.addItemDecoration(DividerItemDecoration
             (tablicaRecyclerViewRaspored.context,DividerItemDecoration.VERTICAL))
 /*
@@ -92,10 +92,10 @@ class TablicaRasporedFragment : Fragment(R.layout.tablica_fragment_raspored) {
             "21.09","NK Zagrađe","NK Bučje","14:15"))
 */
         //database?.tablicaRasporedDao()?.deletePodatkeRaspored()
-        val sviTablicaRasporedObjekti = database?.tablicaRasporedDao()?.getRasporedData()
-        tablicaRecyclerViewRaspored.adapter = sviTablicaRasporedObjekti?.let {TablicaRasporedAdapter(it)}
-        tablicaRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
-        tablicaRecyclerViewRaspored.setHasFixedSize(true)
+        //val sviTablicaRasporedObjekti = database?.tablicaRasporedDao()?.getRasporedData()
+        //tablicaRecyclerViewRaspored.adapter = sviTablicaRasporedObjekti?.let {TablicaRasporedAdapter(it)}
+        //tablicaRecyclerViewRaspored.layoutManager = LinearLayoutManager(context)
+        //tablicaRecyclerViewRaspored.setHasFixedSize(true)
     }
 
 }
