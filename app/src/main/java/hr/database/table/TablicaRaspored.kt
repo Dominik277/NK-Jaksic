@@ -1,17 +1,18 @@
 package hr.database.table
 
+import android.text.Editable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "tablica_raspored")
-data class TablicaRaspored (
+data class TablicaRaspored(
 
     @PrimaryKey(autoGenerate = true)
     val id: Int,
 
     @ColumnInfo(name = "broj_kola")
-    val brojKola: Int,
+    val brojKola: String,
 
     @ColumnInfo(name = "prva_utakmica_datum")
     val prvaUtakmicaDatum: String,

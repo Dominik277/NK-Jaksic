@@ -1,6 +1,7 @@
 package hr.novoDodavanje
 
 import android.os.Bundle
+import android.text.Editable
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -50,45 +51,53 @@ class DodajNoviRasporedLigaFragment: Fragment() {
         val noviRasporedLigaDrugiDatum = noviRasporedLigaDrugiDatum.text.toString()
         val noviRasporedLigaDrugiDomacin = noviRasporedLigaDrugiDomacin.text.toString()
         val noviRasporedLigaDrugiGost = noviRasporedLigaDrugiGost.text.toString()
-        val noviRasporedLigaDrugiVrijeme = noviRasporedLigaDrugoVrijeme.text.toString()
+        val noviRasporedLigaDrugoVrijeme = noviRasporedLigaDrugoVrijeme.text.toString()
 
         val noviRasporedLigaTreciDatum = noviRasporedLigaTreciDatum.text.toString()
         val noviRasporedLigaTreciDomacin = noviRasporedLigaTreciDomacin.text.toString()
         val noviRasporedLigaTreciGost = noviRasporedLigaTreciGost.text.toString()
-        val noviRasporedLigaTreciVrijeme = noviRasporedLigaTreceVrijeme.text.toString()
+        val noviRasporedLigaTreceVrijeme = noviRasporedLigaTreceVrijeme.text.toString()
 
         val noviRasporedLigaCetvrtiDatum = noviRasporedLigaCetvrtiDatum.text.toString()
         val noviRasporedLigaCetvrtiDomacin = noviRasporedLigaCetvrtiDomacin.text.toString()
         val noviRasporedLigaCetvrtiGost = noviRasporedLigaCetvrtiGost.text.toString()
-        val noviRasporedLigaCetvrtiVrijeme = noviRasporedLigaCetvrtoVrijeme.text.toString()
+        val noviRasporedLigaCetvrtoVrijeme = noviRasporedLigaCetvrtoVrijeme.text.toString()
 
 
         val noviRasporedLigaPetiDatum = noviRasporedLigaPetiDatum.text.toString()
         val noviRasporedLigaPetiDomacin = noviRasporedLigaPetiDomacin.text.toString()
         val noviRasporedLigaPetiGost = noviRasporedLigaPetiGost.text.toString()
-        val noviRasporedLigaPetiVrijeme = noviRasporedLigaPetoVrijeme.text.toString()
+        val noviRasporedLigaPetoVrijeme = noviRasporedLigaPetoVrijeme.text.toString()
 
         val noviRasporedLigaSestiDatum = noviRasporedLigaSestiDatum.text.toString()
         val noviRasporedLigaSestiDomacin = noviRasporedLigaSestiDomacin.text.toString()
         val noviRasporedLigaSestiGost = noviRasporedLigaSestiGost.text.toString()
-        val noviRasporedLigaSestiVrijeme = noviRasporedLigaSestoVrijeme.text.toString()
+        val noviRasporedLigaSestoVrijeme = noviRasporedLigaSestoVrijeme.text.toString()
 
         val noviRasporedLigaSedmiDatum = noviRasporedLigaSedmiDatum.text.toString()
         val noviRasporedLigaSedmiDomacin = noviRasporedLigaSedmiDomacin.text.toString()
         val noviRasporedLigaSedmiGost = noviRasporedLigaSedmiGost.text.toString()
-        val noviRasporedLigaSedmiVrijeme = noviRasporedLigaSedmoVrijeme.text.toString()
+        val noviRasporedLigaSedmoVrijeme = noviRasporedLigaSedmoVrijeme.text.toString()
 
         if (inputCheck(noviRasporedLigaBrojKola,
                 noviRasporedLigaPrviDatum,noviRasporedLigaPrviDomacin,noviRasporedLigaPrviGost,noviRasporedLigaPrvoVrijeme,
-                noviRasporedLigaDrugiDatum,noviRasporedLigaDrugiDomacin,noviRasporedLigaDrugiGost,noviRasporedLigaDrugiVrijeme,
-                noviRasporedLigaTreciDatum,noviRasporedLigaTreciDomacin,noviRasporedLigaTreciGost,noviRasporedLigaTreciVrijeme,
-                noviRasporedLigaCetvrtiDatum,noviRasporedLigaCetvrtiDomacin,noviRasporedLigaCetvrtiGost,noviRasporedLigaCetvrtiVrijeme,
-                noviRasporedLigaPetiDatum,noviRasporedLigaPetiDomacin,noviRasporedLigaPetiGost,noviRasporedLigaPetiVrijeme,
-                noviRasporedLigaSestiDatum,noviRasporedLigaSestiDomacin,noviRasporedLigaSestiGost,noviRasporedLigaSestiVrijeme,
-                noviRasporedLigaSedmiDatum,noviRasporedLigaSedmiDomacin,noviRasporedLigaSedmiGost,noviRasporedLigaSedmiVrijeme)){
+                noviRasporedLigaDrugiDatum,noviRasporedLigaDrugiDomacin,noviRasporedLigaDrugiGost,noviRasporedLigaDrugoVrijeme,
+                noviRasporedLigaTreciDatum,noviRasporedLigaTreciDomacin,noviRasporedLigaTreciGost,noviRasporedLigaTreceVrijeme,
+                noviRasporedLigaCetvrtiDatum,noviRasporedLigaCetvrtiDomacin,noviRasporedLigaCetvrtiGost,noviRasporedLigaCetvrtoVrijeme,
+                noviRasporedLigaPetiDatum,noviRasporedLigaPetiDomacin,noviRasporedLigaPetiGost,noviRasporedLigaPetoVrijeme,
+                noviRasporedLigaSestiDatum,noviRasporedLigaSestiDomacin,noviRasporedLigaSestiGost,noviRasporedLigaSestoVrijeme,
+                noviRasporedLigaSedmiDatum,noviRasporedLigaSedmiDomacin,noviRasporedLigaSedmiGost,noviRasporedLigaSedmoVrijeme)){
 
             //Create object
-            val tablicaRaspored = TablicaRaspored()
+            val tablicaRaspored = TablicaRaspored(0,noviRasporedLigaBrojKola,
+                noviRasporedLigaPrviDatum,noviRasporedLigaPrviDomacin,noviRasporedLigaPrviGost,noviRasporedLigaPrvoVrijeme,
+                noviRasporedLigaDrugiDatum,noviRasporedLigaDrugiDomacin,noviRasporedLigaDrugiGost,noviRasporedLigaDrugoVrijeme,
+                noviRasporedLigaTreciDatum,noviRasporedLigaTreciDomacin,noviRasporedLigaTreciGost,noviRasporedLigaTreceVrijeme,
+                noviRasporedLigaCetvrtiDatum,noviRasporedLigaCetvrtiDomacin,noviRasporedLigaCetvrtiGost,noviRasporedLigaCetvrtoVrijeme,
+                noviRasporedLigaPetiDatum,noviRasporedLigaPetiDomacin,noviRasporedLigaPetiGost,noviRasporedLigaPetoVrijeme,
+                noviRasporedLigaSestiDatum,noviRasporedLigaSestiDomacin,noviRasporedLigaSestiGost,noviRasporedLigaSestoVrijeme,
+                noviRasporedLigaSedmiDatum,noviRasporedLigaSedmiDomacin,noviRasporedLigaSedmiGost,noviRasporedLigaSedmoVrijeme)
+
             mTablicaRasporedViewModel.addTablicaRaspored(tablicaRaspored)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
         }else{
@@ -97,14 +106,36 @@ class DodajNoviRasporedLigaFragment: Fragment() {
 
     }
 
-    private fun inputCheck(noviRasporedLigaBrojKola:String,
-                           noviRasporedLigaPrviDatum: String,noviRasporedLigaPrviDomacin:String,noviRasporedLigaPrviGost:String,noviRasporedLigaPrvoVrijeme:String,
-                           noviRasporedLigaDrugiDatum: String,noviRasporedLigaDrugiDomacin:String,noviRasporedLigaDrugiGost:String,noviRasporedLigaDrugoVrijeme:String,
-                           noviRasporedLigaTreciDatum: String,noviRasporedLigaTreciDomacin:String,noviRasporedLigaTreciGost:String,noviRasporedLigaTreceVrijeme:String,
-                           noviRasporedLigaCetvrtiDatum: String,noviRasporedLigaCetvrtiDomacin:String,noviRasporedLigaCetvrtiGost:String,noviRasporedLigaCetvrtoVrijeme:String,
-                           noviRasporedLigaPetiDatum: String,noviRasporedLigaPetiDomacin:String,noviRasporedLigaPetiGost:String,noviRasporedLigaPetoVrijeme:String,
-                           noviRasporedLigaSestiDatum: String,noviRasporedLigaSestiDomacin:String,noviRasporedLigaSestiGost:String,noviRasporedLigaSestoVrijeme:String,
-                           noviRasporedLigaSedmiDatum: String,noviRasporedLigaSedmiDomacin:String,noviRasporedLigaSedmiGost:String,noviRasporedLigaSedmoVrijeme:String): Boolean{
+    private fun inputCheck(
+        noviRasporedLigaBrojKola: String,
+        noviRasporedLigaPrviDatum: String,
+        noviRasporedLigaPrviDomacin:String,
+        noviRasporedLigaPrviGost:String,
+        noviRasporedLigaPrvoVrijeme:String,
+        noviRasporedLigaDrugiDatum: String,
+        noviRasporedLigaDrugiDomacin:String,
+        noviRasporedLigaDrugiGost:String,
+        noviRasporedLigaDrugoVrijeme:String,
+        noviRasporedLigaTreciDatum: String,
+        noviRasporedLigaTreciDomacin:String,
+        noviRasporedLigaTreciGost:String,
+        noviRasporedLigaTreceVrijeme:String,
+        noviRasporedLigaCetvrtiDatum: String,
+        noviRasporedLigaCetvrtiDomacin:String,
+        noviRasporedLigaCetvrtiGost:String,
+        noviRasporedLigaCetvrtoVrijeme:String,
+        noviRasporedLigaPetiDatum: String,
+        noviRasporedLigaPetiDomacin:String,
+        noviRasporedLigaPetiGost:String,
+        noviRasporedLigaPetoVrijeme:String,
+        noviRasporedLigaSestiDatum: String,
+        noviRasporedLigaSestiDomacin:String,
+        noviRasporedLigaSestiGost:String,
+        noviRasporedLigaSestoVrijeme:String,
+        noviRasporedLigaSedmiDatum: String,
+        noviRasporedLigaSedmiDomacin:String,
+        noviRasporedLigaSedmiGost:String,
+        noviRasporedLigaSedmoVrijeme:String): Boolean{
 
         return !(TextUtils.isEmpty(noviRasporedLigaBrojKola)
                 && TextUtils.isEmpty(noviRasporedLigaPrviDatum) && TextUtils.isEmpty(noviRasporedLigaPrviDomacin) && TextUtils.isEmpty(noviRasporedLigaPrviGost) && TextUtils.isEmpty(noviRasporedLigaPrvoVrijeme)

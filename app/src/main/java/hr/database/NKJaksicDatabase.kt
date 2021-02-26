@@ -9,7 +9,7 @@ import hr.database.table.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
-@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class,TablicaRezultati::class],version = 14)
+@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class,TablicaRezultati::class],version = 15)
 abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao
@@ -48,7 +48,9 @@ abstract class NKJaksicDatabase: RoomDatabase() {
                     context.applicationContext,
                     NKJaksicDatabase::class.java,
                     "nk_jaksic_baza"
-                ).build()
+                    ).fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
+                    .build()
                 INSTANCE = instance
                 return instance
             }

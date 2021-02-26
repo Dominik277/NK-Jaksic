@@ -10,7 +10,7 @@ import hr.database.table.TablicaRaspored
 @Dao
 interface TablicaRasporedDao {
 
-    @Query("SELECT * FROM tablica_raspored ORDER BY broj_kola asc")
+    @Query("SELECT * FROM tablica_raspored ORDER BY id asc")
     fun getRasporedData(): LiveData<List<TablicaRaspored>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
