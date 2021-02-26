@@ -48,9 +48,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
                     context.applicationContext,
                     NKJaksicDatabase::class.java,
                     "nk_jaksic_baza"
-                    ).fallbackToDestructiveMigration()
-                    .allowMainThreadQueries()
-                    .build()
+                    ).build()
                 INSTANCE = instance
                 return instance
             }

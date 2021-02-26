@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hr.dominik.nkjaki">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,21 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NKJakšić">
-        <activity
-            android:name="hr.aktivnosti.VijestiActivity"
-            android:parentActivityName="hr.MainActivity" />
-        <activity
-            android:name="hr.aktivnosti.TablicaActivity"
-            android:parentActivityName="hr.MainActivity" />
-        <activity
-            android:name="hr.aktivnosti.RezultatiActivity"
-            android:parentActivityName="hr.MainActivity" />
-        <activity
-            android:name="hr.aktivnosti.RasporedActivity"
-            android:parentActivityName="hr.MainActivity" />
-        <activity
-            android:name="hr.aktivnosti.MomcadActivity"
-            android:parentActivityName="hr.MainActivity" />
         <activity android:name="hr.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
