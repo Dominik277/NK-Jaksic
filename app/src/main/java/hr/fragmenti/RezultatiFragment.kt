@@ -57,7 +57,7 @@ class RezultatiFragment: Fragment() {
         //database?.rezultatiDao()?.deletePodatkeRezultat()
         val exampleRezultatiList = database?.rezultatiDao()?.getRezultatData()
 
-        recyclerViewRezultati.adapter = exampleRezultatiList?.let { RezultatiAdapter(it) }
+        //recyclerViewRezultati.adapter = exampleRezultatiList?.let { RezultatiAdapter(it) }
         recyclerViewRezultati.layoutManager = LinearLayoutManager(context)
         recyclerViewRezultati.setHasFixedSize(true)
 

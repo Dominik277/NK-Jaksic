@@ -37,8 +37,6 @@ abstract class NKJaksicDatabase: RoomDatabase() {
         }
     }
 */
-
-
         @InternalCoroutinesApi
         fun getDatabase(context: Context): NKJaksicDatabase {
             val tempInstance = INSTANCE
