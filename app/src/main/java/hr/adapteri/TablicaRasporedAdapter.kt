@@ -8,14 +8,17 @@ import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_tablica_raspored.view.*
 
-class TablicaRasporedAdapter(private val sviNoviRasporediUBazi: List<TablicaRaspored>): RecyclerView.Adapter<TablicaRasporedAdapter.ViewHolder>() {
+class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TablicaRasporedAdapter.ViewHolder {
+    val tablicaRasporedList = emptyList<TablicaRaspored>()
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_tablica_raspored, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: TablicaRasporedAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val currentItem = tablicaRasporedList[position]
         holder.itemView.tablicaRaspored_brojKola.text = sviNoviRasporediUBazi[position].brojKola.toString()
         holder.itemView.tablicaRaspored_prvaUtakmica_datum.text = sviNoviRasporediUBazi[position].prvaUtakmicaDatum
         holder.itemView.tablicaRaspored_domacinPrvaUtakmica.text = sviNoviRasporediUBazi[position].prvaUtakmicaDomacin
