@@ -1,5 +1,6 @@
 package hr.database.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -10,10 +11,10 @@ import hr.database.table.TablicaTablica
 interface TablicaTablicaDao {
 
     @Query("SELECT * FROM tablica_tablica ORDER BY pozicija asc")
-    fun getTablicaTablica(): List<TablicaTablica>
+    fun getTablicaTablica(): LiveData<List<TablicaTablica>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertTablicaTablica(tablica_tablica: TablicaTablica)
+    suspend fun insertTablicaTablica(tablica_tablica: TablicaTablica)
 
     @Query("DELETE FROM tablica_tablica")
     fun deleteTablicaTablica()
