@@ -17,8 +17,6 @@ import kotlinx.android.synthetic.main.fragment_nova_vijest.view.*
 
 class DodajNovuVijest: Fragment() {
 
-    //lateinit var imageView: ImageView
-    lateinit var button: Button
     private val pickImage = 100
     private var imageUri: Uri? = null
 
@@ -43,5 +41,4 @@ class DodajNovuVijest: Fragment() {
             imageViewVijesti.setImageURI(imageUri)
         }
     }
-
 }
