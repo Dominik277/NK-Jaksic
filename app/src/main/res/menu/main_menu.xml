@@ -27,10 +27,15 @@
         android:title="Dodaj rezultat za ligu">
     </item>
     <item
+        android:id="@+id/dodajNovogStrijelca"
+        android:title="Dodaj novog strijelca">
+    </item>
+    <item
         android:id="@+id/pretrazivac"
         android:title="Pretrazi"
         android:icon="@drawable/ic_search"
         app:showAsAction="always">
     </item>
+
 
 </menu>
