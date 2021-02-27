@@ -11,7 +11,7 @@ data class NajboljiStrijelci (
     val id: Int,
 
     @ColumnInfo(name = "pozicija_po_golovima")
-    val pozicijaPoGolovima: Int,
+    val pozicijaPoGolovima: String,
 
     @ColumnInfo(name = "ime_igraca")
     val imeIgraca: String,

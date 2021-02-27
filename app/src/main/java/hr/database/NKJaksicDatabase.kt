@@ -9,7 +9,7 @@ import hr.database.table.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
-@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class,TablicaRezultati::class],version = 16)
+@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class,TablicaRezultati::class],version = 17)
 abstract class NKJaksicDatabase: RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao

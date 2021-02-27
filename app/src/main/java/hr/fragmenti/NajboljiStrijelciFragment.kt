@@ -23,7 +23,7 @@ class NajboljiStrijelciFragment : Fragment(R.layout.fragment_najbolji_strijelci)
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 */
-
+/*
         val database = getActivity()?.let {
             Room.databaseBuilder(
                 it, NKJaksicDatabase::class.java,"nk_jaksic_baza"
@@ -32,7 +32,7 @@ class NajboljiStrijelciFragment : Fragment(R.layout.fragment_najbolji_strijelci)
                 .fallbackToDestructiveMigration()
                 .build()
         }
-
+*/
         recyclerViewNajboljiStrijelci.addItemDecoration(DividerItemDecoration
             (recyclerViewNajboljiStrijelci.context,DividerItemDecoration.VERTICAL))
 
