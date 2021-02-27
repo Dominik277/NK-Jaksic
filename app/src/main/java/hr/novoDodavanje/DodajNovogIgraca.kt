@@ -16,8 +16,9 @@ import kotlinx.android.synthetic.main.fragment_novi_igrac.view.*
 
 class DodajNovogIgraca: Fragment() {
 
-    private val pickImage = 100
-    private var imageUri: Uri? = null
+    private val REQUEST_PERMISSION = 100
+    private val REQUEST_IMAGE_CAPTURE = 1
+    private val REQUEST_PICK_IMAGE = 2
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,18 +27,35 @@ class DodajNovogIgraca: Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_novi_igrac,container, false)
 
+        view.gumbIgracUslikaj.setOnClickListener {
+            openCamera()
+        }
+
         view.gumbIgracGalerija.setOnClickListener {
-            val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-            startActivityForResult(gallery,pickImage)
+            openGallery()
         }
         return view
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == pickImage) {
-            imageUri = data?.data
-            imageViewIgrac.setImageURI(imageUri)
-        }
+    override fun onResume() {
+        super.onResume()
+        checkCameraPermission()
     }
+
+    private fun checkCameraPermission() {
+
+    }
+
+    private fun openGallery() {
+
+    }
+
+    private fun openCamera() {
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+    }
+
 }
