@@ -54,11 +54,11 @@ class NajboljiStrijelciFragment : Fragment(R.layout.fragment_najbolji_strijelci)
 */
 
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
-        val pokusStrijelciList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
+        //val pokusStrijelciList = database?.najboljiStrijelciDao()?.getNajboljiStrijelciData()
 
-        recyclerViewNajboljiStrijelci.adapter = pokusStrijelciList?.let { NajboljiStrijelciAdapter(it) }
-        recyclerViewNajboljiStrijelci.layoutManager = LinearLayoutManager(context)
-        recyclerViewNajboljiStrijelci.setHasFixedSize(true)
+        //recyclerViewNajboljiStrijelci.adapter = pokusStrijelciList?.let { NajboljiStrijelciAdapter(it) }
+        //recyclerViewNajboljiStrijelci.layoutManager = LinearLayoutManager(context)
+        //recyclerViewNajboljiStrijelci.setHasFixedSize(true)
 
     }
 
