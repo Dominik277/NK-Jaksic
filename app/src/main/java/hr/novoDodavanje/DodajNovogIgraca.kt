@@ -1,18 +1,24 @@
 package hr.novoDodavanje
 
 import android.app.Activity
+import android.app.Activity.RESULT_OK
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.fragment_nova_vijest.*
 import kotlinx.android.synthetic.main.fragment_novi_igrac.*
 import kotlinx.android.synthetic.main.fragment_novi_igrac.view.*
+import java.util.jar.Manifest
 
 class DodajNovogIgraca: Fragment() {
 
@@ -43,19 +49,44 @@ class DodajNovogIgraca: Fragment() {
     }
 
     private fun checkCameraPermission() {
-
-    }
-
-    private fun openGallery() {
-
+        if (ContextCompat.checkSelfPermission(requireContext(),android.Manifest.permission.CAMERA)
+            != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(requireActivity(),arrayOf(android.Manifest.permission.CAMERA),
+            REQUEST_PERMISSION)
+        }
     }
 
     private fun openCamera() {
+        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
+            activity?.let {
+                intent.resolveActivity(it.packageManager)?.also {
+                    startActivityForResult(intent,REQUEST_IMAGE_CAPTURE)
+                }
+            }
+        }
+    }
 
+    private fun openGallery() {
+        Intent(Intent.ACTION_GET_CONTENT).also { intent ->
+            intent.type = "image/*"
+            activity?.let {
+                intent.resolveActivity(it.packageManager)?.also {
+                    startActivityForResult(intent,REQUEST_PICK_IMAGE)
+                }
+            }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-
+        if (resultCode == RESULT_OK){
+            if (requestCode == REQUEST_IMAGE_CAPTURE) {
+                val bitmap = data?.extras?.get("data") as Bitmap
+                imageViewIgrac.setImageBitmap(bitmap)
+            }else if (requestCode == REQUEST_PICK_IMAGE) {
+                val uri = data?.getData()
+                imageViewIgrac.setImageURI(uri)
+            }
+        }
     }
 
 }
