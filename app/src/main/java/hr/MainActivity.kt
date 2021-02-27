@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     val noviRezultatiLiga = DodajNoviRezultatLigaFragment()
     val novaVijest = DodajNovuVijest()
     val noviStrijelac = DodajNovogStrijelcaFragment()
+    val novaTablica = DodajNovuTablicuFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -163,6 +164,14 @@ class MainActivity : AppCompatActivity() {
             R.id.dodajNovogStrijelca -> {
                 supportFragmentManager.beginTransaction().apply {
                     replace(R.id.frameLayoutMainActivity, noviStrijelac)
+                    addToBackStack(null)
+                    commit()
+                }
+                true
+            }
+            R.id.dodajNovuTablicu -> {
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.frameLayoutMainActivity, novaTablica)
                     addToBackStack(null)
                     commit()
                 }

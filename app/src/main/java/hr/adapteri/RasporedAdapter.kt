@@ -9,7 +9,7 @@ import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
-class RasporedAdapter(): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
+class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
 
     private var rasporedList = emptyList<Raspored>()
 

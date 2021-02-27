@@ -31,6 +31,10 @@
         android:title="Dodaj novog strijelca">
     </item>
     <item
+        android:id="@+id/dodajNovuTablicu"
+        android:title="Dodaj novu tablicu">
+    </item>
+    <item
         android:id="@+id/pretrazivac"
         android:title="Pretrazi"
         android:icon="@drawable/ic_search"
