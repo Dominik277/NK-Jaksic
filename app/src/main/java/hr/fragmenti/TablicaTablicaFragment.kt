@@ -46,11 +46,11 @@ class TablicaTablicaFragment : Fragment(R.layout.tablica_fragment_tablica) {
 */
         //database.tablicaDao().deleteTablicaTablica()
 
-        val svePokusTabliceUBazi = database?.tablicaDao()?.getTablicaTablica()
+        //val svePokusTabliceUBazi = database?.tablicaDao()?.getTablicaTablica()
 
-        tablicaRecyclerViewTablica.adapter = svePokusTabliceUBazi?.let { TablicaTablicaAdapter(it) }
-        tablicaRecyclerViewTablica.layoutManager = LinearLayoutManager(context)
-        tablicaRecyclerViewTablica.setHasFixedSize(true)
+        //tablicaRecyclerViewTablica.adapter = svePokusTabliceUBazi?.let { TablicaTablicaAdapter(it) }
+        //tablicaRecyclerViewTablica.layoutManager = LinearLayoutManager(context)
+        //tablicaRecyclerViewTablica.setHasFixedSize(true)
 
     }
 
