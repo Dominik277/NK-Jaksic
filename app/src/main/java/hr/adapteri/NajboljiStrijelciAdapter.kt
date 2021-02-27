@@ -6,12 +6,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.NajboljiStrijelci
+import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.najboljiStrijelciGolovi
 import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.najboljiStrijelciIme
 import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.najboljiStrijelciPozicija
 
-class NajboljiStrijelciAdapter(private val sviNajboljiStrijelciUBazi: List<NajboljiStrijelci>): RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {
+class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {
+
+    private var najboljiStrijelciList = emptyList<NajboljiStrijelci>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_najbolji_strijelci, parent, false)
         return ViewHolder(itemView)
@@ -19,16 +23,25 @@ class NajboljiStrijelciAdapter(private val sviNajboljiStrijelciUBazi: List<Najbo
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.najboljiStrijelciPozicija.text = sviNajboljiStrijelciUBazi[position].pozicijaPoGolovima.toString()
-        holder.najboljiStrijelciIme.text = sviNajboljiStrijelciUBazi[position].imeIgraca
-        holder.najboljiStrijelciGolovi.text = sviNajboljiStrijelciUBazi[position].brojGolova
+        val currentItem = najboljiStrijelciList[position]
+        holder.najboljiStrijelciPozicija.text = currentItem.pozicijaPoGolovima
+        holder.najboljiStrijelciIme.text = currentItem.imeIgraca
+        holder.najboljiStrijelciGolovi.text = currentItem.brojGolova
     }
 
-    override fun getItemCount() = sviNajboljiStrijelciUBazi.size
+    override fun getItemCount(): Int{
+        return  najboljiStrijelciList.size
+    }
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val najboljiStrijelciPozicija: TextView = itemView.najboljiStrijelciPozicija
         val najboljiStrijelciIme: TextView = itemView.najboljiStrijelciIme
         val najboljiStrijelciGolovi: TextView = itemView.najboljiStrijelciGolovi
     }
+
+    fun setData(najboljiStrijelac: List<NajboljiStrijelci>){
+        this.najboljiStrijelciList = najboljiStrijelac
+        notifyDataSetChanged()
+    }
+
 }
