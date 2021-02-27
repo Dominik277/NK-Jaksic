@@ -11,18 +11,18 @@ data class TablicaTablica (
     val id: Int,
 
     @ColumnInfo(name = "pozicija")
-    val pozicija: Int,
+    val pozicija: String,
 
     @ColumnInfo(name = "ime_tima")
     val imeTima: String,
 
     @ColumnInfo(name = "odigrani_susreti")
-    val odigraniSusreti: Int,
+    val odigraniSusreti: String,
 
     @ColumnInfo(name = "gol_razlika")
     val golRazlika: String,
 
     @ColumnInfo(name = "bodovi")
-    val bodovi: Int,
+    val bodovi: String,
 
         )
