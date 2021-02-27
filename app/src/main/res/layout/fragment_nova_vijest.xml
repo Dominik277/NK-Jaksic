@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:hint="Ovdje unesite naslov vijesti"/>
+        android:hint="Ovdje unesite naslov vijesti" />
+
     <EditText
         android:id="@+id/novaVijestClanak"
         android:layout_width="match_parent"
@@ -19,30 +19,42 @@
         android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:gravity="bottom"
-        android:hint="Ovdje unesite tekst članka"/>
+        android:hint="Ovdje unesite tekst članka" />
+
     <ImageView
         android:id="@+id/imageViewVijesti"
         android:layout_width="370dp"
         android:layout_height="170dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/gumbVijestGalerija"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Galerija"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Galerija" />
+
+        <Button
+            android:id="@+id/gumbVijestUslikaj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="Uslikaj" />
+
         <Button
             android:id="@+id/novaVijestGumbSpremi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="150dp"
-            android:text="Spremi"
-            android:layout_gravity="center_horizontal"/>
+            android:text="Spremi" />
 
     </LinearLayout>
 

@@ -28,10 +28,22 @@ class DodajNovuVijest: Fragment() {
         val view = inflater.inflate(R.layout.fragment_nova_vijest, container, false)
 
         view.gumbVijestGalerija.setOnClickListener {
-            val gallery = Intent(Intent.ACTION_PICK,MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-            startActivityForResult(gallery,pickImage)
+            openGallery()
         }
+
+        view.gumbVijestUslikaj.setOnClickListener {
+            openCamera()
+        }
+
         return view
+    }
+
+    private fun openCamera() {
+
+    }
+
+    private fun openGallery() {
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
