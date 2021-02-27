@@ -14,12 +14,6 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) : Recy
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        init {
-            itemView.setOnClickListener {
-                val position: Int = adapterPosition
-                Toast.makeText(itemView.context,"You clicked on item ${position}",Toast.LENGTH_SHORT).show()
-            }
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
