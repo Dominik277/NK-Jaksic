@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.LiveData
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
+import hr.fragmenti.RasporedFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
 class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
@@ -25,7 +27,13 @@ class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
         holder.itemView.rasporedDomacin.text = currentItem.domacin
         holder.itemView.rasporedGost.text = currentItem.gost
         holder.itemView.rasporedVrijeme.text = currentItem.vrijeme
-
+/*
+        holder.itemView.jedanRedRaspored.setOnLongClickListener {
+            val action = RasporedFragmentDirections.actionRasporedFragmentToUpdateRaspored(currentItem)
+            holder.itemView.findNavController().navigate(action)
+            true
+        }
+*/
     }
 
     override fun getItemCount(): Int{

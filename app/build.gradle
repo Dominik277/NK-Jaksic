@@ -5,6 +5,8 @@ plugins {
     id "org.jetbrains.kotlin.kapt"
 }
 
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -40,7 +42,6 @@ android {
 }
 
 dependencies {
-
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

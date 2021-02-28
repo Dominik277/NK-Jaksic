@@ -21,5 +21,8 @@
         <action
             android:id="@+id/action_updateRaspored_to_rasporedFragment"
             app:destination="@id/rasporedFragment" />
+        <argument
+            android:name="currentRaspored"
+            app:argType="hr.database.table.Raspored" />
     </fragment>
 </navigation>
