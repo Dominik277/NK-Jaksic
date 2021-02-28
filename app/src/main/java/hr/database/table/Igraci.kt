@@ -18,6 +18,6 @@ data class Igraci (
         @ColumnInfo(name = "broj")
         val broj: Int,
 
-        @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
-        val slika: ByteArray? = null
+        @ColumnInfo(name = "slika")
+        val slika: Int
         )

@@ -57,11 +57,11 @@ class MomcadFragment: Fragment() {
 */
         //database?.igraciDao()?.deletePodatke()
 
-        val examplePokusMomcadList = database?.igraciDao()?.getIgraciData()
+        //val examplePokusMomcadList = database?.igraciDao()?.getIgraciData()
 
-        recyclerViewMomcad.adapter = examplePokusMomcadList?.let { MomcadAdapter(it) }
-        recyclerViewMomcad.layoutManager = LinearLayoutManager(context)
-        recyclerViewMomcad.setHasFixedSize(true)
+        //recyclerViewMomcad.adapter = examplePokusMomcadList?.let { MomcadAdapter(it) }
+        //recyclerViewMomcad.layoutManager = LinearLayoutManager(context)
+        //recyclerViewMomcad.setHasFixedSize(true)
 
     }
 

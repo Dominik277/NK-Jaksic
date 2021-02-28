@@ -25,7 +25,7 @@ class MomcadAdapter constructor(private val sviIgraciUBazi: List<Igraci>) : Recy
         holder.itemView.momcadBroj.text = sviIgraciUBazi[position].broj.toString()
         holder.itemView.momcadIme.text = sviIgraciUBazi[position].ime
         holder.itemView.momcadPrezime.text = sviIgraciUBazi[position].prezime
-        holder.itemView.momcadSlika.setImageResource(sviIgraciUBazi[position].slika)
+        //holder.itemView.momcadSlika.setImageResource(sviIgraciUBazi[position].slika)
 
     }
     override fun getItemCount() = sviIgraciUBazi.size
