@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_pokus_raspored"
-    app:startDestination="@id/pokusRasporedFragment">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_pokus_raspored"
+    app:startDestination="@id/rasporedFragment">
     <fragment
-        android:id="@+id/pokusRasporedFragment"
+        android:id="@+id/rasporedFragment"
         android:name="hr.fragmenti.RasporedFragment"
-        android:label="PokusRasporedFragment" />
+        android:label="RasporedFragment"
+        tools:layout="@layout/fragment_raspored">
+        <action
+            android:id="@+id/action_rasporedFragment_to_updateRaspored"
+            app:destination="@id/updateRaspored" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRaspored"
+        android:name="hr.updateFragmenti.UpdateRaspored"
+        android:label="UpdateRaspored"
+        tools:layout="@layout/update_fragment_raspored">
+        <action
+            android:id="@+id/action_updateRaspored_to_rasporedFragment"
+            app:destination="@id/rasporedFragment" />
+    </fragment>
 </navigation>
