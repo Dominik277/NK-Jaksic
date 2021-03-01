@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/my_nav"
+    app:startDestination="@id/pocetnaStranicaFragment">
+
+    <fragment
+        android:id="@+id/pocetnaStranicaFragment"
+        android:name="hr.fragmenti.PocetnaStranicaFragment"
+        android:label="PocetnaStranicaFragment" >
+        <action
+            android:id="@+id/action_pocetnaStranicaFragment_to_rasporedFragment2"
+            app:destination="@id/rasporedFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/rasporedFragment2"
+        android:name="hr.fragmenti.RasporedFragment"
+        android:label="RasporedFragment" >
+        <action
+            android:id="@+id/action_rasporedFragment2_to_pocetnaStranicaFragment"
+            app:destination="@id/pocetnaStranicaFragment" />
+        <action
+            android:id="@+id/action_rasporedFragment2_to_updateRaspored2"
+            app:destination="@id/updateRaspored2" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRaspored2"
+        android:name="hr.updateFragmenti.UpdateRaspored"
+        android:label="UpdateRaspored" >
+        <action
+            android:id="@+id/action_updateRaspored2_to_pocetnaStranicaFragment"
+            app:destination="@id/pocetnaStranicaFragment" />
+    </fragment>
+</navigation>
