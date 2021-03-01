@@ -12,4 +12,16 @@ class RasporedRepository(private val rasporedDao: RasporedDao) {
         rasporedDao.insertRaspored(raspored)
     }
 
+    suspend fun updateRaspored(raspored: Raspored){
+        rasporedDao.updateRaspored(raspored)
+    }
+
+    suspend fun deleteRaspored(raspored: Raspored){
+        rasporedDao.deleteRaspored(raspored)
+    }
+
+    suspend fun deleteAllRaspored(){
+        rasporedDao.deleteAllRaspored()
+    }
+
 }
