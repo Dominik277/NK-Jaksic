@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         val vijestiFragment = VijestiFragment()
         val pocetniFragment = PocetnaStranicaFragment()
         val tablicaFragment = TablicaFragment()
+        val pocetnaFragment = PocetnaStranicaFragment()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.frameLayoutMainActivity,pocetniFragment)
@@ -48,6 +49,15 @@ class MainActivity : AppCompatActivity() {
 
         navigation_view.setNavigationItemSelectedListener {
             when (it.itemId) {
+                R.id.nav_pocetnaStranica -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.frameLayoutMainActivity,pocetnaFragment)
+                        addToBackStack(null)
+                        commit()
+                        drawer.closeDrawer(GravityCompat.START)
+                    }
+                    true
+                }
                 R.id.nav_rezultati -> {
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.frameLayoutMainActivity,rezultatiFragment)

@@ -50,6 +50,7 @@ class RasporedFragment: Fragment() {
             adapter.setData(raspored)
         })
 
+
         return view
 
     }
