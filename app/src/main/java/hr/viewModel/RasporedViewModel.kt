@@ -29,4 +29,22 @@ class RasporedViewModel(application: Application): AndroidViewModel(application)
         }
     }
 
+    fun updateRaspored(raspored: Raspored){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateRaspored(raspored)
+        }
+    }
+
+    fun deleteRaspored(raspored: Raspored){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteRaspored(raspored)
+        }
+    }
+
+    fun deleteAllRaspored(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllRaspored()
+        }
+    }
+
 }
