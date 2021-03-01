@@ -18,10 +18,6 @@ class PocetnaStranicaFragment: Fragment(R.layout.fragment_pocetna_stranica) {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_pocetna_stranica,container,false)
 
-        view.gumbPokus.setOnClickListener {
-            findNavController().navigate(R.id.action_pocetnaStranicaFragment_to_rasporedFragment2)
-        }
-
         return view
     }
 
