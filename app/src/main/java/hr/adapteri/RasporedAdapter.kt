@@ -3,6 +3,7 @@ package hr.adapteri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
@@ -40,7 +41,12 @@ class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        init {
+            itemView.setOnClickListener {
+                val position: Int = adapterPosition
+                Toast.makeText(itemView.context,"You clicked ${position + 1}",Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     fun setData(raspored: List<Raspored>){
