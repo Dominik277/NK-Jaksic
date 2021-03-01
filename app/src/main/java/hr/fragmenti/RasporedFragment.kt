@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
@@ -23,6 +26,8 @@ class RasporedFragment: Fragment() {
     @InternalCoroutinesApi
     private lateinit var mRasporedViewModel: RasporedViewModel
 
+    lateinit var navController: NavController
+
     @InternalCoroutinesApi
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,6 +36,7 @@ class RasporedFragment: Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_raspored, container, false)
+
 
         //RecyclerView
         val adapter = RasporedAdapter()

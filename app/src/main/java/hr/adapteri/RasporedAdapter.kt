@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.LiveData
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
@@ -28,10 +29,8 @@ class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
         holder.itemView.rasporedGost.text = currentItem.gost
         holder.itemView.rasporedVrijeme.text = currentItem.vrijeme
 /*
-        holder.itemView.jedanRedRaspored.setOnLongClickListener {
-            val action = RasporedFragmentDirections.actionRasporedFragmentToUpdateRaspored(currentItem)
-            holder.itemView.findNavController().navigate(action)
-            true
+        holder.itemView.jedanRedRaspored.setOnClickListener {
+            findNavController().navigate(R.id.action_rasporedFragment_to_updateRaspored)
         }
 */
     }
