@@ -8,6 +8,29 @@ This app is used mainly for displaying content about my local football club, for
 can insert data in database) in separate fragment inserts data in EditText fields about schedule, results, news, league table, best scorers etc and when he clicks button
 that data is stored in database and displayed in RecyclerView.This app is still in process of making so there will be more features in future.
 
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/64093104/110255885-56062f80-7f96-11eb-997d-f0da4ce88d2d.png" width="200" height="400" />
+  <img src="https://user-images.githubusercontent.com/64093104/110255630-02471680-7f95-11eb-8184-5e2bb8908d91.png" width="200" height="400"/> 
+  <img src="https://user-images.githubusercontent.com/64093104/110255937-94035380-7f96-11eb-8199-6c534be2e53b.png" width="200" height="400"/>
+</p>
+
+<p float="left">
+    <img src="https://user-images.githubusercontent.com/64093104/110255967-a9787d80-7f96-11eb-91af-8fe280d42ac3.png" width="200" height="400"/>
+  <img src="https://user-images.githubusercontent.com/64093104/110256029-ef354600-7f96-11eb-9803-580c572ca528.png" width="200" height="400" />
+  <img src="https://user-images.githubusercontent.com/64093104/110256035-fb210800-7f96-11eb-8ee8-209189106545.png" width="200" height="400"/> 
+</p>
+
+<p float="left"> 
+  <img src="https://user-images.githubusercontent.com/64093104/110256060-1ab83080-7f97-11eb-82c3-a617f7fa2c2b.png" width="200" height="400"/>
+  <img src="https://user-images.githubusercontent.com/64093104/110256290-56072f00-7f98-11eb-9aa9-c09e1c120d4b.png" width="200" height="400"/>
+</p>
+
+<p float="left"> 
+  <img src="https://user-images.githubusercontent.com/64093104/110256194-d7aa8d00-7f97-11eb-9a68-d287e0d3db37.png" width="200" height="400"/>
+  <img src="https://user-images.githubusercontent.com/64093104/110256204-e42ee580-7f97-11eb-9b53-a03caecf13db.png" width="200" height="400"/>
+  <img src="https://user-images.githubusercontent.com/64093104/110256222-fa3ca600-7f97-11eb-97c1-c0a6f57d8a8f.png" width="200" height="400"/>
+</p>
+
 
 # Tech stack & Open-source libraries 🛠
 - Minimum SDK Level 26
