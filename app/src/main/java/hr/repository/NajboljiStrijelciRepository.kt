@@ -12,4 +12,16 @@ class NajboljiStrijelciRepository(private val najboljiStrijelciDao: NajboljiStri
         najboljiStrijelciDao.insertNajboljiStrijelac(najboljiStrijelac)
     }
 
+    suspend fun updateNajboljiStrijelci(najboljiStrijelac: NajboljiStrijelci){
+        najboljiStrijelciDao.updateNajboljiStrijelci(najboljiStrijelac)
+    }
+
+    suspend fun deleteNajboljiStrijelci(najboljiStrijelac: NajboljiStrijelci){
+        najboljiStrijelciDao.deleteNajboljiStrijelac(najboljiStrijelac)
+    }
+
+    suspend fun deleteAllNajboljiStrijelci(){
+        najboljiStrijelciDao.deleteNajboljiStrijelci()
+    }
+
 }

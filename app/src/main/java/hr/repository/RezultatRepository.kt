@@ -12,4 +12,16 @@ class RezultatRepository(private val rezultatiDao: RezultatDao) {
         rezultatiDao.insertRezultat(rezultat)
     }
 
+    suspend fun updateRezultat(rezultat: Rezultat){
+        rezultatiDao.updateRezultat(rezultat)
+    }
+
+    suspend fun deleteRezultat(rezultat: Rezultat){
+        rezultatiDao.deleteOneRezultat(rezultat)
+    }
+
+    suspend fun deleteAllRezultat(){
+        rezultatiDao.deletePodatkeRezultat()
+    }
+
 }

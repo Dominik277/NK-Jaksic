@@ -9,8 +9,11 @@ import hr.database.table.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
-@Database(entities = [Igraci::class, Vijesti::class, TablicaTablica::class,NajboljiStrijelci::class,Raspored::class,Rezultat::class,TablicaRaspored::class,TablicaRezultati::class],version = 18)
-abstract class NKJaksicDatabase: RoomDatabase() {
+@Database(
+    entities = [Igraci::class, Vijesti::class, TablicaTablica::class, NajboljiStrijelci::class, Raspored::class, Rezultat::class, TablicaRaspored::class, TablicaRezultati::class],
+    version = 18
+)
+abstract class NKJaksicDatabase : RoomDatabase() {
 
     abstract fun igraciDao(): IgraciDao
     abstract fun vijestiDao(): VijestiDao
@@ -24,19 +27,7 @@ abstract class NKJaksicDatabase: RoomDatabase() {
     companion object {
         @Volatile
         private var INSTANCE: NKJaksicDatabase? = null
-/*
-        fun getAppDatabase(context: Context): NKJaksicDatabase? {
-            if (INSTANCE == null) {
-                INSTANCE = Room.databaseBuilder(
-                    context.applicationContext, NKJaksicDatabase::class.java, "nk_jaksic_baza"
-                )
-                    .allowMainThreadQueries()
-                    .build()
-            }
-            return INSTANCE
-        }
-    }
-*/
+
         @InternalCoroutinesApi
         fun getDatabase(context: Context): NKJaksicDatabase {
             val tempInstance = INSTANCE
@@ -48,7 +39,8 @@ abstract class NKJaksicDatabase: RoomDatabase() {
                     context.applicationContext,
                     NKJaksicDatabase::class.java,
                     "nk_jaksic_baza"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 return instance
             }

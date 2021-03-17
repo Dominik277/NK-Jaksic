@@ -12,4 +12,16 @@ class TablicaRezultatiRepository(private val tablicaRezultatDao: TablicaRezultat
         tablicaRezultatDao.insertNoviRezultati(tablicaRezulatat)
     }
 
+    suspend fun updateTablicaRezultat(tablicaRezulatat: TablicaRezultati){
+        tablicaRezultatDao.updateTablicaRezultat(tablicaRezulatat)
+    }
+
+    suspend fun deleteTablicaRezultat(tablicaRezulatat: TablicaRezultati){
+        tablicaRezultatDao.deleteOneTablicaRezultati(tablicaRezulatat)
+    }
+
+    suspend fun deleteAllTablicaRezultat(){
+        tablicaRezultatDao.deleteNoviRezultati()
+    }
+
 }

@@ -12,4 +12,16 @@ class TablicaRasporedRepository(private val tablicaRasporedDao: TablicaRasporedD
         tablicaRasporedDao.insertRaspored(tablicaRaspored)
     }
 
+    suspend fun updateTablicaRaspored(tablicaRaspored: TablicaRaspored){
+        tablicaRasporedDao.updateTablicaRaspored(tablicaRaspored)
+    }
+
+    suspend fun deleteTablicaRaspored(tablicaRaspored: TablicaRaspored){
+        tablicaRasporedDao.deleteOneTablicaRaspored(tablicaRaspored)
+    }
+
+    suspend fun deleteAllTablicaRaspored(){
+        tablicaRasporedDao.deletePodatkeRaspored()
+    }
+
 }

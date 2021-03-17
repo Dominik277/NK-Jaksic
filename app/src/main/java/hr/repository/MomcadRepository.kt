@@ -12,4 +12,16 @@ class MomcadRepository(private val momcadDao: IgraciDao) {
         momcadDao.insertIgrac(momcad)
     }
 
+    suspend fun updateMomcad(igraci: Igraci){
+        momcadDao.updateIgrac(igraci)
+    }
+
+    suspend fun deleteMomcad(igraci: Igraci){
+        momcadDao.deleteIgrac(igraci)
+    }
+
+    suspend fun deleteAllMomcad(){
+        momcadDao.deletePodatke()
+    }
+
 }

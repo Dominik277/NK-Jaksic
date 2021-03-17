@@ -12,4 +12,16 @@ class TablicaTablicaRepository(private val tablicaTablicaDao: TablicaTablicaDao)
         tablicaTablicaDao.insertTablicaTablica(tablicaTablica)
     }
 
+    suspend fun updateTablicaTablica(tablicaTablica: TablicaTablica){
+        tablicaTablicaDao.updateTablicaTablica(tablicaTablica)
+    }
+
+    suspend fun deleteTablicaTablica(tablicaTablica: TablicaTablica){
+        tablicaTablicaDao.deleteOneTablicaTablica(tablicaTablica)
+    }
+
+    suspend fun deleteAllTablicaTablica(){
+        tablicaTablicaDao.deleteTablicaTablica()
+    }
+
 }
