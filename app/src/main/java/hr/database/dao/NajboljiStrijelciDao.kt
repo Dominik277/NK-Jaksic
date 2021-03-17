@@ -1,10 +1,7 @@
 package hr.database.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import hr.database.table.Igraci
 import hr.database.table.NajboljiStrijelci
 
@@ -16,6 +13,12 @@ interface NajboljiStrijelciDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertNajboljiStrijelac(najboljiStrijelac: NajboljiStrijelci)
+
+    @Update
+    suspend fun updateNajboljiStrijelci(najboljiStrijelac: NajboljiStrijelci)
+
+    @Delete
+    suspend fun deleteNajboljiStrijelac(najboljiStrijelac: NajboljiStrijelci)
 
     @Query("DELETE FROM najbolji_strijelci")
     fun deleteNajboljiStrijelci()

@@ -1,11 +1,14 @@
 package hr.database.table
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "igraci")
-data class Igraci (
+data class Igraci(
         @PrimaryKey(autoGenerate = true)
         val id: Int,
 
@@ -20,4 +23,4 @@ data class Igraci (
 
         @ColumnInfo(name = "slika")
         val slika: Int
-        )
+): Parcelable

@@ -1,9 +1,6 @@
 package hr.database.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import hr.database.table.Vijesti
 
 @Dao
@@ -14,6 +11,12 @@ interface VijestiDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertVijest(vijesti: Vijesti): Long
+
+    @Update
+    suspend fun updateVijesti(vijesti: Vijesti)
+
+    @Delete
+    suspend fun deleteVijesti(vijesti: Vijesti)
 
     @Query("DELETE FROM vijesti")
     fun deletePodatkeVijesti()

@@ -1,10 +1,7 @@
 package hr.database.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import hr.database.table.TablicaRezultati
 
 @Dao
@@ -15,6 +12,12 @@ interface TablicaRezultatiDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertNoviRezultati(noviRezultati: TablicaRezultati)
+
+    @Update
+    suspend fun updateTablicaRezultat(tablicaRezultati: TablicaRezultati)
+
+    @Delete
+    suspend fun deleteOneTablicaRezultati(tablicaRezultati: TablicaRezultati)
 
     @Query("DELETE FROM novi_rezultati")
     fun deleteNoviRezultati()

@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.LiveData
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +12,7 @@ import hr.dominik.nkjaki.R
 import hr.fragmenti.RasporedFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
-class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
+class RasporedAdapter(private val listener: OnItemClickListener): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
 
     private var rasporedList = emptyList<Raspored>()
 
@@ -40,14 +39,22 @@ class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
         return rasporedList.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),View.OnClickListener {
         init {
-            itemView.setOnClickListener {
-                val position: Int = adapterPosition
-                Toast.makeText(itemView.context,"You clicked ${position + 1}",Toast.LENGTH_LONG).show()
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position: Int = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
             }
         }
     }
+        interface OnItemClickListener{
+            fun onItemClick(position: Int)
+        }
+
 
     fun setData(raspored: List<Raspored>){
         this.rasporedList = raspored

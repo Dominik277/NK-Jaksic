@@ -13,6 +13,12 @@ interface IgraciDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertIgrac(igraci: Igraci): Long
 
+    @Update
+    suspend fun updateIgrac(igraci: Igraci)
+
+    @Delete
+    suspend fun deleteIgrac(igraci: Igraci)
+
     @Query("DELETE FROM igraci")
     fun deletePodatke()
 

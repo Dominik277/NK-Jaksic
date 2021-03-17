@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,13 +16,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
+import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import hr.viewModel.RasporedViewModel
 import kotlinx.android.synthetic.main.fragment_raspored.*
 import kotlinx.android.synthetic.main.fragment_raspored.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
-class RasporedFragment: Fragment() {
+class RasporedFragment: Fragment(), RasporedAdapter.OnItemClickListener {
+
+    private val adapter = RasporedAdapter(this)
+    private val exampleList = emptyList<Raspored>()
 
     @InternalCoroutinesApi
     private lateinit var mRasporedViewModel: RasporedViewModel
@@ -39,7 +44,6 @@ class RasporedFragment: Fragment() {
 
 
         //RecyclerView
-        val adapter = RasporedAdapter()
         val recyclerRaspored = view.recyclerViewRaspored
         recyclerRaspored.adapter = adapter
         recyclerRaspored.layoutManager = LinearLayoutManager(requireContext())
@@ -53,6 +57,13 @@ class RasporedFragment: Fragment() {
 
         return view
 
+    }
+
+    override fun onItemClick(position: Int) {
+        Toast.makeText(requireContext(), "Item $position clicked", Toast.LENGTH_SHORT).show()
+        val clickedItem: Raspored = exampleList[position]
+        clickedItem.natjecanje = "Clicked"
+        adapter.notifyItemChanged(position)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -86,6 +97,7 @@ class RasporedFragment: Fragment() {
         database?.rasporedDao()?.insertRaspored(Raspored(12,"Prijateljska","21.09","NK Kuzmica","NK Jakšić","15:30"))
 */
         //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
+
         //val exampleRasporedList = database?.rasporedDao()?.getRasporedData()
 
         //recyclerViewRaspored.adapter = exampleRasporedList?.let { RasporedAdapter(it) }

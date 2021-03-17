@@ -1,10 +1,7 @@
 package hr.database.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import hr.database.table.TablicaRaspored
 
 @Dao
@@ -15,6 +12,12 @@ interface TablicaRasporedDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertRaspored(tablicaRaspored: TablicaRaspored)
+
+    @Update
+    suspend fun updateTablicaRaspored(tablicaRaspored: TablicaRaspored)
+
+    @Delete
+    suspend fun deleteOneTablicaRaspored(tablicaRaspored: TablicaRaspored)
 
     @Query("DELETE FROM tablica_raspored")
     fun deletePodatkeRaspored()

@@ -1,9 +1,12 @@
 package hr.database.table
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "vijesti")
 data class Vijesti (
 
@@ -15,5 +18,4 @@ data class Vijesti (
 
     @ColumnInfo(name = "slika")
     val slika: Int
-
-        )
+        ):Parcelable

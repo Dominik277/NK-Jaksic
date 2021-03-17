@@ -1,10 +1,7 @@
 package hr.database.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import hr.database.table.Raspored
 import hr.database.table.Rezultat
 
@@ -16,6 +13,12 @@ interface RezultatDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRezultat(rezultat: Rezultat)
+
+    @Update
+    suspend fun updateRezultat(rezultat: Rezultat)
+
+    @Delete
+    suspend fun deleteOneRezultat(rezultat: Rezultat)
 
     @Query("DELETE FROM rezultat_rezultat")
     fun deletePodatkeRezultat()

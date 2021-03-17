@@ -1,10 +1,13 @@
 package hr.database.table
 
+import android.os.Parcelable
 import android.text.Editable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "tablica_raspored")
 data class TablicaRaspored(
 
@@ -82,4 +85,5 @@ data class TablicaRaspored(
     val sedmaUtakmicaGost: String,
     @ColumnInfo(name = "sedma_utakmica_vrijeme")
     val sedmaUtakmicaVrijeme: String
-        )
+
+    ): Parcelable
