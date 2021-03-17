@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/noviRasporedLigaBrojKola"
+        android:id="@+id/updateRasporedLigaBrojKola"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
@@ -20,98 +20,28 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/noviRasporedLigaPrviDatum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum"/>
-
-        <EditText
-            android:id="@+id/noviRasporedLigaPrviDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
-
-        <EditText
-            android:id="@+id/noviRasporedLigaPrviGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
-
-        <EditText
-            android:id="@+id/noviRasporedLigaPrvoVrijeme"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Vrijeme" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRasporedLigaDrugiDatum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum"/>
-
-        <EditText
-            android:id="@+id/noviRasporedLigaDrugiDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
-
-        <EditText
-            android:id="@+id/noviRasporedLigaDrugiGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
-
-        <EditText
-            android:id="@+id/noviRasporedLigaDrugoVrijeme"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Vrijeme" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRasporedLigaTreciDatum"
+            android:id="@+id/updateRasporedLigaPrviDatum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Datum" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaTreciDomacin"
+            android:id="@+id/updateRasporedLigaPrviDomacin"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Domacin" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaTreciGost"
+            android:id="@+id/updateRasporedLigaPrviGost"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Gost" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaTreceVrijeme"
+            android:id="@+id/updateRasporedLigaPrvoVrijeme"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -125,63 +55,28 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/noviRasporedLigaCetvrtiDatum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum"/>
-
-        <EditText
-            android:id="@+id/noviRasporedLigaCetvrtiDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
-
-        <EditText
-            android:id="@+id/noviRasporedLigaCetvrtiGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
-
-        <EditText
-            android:id="@+id/noviRasporedLigaCetvrtoVrijeme"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Vrijeme" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRasporedLigaPetiDatum"
+            android:id="@+id/updateRasporedLigaDrugiDatum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Datum" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaPetiDomacin"
+            android:id="@+id/updateRasporedLigaDrugiDomacin"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Domacin" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaPetiGost"
+            android:id="@+id/updateRasporedLigaDrugiGost"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Gost" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaPetoVrijeme"
+            android:id="@+id/updateRasporedLigaDrugoVrijeme"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -195,28 +90,28 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/noviRasporedLigaSestiDatum"
+            android:id="@+id/updateRasporedLigaTreciDatum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Datum" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaSestiDomacin"
+            android:id="@+id/updateRasporedLigaTreciDomacin"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Domacin" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaSestiGost"
+            android:id="@+id/updateRasporedLigaTreciGost"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Gost" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaSestoVrijeme"
+            android:id="@+id/updateRasporedLigaTreceVrijeme"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -230,40 +125,157 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/noviRasporedLigaSedmiDatum"
+            android:id="@+id/updateRasporedLigaCetvrtiDatum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Datum" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaSedmiDomacin"
+            android:id="@+id/updateRasporedLigaCetvrtiDomacin"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Domacin" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaSedmiGost"
+            android:id="@+id/updateRasporedLigaCetvrtiGost"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Gost" />
 
         <EditText
-            android:id="@+id/noviRasporedLigaSedmoVrijeme"
+            android:id="@+id/updateRasporedLigaCetvrtoVrijeme"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:hint="Vrijeme" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/gumbSpremiTablicaRaspored"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="Spremi" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRasporedLigaPetiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaPetiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaPetiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaPetoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSestiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSestiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSestiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSestoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSedmiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSedmiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSedmiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRasporedLigaSedmoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/gumbUpdateTablicaRaspored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Spremi" />
+        <Button
+            android:id="@+id/gumbDeleteTablicaRaspored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:text="Delete"/>
+
+    </LinearLayout>
 
 </LinearLayout>
