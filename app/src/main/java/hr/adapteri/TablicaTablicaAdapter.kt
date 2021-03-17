@@ -33,18 +33,12 @@ class TablicaTablicaAdapter : RecyclerView.Adapter<TablicaTablicaAdapter.ViewHol
     }
 
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tablicaPozicija: TextView = itemView.tablica_tablica_pozicija
-        val tablicaIme: TextView = itemView.tablica_tablica_ime
-        val tablicaSusreti: TextView = itemView.tablica_tablica_susreti
-        val tablicaGolovi: TextView = itemView.tablica_tablica_golovi
-        val tablicaBodovi: TextView = itemView.tablica_tablica_bodovi
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
     }
 
     fun setData(tablicaTablica: List<TablicaTablica>){
         this.tablicaTablicaList = tablicaTablica
         notifyDataSetChanged()
     }
-
-
 }

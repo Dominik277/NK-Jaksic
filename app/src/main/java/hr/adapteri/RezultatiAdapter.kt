@@ -32,7 +32,7 @@ class RezultatiAdapter: RecyclerView.Adapter<RezultatiAdapter.ViewHolder>() {
         return rezultatiList.size
     }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     }
 
@@ -40,5 +40,4 @@ class RezultatiAdapter: RecyclerView.Adapter<RezultatiAdapter.ViewHolder>() {
         this.rezultatiList = rezultat
         notifyDataSetChanged()
     }
-
 }

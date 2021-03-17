@@ -12,7 +12,7 @@ import hr.dominik.nkjaki.R
 import hr.fragmenti.RasporedFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
-class RasporedAdapter(private val listener: OnItemClickListener): RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
+class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
 
     private var rasporedList = emptyList<Raspored>()
 
@@ -28,37 +28,18 @@ class RasporedAdapter(private val listener: OnItemClickListener): RecyclerView.A
         holder.itemView.rasporedDomacin.text = currentItem.domacin
         holder.itemView.rasporedGost.text = currentItem.gost
         holder.itemView.rasporedVrijeme.text = currentItem.vrijeme
-/*
-        holder.itemView.jedanRedRaspored.setOnClickListener {
-            findNavController().navigate(R.id.action_rasporedFragment_to_updateRaspored)
-        }
-*/
     }
 
     override fun getItemCount(): Int{
         return rasporedList.size
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),View.OnClickListener {
-        init {
-            itemView.setOnClickListener(this)
-        }
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        override fun onClick(v: View?) {
-            val position: Int = adapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(position)
-            }
-        }
     }
-        interface OnItemClickListener{
-            fun onItemClick(position: Int)
-        }
-
 
     fun setData(raspored: List<Raspored>){
         this.rasporedList = raspored
         notifyDataSetChanged()
     }
-
 }

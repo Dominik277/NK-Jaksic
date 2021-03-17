@@ -55,7 +55,7 @@ class TablicaRezultatiAdapter: RecyclerView.Adapter<TablicaRezultatiAdapter.View
         return tablicaRezultatList.size
     }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     }
 

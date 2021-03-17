@@ -24,9 +24,9 @@ class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.Vi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = najboljiStrijelciList[position]
-        holder.najboljiStrijelciPozicija.text = currentItem.pozicijaPoGolovima
-        holder.najboljiStrijelciIme.text = currentItem.imeIgraca
-        holder.najboljiStrijelciGolovi.text = currentItem.brojGolova
+        holder.itemView.najboljiStrijelciPozicija.text = currentItem.pozicijaPoGolovima
+        holder.itemView.najboljiStrijelciIme.text = currentItem.imeIgraca
+        holder.itemView.najboljiStrijelciGolovi.text = currentItem.brojGolova
     }
 
     override fun getItemCount(): Int{
@@ -34,9 +34,7 @@ class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.Vi
     }
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val najboljiStrijelciPozicija: TextView = itemView.najboljiStrijelciPozicija
-        val najboljiStrijelciIme: TextView = itemView.najboljiStrijelciIme
-        val najboljiStrijelciGolovi: TextView = itemView.najboljiStrijelciGolovi
+
     }
 
     fun setData(najboljiStrijelac: List<NajboljiStrijelci>){

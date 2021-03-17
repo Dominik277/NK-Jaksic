@@ -55,7 +55,7 @@ class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHo
         return tablicaRasporedList.size
     }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     }
 
@@ -63,5 +63,4 @@ class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHo
         this.tablicaRasporedList = tablicaRaspored
         notifyDataSetChanged()
     }
-
 }
