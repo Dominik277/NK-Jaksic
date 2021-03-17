@@ -1,6 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/updateRezultatLigaBrojKola"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:hint="Broj kola"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPrviDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPrviDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPrviGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPrviRezultat"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Rezultat"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRezultatLigaDrugiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum"/>
+
+        <EditText
+            android:id="@+id/updateRezultatLigaDrugiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaDrugiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaDrugiRezultat"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Rezultat"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRezultatLigaTreciDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaTreciDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaTreciGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaTreciRezultat"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Rezultat"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRezultatLigaCetvrtiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaCetvrtiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaCetvrtiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaCetvrtiRezultat"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Rezultat"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPetiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPetiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPetiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaPetiRezultat"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Rezultat"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSestiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum"/>
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSestiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSestiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSestiRezultat"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Rezultat"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSedmiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSedmiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSedmiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/updateRezultatLigaSedmiRezultat"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Rezultat"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/gumbUpdateTablicaRezultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Update" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:text="Delete"/>
+    </LinearLayout>
 
 </LinearLayout>

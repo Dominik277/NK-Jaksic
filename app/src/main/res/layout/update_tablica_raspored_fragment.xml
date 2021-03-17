@@ -1,6 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/noviRasporedLigaBrojKola"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:hint="Broj kola"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPrviDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum"/>
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPrviDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPrviGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPrvoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/noviRasporedLigaDrugiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum"/>
+
+        <EditText
+            android:id="@+id/noviRasporedLigaDrugiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaDrugiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaDrugoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/noviRasporedLigaTreciDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaTreciDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaTreciGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaTreceVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/noviRasporedLigaCetvrtiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum"/>
+
+        <EditText
+            android:id="@+id/noviRasporedLigaCetvrtiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaCetvrtiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaCetvrtoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPetiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPetiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPetiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaPetoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSestiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSestiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSestiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSestoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSedmiDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Datum" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSedmiDomacin"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Domacin" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSedmiGost"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Gost" />
+
+        <EditText
+            android:id="@+id/noviRasporedLigaSedmoVrijeme"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Vrijeme" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/gumbSpremiTablicaRaspored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="Spremi" />
 
 </LinearLayout>
