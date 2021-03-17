@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/pocetnaStranicaFragment">
+    app:startDestination="@id/nav_pocetnaStranica">
 
     <fragment
-        android:id="@+id/momcadFragment"
+        android:id="@+id/nav_momcad"
         android:name="hr.fragmenti.MomcadFragment"
         android:label="MomcadFragment"
         tools:layout="@layout/fragment_momcad">
@@ -24,12 +24,12 @@
             app:destination="@id/updateNajboljiStrijalacFragment" />
     </fragment>
     <fragment
-        android:id="@+id/pocetnaStranicaFragment"
+        android:id="@+id/nav_pocetnaStranica"
         android:name="hr.fragmenti.PocetnaStranicaFragment"
         android:label="PocetnaStranicaFragment"
         tools:layout="@layout/fragment_pocetna_stranica"/>
     <fragment
-        android:id="@+id/rasporedFragment"
+        android:id="@+id/nav_raspored"
         android:name="hr.fragmenti.RasporedFragment"
         android:label="RasporedFragment"
         tools:layout="@layout/fragment_raspored">
@@ -38,7 +38,7 @@
             app:destination="@id/updateRasporedFragment" />
     </fragment>
     <fragment
-        android:id="@+id/rezultatiFragment"
+        android:id="@+id/nav_rezultati"
         android:name="hr.fragmenti.RezultatiFragment"
         android:label="RezultatiFragment"
         tools:layout="@layout/fragment_rezultati">
@@ -47,7 +47,7 @@
             app:destination="@id/updateRezultatFragment" />
     </fragment>
     <fragment
-        android:id="@+id/tablicaFragment"
+        android:id="@+id/nav_tablica"
         android:name="hr.fragmenti.TablicaFragment"
         android:label="TablicaFragment"
         tools:layout="@layout/fragment_tablica"/>
@@ -79,7 +79,7 @@
             app:destination="@id/updateTablicaTablicaFragment" />
     </fragment>
     <fragment
-        android:id="@+id/vijestiFragment"
+        android:id="@+id/nav_vijesti"
         android:name="hr.fragmenti.VijestiFragment"
         android:label="VijestiFragment"
         tools:layout="@layout/fragment_vijesti"/>
@@ -99,7 +99,7 @@
         tools:layout="@layout/update_raspored_fragment">
         <action
             android:id="@+id/action_updateRasporedFragment_to_rasporedFragment"
-            app:destination="@id/rasporedFragment" />
+            app:destination="@id/nav_raspored" />
     </fragment>
     <fragment
         android:id="@+id/updateTablicaTablicaFragment"
@@ -117,7 +117,7 @@
         tools:layout="@layout/update_rezultat_fragment">
         <action
             android:id="@+id/action_updateRezultatFragment_to_rezultatiFragment"
-            app:destination="@id/rezultatiFragment" />
+            app:destination="@id/nav_rezultati" />
     </fragment>
     <fragment
         android:id="@+id/updateMomcadFragment"
@@ -126,7 +126,7 @@
         tools:layout="@layout/update_momcad_fragment">
         <action
             android:id="@+id/action_updateMomcadFragment_to_momcadFragment"
-            app:destination="@id/momcadFragment" />
+            app:destination="@id/nav_momcad" />
     </fragment>
     <fragment
         android:id="@+id/updateTablicaRezultatFragment"
@@ -147,16 +147,16 @@
             app:destination="@id/tablicaRasporedFragment" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNoviRasporedFragment"
+        android:id="@+id/dodajNoviRaspored"
         android:name="hr.novoDodavanje.DodajNoviRasporedFragment"
         android:label="DodajNoviRasporedFragment"
         tools:layout="@layout/fragment_novi_raspored">
         <action
             android:id="@+id/action_dodajNoviRasporedFragment_to_rasporedFragment"
-            app:destination="@id/rasporedFragment" />
+            app:destination="@id/nav_raspored" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNovogStrijelcaFragment"
+        android:id="@+id/dodajNovogStrijelca"
         android:name="hr.novoDodavanje.DodajNovogStrijelcaFragment"
         android:label="DodajNovogStrijelcaFragment"
         tools:layout="@layout/fragment_novi_strijelac">
@@ -165,7 +165,7 @@
             app:destination="@id/najboljiStrijelciFragment" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNoviRasporedLigaFragment"
+        android:id="@+id/dodajTablicuRapored"
         android:name="hr.novoDodavanje.DodajNoviRasporedLigaFragment"
         android:label="DodajNoviRasporedLigaFragment"
         tools:layout="@layout/fragment_novi_raspored_liga">
@@ -174,25 +174,25 @@
             app:destination="@id/tablicaRasporedFragment" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNoviRezultatFragment"
+        android:id="@+id/dodajNoviRezultat"
         android:name="hr.novoDodavanje.DodajNoviRezultatFragment"
         android:label="DodajNoviRezultatFragment"
         tools:layout="@layout/fragment_novi_rezultat">
         <action
             android:id="@+id/action_dodajNoviRezultatFragment_to_rezultatiFragment"
-            app:destination="@id/rezultatiFragment" />
+            app:destination="@id/nav_rezultati" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNovogIgraca2"
+        android:id="@+id/dodajNovogIgraca"
         android:name="hr.novoDodavanje.DodajNovogIgraca"
         android:label="DodajNovogIgraca"
         tools:layout="@layout/fragment_novi_igrac">
         <action
             android:id="@+id/action_dodajNovogIgraca2_to_momcadFragment"
-            app:destination="@id/momcadFragment" />
+            app:destination="@id/nav_momcad" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNoviRezultatLigaFragment"
+        android:id="@+id/dodajTablicuRezultat"
         android:name="hr.novoDodavanje.DodajNoviRezultatLigaFragment"
         android:label="DodajNoviRezultatLigaFragment"
         tools:layout="@layout/fragment_novi_rezultati_liga">
@@ -201,21 +201,21 @@
             app:destination="@id/tablicaRezultatiFragment" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNovuTablicuFragment"
+        android:id="@+id/dodajNovuTablicu"
         android:name="hr.novoDodavanje.DodajNovuTablicuFragment"
         android:label="DodajNovuTablicuFragment"
         tools:layout="@layout/fragment_nova_tablica">
         <action
             android:id="@+id/action_dodajNovuTablicuFragment_to_tablicaFragment"
-            app:destination="@id/tablicaFragment" />
+            app:destination="@id/nav_tablica" />
     </fragment>
     <fragment
-        android:id="@+id/dodajNovuVijest2"
+        android:id="@+id/dodajNovuVijest"
         android:name="hr.novoDodavanje.DodajNovuVijest"
         android:label="DodajNovuVijest"
         tools:layout="@layout/fragment_nova_vijest">
         <action
             android:id="@+id/action_dodajNovuVijest2_to_vijestiFragment"
-            app:destination="@id/vijestiFragment" />
+            app:destination="@id/nav_vijesti" />
     </fragment>
 </navigation>

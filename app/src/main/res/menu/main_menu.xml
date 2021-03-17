@@ -4,42 +4,33 @@
 
     <item
         android:id="@+id/dodajNoviRezultat"
-        android:title="Dodaj novi rezultat">
-    </item>
+        android:title="Dodaj novi rezultat"></item>
     <item
         android:id="@+id/dodajNoviRaspored"
-        android:title="Dodaj novi raspored">
-    </item>
+        android:title="Dodaj novi raspored"></item>
     <item
         android:id="@+id/dodajNovogIgraca"
-        android:title="Dodaj igraca">
-    </item>
+        android:title="Dodaj igraca"></item>
     <item
         android:id="@+id/dodajNovuVijest"
-        android:title="Dodaj novu vijest">
-    </item>
+        android:title="Dodaj novu vijest"></item>
     <item
         android:id="@+id/dodajTablicuRapored"
-        android:title="Dodaj raspored za ligu">
-    </item>
+        android:title="Dodaj raspored za ligu"></item>
     <item
         android:id="@+id/dodajTablicuRezultat"
-        android:title="Dodaj rezultat za ligu">
-    </item>
+        android:title="Dodaj rezultat za ligu"></item>
     <item
         android:id="@+id/dodajNovogStrijelca"
-        android:title="Dodaj novog strijelca">
-    </item>
+        android:title="Dodaj novog strijelca"></item>
     <item
         android:id="@+id/dodajNovuTablicu"
-        android:title="Dodaj novu tablicu">
-    </item>
+        android:title="Dodaj novu tablicu"></item>
     <item
         android:id="@+id/pretrazivac"
-        android:title="Pretrazi"
         android:icon="@drawable/ic_search"
-        app:showAsAction="always">
-    </item>
+        android:title="Pretrazi"
+        app:showAsAction="always"></item>
 
 
 </menu>
