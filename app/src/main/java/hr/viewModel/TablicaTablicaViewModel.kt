@@ -29,4 +29,22 @@ class TablicaTablicaViewModel(application: Application): AndroidViewModel(applic
         }
     }
 
+    fun updateTablicaTablica(tablicatablica: TablicaTablica){
+        viewModelScope.launch(Dispatchers.IO) {
+            repositoryTablicaTablica.updateTablicaTablica(tablicatablica)
+        }
+    }
+
+    fun deleteTablicaTablica(tablicatablica: TablicaTablica){
+        viewModelScope.launch(Dispatchers.IO) {
+            repositoryTablicaTablica.deleteTablicaTablica(tablicatablica)
+        }
+    }
+
+    fun deleteAllTablicaTablica(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repositoryTablicaTablica.deleteAllTablicaTablica()
+        }
+    }
+
 }

@@ -29,4 +29,22 @@ class MomcadViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun updateMomcad(momcad: Igraci){
+        viewModelScope.launch(Dispatchers.IO) {
+            momcadRepository.updateMomcad(momcad)
+        }
+    }
+
+    fun deleteMomcad(momcad: Igraci){
+        viewModelScope.launch(Dispatchers.IO) {
+            momcadRepository.deleteMomcad(momcad)
+        }
+    }
+
+    fun deleteAllMomcad(){
+        viewModelScope.launch(Dispatchers.IO) {
+            momcadRepository.deleteAllMomcad()
+        }
+    }
+
 }

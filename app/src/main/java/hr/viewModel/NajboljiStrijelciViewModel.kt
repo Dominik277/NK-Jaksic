@@ -29,4 +29,22 @@ class NajboljiStrijelciViewModel(application: Application): AndroidViewModel(app
         }
     }
 
+    fun updateNajboljiStrijalci(najboljiStrijelac: NajboljiStrijelci){
+        viewModelScope.launch(Dispatchers.IO) {
+            najboljiStrijelciRepository.updateNajboljiStrijelci(najboljiStrijelac)
+        }
+    }
+
+    fun deleteNajboljiStrijelci(najboljiStrijelac: NajboljiStrijelci){
+        viewModelScope.launch(Dispatchers.IO) {
+            najboljiStrijelciRepository.deleteNajboljiStrijelci(najboljiStrijelac)
+        }
+    }
+
+    fun deleteAllNajboljiStrijelaci(){
+        viewModelScope.launch(Dispatchers.IO) {
+            najboljiStrijelciRepository.deleteAllNajboljiStrijelci()
+        }
+    }
+
 }

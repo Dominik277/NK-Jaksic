@@ -29,4 +29,22 @@ class TablicaRezultatiViewModel(application: Application): AndroidViewModel(appl
         }
     }
 
+    fun updateTablicaRezultat(tablicaRezultat: TablicaRezultati){
+        viewModelScope.launch(Dispatchers.IO) {
+            tablicaRezultatRepository.updateTablicaRezultat(tablicaRezultat)
+        }
+    }
+
+    fun deleteTablicaRezultat(tablicaRezultat: TablicaRezultati){
+        viewModelScope.launch(Dispatchers.IO) {
+            tablicaRezultatRepository.deleteTablicaRezultat(tablicaRezultat)
+        }
+    }
+
+    fun deleteAllTablicaRezultat(){
+        viewModelScope.launch(Dispatchers.IO) {
+            tablicaRezultatRepository.deleteAllTablicaRezultat()
+        }
+    }
+
 }

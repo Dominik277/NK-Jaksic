@@ -29,4 +29,22 @@ class RezultatViewModel(application: Application): AndroidViewModel(application)
         }
     }
 
+    fun updateRezultati(rezultat: Rezultat){
+        viewModelScope.launch(Dispatchers.IO) {
+            repositoryRezultat.updateRezultat(rezultat)
+        }
+    }
+
+    fun deleteRezultat(rezultat: Rezultat){
+        viewModelScope.launch(Dispatchers.IO) {
+            repositoryRezultat.deleteRezultat(rezultat)
+        }
+    }
+
+    fun deleteAllRezultati(){
+        viewModelScope.launch (Dispatchers.IO){
+            repositoryRezultat.deleteAllRezultat()
+        }
+    }
+
 }

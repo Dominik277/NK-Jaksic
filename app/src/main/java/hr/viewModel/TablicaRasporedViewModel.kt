@@ -29,4 +29,22 @@ class TablicaRasporedViewModel(application: Application): AndroidViewModel(appli
         }
     }
 
+    fun updateTablicaRaspored(tablicaRaspored: TablicaRaspored){
+        viewModelScope.launch(Dispatchers.IO) {
+            tablicaRasporedRepository.updateTablicaRaspored(tablicaRaspored)
+        }
+    }
+
+    fun deleteTablicaRaspored(tablicaRaspored: TablicaRaspored){
+        viewModelScope.launch(Dispatchers.IO) {
+            tablicaRasporedRepository.deleteTablicaRaspored(tablicaRaspored)
+        }
+    }
+
+    fun deleteAllTablicaRaspored(){
+        viewModelScope.launch(Dispatchers.IO) {
+            tablicaRasporedRepository.deleteAllTablicaRaspored()
+        }
+    }
+
 }
