@@ -13,7 +13,7 @@ data class Raspored (
     val id: Int,
 
     @ColumnInfo(name = "natjecanje")
-    var natjecanje: String,
+    val natjecanje: String,
 
     @ColumnInfo(name = "datum")
     val datum: String,
