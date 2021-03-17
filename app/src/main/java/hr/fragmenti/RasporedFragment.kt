@@ -23,15 +23,10 @@ import kotlinx.android.synthetic.main.fragment_raspored.*
 import kotlinx.android.synthetic.main.fragment_raspored.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
-class RasporedFragment: Fragment(), RasporedAdapter.OnItemClickListener {
-
-    private val adapter = RasporedAdapter(this)
-    private val exampleList = emptyList<Raspored>()
+class RasporedFragment: Fragment(){
 
     @InternalCoroutinesApi
     private lateinit var mRasporedViewModel: RasporedViewModel
-
-    lateinit var navController: NavController
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -44,6 +39,7 @@ class RasporedFragment: Fragment(), RasporedAdapter.OnItemClickListener {
 
 
         //RecyclerView
+        val adapter = RasporedAdapter()
         val recyclerRaspored = view.recyclerViewRaspored
         recyclerRaspored.adapter = adapter
         recyclerRaspored.layoutManager = LinearLayoutManager(requireContext())
@@ -57,13 +53,6 @@ class RasporedFragment: Fragment(), RasporedAdapter.OnItemClickListener {
 
         return view
 
-    }
-
-    override fun onItemClick(position: Int) {
-        Toast.makeText(requireContext(), "Item $position clicked", Toast.LENGTH_SHORT).show()
-        val clickedItem: Raspored = exampleList[position]
-        clickedItem.natjecanje = "Clicked"
-        adapter.notifyItemChanged(position)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

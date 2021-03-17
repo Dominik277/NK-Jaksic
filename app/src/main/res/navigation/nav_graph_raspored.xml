@@ -15,9 +15,9 @@
     </fragment>
     <fragment
         android:id="@+id/updateRaspored"
-        android:name="hr.updateFragmenti.UpdateRaspored"
+        android:name="hr.updateDelete.UpdateRasporedFragment"
         android:label="UpdateRaspored"
-        tools:layout="@layout/update_fragment_raspored">
+        tools:layout="@layout/update_raspored_fragment">
         <action
             android:id="@+id/action_updateRaspored_to_rasporedFragment"
             app:destination="@id/rasporedFragment" />
