@@ -91,6 +91,9 @@
         <action
             android:id="@+id/action_updateNajboljiStrijalacFragment_to_najboljiStrijelciFragment"
             app:destination="@id/najboljiStrijelciFragment" />
+        <argument
+            android:name="updateStrijelciArgs"
+            app:argType="hr.database.table.NajboljiStrijelci" />
     </fragment>
     <fragment
         android:id="@+id/updateRasporedFragment"
@@ -100,6 +103,8 @@
         <action
             android:id="@+id/action_updateRasporedFragment_to_rasporedFragment"
             app:destination="@id/nav_raspored" />
+        <argument android:name="updateRasporedArgs"
+            app:argType="hr.database.table.Raspored" />
     </fragment>
     <fragment
         android:id="@+id/updateTablicaTablicaFragment"
@@ -109,6 +114,8 @@
         <action
             android:id="@+id/action_updateTablicaTablicaFragment_to_tablicaTablicaFragment"
             app:destination="@id/tablicaTablicaFragment" />
+        <argument android:name="updateTablicaArgs"
+            app:argType="hr.database.table.TablicaTablica" />
     </fragment>
     <fragment
         android:id="@+id/updateRezultatFragment"
@@ -118,6 +125,9 @@
         <action
             android:id="@+id/action_updateRezultatFragment_to_rezultatiFragment"
             app:destination="@id/nav_rezultati" />
+        <argument
+            android:name="updateRezultatiArgs"
+            app:argType="hr.database.table.Rezultat" />
     </fragment>
     <fragment
         android:id="@+id/updateMomcadFragment"
@@ -127,6 +137,9 @@
         <action
             android:id="@+id/action_updateMomcadFragment_to_momcadFragment"
             app:destination="@id/nav_momcad" />
+        <argument
+            android:name="updateMomcadArgs"
+            app:argType="hr.database.table.Igraci" />
     </fragment>
     <fragment
         android:id="@+id/updateTablicaRezultatFragment"
@@ -136,6 +149,9 @@
         <action
             android:id="@+id/action_updateTablicaRezultatFragment_to_tablicaRezultatiFragment"
             app:destination="@id/tablicaRezultatiFragment" />
+        <argument
+            android:name="updateRezultatiLigaArgs"
+            app:argType="hr.database.table.TablicaRezultati" />
     </fragment>
     <fragment
         android:id="@+id/updateTablicaRasporedFragment"
@@ -145,6 +161,9 @@
         <action
             android:id="@+id/action_updateTablicaRasporedFragment_to_tablicaRasporedFragment"
             app:destination="@id/tablicaRasporedFragment" />
+        <argument
+            android:name="updateRasporedLigaArgs"
+            app:argType="hr.database.table.TablicaRaspored" />
     </fragment>
     <fragment
         android:id="@+id/dodajNoviRaspored"

@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import hr.dominik.nkjaki.R
 
 class UpdateTablicaTablicaFragment: Fragment() {
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,

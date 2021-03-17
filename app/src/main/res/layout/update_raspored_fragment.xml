@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="Ovdje unesite datum"/>
+        android:hint="Ovdje unesite datum" />
 
     <EditText
         android:id="@+id/updateRasporedDomacin"
@@ -40,11 +41,23 @@
         android:layout_marginTop="30dp"
         android:hint="Ovdje unesite vrijeme igranja" />
 
-    <Button
-        android:id="@+id/gumbUpdateNoviRaspored"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="Azuriraj" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/gumbUpdateNoviRaspored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Azuriraj" />
+        <Button
+            android:id="@+id/gumbDeleteNoviRaspored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="30dp"
+            android:text="Delete" />
+    </LinearLayout>
 </LinearLayout>
