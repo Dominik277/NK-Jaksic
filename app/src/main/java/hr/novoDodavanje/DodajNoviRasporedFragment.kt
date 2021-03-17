@@ -46,23 +46,10 @@ class DodajNoviRasporedFragment: Fragment() {
         val noviRasporedGost = noviRasporedGost.text.toString()
         val noviRasporedVrijeme = noviRasporedVrijeme.text.toString()
 
-        if (inputCheck(noviRasporedNatjecanje,noviRasporedDatum,noviRasporedDomacin,noviRasporedGost,noviRasporedVrijeme)){
             //Create object
             val raspored = Raspored(0,noviRasporedNatjecanje,noviRasporedDatum,noviRasporedDomacin,noviRasporedGost,noviRasporedVrijeme)
             mRasporedViewModel.addRaspored(raspored)
             Toast.makeText(requireContext(),"Successfully added",Toast.LENGTH_LONG).show()
-        }else{
-            Toast.makeText(requireContext(),"Molimo unesite tekst u sva polja,",Toast.LENGTH_LONG).show()
-        }
 
     }
-
-    private fun inputCheck(noviRasporedNatjecanje: String, noviRasporedDatum: String, noviRasporedDomacin: String, noviRasporedGost: String, noviRasporedVrijeme: String): Boolean{
-        return !(TextUtils.isEmpty(noviRasporedNatjecanje)
-                && TextUtils.isEmpty(noviRasporedDatum)
-                && TextUtils.isEmpty(noviRasporedDomacin)
-                && TextUtils.isEmpty(noviRasporedGost)
-                && TextUtils.isEmpty(noviRasporedVrijeme))
-    }
-
 }

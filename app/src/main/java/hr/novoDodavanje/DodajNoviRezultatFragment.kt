@@ -45,23 +45,10 @@ class DodajNoviRezultatFragment: Fragment() {
         val noviRezultatRezultat = noviRezultatRezultat.text.toString()
         val noviRezultatIshod = noviRezultatIshod.text.toString()
 
-        if (inputCheck(noviRezultatNatjecanje,noviRezultatDatum,noviRezultatDomacin,noviRezultatGost,noviRezultatRezultat,noviRezultatIshod)){
             //Create object
             val rezultat = Rezultat(0,noviRezultatNatjecanje,noviRezultatDatum,noviRezultatDomacin,noviRezultatGost,noviRezultatRezultat,noviRezultatIshod)
             mRezultatiViewModel.addRezultat(rezultat)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
-        }else{
-            Toast.makeText(requireContext(),"Molimo unesite tekst u sva polja,",Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun inputCheck(noviRezultatNatjecanje: String,noviRezultatDatum: String,noviRezultatDomacin: String,noviRezultatGost: String,noviRezultatRezultat: String,noviRezultatIshod: String): Boolean{
-        return !(TextUtils.isEmpty(noviRezultatNatjecanje)
-                && TextUtils.isEmpty(noviRezultatDatum)
-                && TextUtils.isEmpty(noviRezultatDomacin)
-                && TextUtils.isEmpty(noviRezultatGost)
-                && TextUtils.isEmpty(noviRezultatRezultat)
-                && TextUtils.isEmpty(noviRezultatIshod))
 
     }
 }

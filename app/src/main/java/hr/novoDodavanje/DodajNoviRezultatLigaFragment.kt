@@ -81,15 +81,6 @@ class DodajNoviRezultatLigaFragment: Fragment() {
         val noviRezultatLigaSedmiGost = noviRezultatLigaSedmiGost.text.toString()
         val noviRezultatLigaSedmoVrijeme = noviRezultatLigaSedmiRezultat.text.toString()
 
-        if (inputCheck(noviRezultatLigaBrojKola,
-                noviRezultatLigaPrviDatum,noviRezultatLigaPrviDomacin,noviRezultatLigaPrviGost,noviRezultatLigaPrvoVrijeme,
-                noviRezultatLigaDrugiDatum,noviRezultatLigaDrugiDomacin,noviRezultatLigaDrugiGost,noviRezultatLigaDrugoVrijeme,
-                noviRezultatLigaTreciDatum,noviRezultatLigaTreciDomacin,noviRezultatLigaTreciGost,noviRezultatLigaTreceVrijeme,
-                noviRezultatLigaCetvrtiDatum,noviRezultatLigaCetvrtiDomacin,noviRezultatLigaCetvrtiGost,noviRezultatLigaCetvrtoVrijeme,
-                noviRezultatLigaPetiDatum,noviRezultatLigaPetiDomacin,noviRezultatLigaPetiGost,noviRezultatLigaPetoVrijeme,
-                noviRezultatLigaSestiDatum,noviRezultatLigaSestiDomacin,noviRezultatLigaSestiGost,noviRezultatLigaSestoVrijeme,
-                noviRezultatLigaSedmiDatum,noviRezultatLigaSedmiDomacin,noviRezultatLigaSedmiGost,noviRezultatLigaSedmoVrijeme)){
-
             //Create object
             val tablicaRezultat = TablicaRezultati(0,noviRezultatLigaBrojKola,
                 noviRezultatLigaPrviDatum,noviRezultatLigaPrviDomacin,noviRezultatLigaPrviGost,noviRezultatLigaPrvoVrijeme,
@@ -103,50 +94,6 @@ class DodajNoviRezultatLigaFragment: Fragment() {
 
             mTablicaRezultatViewModel.addTablicaRezultat(tablicaRezultat)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
-        }else{
-            Toast.makeText(requireContext(),"Molimo unesite tekst u sva polja,", Toast.LENGTH_LONG).show()
-        }
+
     }
-
-    private fun inputCheck(
-        noviRezultatLigaBrojKola: String,
-        noviRezultatLigaPrviDatum: String,
-        noviRezultatLigaPrviDomacin:String,
-        noviRezultatLigaPrviGost:String,
-        noviRezultatLigaPrvoVrijeme:String,
-        noviRezultatLigaDrugiDatum: String,
-        noviRezultatLigaDrugiDomacin:String,
-        noviRezultatLigaDrugiGost:String,
-        noviRezultatLigaDrugoVrijeme:String,
-        noviRezultatLigaTreciDatum: String,
-        noviRezultatLigaTreciDomacin:String,
-        noviRezultatLigaTreciGost:String,
-        noviRezultatLigaTreceVrijeme:String,
-        noviRezultatLigaCetvrtiDatum: String,
-        noviRezultatLigaCetvrtiDomacin:String,
-        noviRezultatLigaCetvrtiGost:String,
-        noviRezultatLigaCetvrtoVrijeme:String,
-        noviRezultatLigaPetiDatum: String,
-        noviRezultatLigaPetiDomacin:String,
-        noviRezultatLigaPetiGost:String,
-        noviRezultatLigaPetoVrijeme:String,
-        noviRezultatLigaSestiDatum: String,
-        noviRezultatLigaSestiDomacin:String,
-        noviRezultatLigaSestiGost:String,
-        noviRezultatLigaSestoVrijeme:String,
-        noviRezultatLigaSedmiDatum: String,
-        noviRezultatLigaSedmiDomacin:String,
-        noviRezultatLigaSedmiGost:String,
-        noviRezultatLigaSedmoVrijeme:String): Boolean {
-
-            return !(TextUtils.isEmpty(noviRezultatLigaBrojKola)
-                    && TextUtils.isEmpty(noviRezultatLigaPrviDatum) && TextUtils.isEmpty(noviRezultatLigaPrviDomacin) && TextUtils.isEmpty(noviRezultatLigaPrviGost) && TextUtils.isEmpty(noviRezultatLigaPrvoVrijeme)
-                    && TextUtils.isEmpty(noviRezultatLigaDrugiDatum) && TextUtils.isEmpty(noviRezultatLigaDrugiDomacin) && TextUtils.isEmpty(noviRezultatLigaDrugiGost) && TextUtils.isEmpty(noviRezultatLigaDrugoVrijeme)
-                    && TextUtils.isEmpty(noviRezultatLigaTreciDatum) && TextUtils.isEmpty(noviRezultatLigaTreciDomacin) && TextUtils.isEmpty(noviRezultatLigaTreciGost) && TextUtils.isEmpty(noviRezultatLigaTreceVrijeme)
-                    && TextUtils.isEmpty(noviRezultatLigaCetvrtiDatum) && TextUtils.isEmpty(noviRezultatLigaCetvrtiDomacin) && TextUtils.isEmpty(noviRezultatLigaCetvrtiGost) && TextUtils.isEmpty(noviRezultatLigaCetvrtoVrijeme)
-                    && TextUtils.isEmpty(noviRezultatLigaPetiDatum) && TextUtils.isEmpty(noviRezultatLigaPetiDomacin) && TextUtils.isEmpty(noviRezultatLigaPetiGost) && TextUtils.isEmpty(noviRezultatLigaPetoVrijeme)
-                    && TextUtils.isEmpty(noviRezultatLigaSestiDatum) && TextUtils.isEmpty(noviRezultatLigaSestiDomacin) && TextUtils.isEmpty(noviRezultatLigaSestiGost) && TextUtils.isEmpty(noviRezultatLigaSestoVrijeme)
-                    && TextUtils.isEmpty(noviRezultatLigaSedmiDatum) && TextUtils.isEmpty(noviRezultatLigaSedmiDomacin) && TextUtils.isEmpty(noviRezultatLigaSedmiGost) && TextUtils.isEmpty(noviRezultatLigaSedmoVrijeme))
-    }
-
 }

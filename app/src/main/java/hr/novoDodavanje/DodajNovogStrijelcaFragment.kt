@@ -43,20 +43,9 @@ class DodajNovogStrijelcaFragment: Fragment() {
         val noviStrijelacImePrezime = noviStrijelacImePrezime.text.toString()
         val noviStrijelacBrojGolova = noviStrijelacBrojGolova.text.toString()
 
-        if (inputCheck(noviStrijelacPozicija,noviStrijelacImePrezime,noviStrijelacBrojGolova)){
             val najboljiStrijelac = NajboljiStrijelci(0,noviStrijelacPozicija,noviStrijelacImePrezime,noviStrijelacBrojGolova)
             mNajboljiStrijelacViewModel.addNajboljiStrijelac(najboljiStrijelac)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
-        }else{
-            Toast.makeText(requireContext(),"Molimo unesite tekst u sva polja,", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun inputCheck(noviStrijelacPozicija: String,noviStrijelacImePrezime: String,noviStrijalacBrojGolova: String): Boolean{
-
-        return !(TextUtils.isEmpty(noviStrijelacPozicija)
-                && TextUtils.isEmpty(noviStrijelacImePrezime)
-                && TextUtils.isEmpty(noviStrijalacBrojGolova))
 
     }
 }

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
 import hr.viewModel.TablicaRezultatiViewModel
@@ -33,6 +34,8 @@ class DodajNovuTablicuFragment: Fragment() {
         mTablicaTablicaViewModel = ViewModelProvider(this).get(TablicaTablicaViewModel::class.java)
 
         view.gumbSpremiTablicu.setOnClickListener {
+            val action = DodajNovuTablicuFragmentDirections.actionDodajNovuTablicuFragmentToTablicaFragment()
+            findNavController().navigate(action)
             insertDataToDatabase()
         }
 
@@ -47,22 +50,9 @@ class DodajNovuTablicuFragment: Fragment() {
         val novaTablicaGolRazlika = novaTablicaGolRazlika.text.toString()
         val novaTablicaBodovi = novaTablicaBodovi.text.toString()
 
-        if (inputCheck(novaTablicaPozcija,novaTablicaImeKluba,novaTablicaOdigraniSusreti,novaTablicaGolRazlika,novaTablicaBodovi)){
-            //Create object
+
             val tablicaTablica = TablicaTablica(0,novaTablicaPozcija,novaTablicaImeKluba,novaTablicaOdigraniSusreti,novaTablicaGolRazlika,novaTablicaBodovi)
             mTablicaTablicaViewModel.addTablicaTablica(tablicaTablica)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
-        }else{
-            Toast.makeText(requireContext(),"Molimo unesite tekst u sva polja,", Toast.LENGTH_LONG).show()
-        }
     }
-
-    private fun inputCheck(novaTablicaPozicija: String, novaTablicaImeKluba: String, novaTablicaOdigraniSusreti: String,novaTablicaGolRazlika: String,novaTablicaBodovi: String): Boolean{
-        return !(TextUtils.isEmpty(novaTablicaPozicija)
-                && TextUtils.isEmpty(novaTablicaImeKluba)
-                && TextUtils.isEmpty(novaTablicaOdigraniSusreti)
-                && TextUtils.isEmpty(novaTablicaGolRazlika)
-                && TextUtils.isEmpty(novaTablicaBodovi))
-    }
-
 }
