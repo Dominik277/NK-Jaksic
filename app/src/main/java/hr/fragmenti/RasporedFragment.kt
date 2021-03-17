@@ -69,41 +69,8 @@ class RasporedFragment: Fragment(), RasporedAdapter.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*
-        val database = getActivity()?.let {
-            Room.databaseBuilder(
-                it, NKJaksicDatabase::class.java,"nk_jaksic_baza"
-            )
-                .allowMainThreadQueries()
-                .fallbackToDestructiveMigration()
-                .build()
-        }
-*/
         recyclerViewRaspored.addItemDecoration(DividerItemDecoration
             (recyclerViewRaspored.context,DividerItemDecoration.VERTICAL))
-/*
-        database?.rasporedDao()?.insertRaspored(Raspored(0,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(1,"Liga","21.09","NK Jakšić","NK Kuzmica","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(2,"Kup","21.09","NK Kuzmica","NK Jakšić","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(3,"Prijateljska","21.09","NK Kuzmica","NK Jakšić","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(4,"Liga","21.09","NK Kuzmica","NK Jakšić","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(5,"Kup","21.09","NK Jakšić","NK Kuzmica","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(6,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(7,"Liga","21.09","NK Kuzmica","NK Jakšić","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(8,"Prijateljska","21.09","NK Kuzmica","NK Jakšić","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(9,"Kup","21.09","NK Jakšić","NK Kuzmica","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(10,"Prijateljska","21.09","NK Jakšić","NK Kuzmica","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(11,"Liga","21.09","NK Kuzmica","NK Jakšić","15:30"))
-        database?.rasporedDao()?.insertRaspored(Raspored(12,"Prijateljska","21.09","NK Kuzmica","NK Jakšić","15:30"))
-*/
-        //database?.najboljiStrijelciDao()?.deleteNajboljiStrijelci()
-
-        //val exampleRasporedList = database?.rasporedDao()?.getRasporedData()
-
-        //recyclerViewRaspored.adapter = exampleRasporedList?.let { RasporedAdapter(it) }
-        //recyclerViewRaspored.layoutManager = LinearLayoutManager(context)
-        //recyclerViewRaspored.setHasFixedSize(true)
 
     }
-
 }

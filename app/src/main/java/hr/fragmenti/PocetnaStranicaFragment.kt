@@ -20,5 +20,4 @@ class PocetnaStranicaFragment: Fragment(R.layout.fragment_pocetna_stranica) {
 
         return view
     }
-
 }

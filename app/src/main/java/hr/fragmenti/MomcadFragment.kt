@@ -30,39 +30,8 @@ class MomcadFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val database = getActivity()?.let {
-            Room.databaseBuilder(
-                it, NKJaksicDatabase::class.java,"nk_jaksic_baza"
-            )
-                .allowMainThreadQueries()
-                .fallbackToDestructiveMigration()
-                .build()
-        }
-
         recyclerViewMomcad.addItemDecoration(DividerItemDecoration
             (recyclerViewMomcad.context,DividerItemDecoration.VERTICAL))
-/*
-        database?.igraciDao()?.insertIgrac(Igraci(0,"Domagoj","Kovačević",5,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(1,"Matko","Kovačević",6,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(2,"Ivan","Karača",15,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(3,"Ivan","Brus",14,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(4,"Stjepan","Šilhan",2,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(5,"Maurizio","Rezo",6,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(6,"Ivo","Ivić",9,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(7,"Matko","Matkić",7,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(8,"Ivan","Ivić",6,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(9,"Marko","Grbeš",8,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(10,"Stjepan","Stjepić",3,R.drawable.face))
-        database?.igraciDao()?.insertIgrac(Igraci(11,"Luka","Obradović",11,R.drawable.face))
-*/
-        //database?.igraciDao()?.deletePodatke()
-
-        //val examplePokusMomcadList = database?.igraciDao()?.getIgraciData()
-
-        //recyclerViewMomcad.adapter = examplePokusMomcadList?.let { MomcadAdapter(it) }
-        //recyclerViewMomcad.layoutManager = LinearLayoutManager(context)
-        //recyclerViewMomcad.setHasFixedSize(true)
 
     }
-
 }

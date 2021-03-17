@@ -24,39 +24,16 @@ class VijestiFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vijesti, container, false)
+        val view = inflater.inflate(R.layout.fragment_vijesti,container,false)
+
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val database = getActivity()?.let {
-            Room.databaseBuilder(
-                it, NKJaksicDatabase::class.java,"nk_jaksic_baza"
-            )
-                .allowMainThreadQueries()
-                .fallbackToDestructiveMigration()
-                .build()
-        }
-
         recyclerViewVijesti.addItemDecoration(DividerItemDecoration
             (recyclerViewVijesti.context,DividerItemDecoration.VERTICAL))
-/*
-        database?.vijestiDao()?.insertVijest(Vijesti(0,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(1,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(2,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(3,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(4,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(5,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-        database?.vijestiDao()?.insertVijest(Vijesti(6,"Jakšić pobijedio rezultatom 3:1",R.drawable.slikavijesti))
-*/
-        //database?.vijestiDao()?.deletePodatkeVijesti()
-        val examplePokusList = database?.vijestiDao()?.getVijestiData()
-
-        recyclerViewVijesti.adapter = examplePokusList?.let { VijestiAdapter(it) }
-        recyclerViewVijesti.layoutManager = LinearLayoutManager(context)
-        recyclerViewVijesti.setHasFixedSize(true)
 
     }
-
 }
