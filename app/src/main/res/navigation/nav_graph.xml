@@ -50,7 +50,20 @@
         android:id="@+id/nav_tablica"
         android:name="hr.fragmenti.TablicaFragment"
         android:label="TablicaFragment"
-        tools:layout="@layout/fragment_tablica"/>
+        tools:layout="@layout/fragment_tablica">
+        <action
+            android:id="@+id/action_nav_tablica_to_najboljiStrijelciFragment"
+            app:destination="@id/najboljiStrijelciFragment" />
+        <action
+            android:id="@+id/action_nav_tablica_to_tablicaRezultatiFragment"
+            app:destination="@id/tablicaRezultatiFragment" />
+        <action
+            android:id="@+id/action_nav_tablica_to_tablicaTablicaFragment"
+            app:destination="@id/tablicaTablicaFragment" />
+        <action
+            android:id="@+id/action_nav_tablica_to_tablicaRasporedFragment"
+            app:destination="@id/tablicaRasporedFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tablicaRasporedFragment"
         android:name="hr.fragmenti.TablicaRasporedFragment"
@@ -232,8 +245,8 @@
         android:label="DodajNovuTablicuFragment"
         tools:layout="@layout/fragment_nova_tablica">
         <action
-            android:id="@+id/action_dodajNovuTablicuFragment_to_tablicaFragment"
-            app:destination="@id/nav_tablica" />
+            android:id="@+id/action_dodajNovuTablicu_to_tablicaTablicaFragment"
+            app:destination="@id/tablicaTablicaFragment" />
     </fragment>
     <fragment
         android:id="@+id/dodajNovuVijest"

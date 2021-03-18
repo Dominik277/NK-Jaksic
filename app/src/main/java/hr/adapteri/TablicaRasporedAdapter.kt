@@ -3,10 +3,12 @@ package hr.adapteri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
 import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
+import hr.fragmenti.TablicaRasporedFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_tablica_raspored.view.*
 
 class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHolder>() {
@@ -48,6 +50,12 @@ class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHo
         holder.itemView.tablicaRaspored_domacinSedmaUtakmica.text = currentItem.sedmaUtakmicaDomacin
         holder.itemView.tablicaRaspored_gostSedmaUtakmica.text = currentItem.sedmaUtakmicaGost
         holder.itemView.tablicaRaspored_vrijemeSedmaUtakmica.text = currentItem.sedmaUtakmicaVrijeme
+
+        holder.itemView.jedanRedTablicaRaspored.setOnLongClickListener {
+            val action = TablicaRasporedFragmentDirections.actionTablicaRasporedFragmentToUpdateTablicaRasporedFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+            true
+        }
 
     }
 

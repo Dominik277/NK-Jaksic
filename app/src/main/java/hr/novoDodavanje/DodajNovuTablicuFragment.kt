@@ -34,7 +34,7 @@ class DodajNovuTablicuFragment: Fragment() {
         mTablicaTablicaViewModel = ViewModelProvider(this).get(TablicaTablicaViewModel::class.java)
 
         view.gumbSpremiTablicu.setOnClickListener {
-            val action = DodajNovuTablicuFragmentDirections.actionDodajNovuTablicuFragmentToTablicaFragment()
+            val action = DodajNovuTablicuFragmentDirections.actionDodajNovuTablicuToTablicaTablicaFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }

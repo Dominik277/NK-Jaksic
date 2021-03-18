@@ -4,10 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
 import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
+import hr.fragmenti.TablicaTablicaFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_tablica_tablica.view.*
 
 class TablicaTablicaAdapter : RecyclerView.Adapter<TablicaTablicaAdapter.ViewHolder>(){
@@ -21,11 +23,18 @@ class TablicaTablicaAdapter : RecyclerView.Adapter<TablicaTablicaAdapter.ViewHol
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = tablicaTablicaList[position]
-        holder.itemView.tablica_tablica_pozicija.text = currentItem.pozicija.toString()
+        holder.itemView.tablica_tablica_pozicija.text = currentItem.pozicija
         holder.itemView.tablica_tablica_ime.text = currentItem.imeTima
-        holder.itemView.tablica_tablica_susreti.text = currentItem.odigraniSusreti.toString()
+        holder.itemView.tablica_tablica_susreti.text = currentItem.odigraniSusreti
         holder.itemView.tablica_tablica_golovi.text = currentItem.golRazlika
-        holder.itemView.tablica_tablica_bodovi.text = currentItem.bodovi.toString()
+        holder.itemView.tablica_tablica_bodovi.text = currentItem.bodovi
+
+        holder.itemView.jedanRedTablicaTablica.setOnLongClickListener {
+            val action = TablicaTablicaFragmentDirections.actionTablicaTablicaFragmentToUpdateTablicaTablicaFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+            true
+        }
+
     }
 
     override fun getItemCount(): Int{

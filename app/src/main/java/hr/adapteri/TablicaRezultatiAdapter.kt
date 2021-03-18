@@ -3,10 +3,12 @@ package hr.adapteri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.TablicaRaspored
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
+import hr.fragmenti.TablicaRezultatiFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_tablica_rezultati.view.*
 
 class TablicaRezultatiAdapter: RecyclerView.Adapter<TablicaRezultatiAdapter.ViewHolder>() {
@@ -49,6 +51,13 @@ class TablicaRezultatiAdapter: RecyclerView.Adapter<TablicaRezultatiAdapter.View
         holder.itemView.tablicaRezultati_domacinSedmaUtakmica.text = currentItem.novi_sedmaUtakmicaDomacin
         holder.itemView.tablicaRezultati_gostSedmaUtakmica.text = currentItem.novi_sedmaUtakmicaGost
         holder.itemView.tablicaRezultati_rezultatSedmaUtakmica.text = currentItem.novi_sedmaUtakmicaRezultat
+
+        holder.itemView.setOnLongClickListener {
+            val action = TablicaRezultatiFragmentDirections.actionTablicaRezultatiFragmentToUpdateTablicaRezultatFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+            true
+        }
+
     }
 
     override fun getItemCount(): Int{

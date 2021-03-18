@@ -43,10 +43,4 @@
 
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/frameLayoutTablica"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/linearLayoutTablica"/>
-
 </RelativeLayout>
