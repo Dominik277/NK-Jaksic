@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
 import hr.viewModel.TablicaRasporedViewModel
 import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.*
@@ -94,6 +95,7 @@ class UpdateTablicaRasporedFragment: Fragment() {
         builder.create().show()
     }
 
+    @InternalCoroutinesApi
     private fun updateItemTablcaRaspored() {
 
         val rasporedLigaBrojKola = updateRasporedLigaBrojKola.text.toString()
@@ -133,6 +135,18 @@ class UpdateTablicaRasporedFragment: Fragment() {
         val rasporedLigaSedmiGost = updateRasporedLigaSedmiGost.text.toString()
         val rasporedLigaSedmiVrijeme = updateRasporedLigaSedmoVrijeme.text.toString()
 
+        val updateRasporedTablica = TablicaRaspored(args.updateRasporedLigaArgs.id,
+            rasporedLigaBrojKola,
+            rasporedLigaPrviDatum,rasporedLigaPrviDomacin,rasporedLigaPrviGost,rasporedLigaPrvoVrijeme,
+            rasporedLigaDrugiDatum,rasporedLigaDrugiDomacin,rasporedLigaDrugiGost,rasporedLigaDrugiVrijeme,
+            rasporedLigaTreciDatum,rasporedLigaTreciDomacin,rasporedLigaTreciGost,rasporedLigaTreciVrijeme,
+            rasporedLigaCetvrtiDatum,rasporedLigaCetvrtiDomacin,rasporedLigaCetvrtiGost,rasporedLigaCetvrtiVrijeme,
+            rasporedLigaPetiDatum,rasporedLigaPetiDomacin,rasporedLigaPetiGost,rasporedLigaPetiVrijeme,
+            rasporedLigaSestiDatum,rasporedLigaSestiDomacin,rasporedLigaSestiGost,rasporedLigaSestiVrijeme,
+            rasporedLigaSedmiDatum,rasporedLigaSedmiDomacin,rasporedLigaSedmiGost,rasporedLigaSedmiVrijeme)
+
+        mTablicaRasporedViewModel.updateTablicaRaspored(updateRasporedTablica)
+        findNavController().navigate(R.id.action_updateTablicaRasporedFragment_to_tablicaRasporedFragment)
     }
 
 }
