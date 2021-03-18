@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import hr.viewModel.RasporedViewModel
@@ -32,6 +33,8 @@ class DodajNoviRasporedFragment: Fragment() {
         mRasporedViewModel = ViewModelProvider(this).get(RasporedViewModel::class.java)
 
         view.gumbSpremiNoviRaspored.setOnClickListener {
+            val action = DodajNoviRasporedFragmentDirections.actionDodajNoviRasporedFragmentToRasporedFragment()
+            findNavController().navigate(action)
             insertDataToDatabase()
         }
 

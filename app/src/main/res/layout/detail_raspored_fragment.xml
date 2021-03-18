@@ -7,26 +7,32 @@
     android:gravity="center">
 
     <TextView
+        android:id="@+id/detailRasporedNatjecanje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail Raspored"/>
     <TextView
+        android:id="@+id/detailRasporedDatum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail Raspored"/>
     <TextView
+        android:id="@+id/detailRasporedDomacin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail Raspored"/>
     <TextView
+        android:id="@+id/detailRasporedGost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail Raspored"/>
     <TextView
+        android:id="@+id/detailRasporedVrijeme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail Raspored"/>
     <TextView
+        android:id="@+id/detailRasporedClanak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail Raspored"/>

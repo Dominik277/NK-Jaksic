@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
 import hr.viewModel.RezultatViewModel
@@ -31,6 +32,8 @@ class DodajNoviRezultatFragment: Fragment() {
         mRezultatiViewModel = ViewModelProvider(this).get(RezultatViewModel::class.java)
 
         view.gumbSpremiNoviRezultat.setOnClickListener {
+            val action = DodajNoviRezultatFragmentDirections.actionDodajNoviRezultatFragmentToRezultatiFragment()
+            findNavController().navigate(action)
             insertDataToDatabase()
         }
         return view
@@ -47,7 +50,9 @@ class DodajNoviRezultatFragment: Fragment() {
         val noviRezultatClanak = noviRezultatClanak.text.toString()
 
             //Create object
-            val rezultat = Rezultat(0,noviRezultatNatjecanje,noviRezultatDatum,noviRezultatDomacin,noviRezultatGost,noviRezultatRezultat,noviRezultatIshod,noviRezultatClanak)
+            val rezultat = Rezultat(0,noviRezultatNatjecanje,noviRezultatDatum,
+                noviRezultatDomacin,noviRezultatGost,noviRezultatRezultat,noviRezultatIshod,
+                noviRezultatClanak)
             mRezultatiViewModel.addRezultat(rezultat)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
 
