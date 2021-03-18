@@ -14,10 +14,15 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
+import hr.viewModel.MomcadViewModel
 import kotlinx.android.synthetic.main.fragment_nova_vijest.*
 import kotlinx.android.synthetic.main.fragment_novi_igrac.*
 import kotlinx.android.synthetic.main.fragment_novi_igrac.view.*
+import kotlinx.coroutines.InternalCoroutinesApi
 import java.util.jar.Manifest
 
 class DodajNovogIgraca: Fragment() {
@@ -26,6 +31,10 @@ class DodajNovogIgraca: Fragment() {
     private val REQUEST_IMAGE_CAPTURE = 1
     private val REQUEST_PICK_IMAGE = 2
 
+    @InternalCoroutinesApi
+    private lateinit var mMomcadViewModel: MomcadViewModel
+
+    @InternalCoroutinesApi
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,6 +42,15 @@ class DodajNovogIgraca: Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_novi_igrac,container, false)
 
+        mMomcadViewModel = ViewModelProvider(this).get(MomcadViewModel::class.java)
+
+        view.gumbSpremiNoviIgrac.setOnClickListener {
+            val action = DodajNovogIgracaDirections.actionDodajNovogIgraca2ToMomcadFragment()
+            findNavController().navigate(action)
+            insertDataToDatabase()
+        }
+
+        /*
         view.gumbIgracUslikaj.setOnClickListener {
             openCamera()
         }
@@ -40,14 +58,29 @@ class DodajNovogIgraca: Fragment() {
         view.gumbIgracGalerija.setOnClickListener {
             openGallery()
         }
+        */
         return view
     }
 
+    @InternalCoroutinesApi
+    private fun insertDataToDatabase() {
+        val igracIme = noviIgracIme.text.toString()
+        val igracPrezime = noviIgracPrezime.text.toString()
+        val igracBroj = noviIgracBroj.text.toString()
+        val igracSlika = R.drawable.face
+
+        val igrac = Igraci(0,igracIme,igracPrezime,igracBroj,igracSlika)
+        mMomcadViewModel.addMomcad(igrac)
+    }
+
+    /*
     override fun onResume() {
         super.onResume()
         checkCameraPermission()
     }
+     */
 
+    /*
     private fun checkCameraPermission() {
         if (ContextCompat.checkSelfPermission(requireContext(),android.Manifest.permission.CAMERA)
             != PackageManager.PERMISSION_GRANTED){
@@ -55,7 +88,10 @@ class DodajNovogIgraca: Fragment() {
             REQUEST_PERMISSION)
         }
     }
+     */
 
+
+    /*
     private fun openCamera() {
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
             activity?.let {
@@ -65,6 +101,7 @@ class DodajNovogIgraca: Fragment() {
             }
         }
     }
+     */
 
     private fun openGallery() {
         Intent(Intent.ACTION_GET_CONTENT).also { intent ->
@@ -77,6 +114,7 @@ class DodajNovogIgraca: Fragment() {
         }
     }
 
+/*
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == RESULT_OK){
             if (requestCode == REQUEST_IMAGE_CAPTURE) {
@@ -88,5 +126,5 @@ class DodajNovogIgraca: Fragment() {
             }
         }
     }
-
+*/
 }

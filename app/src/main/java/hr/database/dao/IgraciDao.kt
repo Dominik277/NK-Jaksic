@@ -20,6 +20,6 @@ interface IgraciDao {
     suspend fun deleteIgrac(igraci: Igraci)
 
     @Query("DELETE FROM igraci")
-    fun deletePodatke()
+    suspend fun deletePodatke()
 
 }
