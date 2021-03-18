@@ -11,7 +11,7 @@ import kotlinx.coroutines.internal.synchronized
 
 @Database(
     entities = [Igraci::class, Vijesti::class, TablicaTablica::class, NajboljiStrijelci::class, Raspored::class, Rezultat::class, TablicaRaspored::class, TablicaRezultati::class],
-    version = 18
+    version = 19
 )
 abstract class NKJaksicDatabase : RoomDatabase() {
 
@@ -40,6 +40,7 @@ abstract class NKJaksicDatabase : RoomDatabase() {
                     NKJaksicDatabase::class.java,
                     "nk_jaksic_baza"
                 ).fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance
                 return instance
