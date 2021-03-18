@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_momcadFragment_to_updateMomcadFragment"
             app:destination="@id/updateMomcadFragment" />
+        <action
+            android:id="@+id/action_nav_momcad_to_detailMomcadFragment"
+            app:destination="@id/detailMomcadFragment" />
     </fragment>
     <fragment
         android:id="@+id/najboljiStrijelciFragment"
@@ -36,6 +39,9 @@
         <action
             android:id="@+id/action_rasporedFragment_to_updateRasporedFragment"
             app:destination="@id/updateRasporedFragment" />
+        <action
+            android:id="@+id/action_nav_raspored_to_detailRasporedFragment"
+            app:destination="@id/detailRasporedFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_rezultati"
@@ -45,6 +51,9 @@
         <action
             android:id="@+id/action_rezultatiFragment_to_updateRezultatFragment"
             app:destination="@id/updateRezultatFragment" />
+        <action
+            android:id="@+id/action_nav_rezultati_to_detailRezultatiFragment"
+            app:destination="@id/detailRezultatiFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_tablica"
@@ -278,4 +287,19 @@
             android:name="detailVijestiArgs"
             app:argType="hr.database.table.Vijesti" />
     </fragment>
+    <fragment
+        android:id="@+id/detailRasporedFragment"
+        android:name="hr.detailFragmenti.DetailRasporedFragment"
+        android:label="DetailRasporedFragment"
+        tools:layout="@layout/detail_raspored_fragment"/>
+    <fragment
+        android:id="@+id/detailMomcadFragment"
+        android:name="hr.detailFragmenti.DetailMomcadFragment"
+        android:label="DetailMomcadFragment"
+        tools:layout="@layout/detail_momcad_fragment"/>
+    <fragment
+        android:id="@+id/detailRezultatiFragment"
+        android:name="hr.detailFragmenti.DetailRezultatiFragment"
+        android:label="DetailRezultatiFragment"
+        tools:layout="@layout/detail_rezultati_fragment"/>
 </navigation>
