@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,11 +17,14 @@ import hr.dominik.nkjaki.R
 import hr.viewModel.VijestiViewModel
 import kotlinx.android.synthetic.main.fragment_vijesti.*
 import kotlinx.android.synthetic.main.fragment_vijesti.view.*
+import kotlinx.coroutines.InternalCoroutinesApi
 
 class VijestiFragment : Fragment() {
 
+    @InternalCoroutinesApi
     private lateinit var mVijestiViewModel: VijestiViewModel
 
+    @InternalCoroutinesApi
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,6 +40,10 @@ class VijestiFragment : Fragment() {
         recyclerVijesti.layoutManager = LinearLayoutManager(requireContext())
 
         //VijestiViewModel
+        mVijestiViewModel = ViewModelProvider(this).get(VijestiViewModel::class.java)
+        mVijestiViewModel.readAllDataVijesti.observe(viewLifecycleOwner, Observer { vijesti ->
+            adapter.setData(vijesti)
+        })
 
         return view
     }
