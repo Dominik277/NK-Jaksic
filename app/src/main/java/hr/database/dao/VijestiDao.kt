@@ -1,5 +1,6 @@
 package hr.database.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import hr.database.table.Vijesti
 
@@ -7,7 +8,7 @@ import hr.database.table.Vijesti
 interface VijestiDao {
 
     @Query("SELECT * FROM vijesti ORDER BY id desc")
-    fun getVijestiData(): List<Vijesti>
+    fun getVijestiData(): LiveData<List<Vijesti>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertVijest(vijesti: Vijesti): Long

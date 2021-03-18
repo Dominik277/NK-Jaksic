@@ -260,5 +260,9 @@
         android:id="@+id/detailVijestiFragment"
         android:name="hr.detailFragmenti.DetailVijestiFragment"
         android:label="DetailVijestiFragment"
-        tools:layout="@layout/detail_vijesti_fragment"/>
+        tools:layout="@layout/detail_vijesti_fragment">
+        <argument
+            android:name="detailVijestiArgs"
+            app:argType="hr.database.table.Vijesti" />
+    </fragment>
 </navigation>

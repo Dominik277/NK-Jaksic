@@ -31,6 +31,12 @@ class VijestiAdapter: RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
             holder.itemView.findNavController().navigate(action)
             true
         }
+
+        holder.itemView.jedanRedVijesti.setOnClickListener {
+            val action = VijestiFragmentDirections.actionNavVijestiToDetailVijestiFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
+
     }
 
     override fun getItemCount(): Int{
