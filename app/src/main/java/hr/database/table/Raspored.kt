@@ -26,4 +26,7 @@ data class Raspored (
 
     @ColumnInfo(name = "vrijeme")
     val vrijeme: String,
+
+    @ColumnInfo(name = "clanak")
+    val clanak: String
         ): Parcelable

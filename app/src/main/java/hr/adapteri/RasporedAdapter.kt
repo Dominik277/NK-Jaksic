@@ -34,6 +34,12 @@ class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
             holder.itemView.findNavController().navigate(action)
             true
         }
+
+        holder.itemView.jedanRedRaspored.setOnClickListener {
+            val action = RasporedFragmentDirections.actionNavRasporedToDetailRasporedFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
+
     }
 
     override fun getItemCount(): Int{

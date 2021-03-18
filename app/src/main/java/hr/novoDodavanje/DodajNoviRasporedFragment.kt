@@ -45,9 +45,10 @@ class DodajNoviRasporedFragment: Fragment() {
         val noviRasporedDomacin = noviRasporedDomacin.text.toString()
         val noviRasporedGost = noviRasporedGost.text.toString()
         val noviRasporedVrijeme = noviRasporedVrijeme.text.toString()
+        val noviRasporedClanak = noviRasporedClanak.text.toString()
 
             //Create object
-            val raspored = Raspored(0,noviRasporedNatjecanje,noviRasporedDatum,noviRasporedDomacin,noviRasporedGost,noviRasporedVrijeme)
+            val raspored = Raspored(0,noviRasporedNatjecanje,noviRasporedDatum,noviRasporedDomacin,noviRasporedGost,noviRasporedVrijeme,noviRasporedClanak)
             mRasporedViewModel.addRaspored(raspored)
             Toast.makeText(requireContext(),"Successfully added",Toast.LENGTH_LONG).show()
 

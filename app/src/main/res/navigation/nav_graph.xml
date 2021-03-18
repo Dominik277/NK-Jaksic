@@ -291,7 +291,11 @@
         android:id="@+id/detailRasporedFragment"
         android:name="hr.detailFragmenti.DetailRasporedFragment"
         android:label="DetailRasporedFragment"
-        tools:layout="@layout/detail_raspored_fragment"/>
+        tools:layout="@layout/detail_raspored_fragment">
+        <argument
+            android:name="detailRasporedArgs"
+            app:argType="hr.database.table.Raspored" />
+    </fragment>
     <fragment
         android:id="@+id/detailMomcadFragment"
         android:name="hr.detailFragmenti.DetailMomcadFragment"
@@ -305,5 +309,9 @@
         android:id="@+id/detailRezultatiFragment"
         android:name="hr.detailFragmenti.DetailRezultatiFragment"
         android:label="DetailRezultatiFragment"
-        tools:layout="@layout/detail_rezultati_fragment"/>
+        tools:layout="@layout/detail_rezultati_fragment">
+        <argument
+            android:name="detailRezultatArgs"
+            app:argType="hr.database.table.Rezultat" />
+    </fragment>
 </navigation>

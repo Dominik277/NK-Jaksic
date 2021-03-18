@@ -34,6 +34,12 @@ class RezultatiAdapter: RecyclerView.Adapter<RezultatiAdapter.ViewHolder>() {
             holder.itemView.findNavController().navigate(action)
             true
         }
+
+        holder.itemView.jedanRedRezultat.setOnClickListener {
+            val action = RezultatiFragmentDirections.actionNavRezultatiToDetailRezultatiFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
+
     }
 
     override fun getItemCount(): Int{

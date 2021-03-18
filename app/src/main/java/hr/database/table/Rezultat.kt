@@ -29,6 +29,9 @@ data class Rezultat (
     val rezultatUtakmice: String,
 
     @ColumnInfo(name = "ishod_rezultat")
-    val ishodRezultat: String
+    val ishodRezultat: String,
+
+    @ColumnInfo(name = "clanak_rezultat")
+    val clanakRezultat: String
 
         ): Parcelable
