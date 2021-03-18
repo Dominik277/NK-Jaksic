@@ -21,6 +21,6 @@ interface RezultatDao {
     suspend fun deleteOneRezultat(rezultat: Rezultat)
 
     @Query("DELETE FROM rezultat_rezultat")
-    fun deletePodatkeRezultat()
+    suspend fun deletePodatkeRezultat()
 
 }

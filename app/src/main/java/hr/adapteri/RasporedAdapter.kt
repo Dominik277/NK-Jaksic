@@ -28,6 +28,12 @@ class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
         holder.itemView.rasporedDomacin.text = currentItem.domacin
         holder.itemView.rasporedGost.text = currentItem.gost
         holder.itemView.rasporedVrijeme.text = currentItem.vrijeme
+
+        holder.itemView.jedanRedRaspored.setOnLongClickListener {
+            val action = RasporedFragmentDirections.actionRasporedFragmentToUpdateRasporedFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+            true
+        }
     }
 
     override fun getItemCount(): Int{

@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_main) as NavHostFragment
         navController = navHostFragment.findNavController()
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_rezultati,R.id.nav_momcad,R.id.nav_pocetnaStranica,
+            setOf(R.id.nav_momcad,R.id.nav_pocetnaStranica,
             R.id.nav_raspored,R.id.nav_tablica,R.id.nav_vijesti),
             main_drawer_layout
         )
