@@ -82,7 +82,11 @@
         android:id="@+id/nav_vijesti"
         android:name="hr.fragmenti.VijestiFragment"
         android:label="VijestiFragment"
-        tools:layout="@layout/fragment_vijesti"/>
+        tools:layout="@layout/fragment_vijesti">
+        <action
+            android:id="@+id/action_nav_vijesti_to_updateVijestiFragment"
+            app:destination="@id/updateVijestiFragment" />
+    </fragment>
     <fragment
         android:id="@+id/updateNajboljiStrijalacFragment"
         android:name="hr.updateDelete.UpdateNajboljiStrijalacFragment"
@@ -235,6 +239,15 @@
         tools:layout="@layout/fragment_nova_vijest">
         <action
             android:id="@+id/action_dodajNovuVijest2_to_vijestiFragment"
+            app:destination="@id/nav_vijesti" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateVijestiFragment"
+        android:name="hr.updateDelete.UpdateVijestiFragment"
+        android:label="UpdateVijestiFragment"
+        tools:layout="@layout/update_vijesti_fragment">
+        <action
+            android:id="@+id/action_updateVijestiFragment_to_nav_vijesti"
             app:destination="@id/nav_vijesti" />
     </fragment>
 </navigation>
