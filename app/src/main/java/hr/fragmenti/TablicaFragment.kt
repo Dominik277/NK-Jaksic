@@ -17,12 +17,14 @@ class TablicaFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_tablica,container,false)
+        val view = inflater.inflate(R.layout.fragment_tablica, container, false)
 
+        /*
         view.gumbNajboljiStrijelci.setOnClickListener {
             val action = TablicaFragmentDirections.actionNavTablicaToNajboljiStrijelciFragment()
             findNavController().navigate(action)
         }
+
 
         view.gumbTablica.setOnClickListener {
             val action = TablicaFragmentDirections.actionNavTablicaToTablicaTablicaFragment()
@@ -39,10 +41,12 @@ class TablicaFragment: Fragment() {
             findNavController().navigate(action)
         }
 
+         */
+
         return view
     }
 
-    /*
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -56,6 +60,8 @@ class TablicaFragment: Fragment() {
             commit()
         }
 
+
+/*
         gumbTablica.setOnClickListener {
             childFragmentManager.beginTransaction().apply {
                 replace(R.id.frameLayoutTablica, tablicaTablicaFragment)
@@ -63,6 +69,7 @@ class TablicaFragment: Fragment() {
                 commit()
             }
         }
+        */
 
         gumbNajboljiStrijelci.setOnClickListener {
             childFragmentManager.beginTransaction().apply {
@@ -88,6 +95,4 @@ class TablicaFragment: Fragment() {
             }
         }
     }
-
-     */
 }

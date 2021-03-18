@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.NajboljiStrijelci
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.najboljiStrijelciGolovi
-import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.najboljiStrijelciIme
-import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.najboljiStrijelciPozicija
+import hr.fragmenti.NajboljiStrijelciFragmentDirections
+import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.*
 
 class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {
 
@@ -27,6 +27,12 @@ class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.Vi
         holder.itemView.najboljiStrijelciPozicija.text = currentItem.pozicijaPoGolovima
         holder.itemView.najboljiStrijelciIme.text = currentItem.imeIgraca
         holder.itemView.najboljiStrijelciGolovi.text = currentItem.brojGolova
+
+        holder.itemView.jedanRedStrijelci.setOnLongClickListener {
+            val action = NajboljiStrijelciFragmentDirections.actionNajboljiStrijelciFragmentToUpdateNajboljiStrijalacFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+            true
+        }
     }
 
     override fun getItemCount(): Int{
