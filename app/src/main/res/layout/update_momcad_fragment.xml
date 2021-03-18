@@ -17,7 +17,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Prezime" />
-
+    <EditText
+        android:id="@+id/updateMomcadOdigraniSusreti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Odigrani susreti" />
+    <EditText
+        android:id="@+id/updateMomcadGolovi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Golovi" />
+    <EditText
+        android:id="@+id/updateMomcadAsistencije"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Asistencije" />
+    <EditText
+        android:id="@+id/updateMomcadOdigraneMinute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Odigrane minute" />
+    <EditText
+        android:id="@+id/updateMomcadZutiKartoni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zuti kartoni" />
+    <EditText
+        android:id="@+id/updateMomcadCrveniKartoni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Crveni kartoni" />
     <EditText
         android:id="@+id/updateMomcadBroj"
         android:layout_width="match_parent"

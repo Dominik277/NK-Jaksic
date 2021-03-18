@@ -35,6 +35,12 @@ class UpdateMomcadFragment: Fragment() {
 
         view.updateMomcadIme.setText(args.updateMomcadArgs.ime)
         view.updateMomcadPrezime.setText(args.updateMomcadArgs.prezime)
+        view.updateMomcadOdigraniSusreti.setText(args.updateMomcadArgs.odigranihSusreta)
+        view.updateMomcadGolovi.setText(args.updateMomcadArgs.golova)
+        view.updateMomcadAsistencije.setText(args.updateMomcadArgs.asistencija)
+        view.updateMomcadOdigraneMinute.setText(args.updateMomcadArgs.odigranihMinuta)
+        view.updateMomcadZutiKartoni.setText(args.updateMomcadArgs.zutiKartoni)
+        view.updateMomcadCrveniKartoni.setText(args.updateMomcadArgs.crveniKartoni)
         view.updateMomcadBroj.setText(args.updateMomcadArgs.broj)
 
         view.gumbUpdateMomcad.setOnClickListener {
@@ -66,10 +72,18 @@ class UpdateMomcadFragment: Fragment() {
     private fun updateItemMomcad() {
         val imeMomcad = updateMomcadIme.text.toString()
         val prezimeMomcad = updateMomcadPrezime.text.toString()
+        val odigraniSusretiMomcad = updateMomcadOdigraniSusreti.text.toString()
+        val goloviMomcad = updateMomcadGolovi.text.toString()
+        val asistencijeMomcad = updateMomcadAsistencije.text.toString()
+        val odigraneMinuteMomcad = updateMomcadOdigraneMinute.text.toString()
+        val zutiKartoniMomcad = updateMomcadZutiKartoni.text.toString()
+        val crveniKartoniMomcad = updateMomcadCrveniKartoni.text.toString()
         val brojMomcad = updateMomcadBroj.text.toString()
         val slikaMomcad = 0
 
-        val updateMomcad = Igraci(args.updateMomcadArgs.id,imeMomcad,prezimeMomcad,brojMomcad,slikaMomcad)
+        val updateMomcad = Igraci(args.updateMomcadArgs.id,imeMomcad,prezimeMomcad,
+            odigraniSusretiMomcad,goloviMomcad,asistencijeMomcad,odigraneMinuteMomcad,
+            zutiKartoniMomcad,crveniKartoniMomcad,brojMomcad,slikaMomcad)
         mMomcadViewModel.updateMomcad(updateMomcad)
         findNavController().navigate(R.id.action_updateMomcadFragment_to_momcadFragment)
     }
