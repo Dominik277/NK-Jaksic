@@ -5,14 +5,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
+import hr.fragmenti.VijestiFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_vijesti.view.*
 
 class VijestiAdapter: RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
 
-    private var sveVijestiUBazi = emptyList<Vijesti>()
+    private var listVijesti = emptyList<Vijesti>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_vijesti, parent, false)
@@ -20,13 +22,19 @@ class VijestiAdapter: RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val trenutniItem = sveVijestiUBazi[position]
-        holder.itemView.textViewVijesti.text = sveVijestiUBazi[position].naslov
-        holder.itemView.imageViewVijesti.setImageResource(trenutniItem.slika)
+        val currentItem = listVijesti[position]
+        holder.itemView.textViewVijesti.text = currentItem.naslov
+        holder.itemView.textViewVijestiVrijeme.text = currentItem.vrijeme
+
+        holder.itemView.jedanRedVijesti.setOnLongClickListener {
+            val action = VijestiFragmentDirections.actionNavVijestiToUpdateVijestiFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+            true
+        }
     }
 
     override fun getItemCount(): Int{
-        return sveVijestiUBazi.size
+        return listVijesti.size
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -34,7 +42,7 @@ class VijestiAdapter: RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
     }
 
     fun setData(vijesti: List<Vijesti>){
-        this.sveVijestiUBazi = vijesti
+        this.listVijesti = vijesti
         notifyDataSetChanged()
     }
 
