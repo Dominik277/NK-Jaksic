@@ -11,10 +11,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import hr.database.table.TablicaRaspored
+import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
 import hr.viewModel.TablicaRezultatiViewModel
 import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.*
+import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.updateRasporedLigaBrojKola
 import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.view.*
+import kotlinx.android.synthetic.main.update_tablica_rezultat_fragment.*
 import kotlinx.android.synthetic.main.update_tablica_rezultat_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
@@ -34,42 +37,42 @@ class UpdateTablicaRezultatFragment: Fragment() {
 
         mTablicaRezultat = ViewModelProvider(this).get(TablicaRezultatiViewModel::class.java)
 
-        view.updateRasporedLigaBrojKola.setText(args.updateRasporedLigaArgs.brojKola)
+        view.updateRasporedLigaBrojKola.setText(args.updateRezultatiLigaArgs.novi_brojKola)
 
-        view.updateRasporedLigaPrviDatum.setText(args.updateRasporedLigaArgs.prvaUtakmicaDatum)
-        view.updateRasporedLigaPrviDomacin.setText(args.updateRasporedLigaArgs.prvaUtakmicaDomacin)
-        view.updateRasporedLigaPrviGost.setText(args.updateRasporedLigaArgs.prvaUtakmicaGost)
-        view.updateRasporedLigaPrvoVrijeme.setText(args.updateRasporedLigaArgs.prvaUtakmicaVrijeme)
+        view.updateRasporedLigaPrviDatum.setText(args.updateRezultatiLigaArgs.novi_prvaUtakmicaDatum)
+        view.updateRasporedLigaPrviDomacin.setText(args.updateRezultatiLigaArgs.novi_prvaUtakmicaDomacin)
+        view.updateRasporedLigaPrviGost.setText(args.updateRezultatiLigaArgs.novi_prvaUtakmicaGost)
+        view.updateRasporedLigaPrvoVrijeme.setText(args.updateRezultatiLigaArgs.novi_prvaUtakmicaRezultat)
 
-        view.updateRasporedLigaDrugiDatum.setText(args.updateRasporedLigaArgs.drugaUtakmicaDatum)
-        view.updateRasporedLigaDrugiDomacin.setText(args.updateRasporedLigaArgs.drugaUtakmicaDomacin)
-        view.updateRasporedLigaDrugiGost.setText(args.updateRasporedLigaArgs.drugaUtakmicaGost)
-        view.updateRasporedLigaDrugoVrijeme.setText(args.updateRasporedLigaArgs.drugaUtakmicaVrijeme)
+        view.updateRasporedLigaDrugiDatum.setText(args.updateRezultatiLigaArgs.novi_drugaUtakmicaDatum)
+        view.updateRasporedLigaDrugiDomacin.setText(args.updateRezultatiLigaArgs.novi_drugaUtakmicaDomacin)
+        view.updateRasporedLigaDrugiGost.setText(args.updateRezultatiLigaArgs.novi_drugaUtakmicaGost)
+        view.updateRasporedLigaDrugoVrijeme.setText(args.updateRezultatiLigaArgs.novi_drugaUtakmicaRezultat)
 
-        view.updateRasporedLigaTreciDatum.setText(args.updateRasporedLigaArgs.trecaUtakmicaDatum)
-        view.updateRasporedLigaTreciDomacin.setText(args.updateRasporedLigaArgs.trecaUtakmicaDomacin)
-        view.updateRasporedLigaTreciGost.setText(args.updateRasporedLigaArgs.trecaUtakmicaGost)
-        view.updateRasporedLigaTreceVrijeme.setText(args.updateRasporedLigaArgs.trecaUtakmicaVrijeme)
+        view.updateRasporedLigaTreciDatum.setText(args.updateRezultatiLigaArgs.novi_trecaUtakmicaDatum)
+        view.updateRasporedLigaTreciDomacin.setText(args.updateRezultatiLigaArgs.novi_trecaUtakmicaDomacin)
+        view.updateRasporedLigaTreciGost.setText(args.updateRezultatiLigaArgs.novi_trecaUtakmicaGost)
+        view.updateRasporedLigaTreceVrijeme.setText(args.updateRezultatiLigaArgs.novi_trecaUtakmicaRezultat)
 
-        view.updateRasporedLigaCetvrtiDatum.setText(args.updateRasporedLigaArgs.cetvrtaUtakmicaDatum)
-        view.updateRasporedLigaCetvrtiDomacin.setText(args.updateRasporedLigaArgs.cetvrtaUtakmicaDomacin)
-        view.updateRasporedLigaCetvrtiGost.setText(args.updateRasporedLigaArgs.cetvrtaUtakmicaGost)
-        view.updateRasporedLigaCetvrtoVrijeme.setText(args.updateRasporedLigaArgs.cetvrtaUtakmicaVrijeme)
+        view.updateRasporedLigaCetvrtiDatum.setText(args.updateRezultatiLigaArgs.novi_cetvrtaUtakmicaDatum)
+        view.updateRasporedLigaCetvrtiDomacin.setText(args.updateRezultatiLigaArgs.novi_cetvrtaUtakmicaDomacin)
+        view.updateRasporedLigaCetvrtiGost.setText(args.updateRezultatiLigaArgs.novi_cetvrtaUtakmicaGost)
+        view.updateRasporedLigaCetvrtoVrijeme.setText(args.updateRezultatiLigaArgs.novi_cetvrtaUtakmicaRezultat)
 
-        view.updateRasporedLigaPetiDatum.setText(args.updateRasporedLigaArgs.petaUtakmicaDatum)
-        view.updateRasporedLigaPetiDomacin.setText(args.updateRasporedLigaArgs.petaUtakmicaDomacin)
-        view.updateRasporedLigaPetiGost.setText(args.updateRasporedLigaArgs.petaUtakmicaGost)
-        view.updateRasporedLigaPetoVrijeme.setText(args.updateRasporedLigaArgs.petaUtakmicaVrijeme)
+        view.updateRasporedLigaPetiDatum.setText(args.updateRezultatiLigaArgs.novi_petaUtakmicaDatum)
+        view.updateRasporedLigaPetiDomacin.setText(args.updateRezultatiLigaArgs.novi_petaUtakmicaDomacin)
+        view.updateRasporedLigaPetiGost.setText(args.updateRezultatiLigaArgs.novi_petaUtakmicaGost)
+        view.updateRasporedLigaPetoVrijeme.setText(args.updateRezultatiLigaArgs.novi_petaUtakmicaRezultat)
 
-        view.updateRasporedLigaSestiDatum.setText(args.updateRasporedLigaArgs.sestaUtakmicaDatum)
-        view.updateRasporedLigaSestiDomacin.setText(args.updateRasporedLigaArgs.sestaUtakmicaDomacin)
-        view.updateRasporedLigaSestiGost.setText(args.updateRasporedLigaArgs.sestaUtakmicaGost)
-        view.updateRasporedLigaSestoVrijeme.setText(args.updateRasporedLigaArgs.sestaUtakmicaVrijeme)
+        view.updateRasporedLigaSestiDatum.setText(args.updateRezultatiLigaArgs.novi_sestaUtakmicaDatum)
+        view.updateRasporedLigaSestiDomacin.setText(args.updateRezultatiLigaArgs.novi_sestaUtakmicaDomacin)
+        view.updateRasporedLigaSestiGost.setText(args.updateRezultatiLigaArgs.novi_sestaUtakmicaGost)
+        view.updateRasporedLigaSestoVrijeme.setText(args.updateRezultatiLigaArgs.novi_sestaUtakmicaRezultat)
 
-        view.updateRasporedLigaSedmiDatum.setText(args.updateRasporedLigaArgs.sedmaUtakmicaDatum)
-        view.updateRasporedLigaSedmiDomacin.setText(args.updateRasporedLigaArgs.sedmaUtakmicaDomacin)
-        view.updateRasporedLigaSedmiGost.setText(args.updateRasporedLigaArgs.sedmaUtakmicaGost)
-        view.updateRasporedLigaSedmoVrijeme.setText(args.updateRasporedLigaArgs.sedmaUtakmicaVrijeme)
+        view.updateRasporedLigaSedmiDatum.setText(args.updateRezultatiLigaArgs.novi_sedmaUtakmicaDatum)
+        view.updateRasporedLigaSedmiDomacin.setText(args.updateRezultatiLigaArgs.novi_sedmaUtakmicaDomacin)
+        view.updateRasporedLigaSedmiGost.setText(args.updateRezultatiLigaArgs.novi_sedmaUtakmicaGost)
+        view.updateRasporedLigaSedmoVrijeme.setText(args.updateRezultatiLigaArgs.novi_sedmaUtakmicaRezultat)
 
         view.gumbUpdateTablicaRezultat.setOnClickListener {
             updateItemTablicaRezultat()
@@ -96,55 +99,56 @@ class UpdateTablicaRezultatFragment: Fragment() {
         builder.create().show()
     }
 
+    @InternalCoroutinesApi
     private fun updateItemTablicaRezultat() {
-        val rasporedLigaBrojKola = updateRasporedLigaBrojKola.text.toString()
+        val rezultatLigaBrojKola = updateRezultatLigaBrojKola.text.toString()
 
-        val rasporedLigaPrviDatum = updateRasporedLigaPrviDatum.text.toString()
-        val rasporedLigaPrviDomacin = updateRasporedLigaPrviDomacin.text.toString()
-        val rasporedLigaPrviGost = updateRasporedLigaPrviGost.text.toString()
-        val rasporedLigaPrvoVrijeme = updateRasporedLigaPrvoVrijeme.text.toString()
+        val rezultatLigaPrviDatum = updateRezultatLigaPrviDatum.text.toString()
+        val rezultatLigaPrviDomacin = updateRezultatLigaPrviDomacin.text.toString()
+        val rezultatLigaPrviGost = updateRezultatLigaPrviGost.text.toString()
+        val rezultatLigaPrviRezultat = updateRezultatLigaPrviRezultat.text.toString()
 
-        val rasporedLigaDrugiDatum = updateRasporedLigaDrugiDatum.text.toString()
-        val rasporedLigaDrugiDomacin = updateRasporedLigaDrugiDomacin.text.toString()
-        val rasporedLigaDrugiGost = updateRasporedLigaDrugiGost.text.toString()
-        val rasporedLigaDrugiVrijeme = updateRasporedLigaDrugoVrijeme.text.toString()
+        val rezultatLigaDrugiDatum = updateRezultatLigaDrugiDatum.text.toString()
+        val rezultatLigaDrugiDomacin = updateRezultatLigaDrugiDomacin.text.toString()
+        val rezultatLigaDrugiGost = updateRezultatLigaDrugiGost.text.toString()
+        val rezultatLigaDrugiRezultat = updateRezultatLigaDrugiRezultat.text.toString()
 
-        val rasporedLigaTreciDatum = updateRasporedLigaTreciDatum.text.toString()
-        val rasporedLigaTreciDomacin = updateRasporedLigaTreciDomacin.text.toString()
-        val rasporedLigaTreciGost = updateRasporedLigaTreciGost.text.toString()
-        val rasporedLigaTreciVrijeme = updateRasporedLigaTreceVrijeme.text.toString()
+        val rezultatLigaTreciDatum = updateRezultatLigaTreciDatum.text.toString()
+        val rezultatLigaTreciDomacin = updateRezultatLigaTreciDomacin.text.toString()
+        val rezultatLigaTreciGost = updateRezultatLigaTreciGost.text.toString()
+        val rezultatLigaTreciRezultat = updateRezultatLigaTreciRezultat.text.toString()
 
-        val rasporedLigaCetvrtiDatum = updateRasporedLigaCetvrtiDatum.text.toString()
-        val rasporedLigaCetvrtiDomacin = updateRasporedLigaCetvrtiDomacin.text.toString()
-        val rasporedLigaCetvrtiGost = updateRasporedLigaCetvrtiGost.text.toString()
-        val rasporedLigaCetvrtiVrijeme = updateRasporedLigaCetvrtoVrijeme.text.toString()
+        val rezultatLigaCetvrtiDatum = updateRezultatLigaCetvrtiDatum.text.toString()
+        val rezultatLigaCetvrtiDomacin = updateRezultatLigaCetvrtiDomacin.text.toString()
+        val rezultatLigaCetvrtiGost = updateRezultatLigaCetvrtiGost.text.toString()
+        val rezultatLigaCetvrtiRezultat = updateRezultatLigaCetvrtiRezultat.text.toString()
 
-        val rasporedLigaPetiDatum = updateRasporedLigaPetiDatum.text.toString()
-        val rasporedLigaPetiDomacin = updateRasporedLigaPetiDomacin.text.toString()
-        val rasporedLigaPetiGost = updateRasporedLigaPetiGost.text.toString()
-        val rasporedLigaPetiVrijeme = updateRasporedLigaPetoVrijeme.text.toString()
+        val rezultatLigaPetiDatum = updateRezultatLigaPetiDatum.text.toString()
+        val rezultatLigaPetiDomacin = updateRezultatLigaPetiDomacin.text.toString()
+        val rezultatLigaPetiGost = updateRezultatLigaPetiGost.text.toString()
+        val rezultatLigaPetiRezultat = updateRezultatLigaPetiRezultat.text.toString()
 
-        val rasporedLigaSestiDatum = updateRasporedLigaSestiDatum.text.toString()
-        val rasporedLigaSestiDomacin = updateRasporedLigaSestiDomacin.text.toString()
-        val rasporedLigaSestiGost = updateRasporedLigaSestiGost.text.toString()
-        val rasporedLigaSestiVrijeme = updateRasporedLigaSestoVrijeme.text.toString()
+        val rezultatLigaSestiDatum = updateRezultatLigaSestiDatum.text.toString()
+        val rezultatLigaSestiDomacin = updateRezultatLigaSestiDomacin.text.toString()
+        val rezultatLigaSestiGost = updateRezultatLigaSestiGost.text.toString()
+        val rezultatLigaSestiRezultat = updateRezultatLigaSestiRezultat.text.toString()
 
-        val rasporedLigaSedmiDatum = updateRasporedLigaSedmiDatum.text.toString()
-        val rasporedLigaSedmiDomacin = updateRasporedLigaSedmiDomacin.text.toString()
-        val rasporedLigaSedmiGost = updateRasporedLigaSedmiGost.text.toString()
-        val rasporedLigaSedmiVrijeme = updateRasporedLigaSedmoVrijeme.text.toString()
+        val rezultatLigaSedmiDatum = updateRezultatLigaSedmiDatum.text.toString()
+        val rezultatLigaSedmiDomacin = updateRezultatLigaSedmiDomacin.text.toString()
+        val rezultatLigaSedmiGost = updateRezultatLigaSedmiGost.text.toString()
+        val rezultatLigaSedmiRezultat = updateRezultatLigaSedmiRezultat.text.toString()
 
-        val updateRasporedTablica = TablicaRaspored(args.updateRasporedLigaArgs.id,
-            rasporedLigaBrojKola,
-            rasporedLigaPrviDatum,rasporedLigaPrviDomacin,rasporedLigaPrviGost,rasporedLigaPrvoVrijeme,
-            rasporedLigaDrugiDatum,rasporedLigaDrugiDomacin,rasporedLigaDrugiGost,rasporedLigaDrugiVrijeme,
-            rasporedLigaTreciDatum,rasporedLigaTreciDomacin,rasporedLigaTreciGost,rasporedLigaTreciVrijeme,
-            rasporedLigaCetvrtiDatum,rasporedLigaCetvrtiDomacin,rasporedLigaCetvrtiGost,rasporedLigaCetvrtiVrijeme,
-            rasporedLigaPetiDatum,rasporedLigaPetiDomacin,rasporedLigaPetiGost,rasporedLigaPetiVrijeme,
-            rasporedLigaSestiDatum,rasporedLigaSestiDomacin,rasporedLigaSestiGost,rasporedLigaSestiVrijeme,
-            rasporedLigaSedmiDatum,rasporedLigaSedmiDomacin,rasporedLigaSedmiGost,rasporedLigaSedmiVrijeme)
+        val updateRezultatTablica = TablicaRezultati(args.updateRezultatiLigaArgs.novi_id,
+            rezultatLigaBrojKola,
+            rezultatLigaPrviDatum,rezultatLigaPrviDomacin,rezultatLigaPrviGost,rezultatLigaPrviRezultat,
+            rezultatLigaDrugiDatum,rezultatLigaDrugiDomacin,rezultatLigaDrugiGost,rezultatLigaDrugiRezultat,
+            rezultatLigaTreciDatum,rezultatLigaTreciDomacin,rezultatLigaTreciGost,rezultatLigaTreciRezultat,
+            rezultatLigaCetvrtiDatum,rezultatLigaCetvrtiDomacin,rezultatLigaCetvrtiGost,rezultatLigaCetvrtiRezultat,
+            rezultatLigaPetiDatum,rezultatLigaPetiDomacin,rezultatLigaPetiGost,rezultatLigaPetiRezultat,
+            rezultatLigaSestiDatum,rezultatLigaSestiDomacin,rezultatLigaSestiGost,rezultatLigaSestiRezultat,
+            rezultatLigaSedmiDatum,rezultatLigaSedmiDomacin,rezultatLigaSedmiGost,rezultatLigaSedmiRezultat)
 
-        mTablicaRasporedViewModel.updateTablicaRaspored(updateRasporedTablica)
+        mTablicaRezultat.updateTablicaRezultat(updateRezultatTablica)
         findNavController().navigate(R.id.action_updateTablicaRasporedFragment_to_tablicaRasporedFragment)
     }
 
