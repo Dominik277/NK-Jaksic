@@ -66,10 +66,16 @@ class DodajNovogIgraca: Fragment() {
     private fun insertDataToDatabase() {
         val igracIme = noviIgracIme.text.toString()
         val igracPrezime = noviIgracPrezime.text.toString()
+        val igracOdigraniSusreti = noviIgracOdigraniSusreti.text.toString()
+        val igracGolovi = noviIgracGolovi.text.toString()
+        val igracAsistencije = noviIgracAsistencije.text.toString()
+        val igracOdigraneMinute = noviIgracOdigraneMinute.text.toString()
+        val igracZutiKartoni = noviIgracZutiKartoni.text.toString()
+        val igracCrveniKartoni = noviIgracCrveniKartoni.text.toString()
         val igracBroj = noviIgracBroj.text.toString()
         val igracSlika = R.drawable.face
 
-        val igrac = Igraci(0,igracIme,igracPrezime,igracBroj,igracSlika)
+        val igrac = Igraci(0,igracIme,igracPrezime,igracOdigraniSusreti,igracGolovi,igracAsistencije,igracOdigraneMinute,igracZutiKartoni,igracCrveniKartoni,igracBroj,igracSlika)
         mMomcadViewModel.addMomcad(igrac)
     }
 

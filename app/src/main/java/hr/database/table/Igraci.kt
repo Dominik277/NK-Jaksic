@@ -18,6 +18,24 @@ data class Igraci(
         @ColumnInfo(name = "prezime")
         val prezime: String,
 
+        @ColumnInfo(name = "odigranih_susreta")
+        val odigranihSusreta: String,
+
+        @ColumnInfo(name = "golova")
+        val golova: String,
+
+        @ColumnInfo(name = "asistencija")
+        val asistencija: String,
+
+        @ColumnInfo(name = "odigranih_minuta")
+        val odigranihMinuta: String,
+
+        @ColumnInfo(name = "zuti_kartoni")
+        val zutiKartoni: String,
+
+        @ColumnInfo(name = "crveni_kartoni")
+        val crveniKartoni: String,
+
         @ColumnInfo(name = "broj")
         val broj: String,
 

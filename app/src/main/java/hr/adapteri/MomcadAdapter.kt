@@ -33,6 +33,11 @@ class MomcadAdapter: RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
             true
         }
 
+        holder.itemView.jedanRedMomcad.setOnClickListener {
+            val action = MomcadFragmentDirections.actionNavMomcadToDetailMomcadFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
+
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

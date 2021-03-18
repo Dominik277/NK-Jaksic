@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/detailIgracIme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracPrezime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracBroj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracOdigraniSusreti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracGolovi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracAsistencije"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracOdigraneMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracZutiKartoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracCrveniKartoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+
+</LinearLayout>

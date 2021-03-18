@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="30dp">
 
 
@@ -10,21 +11,47 @@
         android:id="@+id/noviIgracIme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:hint="Ovdje upišite ime igrača" />
 
     <EditText
         android:id="@+id/noviIgracPrezime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:hint="Ovdje upišite prezime igrača" />
-
+    <EditText
+        android:id="@+id/noviIgracOdigraniSusreti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ovdje upišite odigrane susrete" />
+    <EditText
+        android:id="@+id/noviIgracGolovi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ovdje upišite broj golova" />
+    <EditText
+        android:id="@+id/noviIgracAsistencije"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ovdje upišite broj asistencija" />
+    <EditText
+        android:id="@+id/noviIgracOdigraneMinute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ovdje upišite odigrane minute" />
+    <EditText
+        android:id="@+id/noviIgracZutiKartoni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ovdje upišite žute kartone" />
+    <EditText
+        android:id="@+id/noviIgracCrveniKartoni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ovdje upišite crvene kartone" />
     <EditText
         android:id="@+id/noviIgracBroj"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:hint="Ovdje upišite broj igrača"
         android:inputType="number" />
 

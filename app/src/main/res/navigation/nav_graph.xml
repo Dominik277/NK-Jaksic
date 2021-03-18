@@ -296,7 +296,11 @@
         android:id="@+id/detailMomcadFragment"
         android:name="hr.detailFragmenti.DetailMomcadFragment"
         android:label="DetailMomcadFragment"
-        tools:layout="@layout/detail_momcad_fragment"/>
+        tools:layout="@layout/detail_momcad_fragment">
+        <argument
+            android:name="detailMomcadArgs"
+            app:argType="hr.database.table.Igraci" />
+    </fragment>
     <fragment
         android:id="@+id/detailRezultatiFragment"
         android:name="hr.detailFragmenti.DetailRezultatiFragment"
