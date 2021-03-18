@@ -50,7 +50,20 @@
         android:id="@+id/nav_tablica"
         android:name="hr.fragmenti.TablicaFragment"
         android:label="TablicaFragment"
-        tools:layout="@layout/fragment_tablica"/>
+        tools:layout="@layout/fragment_tablica">
+        <action
+            android:id="@+id/action_nav_tablica_to_najboljiStrijelciFragment"
+            app:destination="@id/najboljiStrijelciFragment" />
+        <action
+            android:id="@+id/action_nav_tablica_to_tablicaTablicaFragment"
+            app:destination="@id/tablicaTablicaFragment" />
+        <action
+            android:id="@+id/action_nav_tablica_to_tablicaRasporedFragment"
+            app:destination="@id/tablicaRasporedFragment" />
+        <action
+            android:id="@+id/action_nav_tablica_to_tablicaRezultatiFragment"
+            app:destination="@id/tablicaRezultatiFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tablicaRasporedFragment"
         android:name="hr.fragmenti.TablicaRasporedFragment"
