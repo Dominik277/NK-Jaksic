@@ -47,12 +47,14 @@ class DodajNoviRezultatFragment: Fragment() {
         val noviRezultatGost = noviRezultatGost.text.toString()
         val noviRezultatRezultat = noviRezultatRezultat.text.toString()
         val noviRezultatIshod = noviRezultatIshod.text.toString()
+        val noviRezultatPostave = noviRezultatPostave.text.toString()
+        val noviRezultatDetalji = noviRezultatDetalji.text.toString()
         val noviRezultatClanak = noviRezultatClanak.text.toString()
 
             //Create object
             val rezultat = Rezultat(0,noviRezultatNatjecanje,noviRezultatDatum,
-                noviRezultatDomacin,noviRezultatGost,noviRezultatRezultat,noviRezultatIshod,
-                noviRezultatClanak)
+                noviRezultatDomacin,noviRezultatGost,noviRezultatRezultat,noviRezultatIshod,noviRezultatPostave,
+                noviRezultatDetalji,noviRezultatClanak)
             mRezultatiViewModel.addRezultat(rezultat)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
 

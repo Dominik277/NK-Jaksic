@@ -40,6 +40,8 @@ class UpdateRezultatFragment : Fragment() {
         view.updateRezultatGost.setText(args.updateRezultatiArgs.gostRezultat)
         view.updateRezultatRezultat.setText(args.updateRezultatiArgs.rezultatUtakmice)
         view.updateRezultatIshod.setText(args.updateRezultatiArgs.ishodRezultat)
+        view.updateRezultatPostave.setText(args.updateRezultatiArgs.postaveRezultati)
+        view.updateRezultatDetalji.setText(args.updateRezultatiArgs.detaljiRezultati)
         view.updateRezultatClanak.setText(args.updateRezultatiArgs.clanakRezultat)
 
         view.gumbRezultatUpdate.setOnClickListener {
@@ -76,12 +78,14 @@ class UpdateRezultatFragment : Fragment() {
         val rezultatGost = updateRezultatGost.text.toString()
         val rezultatRezultat = updateRezultatRezultat.text.toString()
         val rezultatIshod = updateRezultatIshod.text.toString()
+        val rezultatPostave = updateRezultatPostave.text.toString()
+        val rezultatDetalji = updateRezultatDetalji.text.toString()
         val rezultatClanak = updateRezultatClanak.text.toString()
 
         val updateRezultat = Rezultat(
             args.updateRezultatiArgs.id, rezultatNatjecanje, rezultatDatum,
             rezultatDomacin, rezultatGost, rezultatRezultat, rezultatIshod,
-        rezultatClanak)
+        rezultatPostave,rezultatDetalji,rezultatClanak)
         mRezultatiViewModel.updateRezultati(updateRezultat)
         findNavController().navigate(R.id.action_updateRezultatFragment_to_rezultatiFragment)
 

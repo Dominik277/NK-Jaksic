@@ -34,6 +34,8 @@ class DetailRezultatiFragment : Fragment(){
         view.detailRezultatGost.setText(args.detailRezultatArgs.gostRezultat)
         view.detailRezultatRezultat.setText(args.detailRezultatArgs.rezultatUtakmice)
         view.detailRezultatIshod.setText(args.detailRezultatArgs.ishodRezultat)
+        view.detailRezultatPostave.setText(args.detailRezultatArgs.postaveRezultati)
+        view.detailRezultatDetalji.setText(args.detailRezultatArgs.detaljiRezultati)
         view.detailRezultatClanak.setText(args.detailRezultatArgs.clanakRezultat)
 
         return view

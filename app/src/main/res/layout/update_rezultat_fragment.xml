@@ -4,48 +4,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:gravity="center">
+    android:padding="20dp">
 
     <EditText
         android:id="@+id/updateRezultatNatjecanje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Ime natjecanja"/>
     <EditText
         android:id="@+id/updateRezultatDatum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Datum"/>
     <EditText
         android:id="@+id/updateRezultatDomacin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Domacin"/>
     <EditText
         android:id="@+id/updateRezultatGost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Gost"/>
     <EditText
         android:id="@+id/updateRezultatRezultat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Rezultat"/>
     <EditText
         android:id="@+id/updateRezultatIshod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="Ishod"/>
+    <EditText
+        android:id="@+id/updateRezultatPostave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Postave"/>
+    <EditText
+        android:id="@+id/updateRezultatDetalji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Detalji"/>
     <EditText
         android:id="@+id/updateRezultatClanak"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:hint="Ovdje unesite clanak" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button
