@@ -1,65 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/detailIgracIme"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/jaksic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracPrezime"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ime: " />
+
+        <TextView
+            android:id="@+id/detailIgracIme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracPozicija"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prezime: " />
+
+        <TextView
+            android:id="@+id/detailIgracPrezime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracBroj"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pozicija: " />
+
+        <TextView
+            android:id="@+id/detailIgracPozicija"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracOdigraniSusreti"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broj: " />
+
+        <TextView
+            android:id="@+id/detailIgracBroj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracGolovi"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Odigrani susreti: " />
+
+        <TextView
+            android:id="@+id/detailIgracOdigraniSusreti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracAsistencije"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Golovi: " />
+
+        <TextView
+            android:id="@+id/detailIgracGolovi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracOdigraneMinute"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asistencije: " />
+
+        <TextView
+            android:id="@+id/detailIgracAsistencije"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracZutiKartoni"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Odigrane minute: "/>
+
+        <TextView
+            android:id="@+id/detailIgracOdigraneMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
-    <TextView
-        android:id="@+id/detailIgracCrveniKartoni"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zuti kartoni: " />
+
+        <TextView
+            android:id="@+id/detailIgracZutiKartoni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crveni kartoni: " />
+
+        <TextView
+            android:id="@+id/detailIgracCrveniKartoni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail igraci" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
     <TextView
         android:id="@+id/detailIgracOpis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail igraci"/>
+        android:text="Detail igraci" />
 
 </LinearLayout>
