@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import hr.database.table.TablicaRaspored
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
@@ -35,6 +36,8 @@ class DodajNoviRezultatLigaFragment: Fragment() {
         mTablicaRezultatViewModel = ViewModelProvider(this).get(TablicaRezultatiViewModel::class.java)
 
         view.gumbSpremiTablicaRezultat.setOnClickListener {
+            val action = DodajNoviRezultatLigaFragmentDirections.actionDodajNoviRezultatLigaFragmentToTablicaRezultatiFragment()
+            findNavController().navigate(action)
             insertDataToDatabase()
         }
 

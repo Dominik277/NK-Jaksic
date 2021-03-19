@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import hr.viewModel.NajboljiStrijelciViewModel
@@ -31,6 +32,8 @@ class DodajNovogStrijelcaFragment: Fragment() {
         mNajboljiStrijelacViewModel = ViewModelProvider(this).get(NajboljiStrijelciViewModel::class.java)
 
         view.gumbSpremiNovogStrijelca.setOnClickListener {
+            val action = DodajNovogStrijelcaFragmentDirections.actionDodajNovogStrijelcaFragmentToNajboljiStrijelciFragment()
+            findNavController().navigate(action)
             insertDataToDatabase()
         }
 

@@ -239,7 +239,7 @@
             android:id="@+id/tablicaRezultati_domacinSestaUtakmica"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="25dp"
             android:text="NK Jakšić"
             android:textSize="18dp"
             android:textColor="#000"/>
@@ -294,7 +294,7 @@
             android:id="@+id/tablicaRezultati_rezultatSedmaUtakmica"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="15dp"
             android:text="3:2"
             android:textSize="18dp"
             android:textColor="#000"/>
