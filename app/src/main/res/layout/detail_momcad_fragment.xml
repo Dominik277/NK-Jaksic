@@ -17,6 +17,11 @@
         android:layout_height="wrap_content"
         android:text="Detail igraci"/>
     <TextView
+        android:id="@+id/detailIgracPozicija"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
         android:id="@+id/detailIgracBroj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,6 +53,11 @@
         android:text="Detail igraci"/>
     <TextView
         android:id="@+id/detailIgracCrveniKartoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail igraci"/>
+    <TextView
+        android:id="@+id/detailIgracOpis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detail igraci"/>

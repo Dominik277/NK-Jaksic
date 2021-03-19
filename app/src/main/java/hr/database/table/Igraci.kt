@@ -42,6 +42,9 @@ data class Igraci(
         @ColumnInfo(name = "broj")
         val broj: String,
 
+        @ColumnInfo(name = "opis")
+        val opis: String,
+
         @ColumnInfo(name = "slika")
         val slika: Int
 ): Parcelable

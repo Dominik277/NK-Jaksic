@@ -35,6 +35,7 @@ class UpdateMomcadFragment: Fragment() {
 
         view.updateMomcadIme.setText(args.updateMomcadArgs.ime)
         view.updateMomcadPrezime.setText(args.updateMomcadArgs.prezime)
+        view.updateMomcadPozicija.setText(args.updateMomcadArgs.pozicija)
         view.updateMomcadOdigraniSusreti.setText(args.updateMomcadArgs.odigranihSusreta)
         view.updateMomcadGolovi.setText(args.updateMomcadArgs.golova)
         view.updateMomcadAsistencije.setText(args.updateMomcadArgs.asistencija)
@@ -42,6 +43,7 @@ class UpdateMomcadFragment: Fragment() {
         view.updateMomcadZutiKartoni.setText(args.updateMomcadArgs.zutiKartoni)
         view.updateMomcadCrveniKartoni.setText(args.updateMomcadArgs.crveniKartoni)
         view.updateMomcadBroj.setText(args.updateMomcadArgs.broj)
+        view.updateMomcadOpis.setText(args.updateMomcadArgs.opis)
 
         view.gumbUpdateMomcad.setOnClickListener {
             updateItemMomcad()
@@ -72,6 +74,7 @@ class UpdateMomcadFragment: Fragment() {
     private fun updateItemMomcad() {
         val imeMomcad = updateMomcadIme.text.toString()
         val prezimeMomcad = updateMomcadPrezime.text.toString()
+        val pozicijaMomcad = updateMomcadPozicija.text.toString()
         val odigraniSusretiMomcad = updateMomcadOdigraniSusreti.text.toString()
         val goloviMomcad = updateMomcadGolovi.text.toString()
         val asistencijeMomcad = updateMomcadAsistencije.text.toString()
@@ -79,11 +82,12 @@ class UpdateMomcadFragment: Fragment() {
         val zutiKartoniMomcad = updateMomcadZutiKartoni.text.toString()
         val crveniKartoniMomcad = updateMomcadCrveniKartoni.text.toString()
         val brojMomcad = updateMomcadBroj.text.toString()
+        val opisMomcad = updateMomcadOpis.text.toString()
         val slikaMomcad = 0
 
-        val updateMomcad = Igraci(args.updateMomcadArgs.id,imeMomcad,prezimeMomcad,
+        val updateMomcad = Igraci(args.updateMomcadArgs.id,imeMomcad,prezimeMomcad,pozicijaMomcad,
             odigraniSusretiMomcad,goloviMomcad,asistencijeMomcad,odigraneMinuteMomcad,
-            zutiKartoniMomcad,crveniKartoniMomcad,brojMomcad,slikaMomcad)
+            zutiKartoniMomcad,crveniKartoniMomcad,brojMomcad,opisMomcad,slikaMomcad)
         mMomcadViewModel.updateMomcad(updateMomcad)
         findNavController().navigate(R.id.action_updateMomcadFragment_to_momcadFragment)
     }

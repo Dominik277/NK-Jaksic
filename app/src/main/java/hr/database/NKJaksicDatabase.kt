@@ -11,7 +11,7 @@ import kotlinx.coroutines.internal.synchronized
 
 @Database(
     entities = [Igraci::class, Vijesti::class, TablicaTablica::class, NajboljiStrijelci::class, Raspored::class, Rezultat::class, TablicaRaspored::class, TablicaRezultati::class],
-    version = 22
+    version = 23
 )
 abstract class NKJaksicDatabase : RoomDatabase() {
 

@@ -3,9 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="30dp">
-
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/noviIgracIme"
@@ -20,10 +18,10 @@
         android:hint="Ovdje upišite prezime igrača" />
 
     <EditText
-        android:id="@+id/noviIgracIme"
+        android:id="@+id/noviIgracPozicija"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ovdje upišite ime igrača" />
+        android:hint="Ovdje upišite poziciju igrača" />
 
     <EditText
         android:id="@+id/noviIgracOdigraniSusreti"
@@ -67,6 +65,13 @@
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite broj igrača"
         android:inputType="number" />
+
+    <EditText
+        android:id="@+id/noviIgracOpis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Ovdje upišite opis igraca" />
 
     <Button
         android:id="@+id/gumbSpremiNoviIgrac"

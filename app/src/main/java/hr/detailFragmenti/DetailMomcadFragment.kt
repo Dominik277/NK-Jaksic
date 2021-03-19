@@ -30,6 +30,7 @@ class DetailMomcadFragment: Fragment() {
 
         view.detailIgracIme.setText(args.detailMomcadArgs.ime)
         view.detailIgracPrezime.setText(args.detailMomcadArgs.prezime)
+        view.detailIgracPozicija.setText(args.detailMomcadArgs.pozicija)
         view.detailIgracOdigraniSusreti.setText(args.detailMomcadArgs.odigranihSusreta)
         view.detailIgracGolovi.setText(args.detailMomcadArgs.golova)
         view.detailIgracAsistencije.setText(args.detailMomcadArgs.asistencija)
@@ -37,6 +38,7 @@ class DetailMomcadFragment: Fragment() {
         view.detailIgracZutiKartoni.setText(args.detailMomcadArgs.zutiKartoni)
         view.detailIgracCrveniKartoni.setText(args.detailMomcadArgs.crveniKartoni)
         view.detailIgracBroj.setText(args.detailMomcadArgs.broj)
+        view.detailIgracOpis.setText(args.detailMomcadArgs.opis)
 
         return view
     }
