@@ -22,13 +22,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Natjecanje: " />
+            android:layout_marginLeft="10dp"
+            android:text="Natjecanje: "
+            android:textColor="#000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/detailRasporedNatjecanje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detail Raspored" />
+            android:text="Detail Raspored"
+            android:textColor="#000"
+            android:textSize="20dp" />
     </LinearLayout>
 
 
@@ -40,13 +45,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Datum: " />
+            android:layout_marginLeft="10dp"
+            android:text="Datum: "
+            android:textColor="#000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/detailRasporedDatum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detail Raspored" />
+            android:text="Detail Raspored"
+            android:textColor="#000"
+            android:textSize="20dp" />
     </LinearLayout>
 
 
@@ -58,13 +68,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Domacin: " />
+            android:layout_marginLeft="10dp"
+            android:text="Domacin: "
+            android:textColor="#000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/detailRasporedDomacin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detail Raspored" />
+            android:text="Detail Raspored"
+            android:textColor="#000"
+            android:textSize="20dp" />
     </LinearLayout>
 
 
@@ -76,13 +91,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gost: " />
+            android:layout_marginLeft="10dp"
+            android:text="Gost: "
+            android:textColor="#000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/detailRasporedGost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detail Raspored" />
+            android:text="Detail Raspored"
+            android:textColor="#000"
+            android:textSize="20dp" />
     </LinearLayout>
 
 
@@ -90,15 +110,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vrijeme: "/>
-    <TextView
-        android:id="@+id/detailRasporedVrijeme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Detail Raspored" />
+            android:layout_marginLeft="10dp"
+            android:text="Vrijeme: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/detailRasporedVrijeme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Raspored"
+            android:textColor="#000"
+            android:textSize="20dp" />
     </LinearLayout>
 
     <View
@@ -110,6 +137,9 @@
         android:id="@+id/detailRasporedClanak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail Raspored" />
+        android:layout_marginLeft="10dp"
+        android:text="Detail Raspored"
+        android:textColor="#000"
+        android:textSize="20dp" />
 
 </LinearLayout>
