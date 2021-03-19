@@ -1,40 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/detailRasporedNatjecanje"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/jaksic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail Raspored"/>
-    <TextView
-        android:id="@+id/detailRasporedDatum"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Natjecanje: " />
+
+        <TextView
+            android:id="@+id/detailRasporedNatjecanje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Raspored" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail Raspored"/>
-    <TextView
-        android:id="@+id/detailRasporedDomacin"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datum: " />
+
+        <TextView
+            android:id="@+id/detailRasporedDatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Raspored" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail Raspored"/>
-    <TextView
-        android:id="@+id/detailRasporedGost"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Domacin: " />
+
+        <TextView
+            android:id="@+id/detailRasporedDomacin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Raspored" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail Raspored"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gost: " />
+
+        <TextView
+            android:id="@+id/detailRasporedGost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Raspored" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vrijeme: "/>
     <TextView
         android:id="@+id/detailRasporedVrijeme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail Raspored"/>
+        android:text="Detail Raspored" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
     <TextView
         android:id="@+id/detailRasporedClanak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail Raspored"/>
+        android:text="Detail Raspored" />
 
 </LinearLayout>
