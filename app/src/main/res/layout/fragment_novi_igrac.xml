@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="30dp">
 
 
@@ -18,36 +18,49 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite prezime igrača" />
+
+    <EditText
+        android:id="@+id/noviIgracIme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ovdje upišite ime igrača" />
+
     <EditText
         android:id="@+id/noviIgracOdigraniSusreti"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite odigrane susrete" />
+
     <EditText
         android:id="@+id/noviIgracGolovi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite broj golova" />
+
     <EditText
         android:id="@+id/noviIgracAsistencije"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite broj asistencija" />
+
     <EditText
         android:id="@+id/noviIgracOdigraneMinute"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite odigrane minute" />
+
     <EditText
         android:id="@+id/noviIgracZutiKartoni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite žute kartone" />
+
     <EditText
         android:id="@+id/noviIgracCrveniKartoni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ovdje upišite crvene kartone" />
+
     <EditText
         android:id="@+id/noviIgracBroj"
         android:layout_width="match_parent"
@@ -55,40 +68,12 @@
         android:hint="Ovdje upišite broj igrača"
         android:inputType="number" />
 
-    <ImageView
-        android:id="@+id/imageViewIgrac"
-        android:layout_width="345dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:scaleType="centerCrop" />
-
-    <LinearLayout
+    <Button
+        android:id="@+id/gumbSpremiNoviIgrac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/gumbIgracGalerija"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:text="Galerija" />
-
-        <Button
-            android:id="@+id/gumbIgracUslikaj"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:text="Uslikaj" />
-
-        <Button
-            android:id="@+id/gumbSpremiNoviIgrac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:text="Spremi" />
-
-    </LinearLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="Spremi" />
 
 </LinearLayout>

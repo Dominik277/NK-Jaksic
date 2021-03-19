@@ -21,41 +21,13 @@
         android:gravity="bottom"
         android:hint="Ovdje unesite tekst članka" />
 
-    <ImageView
-        android:id="@+id/imageViewVijesti"
-        android:layout_width="370dp"
-        android:layout_height="170dp"
-        android:scaleType="centerCrop" />
 
-    <LinearLayout
+    <Button
+        android:id="@+id/novaVijestGumbSpremi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/gumbVijestGalerija"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="30dp"
-            android:text="Galerija" />
-
-        <Button
-            android:id="@+id/gumbVijestUslikaj"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:text="Uslikaj" />
-
-        <Button
-            android:id="@+id/novaVijestGumbSpremi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:text="Spremi" />
-
-    </LinearLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:text="Spremi" />
 
 </LinearLayout>

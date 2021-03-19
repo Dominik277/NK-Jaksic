@@ -18,6 +18,9 @@ data class Igraci(
         @ColumnInfo(name = "prezime")
         val prezime: String,
 
+        @ColumnInfo(name = "pozicija")
+        val pozicija: String,
+
         @ColumnInfo(name = "odigranih_susreta")
         val odigranihSusreta: String,
 

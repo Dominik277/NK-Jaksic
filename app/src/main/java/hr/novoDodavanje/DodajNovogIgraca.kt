@@ -27,10 +27,6 @@ import java.util.jar.Manifest
 
 class DodajNovogIgraca: Fragment() {
 
-    private val REQUEST_PERMISSION = 100
-    private val REQUEST_IMAGE_CAPTURE = 1
-    private val REQUEST_PICK_IMAGE = 2
-
     @InternalCoroutinesApi
     private lateinit var mMomcadViewModel: MomcadViewModel
 
@@ -50,15 +46,6 @@ class DodajNovogIgraca: Fragment() {
             insertDataToDatabase()
         }
 
-        /*
-        view.gumbIgracUslikaj.setOnClickListener {
-            openCamera()
-        }
-
-        view.gumbIgracGalerija.setOnClickListener {
-            openGallery()
-        }
-        */
         return view
     }
 
@@ -78,59 +65,4 @@ class DodajNovogIgraca: Fragment() {
         val igrac = Igraci(0,igracIme,igracPrezime,igracOdigraniSusreti,igracGolovi,igracAsistencije,igracOdigraneMinute,igracZutiKartoni,igracCrveniKartoni,igracBroj,igracSlika)
         mMomcadViewModel.addMomcad(igrac)
     }
-
-    /*
-    override fun onResume() {
-        super.onResume()
-        checkCameraPermission()
-    }
-     */
-
-    /*
-    private fun checkCameraPermission() {
-        if (ContextCompat.checkSelfPermission(requireContext(),android.Manifest.permission.CAMERA)
-            != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(requireActivity(),arrayOf(android.Manifest.permission.CAMERA),
-            REQUEST_PERMISSION)
-        }
-    }
-     */
-
-
-    /*
-    private fun openCamera() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
-            activity?.let {
-                intent.resolveActivity(it.packageManager)?.also {
-                    startActivityForResult(intent,REQUEST_IMAGE_CAPTURE)
-                }
-            }
-        }
-    }
-     */
-
-    private fun openGallery() {
-        Intent(Intent.ACTION_GET_CONTENT).also { intent ->
-            intent.type = "image/*"
-            activity?.let {
-                intent.resolveActivity(it.packageManager)?.also {
-                    startActivityForResult(intent,REQUEST_PICK_IMAGE)
-                }
-            }
-        }
-    }
-
-/*
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (resultCode == RESULT_OK){
-            if (requestCode == REQUEST_IMAGE_CAPTURE) {
-                val bitmap = data?.extras?.get("data") as Bitmap
-                imageViewIgrac.setImageBitmap(bitmap)
-            }else if (requestCode == REQUEST_PICK_IMAGE) {
-                val uri = data?.getData()
-                imageViewIgrac.setImageURI(uri)
-            }
-        }
-    }
-*/
 }

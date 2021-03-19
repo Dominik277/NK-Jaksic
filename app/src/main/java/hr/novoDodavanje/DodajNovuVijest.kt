@@ -51,17 +51,6 @@ class DodajNovuVijest: Fragment() {
             findNavController().navigate(action)
             insertDataToDatabase()
         }
-
-/*
-        view.gumbVijestGalerija.setOnClickListener {
-            openGallery()
-        }
-
-        view.gumbVijestUslikaj.setOnClickListener {
-            openCamera()
-        }
- */
-
         return view
     }
 
@@ -78,57 +67,4 @@ class DodajNovuVijest: Fragment() {
         val vijest = Vijesti(0,noviNaslov,noviClanak,novoVrijeme,novaSlika)
         mVijestiViewModel.addVijesti(vijest)
     }
-/*
-    override fun onResume() {
-        super.onResume()
-        checkCameraPermission()
-    }
- */
-
-    /*
-    private fun checkCameraPermission() {
-        if (ContextCompat.checkSelfPermission(requireContext(),android.Manifest.permission.CAMERA)
-            != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(requireActivity(),arrayOf(android.Manifest.permission.CAMERA),
-                REQUEST_PERMISSION)
-        }
-    }
-     */
-
-    /*
-    private fun openCamera() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
-            activity?.let {
-                intent.resolveActivity(it.packageManager)?.also {
-                    startActivityForResult(intent,REQUEST_IMAGE_CAPTURE)
-                }
-            }
-        }
-    }
-     */
-
-    private fun openGallery() {
-        Intent(Intent.ACTION_GET_CONTENT).also { intent ->
-            intent.type = "image/*"
-            activity?.let {
-                intent.resolveActivity(it.packageManager)?.also {
-                    startActivityForResult(intent,REQUEST_PICK_IMAGE)
-                }
-            }
-        }
-    }
-
-    /*
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (resultCode == RESULT_OK){
-            if (requestCode == REQUEST_IMAGE_CAPTURE) {
-                val bitmap = data?.extras?.get("data") as Bitmap
-                imageViewVijesti.setImageBitmap(bitmap)
-            }else if (requestCode == REQUEST_PICK_IMAGE) {
-                val uri = data?.getData()
-                imageViewVijesti.setImageURI(uri)
-            }
-        }
-    }
-     */
-}
+ }
