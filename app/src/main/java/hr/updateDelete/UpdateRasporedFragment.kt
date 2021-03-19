@@ -39,6 +39,7 @@ class UpdateRasporedFragment: Fragment() {
         view.updateRasporedDomacin.setText(args.updateRasporedArgs.domacin)
         view.updateRasporedGost.setText(args.updateRasporedArgs.gost)
         view.updateRasporedVrijeme.setText(args.updateRasporedArgs.vrijeme)
+        view.updateRasporedNedostaje.setText(args.updateRasporedArgs.nedostaju)
         view.updateRasporedClanak.setText(args.updateRasporedArgs.clanak)
 
         view.gumbUpdateRaspored.setOnClickListener {
@@ -73,9 +74,10 @@ class UpdateRasporedFragment: Fragment() {
         val domacinRaspored = updateRasporedDomacin.text.toString()
         val gostRaspored = updateRasporedGost.text.toString()
         val vrijemeRaspored = updateRasporedVrijeme.text.toString()
+        val nedostajeRaspored = updateRasporedNedostaje.text.toString()
         val clanakRaspored = updateRasporedClanak.text.toString()
 
-        val updateRaspored = Raspored(args.updateRasporedArgs.id,natjecanjeRaspored,datumRaspored,domacinRaspored,gostRaspored,vrijemeRaspored,clanakRaspored)
+        val updateRaspored = Raspored(args.updateRasporedArgs.id,natjecanjeRaspored,datumRaspored,domacinRaspored,gostRaspored,vrijemeRaspored,nedostajeRaspored,clanakRaspored)
         mRasporedViewModel.updateRaspored(updateRaspored)
         findNavController().navigate(R.id.action_updateRasporedFragment_to_rasporedFragment)
     }

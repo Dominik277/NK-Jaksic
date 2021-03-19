@@ -31,6 +31,12 @@ data class Rezultat (
     @ColumnInfo(name = "ishod_rezultat")
     val ishodRezultat: String,
 
+    @ColumnInfo(name = "postave")
+    val postaveRezultati: String,
+
+    @ColumnInfo(name = "detalji")
+    val detaljiRezultati: String,
+
     @ColumnInfo(name = "clanak_rezultat")
     val clanakRezultat: String
 

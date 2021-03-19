@@ -16,34 +16,42 @@
         android:id="@+id/noviRasporedDatum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:hint="Ovdje unesite datum"/>
+        android:layout_marginTop="20dp"
+        android:hint="Ovdje unesite datum" />
 
     <EditText
         android:id="@+id/noviRasporedDomacin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite domaćina" />
 
     <EditText
         android:id="@+id/noviRasporedGost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite gosta" />
 
     <EditText
         android:id="@+id/noviRasporedVrijeme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite vrijeme igranja" />
+
+    <EditText
+        android:id="@+id/noviRasporedNedostaju"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Ovdje unesite tko nedostaje" />
+
     <EditText
         android:id="@+id/noviRasporedClanak"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite clanak" />
 
     <Button
@@ -51,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Spremi" />
 
 </LinearLayout>

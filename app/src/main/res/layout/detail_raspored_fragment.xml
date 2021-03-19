@@ -133,6 +133,33 @@
         android:layout_height="1dp"
         android:background="@color/black" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Nedostaju: "
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/detailRasporedNedostaju"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Raspored"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
     <TextView
         android:id="@+id/detailRasporedClanak"
         android:layout_width="wrap_content"

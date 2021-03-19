@@ -33,6 +33,7 @@ class DetailRasporedFragment: Fragment() {
         view.detailRasporedDomacin.setText(args.detailRasporedArgs.domacin)
         view.detailRasporedGost.setText(args.detailRasporedArgs.gost)
         view.detailRasporedVrijeme.setText(args.detailRasporedArgs.vrijeme)
+        view.detailRasporedNedostaju.setText(args.detailRasporedArgs.nedostaju)
         view.detailRasporedClanak.setText(args.detailRasporedArgs.clanak)
 
         return view

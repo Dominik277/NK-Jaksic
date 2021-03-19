@@ -17,34 +17,40 @@
         android:id="@+id/updateRasporedDatum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite datum" />
 
     <EditText
         android:id="@+id/updateRasporedDomacin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite domaćina" />
 
     <EditText
         android:id="@+id/updateRasporedGost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite gosta" />
 
     <EditText
         android:id="@+id/updateRasporedVrijeme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite vrijeme igranja" />
+    <EditText
+        android:id="@+id/updateRasporedNedostaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Ovdje unesite tko nedostaje" />
     <EditText
         android:id="@+id/updateRasporedClanak"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Ovdje unesite clanak" />
 
     <LinearLayout
