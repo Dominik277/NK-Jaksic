@@ -6,7 +6,7 @@ App is stil in a process of making.
 # About
 This app is used mainly for displaying content about my local football club, for now it's implemented that user(later I will implement the design where admin logins and only him 
 can insert data in database) in separate fragment inserts data in EditText fields about schedule, results, news, league table, best scorers etc and when he clicks button
-that data is stored in database and displayed in RecyclerView.This app is still in process of making so there will be more features in future.
+that data is stored in database and displayed in RecyclerView. App also has functionality of updating and deleting rows in RecylcerView .This app is still in process of making so there will be more features in future.
 
 <p float="left">
   <img src="https://user-images.githubusercontent.com/64093104/110255885-56062f80-7f96-11eb-997d-f0da4ce88d2d.png" width="200" height="400" />
