@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import dagger.hilt.android.AndroidEntryPoint
 import hr.adapteri.RezultatiAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Rezultat
@@ -20,10 +22,11 @@ import kotlinx.android.synthetic.main.fragment_rezultati.*
 import kotlinx.android.synthetic.main.fragment_rezultati.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class RezultatiFragment: Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mRezultatViewModel: RezultatViewModel
+    private val mRezultatViewModel: RezultatViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -41,11 +44,9 @@ class RezultatiFragment: Fragment() {
         recyclerRezultat.layoutManager = LinearLayoutManager(requireContext())
 
         //RezultatiViewModel
-        mRezultatViewModel = ViewModelProvider(this).get(RezultatViewModel::class.java)
-        mRezultatViewModel.readAllDataRezultat.observe(viewLifecycleOwner, Observer { rezultat ->
+        mRezultatViewModel.readAllDataRezultati.observe(viewLifecycleOwner, Observer { rezultat ->
             adapter.setData(rezultat)
         })
-
         return view
     }
 

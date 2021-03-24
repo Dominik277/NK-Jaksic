@@ -3,47 +3,47 @@ package hr.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import hr.database.NKJaksicDatabase
 import hr.database.table.Rezultat
 import hr.repository.RezultatRepository
+import hr.repository.TablicaRezultatiRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @InternalCoroutinesApi
-class RezultatViewModel(application: Application): AndroidViewModel(application) {
+@HiltViewModel
+class RezultatViewModel @Inject constructor(
+    val rezultatiRepository: RezultatRepository
+) : ViewModel() {
 
-    val readAllDataRezultat: LiveData<List<Rezultat>>
-    private val repositoryRezultat: RezultatRepository
+    val readAllDataRezultati = rezultatiRepository.getAllDataRezultati()
 
-    init {
-        val rezultatiDao = NKJaksicDatabase.getDatabase(application).rezultatiDao()
-        repositoryRezultat = RezultatRepository(rezultatiDao)
-        readAllDataRezultat = repositoryRezultat.readAllDataRezultat
-    }
-
-    fun addRezultat(rezultat: Rezultat){
-        viewModelScope.launch (Dispatchers.IO){
-            repositoryRezultat.addRezultat(rezultat)
-        }
-    }
-
-    fun updateRezultati(rezultat: Rezultat){
+    fun addRezultat(rezultat: Rezultat) {
         viewModelScope.launch(Dispatchers.IO) {
-            repositoryRezultat.updateRezultat(rezultat)
+            rezultatiRepository.addRezultat(rezultat)
         }
     }
 
-    fun deleteRezultat(rezultat: Rezultat){
+    fun updateRezultati(rezultat: Rezultat) {
         viewModelScope.launch(Dispatchers.IO) {
-            repositoryRezultat.deleteRezultat(rezultat)
+            rezultatiRepository.updateRezultat(rezultat)
         }
     }
 
-    fun deleteAllRezultati(){
-        viewModelScope.launch (Dispatchers.IO){
-            repositoryRezultat.deleteAllRezultat()
+    fun deleteRezultat(rezultat: Rezultat) {
+        viewModelScope.launch(Dispatchers.IO) {
+            rezultatiRepository.deleteRezultat(rezultat)
+        }
+    }
+
+    fun deleteAllRezultati() {
+        viewModelScope.launch(Dispatchers.IO) {
+            rezultatiRepository.deleteAllRezultat()
         }
     }
 

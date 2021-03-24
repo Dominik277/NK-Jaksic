@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
 import hr.viewModel.RezultatViewModel
@@ -17,12 +19,13 @@ import kotlinx.android.synthetic.main.update_rezultat_fragment.*
 import kotlinx.android.synthetic.main.update_rezultat_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class UpdateRezultatFragment : Fragment() {
 
     private val args by navArgs<UpdateRezultatFragmentArgs>()
 
     @InternalCoroutinesApi
-    private lateinit var mRezultatiViewModel: RezultatViewModel
+    private val mRezultatiViewModel: RezultatViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -31,8 +34,6 @@ class UpdateRezultatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.update_rezultat_fragment, container, false)
-
-        mRezultatiViewModel = ViewModelProvider(this).get(RezultatViewModel::class.java)
 
         view.updateRezultatNatjecanje.setText(args.updateRezultatiArgs.natjecanjeRezultat)
         view.updateRezultatDatum.setText(args.updateRezultatiArgs.datumRezultat)
@@ -51,7 +52,6 @@ class UpdateRezultatFragment : Fragment() {
         view.gumbDeleteRezultat.setOnClickListener {
             deleteItemRezultat()
         }
-
         return view
     }
 
@@ -90,5 +90,4 @@ class UpdateRezultatFragment : Fragment() {
         findNavController().navigate(R.id.action_updateRezultatFragment_to_rezultatiFragment)
 
     }
-
 }

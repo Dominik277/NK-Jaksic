@@ -15,8 +15,6 @@ import kotlinx.coroutines.InternalCoroutinesApi
 class DetailRezultatiFragment : Fragment(){
 
     private val args by navArgs<DetailRezultatiFragmentArgs>()
-    @InternalCoroutinesApi
-    private lateinit var mRezultatiViewModel: RezultatViewModel
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -25,8 +23,6 @@ class DetailRezultatiFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.detail_rezultati_fragment,container,false)
-
-        mRezultatiViewModel = ViewModelProvider(this).get(RezultatViewModel::class.java)
 
         view.detailRezultatNatjecanje.setText(args.detailRezultatArgs.natjecanjeRezultat)
         view.detailRezultatDatum.setText(args.detailRezultatArgs.datumRezultat)
