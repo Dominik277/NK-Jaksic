@@ -3,47 +3,46 @@ package hr.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import hr.database.NKJaksicDatabase
 import hr.database.table.Raspored
 import hr.repository.RasporedRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @InternalCoroutinesApi
-class RasporedViewModel(application: Application): AndroidViewModel(application) {
+@HiltViewModel
+class RasporedViewModel @Inject constructor(
+    val rasporedRepository: RasporedRepository
+): ViewModel() {
 
-    val readAllData: LiveData<List<Raspored>>
-    private val repository: RasporedRepository
-
-    init {
-        val rasporedDao = NKJaksicDatabase.getDatabase(application).rasporedDao()
-        repository = RasporedRepository(rasporedDao)
-        readAllData = repository.readAllData
-    }
+    val readAllDataRaspored = rasporedRepository.getAllDataRaspored()
 
     fun addRaspored(raspored: Raspored){
         viewModelScope.launch ( Dispatchers.IO) {
-            repository.addRaspored(raspored)
+            rasporedRepository.addRaspored(raspored)
         }
     }
 
     fun updateRaspored(raspored: Raspored){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.updateRaspored(raspored)
+            rasporedRepository.updateRaspored(raspored)
         }
     }
 
     fun deleteRaspored(raspored: Raspored){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteRaspored(raspored)
+            rasporedRepository.deleteRaspored(raspored)
         }
     }
 
     fun deleteAllRaspored(){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteAllRaspored()
+            rasporedRepository.deleteAllRaspored()
         }
     }
 

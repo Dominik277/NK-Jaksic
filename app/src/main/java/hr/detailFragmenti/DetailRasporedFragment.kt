@@ -15,8 +15,6 @@ import kotlinx.coroutines.InternalCoroutinesApi
 class DetailRasporedFragment: Fragment() {
 
     private val args by navArgs<DetailRasporedFragmentArgs>()
-    @InternalCoroutinesApi
-    private lateinit var mRasporedViewModel: RasporedViewModel
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -25,8 +23,6 @@ class DetailRasporedFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.detail_raspored_fragment,container,false)
-
-        mRasporedViewModel = ViewModelProvider(this).get(RasporedViewModel::class.java)
 
         view.detailRasporedNatjecanje.setText(args.detailRasporedArgs.natjecanje)
         view.detailRasporedDatum.setText(args.detailRasporedArgs.datum)

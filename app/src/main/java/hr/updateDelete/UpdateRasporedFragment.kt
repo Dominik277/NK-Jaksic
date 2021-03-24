@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
 import hr.viewModel.RasporedViewModel
@@ -18,11 +20,12 @@ import kotlinx.android.synthetic.main.update_raspored_fragment.view.*
 import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class UpdateRasporedFragment: Fragment() {
 
     private val args by navArgs<UpdateRasporedFragmentArgs>()
     @InternalCoroutinesApi
-    private lateinit var mRasporedViewModel: RasporedViewModel
+    private val mRasporedViewModel: RasporedViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -31,8 +34,6 @@ class UpdateRasporedFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.update_raspored_fragment,container, false)
-
-        mRasporedViewModel = ViewModelProvider(this).get(RasporedViewModel::class.java)
 
         view.updateRasporedNatjecanje.setText(args.updateRasporedArgs.natjecanje)
         view.updateRasporedDatum.setText(args.updateRasporedArgs.datum)
@@ -81,5 +82,4 @@ class UpdateRasporedFragment: Fragment() {
         mRasporedViewModel.updateRaspored(updateRaspored)
         findNavController().navigate(R.id.action_updateRasporedFragment_to_rasporedFragment)
     }
-
 }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
@@ -14,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import dagger.hilt.android.AndroidEntryPoint
 import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.Raspored
@@ -23,10 +25,11 @@ import kotlinx.android.synthetic.main.fragment_raspored.*
 import kotlinx.android.synthetic.main.fragment_raspored.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class RasporedFragment: Fragment(){
 
     @InternalCoroutinesApi
-    private lateinit var mRasporedViewModel: RasporedViewModel
+    private val mRasporedViewModel: RasporedViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -45,14 +48,10 @@ class RasporedFragment: Fragment(){
         recyclerRaspored.layoutManager = LinearLayoutManager(requireContext())
 
         //RasporedViewModel
-        mRasporedViewModel = ViewModelProvider(this).get(RasporedViewModel::class.java)
-        mRasporedViewModel.readAllData.observe(viewLifecycleOwner, Observer { raspored ->
+        mRasporedViewModel.readAllDataRaspored.observe(viewLifecycleOwner, Observer { raspored ->
             adapter.setData(raspored)
         })
-
-
         return view
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

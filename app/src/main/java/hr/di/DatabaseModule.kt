@@ -25,4 +25,8 @@ object DatabaseModule {
     ).fallbackToDestructiveMigration()
         .build()
 
+    @Provides
+    @Singleton
+    fun provideRasporedDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.rasporedDao()
+
 }

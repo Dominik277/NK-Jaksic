@@ -11,11 +11,13 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
+import dagger.hilt.android.AndroidEntryPoint
 import hr.dominik.nkjaki.R
 import hr.fragmenti.*
 import hr.novoDodavanje.*
 import kotlinx.android.synthetic.main.activity_main.*
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
