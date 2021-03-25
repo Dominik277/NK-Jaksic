@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import dagger.hilt.android.AndroidEntryPoint
 import hr.adapteri.NajboljiStrijelciAdapter
 import hr.database.NKJaksicDatabase
 import hr.database.table.NajboljiStrijelci
@@ -20,10 +22,11 @@ import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.*
 import kotlinx.android.synthetic.main.fragment_najbolji_strijelci.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class NajboljiStrijelciFragment : Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mNajboljiStrijelacViewModel: NajboljiStrijelciViewModel
+    private val mNajboljiStrijelacViewModel: NajboljiStrijelciViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -40,7 +43,6 @@ class NajboljiStrijelciFragment : Fragment() {
         recyclerNajboljiStrijelci.layoutManager = LinearLayoutManager(requireContext())
 
         //NajboljiStrijelciViewModel
-        mNajboljiStrijelacViewModel = ViewModelProvider(this).get(NajboljiStrijelciViewModel::class.java)
         mNajboljiStrijelacViewModel.readAllDataNajboljiStrijelci.observe(viewLifecycleOwner, Observer { najboljiStrijelac ->
             adapter.setData(najboljiStrijelac)
         })

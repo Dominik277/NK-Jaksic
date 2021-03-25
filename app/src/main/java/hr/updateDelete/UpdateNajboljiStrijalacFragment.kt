@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import hr.viewModel.NajboljiStrijelciViewModel
@@ -17,11 +19,12 @@ import kotlinx.android.synthetic.main.update_strijelci_fragment.*
 import kotlinx.android.synthetic.main.update_strijelci_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class UpdateNajboljiStrijalacFragment: Fragment() {
 
     private val args by navArgs<UpdateNajboljiStrijalacFragmentArgs>()
     @InternalCoroutinesApi
-    private lateinit var mStrijeciViewModel: NajboljiStrijelciViewModel
+    private val mStrijeciViewModel: NajboljiStrijelciViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -30,8 +33,6 @@ class UpdateNajboljiStrijalacFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.update_strijelci_fragment,container,false)
-
-        mStrijeciViewModel = ViewModelProvider(this).get(NajboljiStrijelciViewModel::class.java)
 
         view.updateStrijelciPozicija.setText(args.updateStrijelciArgs.pozicijaPoGolovima)
         view.updateStrijelciImePrezime.setText(args.updateStrijelciArgs.imeIgraca)

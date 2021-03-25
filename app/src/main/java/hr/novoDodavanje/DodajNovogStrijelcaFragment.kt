@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
 import hr.viewModel.NajboljiStrijelciViewModel
@@ -16,10 +18,11 @@ import kotlinx.android.synthetic.main.fragment_novi_strijelac.*
 import kotlinx.android.synthetic.main.fragment_novi_strijelac.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class DodajNovogStrijelcaFragment: Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mNajboljiStrijelacViewModel: NajboljiStrijelciViewModel
+    private val mNajboljiStrijelacViewModel: NajboljiStrijelciViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -28,8 +31,6 @@ class DodajNovogStrijelcaFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
        val view = inflater.inflate(R.layout.fragment_novi_strijelac,container, false)
-
-        mNajboljiStrijelacViewModel = ViewModelProvider(this).get(NajboljiStrijelciViewModel::class.java)
 
         view.gumbSpremiNovogStrijelca.setOnClickListener {
             val action = DodajNovogStrijelcaFragmentDirections.actionDodajNovogStrijelcaFragmentToNajboljiStrijelciFragment()
@@ -49,6 +50,5 @@ class DodajNovogStrijelcaFragment: Fragment() {
             val najboljiStrijelac = NajboljiStrijelci(0,noviStrijelacPozicija,noviStrijelacImePrezime,noviStrijelacBrojGolova)
             mNajboljiStrijelacViewModel.addNajboljiStrijelac(najboljiStrijelac)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
-
     }
 }
