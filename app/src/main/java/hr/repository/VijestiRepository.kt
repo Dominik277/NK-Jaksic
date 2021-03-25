@@ -3,24 +3,27 @@ package hr.repository
 import androidx.lifecycle.LiveData
 import hr.database.dao.VijestiDao
 import hr.database.table.Vijesti
+import javax.inject.Inject
 
-class VijestiRepository(private val vijestiDao: VijestiDao) {
+class VijestiRepository @Inject constructor(
+    private val vijestiDao: VijestiDao
+) {
 
-    val readAllDataVijesti: LiveData<List<Vijesti>> = vijestiDao.getVijestiData()
+    fun getAllDataVijesti() = vijestiDao.getVijestiData()
 
-    suspend fun addVijest(vijesti: Vijesti){
+    suspend fun addVijest(vijesti: Vijesti) {
         vijestiDao.insertVijest(vijesti)
     }
 
-    suspend fun updateVijest(vijesti: Vijesti){
+    suspend fun updateVijest(vijesti: Vijesti) {
         vijestiDao.updateVijesti(vijesti)
     }
 
-    suspend fun deleteVijest(vijesti: Vijesti){
+    suspend fun deleteVijest(vijesti: Vijesti) {
         vijestiDao.deleteVijesti(vijesti)
     }
 
-    suspend fun deleteAllVijesti(){
+    suspend fun deleteAllVijesti() {
         vijestiDao.deletePodatkeVijesti()
     }
 
