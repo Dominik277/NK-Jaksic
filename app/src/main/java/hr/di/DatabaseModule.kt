@@ -37,4 +37,8 @@ object DatabaseModule {
     @Singleton
     fun provideVijestiDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.vijestiDao()
 
+    @Provides
+    @Singleton
+    fun provideMomcadDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.igraciDao()
+
 }

@@ -3,25 +3,24 @@ package hr.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import hr.database.NKJaksicDatabase
 import hr.database.table.Igraci
 import hr.repository.MomcadRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @InternalCoroutinesApi
-class MomcadViewModel(application: Application): AndroidViewModel(application) {
+@HiltViewModel
+class MomcadViewModel @Inject constructor(
+    val momcadRepository: MomcadRepository
+): ViewModel() {
 
-    val readAllDataMomcad: LiveData<List<Igraci>>
-    private val momcadRepository: MomcadRepository
-
-    init {
-        val momcadDao = NKJaksicDatabase.getDatabase(application).igraciDao()
-        momcadRepository = MomcadRepository(momcadDao)
-        readAllDataMomcad = momcadRepository.readAllDataMomcad
-    }
+    val readAllDataMomcad = momcadRepository.getAllDataMomcad()
 
     fun addMomcad(momcad: Igraci){
         viewModelScope.launch (Dispatchers.IO){
