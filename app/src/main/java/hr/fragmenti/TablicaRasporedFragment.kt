@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import dagger.hilt.android.AndroidEntryPoint
 import hr.adapteri.TablicaRasporedAdapter
 import hr.adapteri.RasporedAdapter
 import hr.database.NKJaksicDatabase
@@ -20,10 +22,11 @@ import kotlinx.android.synthetic.main.tablica_fragment_raspored.*
 import kotlinx.android.synthetic.main.tablica_fragment_raspored.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class TablicaRasporedFragment : Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mTablicaRasporedViewModel: TablicaRasporedViewModel
+    private val mTablicaRasporedViewModel: TablicaRasporedViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -40,7 +43,6 @@ class TablicaRasporedFragment : Fragment() {
         recyclerTablicaRaspored.layoutManager = LinearLayoutManager(requireContext())
 
         //TablicaRasporedViewModel
-        mTablicaRasporedViewModel = ViewModelProvider(this).get(TablicaRasporedViewModel::class.java)
         mTablicaRasporedViewModel.readAllDataTablicaRaspored.observe(viewLifecycleOwner, Observer { tablicaRaspored ->
             adapter.setData(tablicaRaspored)
         })

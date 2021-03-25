@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
 import hr.viewModel.TablicaRasporedViewModel
@@ -17,11 +19,12 @@ import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.*
 import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class UpdateTablicaRasporedFragment: Fragment() {
 
     private val args by navArgs<UpdateTablicaRasporedFragmentArgs>()
     @InternalCoroutinesApi
-    private lateinit var mTablicaRasporedViewModel: TablicaRasporedViewModel
+    private val mTablicaRasporedViewModel: TablicaRasporedViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -30,8 +33,6 @@ class UpdateTablicaRasporedFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.update_tablica_raspored_fragment,container,false)
-
-        mTablicaRasporedViewModel = ViewModelProvider(this).get(TablicaRasporedViewModel::class.java)
 
         view.updateRasporedLigaBrojKola.setText(args.updateRasporedLigaArgs.brojKola)
 

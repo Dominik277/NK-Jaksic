@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
 import hr.viewModel.TablicaRasporedViewModel
@@ -17,10 +19,11 @@ import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.*
 import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class DodajNoviRasporedLigaFragment: Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mTablicaRasporedViewModel: TablicaRasporedViewModel
+    private val mTablicaRasporedViewModel: TablicaRasporedViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -30,14 +33,11 @@ class DodajNoviRasporedLigaFragment: Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_novi_raspored_liga,container, false)
 
-        mTablicaRasporedViewModel = ViewModelProvider(this).get(TablicaRasporedViewModel::class.java)
-
         view.gumbSpremiTablicaRaspored.setOnClickListener {
             val action = DodajNoviRasporedLigaFragmentDirections.actionDodajNoviRasporedLigaFragmentToTablicaRasporedFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }
-
         return view
     }
 
