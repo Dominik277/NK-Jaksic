@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
 import hr.viewModel.VijestiViewModel
@@ -19,11 +21,12 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import java.text.SimpleDateFormat
 import java.util.*
 
+@AndroidEntryPoint
 class UpdateVijestiFragment: Fragment() {
 
     private val args by navArgs<UpdateVijestiFragmentArgs>()
     @InternalCoroutinesApi
-    private lateinit var mVijestiViewModel: VijestiViewModel
+    private val mVijestiViewModel: VijestiViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -32,8 +35,6 @@ class UpdateVijestiFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.update_vijesti_fragment,container,false)
-
-        mVijestiViewModel = ViewModelProvider(this).get(VijestiViewModel::class.java)
 
         view.updateVijestiNaslov.setText(args.updateVijestiArgs.naslov)
         view.updateVijestiClanak.setText(args.updateVijestiArgs.clanak)

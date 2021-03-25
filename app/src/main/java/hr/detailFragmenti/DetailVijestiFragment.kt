@@ -15,8 +15,6 @@ import kotlinx.coroutines.InternalCoroutinesApi
 class DetailVijestiFragment: Fragment() {
 
     private val args by navArgs<DetailVijestiFragmentArgs>()
-    @InternalCoroutinesApi
-    private lateinit var mVijestiViewModel: VijestiViewModel
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -25,8 +23,6 @@ class DetailVijestiFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.detail_vijesti_fragment,container,false)
-
-        mVijestiViewModel = ViewModelProvider(this).get(VijestiViewModel::class.java)
 
         view.detailVijestiNaslov.setText(args.detailVijestiArgs.naslov)
         view.detailVijestiClanak.setText(args.detailVijestiArgs.clanak)

@@ -15,8 +15,10 @@ import android.widget.ImageView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
 import hr.viewModel.VijestiViewModel
@@ -27,14 +29,11 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import java.text.SimpleDateFormat
 import java.util.*
 
+@AndroidEntryPoint
 class DodajNovuVijest: Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mVijestiViewModel: VijestiViewModel
-
-    private val REQUEST_PERMISSION = 100
-    private val REQUEST_IMAGE_CAPTURE = 1
-    private val REQUEST_PICK_IMAGE = 2
+    private val mVijestiViewModel: VijestiViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -43,8 +42,6 @@ class DodajNovuVijest: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_nova_vijest, container, false)
-
-        mVijestiViewModel = ViewModelProvider(this).get(VijestiViewModel::class.java)
 
         view.novaVijestGumbSpremi.setOnClickListener {
             val action = DodajNovuVijestDirections.actionDodajNovuVijest2ToVijestiFragment()
