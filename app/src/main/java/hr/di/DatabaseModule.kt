@@ -41,4 +41,12 @@ object DatabaseModule {
     @Singleton
     fun provideMomcadDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.igraciDao()
 
+    @Provides
+    @Singleton
+    fun provideTablicaTablicaDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.tablicaDao()
+
+    @Provides
+    @Singleton
+    fun provideTablicaRezultatiDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.tablicaRezultatiDao()
+
 }

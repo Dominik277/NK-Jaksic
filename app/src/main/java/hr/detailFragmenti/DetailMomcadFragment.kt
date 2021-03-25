@@ -15,8 +15,6 @@ import kotlinx.coroutines.InternalCoroutinesApi
 class DetailMomcadFragment: Fragment() {
 
     private val args by navArgs<DetailMomcadFragmentArgs>()
-    @InternalCoroutinesApi
-    private lateinit var mDetailMomcadViewModel: MomcadViewModel
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -25,8 +23,6 @@ class DetailMomcadFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.detail_momcad_fragment,container,false)
-
-        mDetailMomcadViewModel = ViewModelProvider(this).get(MomcadViewModel::class.java)
 
         view.detailIgracIme.setText(args.detailMomcadArgs.ime)
         view.detailIgracPrezime.setText(args.detailMomcadArgs.prezime)

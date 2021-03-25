@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
 import hr.viewModel.MomcadViewModel
@@ -17,11 +19,12 @@ import kotlinx.android.synthetic.main.update_momcad_fragment.*
 import kotlinx.android.synthetic.main.update_momcad_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class UpdateMomcadFragment: Fragment() {
 
     private val args by navArgs<UpdateMomcadFragmentArgs>()
     @InternalCoroutinesApi
-    private lateinit var mMomcadViewModel: MomcadViewModel
+    private val mMomcadViewModel: MomcadViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -30,8 +33,6 @@ class UpdateMomcadFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.update_momcad_fragment,container,false)
-
-        mMomcadViewModel = ViewModelProvider(this).get(MomcadViewModel::class.java)
 
         view.updateMomcadIme.setText(args.updateMomcadArgs.ime)
         view.updateMomcadPrezime.setText(args.updateMomcadArgs.prezime)

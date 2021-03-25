@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRaspored
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
@@ -22,11 +24,12 @@ import kotlinx.android.synthetic.main.update_tablica_rezultat_fragment.*
 import kotlinx.android.synthetic.main.update_tablica_rezultat_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class UpdateTablicaRezultatFragment: Fragment() {
 
     private val args by navArgs<UpdateTablicaRezultatFragmentArgs>()
     @InternalCoroutinesApi
-    private lateinit var mTablicaRezultat: TablicaRezultatiViewModel
+    private val mTablicaRezultat: TablicaRezultatiViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -35,8 +38,6 @@ class UpdateTablicaRezultatFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.update_tablica_rezultat_fragment,container,false)
-
-        mTablicaRezultat = ViewModelProvider(this).get(TablicaRezultatiViewModel::class.java)
 
         view.updateRezultatLigaBrojKola.setText(args.updateRezultatiLigaArgs.novi_brojKola)
 

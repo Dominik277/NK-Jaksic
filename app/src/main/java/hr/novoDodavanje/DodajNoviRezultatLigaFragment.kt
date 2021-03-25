@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRaspored
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
@@ -20,10 +22,11 @@ import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.*
 import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
+@AndroidEntryPoint
 class DodajNoviRezultatLigaFragment: Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mTablicaRezultatViewModel: TablicaRezultatiViewModel
+    private val mTablicaRezultatViewModel: TablicaRezultatiViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -32,8 +35,6 @@ class DodajNoviRezultatLigaFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_novi_rezultati_liga,container, false)
-
-        mTablicaRezultatViewModel = ViewModelProvider(this).get(TablicaRezultatiViewModel::class.java)
 
         view.gumbSpremiTablicaRezultat.setOnClickListener {
             val action = DodajNoviRezultatLigaFragmentDirections.actionDodajNoviRezultatLigaFragmentToTablicaRezultatiFragment()
@@ -93,7 +94,6 @@ class DodajNoviRezultatLigaFragment: Fragment() {
                 noviRezultatLigaPetiDatum,noviRezultatLigaPetiDomacin,noviRezultatLigaPetiGost,noviRezultatLigaPetoVrijeme,
                 noviRezultatLigaSestiDatum,noviRezultatLigaSestiDomacin,noviRezultatLigaSestiGost,noviRezultatLigaSestoVrijeme,
                 noviRezultatLigaSedmiDatum,noviRezultatLigaSedmiDomacin,noviRezultatLigaSedmiGost,noviRezultatLigaSedmoVrijeme)
-
 
             mTablicaRezultatViewModel.addTablicaRezultat(tablicaRezultat)
             Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()

@@ -14,8 +14,10 @@ import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
 import hr.viewModel.MomcadViewModel
@@ -25,10 +27,11 @@ import kotlinx.android.synthetic.main.fragment_novi_igrac.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import java.util.jar.Manifest
 
+@AndroidEntryPoint
 class DodajNovogIgraca: Fragment() {
 
     @InternalCoroutinesApi
-    private lateinit var mMomcadViewModel: MomcadViewModel
+    private val mMomcadViewModel: MomcadViewModel by viewModels()
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -37,8 +40,6 @@ class DodajNovogIgraca: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_novi_igrac,container, false)
-
-        mMomcadViewModel = ViewModelProvider(this).get(MomcadViewModel::class.java)
 
         view.gumbSpremiNoviIgrac.setOnClickListener {
             val action = DodajNovogIgracaDirections.actionDodajNovogIgraca2ToMomcadFragment()
@@ -65,7 +66,8 @@ class DodajNovogIgraca: Fragment() {
 
         val igracSlika = R.drawable.face
 
-        val igrac = Igraci(0,igracIme,igracPrezime,igracPozicija,igracOdigraniSusreti,igracGolovi,igracAsistencije,igracOdigraneMinute,igracZutiKartoni,igracCrveniKartoni,igracBroj,igracOpis,igracSlika)
+        val igrac = Igraci(0,igracIme,igracPrezime,igracPozicija,igracOdigraniSusreti,igracGolovi,
+            igracAsistencije,igracOdigraneMinute,igracZutiKartoni,igracCrveniKartoni,igracBroj,igracOpis,igracSlika)
         mMomcadViewModel.addMomcad(igrac)
     }
 }

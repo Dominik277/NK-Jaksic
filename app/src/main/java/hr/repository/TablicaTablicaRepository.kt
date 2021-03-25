@@ -3,24 +3,27 @@ package hr.repository
 import androidx.lifecycle.LiveData
 import hr.database.dao.TablicaTablicaDao
 import hr.database.table.TablicaTablica
+import javax.inject.Inject
 
-class TablicaTablicaRepository(private val tablicaTablicaDao: TablicaTablicaDao) {
+class TablicaTablicaRepository @Inject constructor(
+    private val tablicaTablicaDao: TablicaTablicaDao
+) {
 
-    val readAllDataTablicaTablica: LiveData<List<TablicaTablica>> = tablicaTablicaDao.getTablicaTablica()
+    fun getAllDataTablicaTablica() = tablicaTablicaDao.getTablicaTablica()
 
-    suspend fun addTablicaTablica(tablicaTablica: TablicaTablica){
+    suspend fun addTablicaTablica(tablicaTablica: TablicaTablica) {
         tablicaTablicaDao.insertTablicaTablica(tablicaTablica)
     }
 
-    suspend fun updateTablicaTablica(tablicaTablica: TablicaTablica){
+    suspend fun updateTablicaTablica(tablicaTablica: TablicaTablica) {
         tablicaTablicaDao.updateTablicaTablica(tablicaTablica)
     }
 
-    suspend fun deleteTablicaTablica(tablicaTablica: TablicaTablica){
+    suspend fun deleteTablicaTablica(tablicaTablica: TablicaTablica) {
         tablicaTablicaDao.deleteOneTablicaTablica(tablicaTablica)
     }
 
-    suspend fun deleteAllTablicaTablica(){
+    suspend fun deleteAllTablicaTablica() {
         tablicaTablicaDao.deleteTablicaTablica()
     }
 
