@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_rezultati.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
-class RezultatiFragment: Fragment() {
+class RezultatiFragment:  Fragment() {
 
     @InternalCoroutinesApi
     private val mRezultatViewModel: RezultatViewModel by viewModels()
