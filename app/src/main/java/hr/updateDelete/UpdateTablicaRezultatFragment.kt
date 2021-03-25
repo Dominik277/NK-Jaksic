@@ -151,7 +151,7 @@ class UpdateTablicaRezultatFragment: Fragment() {
             rezultatLigaSedmiDatum,rezultatLigaSedmiDomacin,rezultatLigaSedmiGost,rezultatLigaSedmiRezultat)
 
         mTablicaRezultat.updateTablicaRezultat(updateRezultatTablica)
-        findNavController().navigate(R.id.action_updateTablicaRasporedFragment_to_tablicaRasporedFragment)
+        findNavController().navigate(R.id.action_updateTablicaRezultatFragment_to_tablicaRezultatiFragment)
     }
 
 }

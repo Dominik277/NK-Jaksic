@@ -22,10 +22,11 @@ class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHo
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = tablicaRasporedList[position]
-        holder.itemView.tablicaRaspored_brojKola.text = currentItem.brojKola.toString()
+        holder.itemView.tablicaRaspored_brojKola.text = currentItem.brojKola
         holder.itemView.tablicaRaspored_prvaUtakmica_datum.text = currentItem.prvaUtakmicaDatum
         holder.itemView.tablicaRaspored_domacinPrvaUtakmica.text = currentItem.prvaUtakmicaDomacin
         holder.itemView.tablicaRaspored_gostPrvaUtakmica.text = currentItem.prvaUtakmicaGost
+        holder.itemView.tablicaRaspored_vrijemePrvaUtakmica.text = currentItem.prvaUtakmicaVrijeme
         holder.itemView.tablicaRaspored_drugaUtakmica_datum.text = currentItem.drugaUtakmicaDatum
         holder.itemView.tablicaRaspored_domacinDrugaUtakmica.text = currentItem.drugaUtakmicaDomacin
         holder.itemView.tablicaRaspored_gostDrugaUtakmica.text = currentItem.drugaUtakmicaGost

@@ -53,4 +53,8 @@ object DatabaseModule {
     @Singleton
     fun provideTablicaRasporedDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.tablicaRasporedDao()
 
+    @Provides
+    @Singleton
+    fun provideNajboljiStrijelacDao(nkJaksicDatabase: NKJaksicDatabase) = nkJaksicDatabase.najboljiStrijelciDao()
+
 }
