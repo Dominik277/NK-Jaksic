@@ -1,22 +1,20 @@
-package hr.novoDodavanje
+package hr.fragmenti.novoDodavanje
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
+import hr.novoDodavanje.DodajNoviRasporedFragmentDirections
 import hr.viewModel.RasporedViewModel
 import kotlinx.android.synthetic.main.fragment_novi_raspored.*
 import kotlinx.android.synthetic.main.fragment_novi_raspored.view.*
-import kotlinx.android.synthetic.main.fragment_novi_rezultat.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
@@ -34,7 +32,8 @@ class DodajNoviRasporedFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_novi_raspored,container, false)
 
         view.gumbSpremiNoviRaspored.setOnClickListener {
-            val action = DodajNoviRasporedFragmentDirections.actionDodajNoviRasporedFragmentToRasporedFragment()
+            val action =
+                DodajNoviRasporedFragmentDirections.actionDodajNoviRasporedFragmentToRasporedFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }

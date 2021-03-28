@@ -1,19 +1,17 @@
-package hr.novoDodavanje
+package hr.fragmenti.novoDodavanje
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
+import hr.novoDodavanje.DodajNoviRasporedLigaFragmentDirections
 import hr.viewModel.TablicaRasporedViewModel
 import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.*
 import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.view.*
@@ -34,7 +32,8 @@ class DodajNoviRasporedLigaFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_novi_raspored_liga,container, false)
 
         view.gumbSpremiTablicaRaspored.setOnClickListener {
-            val action = DodajNoviRasporedLigaFragmentDirections.actionDodajNoviRasporedLigaFragmentToTablicaRasporedFragment()
+            val action =
+                DodajNoviRasporedLigaFragmentDirections.actionDodajNoviRasporedLigaFragmentToTablicaRasporedFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }

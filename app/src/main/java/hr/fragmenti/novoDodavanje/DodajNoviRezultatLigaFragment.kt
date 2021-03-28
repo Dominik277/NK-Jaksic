@@ -1,23 +1,18 @@
-package hr.novoDodavanje
+package hr.fragmenti.novoDodavanje
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import hr.database.table.TablicaRaspored
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
-import hr.viewModel.TablicaRasporedViewModel
+import hr.novoDodavanje.DodajNoviRezultatLigaFragmentDirections
 import hr.viewModel.TablicaRezultatiViewModel
-import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.*
-import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.noviRasporedLigaBrojKola
 import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.*
 import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -37,7 +32,8 @@ class DodajNoviRezultatLigaFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_novi_rezultati_liga,container, false)
 
         view.gumbSpremiTablicaRezultat.setOnClickListener {
-            val action = DodajNoviRezultatLigaFragmentDirections.actionDodajNoviRezultatLigaFragmentToTablicaRezultatiFragment()
+            val action =
+                DodajNoviRezultatLigaFragmentDirections.actionDodajNoviRezultatLigaFragmentToTablicaRezultatiFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }

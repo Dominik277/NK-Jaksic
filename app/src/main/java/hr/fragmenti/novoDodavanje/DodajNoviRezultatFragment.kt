@@ -1,18 +1,17 @@
-package hr.novoDodavanje
+package hr.fragmenti.novoDodavanje
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
+import hr.novoDodavanje.DodajNoviRezultatFragmentDirections
 import hr.viewModel.RezultatViewModel
 import kotlinx.android.synthetic.main.fragment_novi_rezultat.*
 import kotlinx.android.synthetic.main.fragment_novi_rezultat.view.*
@@ -33,7 +32,8 @@ class DodajNoviRezultatFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_novi_rezultat, container, false)
 
         view.gumbSpremiNoviRezultat.setOnClickListener {
-            val action = DodajNoviRezultatFragmentDirections.actionDodajNoviRezultatFragmentToRezultatiFragment()
+            val action =
+                DodajNoviRezultatFragmentDirections.actionDodajNoviRezultatFragmentToRezultatiFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }

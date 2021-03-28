@@ -114,7 +114,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateNajboljiStrijalacFragment"
-        android:name="hr.updateDelete.UpdateNajboljiStrijalacFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateNajboljiStrijalacFragment"
         android:label="UpdateNajboljiStrijalacFragment"
         tools:layout="@layout/update_strijelci_fragment">
         <action
@@ -126,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateRasporedFragment"
-        android:name="hr.updateDelete.UpdateRasporedFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateRasporedFragment"
         android:label="UpdateRasporedFragment"
         tools:layout="@layout/update_raspored_fragment">
         <action
@@ -137,7 +137,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateTablicaTablicaFragment"
-        android:name="hr.updateDelete.UpdateTablicaTablicaFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateTablicaTablicaFragment"
         android:label="UpdateTablicaTablicaFragment"
         tools:layout="@layout/update_tablica_tablica_fragment">
         <action
@@ -148,7 +148,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateRezultatFragment"
-        android:name="hr.updateDelete.UpdateRezultatFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateRezultatFragment"
         android:label="UpdateRezultatFragment"
         tools:layout="@layout/update_rezultat_fragment">
         <action
@@ -160,7 +160,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateMomcadFragment"
-        android:name="hr.updateDelete.UpdateMomcadFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateMomcadFragment"
         android:label="UpdateMomcadFragment"
         tools:layout="@layout/update_momcad_fragment">
         <action
@@ -172,7 +172,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateTablicaRezultatFragment"
-        android:name="hr.updateDelete.UpdateTablicaRezultatFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateTablicaRezultatFragment"
         android:label="UpdateTablicaRezultatFragment"
         tools:layout="@layout/update_tablica_rezultat_fragment">
         <action
@@ -184,7 +184,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateTablicaRasporedFragment"
-        android:name="hr.updateDelete.UpdateTablicaRasporedFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateTablicaRasporedFragment"
         android:label="UpdateTablicaRasporedFragment"
         tools:layout="@layout/update_tablica_raspored_fragment">
         <action
@@ -196,7 +196,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajNoviRaspored"
-        android:name="hr.novoDodavanje.DodajNoviRasporedFragment"
+        android:name="hr.fragmenti.novoDodavanje.DodajNoviRasporedFragment"
         android:label="DodajNoviRasporedFragment"
         tools:layout="@layout/fragment_novi_raspored">
         <action
@@ -205,7 +205,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajNovogStrijelca"
-        android:name="hr.novoDodavanje.DodajNovogStrijelcaFragment"
+        android:name="hr.fragmenti.novoDodavanje.DodajNovogStrijelcaFragment"
         android:label="DodajNovogStrijelcaFragment"
         tools:layout="@layout/fragment_novi_strijelac">
         <action
@@ -214,7 +214,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajTablicuRapored"
-        android:name="hr.novoDodavanje.DodajNoviRasporedLigaFragment"
+        android:name="hr.fragmenti.novoDodavanje.DodajNoviRasporedLigaFragment"
         android:label="DodajNoviRasporedLigaFragment"
         tools:layout="@layout/fragment_novi_raspored_liga">
         <action
@@ -223,7 +223,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajNoviRezultat"
-        android:name="hr.novoDodavanje.DodajNoviRezultatFragment"
+        android:name="hr.fragmenti.novoDodavanje.DodajNoviRezultatFragment"
         android:label="DodajNoviRezultatFragment"
         tools:layout="@layout/fragment_novi_rezultat">
         <action
@@ -232,7 +232,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajNovogIgraca"
-        android:name="hr.novoDodavanje.DodajNovogIgraca"
+        android:name="hr.fragmenti.novoDodavanje.DodajNovogIgraca"
         android:label="DodajNovogIgraca"
         tools:layout="@layout/fragment_novi_igrac">
         <action
@@ -241,7 +241,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajTablicuRezultat"
-        android:name="hr.novoDodavanje.DodajNoviRezultatLigaFragment"
+        android:name="hr.fragmenti.novoDodavanje.DodajNoviRezultatLigaFragment"
         android:label="DodajNoviRezultatLigaFragment"
         tools:layout="@layout/fragment_novi_rezultati_liga">
         <action
@@ -250,7 +250,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajNovuTablicu"
-        android:name="hr.novoDodavanje.DodajNovuTablicuFragment"
+        android:name="hr.fragmenti.novoDodavanje.DodajNovuTablicuFragment"
         android:label="DodajNovuTablicuFragment"
         tools:layout="@layout/fragment_nova_tablica">
         <action
@@ -259,7 +259,7 @@
     </fragment>
     <fragment
         android:id="@+id/dodajNovuVijest"
-        android:name="hr.novoDodavanje.DodajNovuVijest"
+        android:name="hr.fragmenti.novoDodavanje.DodajNovuVijest"
         android:label="DodajNovuVijest"
         tools:layout="@layout/fragment_nova_vijest">
         <action
@@ -268,7 +268,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateVijestiFragment"
-        android:name="hr.updateDelete.UpdateVijestiFragment"
+        android:name="hr.fragmenti.updateDelete.UpdateVijestiFragment"
         android:label="UpdateVijestiFragment"
         tools:layout="@layout/update_vijesti_fragment">
         <action

@@ -1,4 +1,4 @@
-package hr.updateDelete
+package hr.fragmenti.updateDelete
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
+import hr.updateDelete.UpdateNajboljiStrijalacFragmentArgs
 import hr.viewModel.NajboljiStrijelciViewModel
 import kotlinx.android.synthetic.main.update_strijelci_fragment.*
 import kotlinx.android.synthetic.main.update_strijelci_fragment.view.*

@@ -1,4 +1,4 @@
-package hr.updateDelete
+package hr.fragmenti.updateDelete
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -8,16 +8,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
+import hr.updateDelete.UpdateRasporedFragmentArgs
 import hr.viewModel.RasporedViewModel
 import kotlinx.android.synthetic.main.update_raspored_fragment.*
 import kotlinx.android.synthetic.main.update_raspored_fragment.view.*
-import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
