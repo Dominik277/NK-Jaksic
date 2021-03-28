@@ -1,4 +1,4 @@
-package hr.fragmenti
+package hr.fragmenti.fragmenti
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import hr.dominik.nkjaki.R
-import kotlinx.android.synthetic.main.fragment_tablica.*
+import hr.fragmenti.TablicaFragmentDirections
 import kotlinx.android.synthetic.main.fragment_tablica.view.*
 
 class TablicaFragment: Fragment() {

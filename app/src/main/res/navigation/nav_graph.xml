@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_momcad"
-        android:name="hr.fragmenti.MomcadFragment"
+        android:name="hr.fragmenti.fragmenti.MomcadFragment"
         android:label="MomcadFragment"
         tools:layout="@layout/fragment_momcad">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/najboljiStrijelciFragment"
-        android:name="hr.fragmenti.NajboljiStrijelciFragment"
+        android:name="hr.fragmenti.fragmenti.NajboljiStrijelciFragment"
         android:label="NajboljiStrijelciFragment"
         tools:layout="@layout/fragment_najbolji_strijelci">
         <action
@@ -28,12 +28,12 @@
     </fragment>
     <fragment
         android:id="@+id/nav_pocetnaStranica"
-        android:name="hr.fragmenti.PocetnaStranicaFragment"
+        android:name="hr.fragmenti.fragmenti.PocetnaStranicaFragment"
         android:label="PocetnaStranicaFragment"
         tools:layout="@layout/fragment_pocetna_stranica"/>
     <fragment
         android:id="@+id/nav_raspored"
-        android:name="hr.fragmenti.RasporedFragment"
+        android:name="hr.fragmenti.fragmenti.RasporedFragment"
         android:label="RasporedFragment"
         tools:layout="@layout/fragment_raspored">
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_rezultati"
-        android:name="hr.fragmenti.RezultatiFragment"
+        android:name="hr.fragmenti.fragmenti.RezultatiFragment"
         android:label="RezultatiFragment"
         tools:layout="@layout/fragment_rezultati">
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_tablica"
-        android:name="hr.fragmenti.TablicaFragment"
+        android:name="hr.fragmenti.fragmenti.TablicaFragment"
         android:label="TablicaFragment"
         tools:layout="@layout/fragment_tablica">
         <action
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/tablicaRasporedFragment"
-        android:name="hr.fragmenti.TablicaRasporedFragment"
+        android:name="hr.fragmenti.fragmenti.TablicaRasporedFragment"
         android:label="TablicaRasporedFragment"
         tools:layout="@layout/tablica_fragment_raspored">
         <action
@@ -84,7 +84,7 @@
     </fragment>
     <fragment
         android:id="@+id/tablicaRezultatiFragment"
-        android:name="hr.fragmenti.TablicaRezultatiFragment"
+        android:name="hr.fragmenti.fragmenti.TablicaRezultatiFragment"
         android:label="TablicaRezultatiFragment"
         tools:layout="@layout/novi_fragment_rezultati">
         <action
@@ -93,7 +93,7 @@
     </fragment>
     <fragment
         android:id="@+id/tablicaTablicaFragment"
-        android:name="hr.fragmenti.TablicaTablicaFragment"
+        android:name="hr.fragmenti.fragmenti.TablicaTablicaFragment"
         android:label="TablicaTablicaFragment"
         tools:layout="@layout/tablica_fragment_tablica">
         <action
@@ -102,7 +102,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_vijesti"
-        android:name="hr.fragmenti.VijestiFragment"
+        android:name="hr.fragmenti.fragmenti.VijestiFragment"
         android:label="VijestiFragment"
         tools:layout="@layout/fragment_vijesti">
         <action
