@@ -280,7 +280,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailVijestiFragment"
-        android:name="hr.detailFragmenti.DetailVijestiFragment"
+        android:name="hr.fragmenti.detailFragmenti.DetailVijestiFragment"
         android:label="DetailVijestiFragment"
         tools:layout="@layout/detail_vijesti_fragment">
         <argument
@@ -289,7 +289,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailRasporedFragment"
-        android:name="hr.detailFragmenti.DetailRasporedFragment"
+        android:name="hr.fragmenti.detailFragmenti.DetailRasporedFragment"
         android:label="DetailRasporedFragment"
         tools:layout="@layout/detail_raspored_fragment">
         <argument
@@ -298,7 +298,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailMomcadFragment"
-        android:name="hr.detailFragmenti.DetailMomcadFragment"
+        android:name="hr.fragmenti.detailFragmenti.DetailMomcadFragment"
         android:label="DetailMomcadFragment"
         tools:layout="@layout/detail_momcad_fragment">
         <argument
@@ -307,7 +307,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailRezultatiFragment"
-        android:name="hr.detailFragmenti.DetailRezultatiFragment"
+        android:name="hr.fragmenti.detailFragmenti.DetailRezultatiFragment"
         android:label="DetailRezultatiFragment"
         tools:layout="@layout/detail_rezultati_fragment">
         <argument
