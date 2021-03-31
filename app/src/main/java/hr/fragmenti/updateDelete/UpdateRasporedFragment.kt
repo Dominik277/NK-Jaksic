@@ -2,9 +2,7 @@ package hr.fragmenti.updateDelete
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,55 +11,50 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import hr.fragmenti.updateDelete.UpdateRasporedFragmentArgs
+import hr.dominik.nkjaki.databinding.UpdateRasporedFragmentBinding
 import hr.viewModel.RasporedViewModel
-import kotlinx.android.synthetic.main.update_raspored_fragment.*
-import kotlinx.android.synthetic.main.update_raspored_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
-class UpdateRasporedFragment: Fragment() {
+class UpdateRasporedFragment : Fragment(R.layout.update_raspored_fragment) {
 
     private val args by navArgs<UpdateRasporedFragmentArgs>()
+
     @InternalCoroutinesApi
     private val mRasporedViewModel: RasporedViewModel by viewModels()
+    private lateinit var binding: UpdateRasporedFragmentBinding
 
     @InternalCoroutinesApi
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.update_raspored_fragment,container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = UpdateRasporedFragmentBinding.bind(view)
 
-        view.updateRasporedNatjecanje.setText(args.updateRasporedArgs.natjecanje)
-        view.updateRasporedDatum.setText(args.updateRasporedArgs.datum)
-        view.updateRasporedDomacin.setText(args.updateRasporedArgs.domacin)
-        view.updateRasporedGost.setText(args.updateRasporedArgs.gost)
-        view.updateRasporedVrijeme.setText(args.updateRasporedArgs.vrijeme)
-        view.updateRasporedNedostaje.setText(args.updateRasporedArgs.nedostaju)
-        view.updateRasporedClanak.setText(args.updateRasporedArgs.clanak)
+        binding.updateRasporedNatjecanje.setText(args.updateRasporedArgs.natjecanje)
+        binding.updateRasporedDatum.setText(args.updateRasporedArgs.datum)
+        binding.updateRasporedDomacin.setText(args.updateRasporedArgs.domacin)
+        binding.updateRasporedGost.setText(args.updateRasporedArgs.gost)
+        binding.updateRasporedVrijeme.setText(args.updateRasporedArgs.vrijeme)
+        binding.updateRasporedNedostaje.setText(args.updateRasporedArgs.nedostaju)
+        binding.updateRasporedClanak.setText(args.updateRasporedArgs.clanak)
 
-        view.gumbUpdateRaspored.setOnClickListener {
+        binding.gumbUpdateRaspored.setOnClickListener {
             updateItemRaspored()
         }
 
-        view.gumbDeleteRaspored.setOnClickListener {
+        binding.gumbDeleteRaspored.setOnClickListener {
             deleteItemRaspored()
         }
-
-        return view
     }
 
     @InternalCoroutinesApi
     private fun deleteItemRaspored() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes"){_, _ ->
+        builder.setPositiveButton("Yes") { _, _ ->
             mRasporedViewModel.deleteRaspored(args.updateRasporedArgs)
-            Toast.makeText(requireContext(),"Brisanje uspješno!", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Brisanje uspješno!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateRasporedFragment_to_rasporedFragment)
         }
-        builder.setNegativeButton("No"){_, _ -> }
+        builder.setNegativeButton("No") { _, _ -> }
         builder.setTitle("Delete ${args.updateRasporedArgs.domacin}?")
         builder.setMessage("Are you sure you want to delete ${args.updateRasporedArgs.domacin}?")
         builder.create().show()
@@ -69,15 +62,24 @@ class UpdateRasporedFragment: Fragment() {
 
     @InternalCoroutinesApi
     private fun updateItemRaspored() {
-        val natjecanjeRaspored = updateRasporedNatjecanje.text.toString()
-        val datumRaspored = updateRasporedDatum.text.toString()
-        val domacinRaspored = updateRasporedDomacin.text.toString()
-        val gostRaspored = updateRasporedGost.text.toString()
-        val vrijemeRaspored = updateRasporedVrijeme.text.toString()
-        val nedostajeRaspored = updateRasporedNedostaje.text.toString()
-        val clanakRaspored = updateRasporedClanak.text.toString()
+        val natjecanjeRaspored = binding.updateRasporedNatjecanje.text.toString()
+        val datumRaspored = binding.updateRasporedDatum.text.toString()
+        val domacinRaspored = binding.updateRasporedDomacin.text.toString()
+        val gostRaspored = binding.updateRasporedGost.text.toString()
+        val vrijemeRaspored = binding.updateRasporedVrijeme.text.toString()
+        val nedostajeRaspored = binding.updateRasporedNedostaje.text.toString()
+        val clanakRaspored = binding.updateRasporedClanak.text.toString()
 
-        val updateRaspored = Raspored(args.updateRasporedArgs.id,natjecanjeRaspored,datumRaspored,domacinRaspored,gostRaspored,vrijemeRaspored,nedostajeRaspored,clanakRaspored)
+        val updateRaspored = Raspored(
+            args.updateRasporedArgs.id,
+            natjecanjeRaspored,
+            datumRaspored,
+            domacinRaspored,
+            gostRaspored,
+            vrijemeRaspored,
+            nedostajeRaspored,
+            clanakRaspored
+        )
         mRasporedViewModel.updateRaspored(updateRaspored)
         findNavController().navigate(R.id.action_updateRasporedFragment_to_rasporedFragment)
     }
