@@ -2,9 +2,7 @@ package hr.fragmenti.updateDelete
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,41 +11,35 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
-import hr.fragmenti.updateDelete.UpdateVijestiFragmentArgs
+import hr.dominik.nkjaki.databinding.UpdateVijestiFragmentBinding
 import hr.viewModel.VijestiViewModel
-import kotlinx.android.synthetic.main.update_vijesti_fragment.*
-import kotlinx.android.synthetic.main.update_vijesti_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 import java.text.SimpleDateFormat
 import java.util.*
 
 @AndroidEntryPoint
-class UpdateVijestiFragment: Fragment() {
+class UpdateVijestiFragment: Fragment(R.layout.update_vijesti_fragment) {
 
     private val args by navArgs<UpdateVijestiFragmentArgs>()
     @InternalCoroutinesApi
     private val mVijestiViewModel: VijestiViewModel by viewModels()
+    private lateinit var binding: UpdateVijestiFragmentBinding
 
     @InternalCoroutinesApi
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.update_vijesti_fragment,container,false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = UpdateVijestiFragmentBinding.bind(view)
 
-        view.updateVijestiNaslov.setText(args.updateVijestiArgs.naslov)
-        view.updateVijestiClanak.setText(args.updateVijestiArgs.clanak)
+        binding.updateVijestiNaslov.setText(args.updateVijestiArgs.naslov)
+        binding.updateVijestiClanak.setText(args.updateVijestiArgs.clanak)
 
-        view.gumbUpdateVijesti.setOnClickListener {
+        binding.gumbUpdateVijesti.setOnClickListener {
             updateItemVijesti()
         }
 
-        view.gumbDeleteVijesti.setOnClickListener {
+        binding.gumbDeleteVijesti.setOnClickListener {
             deleteItemVijesti()
         }
-
-        return view
     }
 
     @InternalCoroutinesApi
@@ -69,8 +61,8 @@ class UpdateVijestiFragment: Fragment() {
         val sdf = SimpleDateFormat("dd.MM.yyyy. HH:mm")
         val currentDate = sdf.format(Date())
 
-        val naslovVijesti = updateVijestiNaslov.text.toString()
-        val clanakVijesti = updateVijestiClanak.text.toString()
+        val naslovVijesti = binding.updateVijestiNaslov.text.toString()
+        val clanakVijesti = binding.updateVijestiClanak.text.toString()
         val vrijemeVijesti = currentDate
         val slikaVijesti = 0
 
