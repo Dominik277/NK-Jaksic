@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import hr.dominik.nkjaki.R
 import hr.fragmenti.fragmenti.TablicaFragmentDirections
 import kotlinx.android.synthetic.main.fragment_tablica.view.*
 
+@AndroidEntryPoint
 class TablicaFragment: Fragment() {
 
 
@@ -49,53 +51,6 @@ class TablicaFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val tablicaTablicaFragment = TablicaTablicaFragment()
-        val strijelciFragment = NajboljiStrijelciFragment()
-        val tablicaRasporedFragment = TablicaRasporedFragment()
-        val noviRezultatiFragment = TablicaRezultatiFragment()
 
-        /*
-        childFragmentManager.beginTransaction().apply {
-            replace(R.id.frameLayoutTablica, tablicaTablicaFragment)
-            commit()
-        }
-*/
-
-/*
-        gumbTablica.setOnClickListener {
-            childFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica, tablicaTablicaFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
-
-
-        gumbNajboljiStrijelci.setOnClickListener {
-            childFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica, strijelciFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
-
-        gumbRaspored.setOnClickListener {
-            childFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica, tablicaRasporedFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
-
-        gumbRezultati.setOnClickListener {
-            childFragmentManager.beginTransaction().apply {
-                replace(R.id.frameLayoutTablica, noviRezultatiFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
-    }
-
- */
     }
 }
