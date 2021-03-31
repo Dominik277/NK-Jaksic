@@ -1,9 +1,7 @@
 package hr.fragmenti.novoDodavanje
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -11,44 +9,43 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
-import hr.fragmenti.novoDodavanje.DodajNovogStrijelcaFragmentDirections
+import hr.dominik.nkjaki.databinding.FragmentNoviStrijelacBinding
 import hr.viewModel.NajboljiStrijelciViewModel
-import kotlinx.android.synthetic.main.fragment_novi_strijelac.*
-import kotlinx.android.synthetic.main.fragment_novi_strijelac.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
-class DodajNovogStrijelcaFragment: Fragment() {
+class DodajNovogStrijelcaFragment : Fragment(R.layout.fragment_novi_strijelac) {
 
     @InternalCoroutinesApi
     private val mNajboljiStrijelacViewModel: NajboljiStrijelciViewModel by viewModels()
+    private lateinit var binding: FragmentNoviStrijelacBinding
 
     @InternalCoroutinesApi
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-       val view = inflater.inflate(R.layout.fragment_novi_strijelac,container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentNoviStrijelacBinding.bind(view)
 
-        view.gumbSpremiNovogStrijelca.setOnClickListener {
+        binding.gumbSpremiNovogStrijelca.setOnClickListener {
             val action =
                 DodajNovogStrijelcaFragmentDirections.actionDodajNovogStrijelcaFragmentToNajboljiStrijelciFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }
-
-        return view
     }
 
     @InternalCoroutinesApi
     private fun insertDataToDatabase() {
-        val noviStrijelacPozicija = noviStrijelacPozicija.text.toString()
-        val noviStrijelacImePrezime = noviStrijelacImePrezime.text.toString()
-        val noviStrijelacBrojGolova = noviStrijelacBrojGolova.text.toString()
+        val noviStrijelacPozicija = binding.noviStrijelacPozicija.text.toString()
+        val noviStrijelacImePrezime = binding.noviStrijelacImePrezime.text.toString()
+        val noviStrijelacBrojGolova = binding.noviStrijelacBrojGolova.text.toString()
 
-            val najboljiStrijelac = NajboljiStrijelci(0,noviStrijelacPozicija,noviStrijelacImePrezime,noviStrijelacBrojGolova)
-            mNajboljiStrijelacViewModel.addNajboljiStrijelac(najboljiStrijelac)
-            Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
+        val najboljiStrijelac = NajboljiStrijelci(
+            0,
+            noviStrijelacPozicija,
+            noviStrijelacImePrezime,
+            noviStrijelacBrojGolova
+        )
+        mNajboljiStrijelacViewModel.addNajboljiStrijelac(najboljiStrijelac)
+        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
     }
 }

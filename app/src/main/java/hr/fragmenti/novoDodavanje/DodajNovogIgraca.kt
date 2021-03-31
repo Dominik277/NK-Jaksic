@@ -10,53 +10,60 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
-import hr.fragmenti.novoDodavanje.DodajNovogIgracaDirections
+import hr.dominik.nkjaki.databinding.FragmentNoviIgracBinding
 import hr.viewModel.MomcadViewModel
-import kotlinx.android.synthetic.main.fragment_novi_igrac.*
-import kotlinx.android.synthetic.main.fragment_novi_igrac.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
-class DodajNovogIgraca: Fragment() {
+class DodajNovogIgraca : Fragment(R.layout.fragment_novi_igrac) {
 
     @InternalCoroutinesApi
     private val mMomcadViewModel: MomcadViewModel by viewModels()
+    private lateinit var binding: FragmentNoviIgracBinding
 
     @InternalCoroutinesApi
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_novi_igrac,container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentNoviIgracBinding.bind(view)
 
-        view.gumbSpremiNoviIgrac.setOnClickListener {
+        binding.gumbSpremiNoviIgrac.setOnClickListener {
             val action = DodajNovogIgracaDirections.actionDodajNovogIgraca2ToMomcadFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }
-
-        return view
     }
 
     @InternalCoroutinesApi
     private fun insertDataToDatabase() {
-        val igracIme = noviIgracIme.text.toString()
-        val igracPrezime = noviIgracPrezime.text.toString()
-        val igracPozicija = noviIgracPozicija.text.toString()
-        val igracOdigraniSusreti = noviIgracOdigraniSusreti.text.toString()
-        val igracGolovi = noviIgracGolovi.text.toString()
-        val igracAsistencije = noviIgracAsistencije.text.toString()
-        val igracOdigraneMinute = noviIgracOdigraneMinute.text.toString()
-        val igracZutiKartoni = noviIgracZutiKartoni.text.toString()
-        val igracCrveniKartoni = noviIgracCrveniKartoni.text.toString()
-        val igracOpis = noviIgracOpis.text.toString()
-        val igracBroj = noviIgracBroj.text.toString()
+        val igracIme = binding.noviIgracIme.text.toString()
+        val igracPrezime = binding.noviIgracPrezime.text.toString()
+        val igracPozicija = binding.noviIgracPozicija.text.toString()
+        val igracOdigraniSusreti = binding.noviIgracOdigraniSusreti.text.toString()
+        val igracGolovi = binding.noviIgracGolovi.text.toString()
+        val igracAsistencije = binding.noviIgracAsistencije.text.toString()
+        val igracOdigraneMinute = binding.noviIgracOdigraneMinute.text.toString()
+        val igracZutiKartoni = binding.noviIgracZutiKartoni.text.toString()
+        val igracCrveniKartoni = binding.noviIgracCrveniKartoni.text.toString()
+        val igracOpis = binding.noviIgracOpis.text.toString()
+        val igracBroj = binding.noviIgracBroj.text.toString()
 
         val igracSlika = R.drawable.face
 
-        val igrac = Igraci(0,igracIme,igracPrezime,igracPozicija,igracOdigraniSusreti,igracGolovi,
-            igracAsistencije,igracOdigraneMinute,igracZutiKartoni,igracCrveniKartoni,igracBroj,igracOpis,igracSlika)
+        val igrac = Igraci(
+            0,
+            igracIme,
+            igracPrezime,
+            igracPozicija,
+            igracOdigraniSusreti,
+            igracGolovi,
+            igracAsistencije,
+            igracOdigraneMinute,
+            igracZutiKartoni,
+            igracCrveniKartoni,
+            igracBroj,
+            igracOpis,
+            igracSlika
+        )
         mMomcadViewModel.addMomcad(igrac)
     }
 }
