@@ -1,9 +1,7 @@
 package hr.fragmenti.novoDodavanje
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -11,53 +9,57 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
-import hr.fragmenti.novoDodavanje.DodajNoviRezultatFragmentDirections
+import hr.dominik.nkjaki.databinding.FragmentNoviRezultatBinding
 import hr.viewModel.RezultatViewModel
-import kotlinx.android.synthetic.main.fragment_novi_rezultat.*
-import kotlinx.android.synthetic.main.fragment_novi_rezultat.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
-class DodajNoviRezultatFragment: Fragment() {
+class DodajNoviRezultatFragment : Fragment(R.layout.fragment_novi_rezultat) {
 
     @InternalCoroutinesApi
     private val mRezultatiViewModel: RezultatViewModel by viewModels()
+    private lateinit var binding: FragmentNoviRezultatBinding
 
     @InternalCoroutinesApi
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_novi_rezultat, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentNoviRezultatBinding.bind(view)
 
-        view.gumbSpremiNoviRezultat.setOnClickListener {
+        binding.gumbSpremiNoviRezultat.setOnClickListener {
             val action =
                 DodajNoviRezultatFragmentDirections.actionDodajNoviRezultatFragmentToRezultatiFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }
-        return view
     }
 
     @InternalCoroutinesApi
     private fun insertDataToDatabase() {
-        val noviRezultatNatjecanje = noviRezultatNatjecanje.text.toString()
-        val noviRezultatDatum = noviRezultatDatum.text.toString()
-        val noviRezultatDomacin = noviRezultatDomacin.text.toString()
-        val noviRezultatGost = noviRezultatGost.text.toString()
-        val noviRezultatRezultat = noviRezultatRezultat.text.toString()
-        val noviRezultatIshod = noviRezultatIshod.text.toString()
-        val noviRezultatPostave = noviRezultatPostave.text.toString()
-        val noviRezultatDetalji = noviRezultatDetalji.text.toString()
-        val noviRezultatClanak = noviRezultatClanak.text.toString()
+        val noviRezultatNatjecanje = binding.noviRezultatNatjecanje.text.toString()
+        val noviRezultatDatum = binding.noviRezultatDatum.text.toString()
+        val noviRezultatDomacin = binding.noviRezultatDomacin.text.toString()
+        val noviRezultatGost = binding.noviRezultatGost.text.toString()
+        val noviRezultatRezultat = binding.noviRezultatRezultat.text.toString()
+        val noviRezultatIshod = binding.noviRezultatIshod.text.toString()
+        val noviRezultatPostave = binding.noviRezultatPostave.text.toString()
+        val noviRezultatDetalji = binding.noviRezultatDetalji.text.toString()
+        val noviRezultatClanak = binding.noviRezultatClanak.text.toString()
 
-            //Create object
-            val rezultat = Rezultat(0,noviRezultatNatjecanje,noviRezultatDatum,
-                noviRezultatDomacin,noviRezultatGost,noviRezultatRezultat,noviRezultatIshod,noviRezultatPostave,
-                noviRezultatDetalji,noviRezultatClanak)
-            mRezultatiViewModel.addRezultat(rezultat)
-            Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
+        //Create object
+        val rezultat = Rezultat(
+            0,
+            noviRezultatNatjecanje,
+            noviRezultatDatum,
+            noviRezultatDomacin,
+            noviRezultatGost,
+            noviRezultatRezultat,
+            noviRezultatIshod,
+            noviRezultatPostave,
+            noviRezultatDetalji,
+            noviRezultatClanak
+        )
+        mRezultatiViewModel.addRezultat(rezultat)
+        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
 
     }
 }
