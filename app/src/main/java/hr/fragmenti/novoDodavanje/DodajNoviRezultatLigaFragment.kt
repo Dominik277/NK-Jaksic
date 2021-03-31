@@ -1,9 +1,7 @@
 package hr.fragmenti.novoDodavanje
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -11,88 +9,106 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
-import hr.fragmenti.novoDodavanje.DodajNoviRezultatLigaFragmentDirections
+import hr.dominik.nkjaki.databinding.FragmentNoviRezultatiLigaBinding
 import hr.viewModel.TablicaRezultatiViewModel
-import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.*
-import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.view.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @AndroidEntryPoint
-class DodajNoviRezultatLigaFragment: Fragment() {
+class DodajNoviRezultatLigaFragment : Fragment(R.layout.fragment_novi_rezultati_liga) {
 
     @InternalCoroutinesApi
     private val mTablicaRezultatViewModel: TablicaRezultatiViewModel by viewModels()
+    private lateinit var binding: FragmentNoviRezultatiLigaBinding
 
     @InternalCoroutinesApi
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_novi_rezultati_liga,container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentNoviRezultatiLigaBinding.bind(view)
 
-        view.gumbSpremiTablicaRezultat.setOnClickListener {
+        binding.gumbSpremiTablicaRezultat.setOnClickListener {
             val action =
                 DodajNoviRezultatLigaFragmentDirections.actionDodajNoviRezultatLigaFragmentToTablicaRezultatiFragment()
             findNavController().navigate(action)
             insertDataToDatabase()
         }
-
-        return view
     }
 
     @InternalCoroutinesApi
     private fun insertDataToDatabase() {
-        val noviRezultatLigaBrojKola = noviRezultatLigaBrojKola.text.toString()
+        val noviRezultatLigaBrojKola = binding.noviRezultatLigaBrojKola.text.toString()
 
-        val noviRezultatLigaPrviDatum = noviRezultatLigaPrviDatum.text.toString()
-        val noviRezultatLigaPrviDomacin = noviRezultatLigaPrviDomacin.text.toString()
-        val noviRezultatLigaPrviGost = noviRezultatLigaPrviGost.text.toString()
-        val noviRezultatLigaPrvoVrijeme = noviRezultatLigaPrviRezultat.text.toString()
+        val noviRezultatLigaPrviDatum = binding.noviRezultatLigaPrviDatum.text.toString()
+        val noviRezultatLigaPrviDomacin = binding.noviRezultatLigaPrviDomacin.text.toString()
+        val noviRezultatLigaPrviGost = binding.noviRezultatLigaPrviGost.text.toString()
+        val noviRezultatLigaPrvoVrijeme = binding.noviRezultatLigaPrviRezultat.text.toString()
 
-        val noviRezultatLigaDrugiDatum = noviRezultatLigaDrugiDatum.text.toString()
-        val noviRezultatLigaDrugiDomacin = noviRezultatLigaDrugiDomacin.text.toString()
-        val noviRezultatLigaDrugiGost = noviRezultatLigaDrugiGost.text.toString()
-        val noviRezultatLigaDrugoVrijeme = noviRezultatLigaDrugiRezultat.text.toString()
+        val noviRezultatLigaDrugiDatum = binding.noviRezultatLigaDrugiDatum.text.toString()
+        val noviRezultatLigaDrugiDomacin = binding.noviRezultatLigaDrugiDomacin.text.toString()
+        val noviRezultatLigaDrugiGost = binding.noviRezultatLigaDrugiGost.text.toString()
+        val noviRezultatLigaDrugoVrijeme = binding.noviRezultatLigaDrugiRezultat.text.toString()
 
-        val noviRezultatLigaTreciDatum = noviRezultatLigaTreciDatum.text.toString()
-        val noviRezultatLigaTreciDomacin = noviRezultatLigaTreciDomacin.text.toString()
-        val noviRezultatLigaTreciGost = noviRezultatLigaTreciGost.text.toString()
-        val noviRezultatLigaTreceVrijeme = noviRezultatLigaTreciRezultat.text.toString()
+        val noviRezultatLigaTreciDatum = binding.noviRezultatLigaTreciDatum.text.toString()
+        val noviRezultatLigaTreciDomacin = binding.noviRezultatLigaTreciDomacin.text.toString()
+        val noviRezultatLigaTreciGost = binding.noviRezultatLigaTreciGost.text.toString()
+        val noviRezultatLigaTreceVrijeme = binding.noviRezultatLigaTreciRezultat.text.toString()
 
-        val noviRezultatLigaCetvrtiDatum = noviRezultatLigaCetvrtiDatum.text.toString()
-        val noviRezultatLigaCetvrtiDomacin = noviRezultatLigaCetvrtiDomacin.text.toString()
-        val noviRezultatLigaCetvrtiGost = noviRezultatLigaCetvrtiGost.text.toString()
-        val noviRezultatLigaCetvrtoVrijeme = noviRezultatLigaCetvrtiRezultat.text.toString()
+        val noviRezultatLigaCetvrtiDatum = binding.noviRezultatLigaCetvrtiDatum.text.toString()
+        val noviRezultatLigaCetvrtiDomacin = binding.noviRezultatLigaCetvrtiDomacin.text.toString()
+        val noviRezultatLigaCetvrtiGost = binding.noviRezultatLigaCetvrtiGost.text.toString()
+        val noviRezultatLigaCetvrtoVrijeme = binding.noviRezultatLigaCetvrtiRezultat.text.toString()
 
 
-        val noviRezultatLigaPetiDatum = noviRezultatLigaPetiDatum.text.toString()
-        val noviRezultatLigaPetiDomacin = noviRezultatLigaPetiDomacin.text.toString()
-        val noviRezultatLigaPetiGost = noviRezultatLigaPetiGost.text.toString()
-        val noviRezultatLigaPetoVrijeme = noviRezultatLigaPetiRezultat.text.toString()
+        val noviRezultatLigaPetiDatum = binding.noviRezultatLigaPetiDatum.text.toString()
+        val noviRezultatLigaPetiDomacin = binding.noviRezultatLigaPetiDomacin.text.toString()
+        val noviRezultatLigaPetiGost = binding.noviRezultatLigaPetiGost.text.toString()
+        val noviRezultatLigaPetoVrijeme = binding.noviRezultatLigaPetiRezultat.text.toString()
 
-        val noviRezultatLigaSestiDatum = noviRezultatLigaSestiDatum.text.toString()
-        val noviRezultatLigaSestiDomacin = noviRezultatLigaSestiDomacin.text.toString()
-        val noviRezultatLigaSestiGost = noviRezultatLigaSestiGost.text.toString()
-        val noviRezultatLigaSestoVrijeme = noviRezultatLigaSestiRezultat.text.toString()
+        val noviRezultatLigaSestiDatum = binding.noviRezultatLigaSestiDatum.text.toString()
+        val noviRezultatLigaSestiDomacin = binding.noviRezultatLigaSestiDomacin.text.toString()
+        val noviRezultatLigaSestiGost = binding.noviRezultatLigaSestiGost.text.toString()
+        val noviRezultatLigaSestoVrijeme = binding.noviRezultatLigaSestiRezultat.text.toString()
 
-        val noviRezultatLigaSedmiDatum = noviRezultatLigaSedmiDatum.text.toString()
-        val noviRezultatLigaSedmiDomacin = noviRezultatLigaSedmiDomacin.text.toString()
-        val noviRezultatLigaSedmiGost = noviRezultatLigaSedmiGost.text.toString()
-        val noviRezultatLigaSedmoVrijeme = noviRezultatLigaSedmiRezultat.text.toString()
+        val noviRezultatLigaSedmiDatum = binding.noviRezultatLigaSedmiDatum.text.toString()
+        val noviRezultatLigaSedmiDomacin = binding.noviRezultatLigaSedmiDomacin.text.toString()
+        val noviRezultatLigaSedmiGost = binding.noviRezultatLigaSedmiGost.text.toString()
+        val noviRezultatLigaSedmoVrijeme = binding.noviRezultatLigaSedmiRezultat.text.toString()
 
-            //Create object
-            val tablicaRezultat = TablicaRezultati(0,noviRezultatLigaBrojKola,
-                noviRezultatLigaPrviDatum,noviRezultatLigaPrviDomacin,noviRezultatLigaPrviGost,noviRezultatLigaPrvoVrijeme,
-                noviRezultatLigaDrugiDatum,noviRezultatLigaDrugiDomacin,noviRezultatLigaDrugiGost,noviRezultatLigaDrugoVrijeme,
-                noviRezultatLigaTreciDatum,noviRezultatLigaTreciDomacin,noviRezultatLigaTreciGost,noviRezultatLigaTreceVrijeme,
-                noviRezultatLigaCetvrtiDatum,noviRezultatLigaCetvrtiDomacin,noviRezultatLigaCetvrtiGost,noviRezultatLigaCetvrtoVrijeme,
-                noviRezultatLigaPetiDatum,noviRezultatLigaPetiDomacin,noviRezultatLigaPetiGost,noviRezultatLigaPetoVrijeme,
-                noviRezultatLigaSestiDatum,noviRezultatLigaSestiDomacin,noviRezultatLigaSestiGost,noviRezultatLigaSestoVrijeme,
-                noviRezultatLigaSedmiDatum,noviRezultatLigaSedmiDomacin,noviRezultatLigaSedmiGost,noviRezultatLigaSedmoVrijeme)
+        //Create object
+        val tablicaRezultat = TablicaRezultati(
+            0,
+            noviRezultatLigaBrojKola,
+            noviRezultatLigaPrviDatum,
+            noviRezultatLigaPrviDomacin,
+            noviRezultatLigaPrviGost,
+            noviRezultatLigaPrvoVrijeme,
+            noviRezultatLigaDrugiDatum,
+            noviRezultatLigaDrugiDomacin,
+            noviRezultatLigaDrugiGost,
+            noviRezultatLigaDrugoVrijeme,
+            noviRezultatLigaTreciDatum,
+            noviRezultatLigaTreciDomacin,
+            noviRezultatLigaTreciGost,
+            noviRezultatLigaTreceVrijeme,
+            noviRezultatLigaCetvrtiDatum,
+            noviRezultatLigaCetvrtiDomacin,
+            noviRezultatLigaCetvrtiGost,
+            noviRezultatLigaCetvrtoVrijeme,
+            noviRezultatLigaPetiDatum,
+            noviRezultatLigaPetiDomacin,
+            noviRezultatLigaPetiGost,
+            noviRezultatLigaPetoVrijeme,
+            noviRezultatLigaSestiDatum,
+            noviRezultatLigaSestiDomacin,
+            noviRezultatLigaSestiGost,
+            noviRezultatLigaSestoVrijeme,
+            noviRezultatLigaSedmiDatum,
+            noviRezultatLigaSedmiDomacin,
+            noviRezultatLigaSedmiGost,
+            noviRezultatLigaSedmoVrijeme
+        )
 
-            mTablicaRezultatViewModel.addTablicaRezultat(tablicaRezultat)
-            Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
+        mTablicaRezultatViewModel.addTablicaRezultat(tablicaRezultat)
+        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
 
     }
 }
