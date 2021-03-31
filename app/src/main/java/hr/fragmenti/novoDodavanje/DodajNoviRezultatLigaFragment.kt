@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
-import hr.novoDodavanje.DodajNoviRezultatLigaFragmentDirections
+import hr.fragmenti.novoDodavanje.DodajNoviRezultatLigaFragmentDirections
 import hr.viewModel.TablicaRezultatiViewModel
 import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.*
 import kotlinx.android.synthetic.main.fragment_novi_rezultati_liga.view.*

@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
-import hr.updateDelete.UpdateRezultatFragmentArgs
+import hr.fragmenti.updateDelete.UpdateRezultatFragmentArgs
 import hr.viewModel.RezultatViewModel
 import kotlinx.android.synthetic.main.update_rezultat_fragment.*
 import kotlinx.android.synthetic.main.update_rezultat_fragment.view.*

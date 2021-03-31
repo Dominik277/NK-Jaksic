@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
-import hr.novoDodavanje.DodajNovogIgracaDirections
+import hr.fragmenti.novoDodavanje.DodajNovogIgracaDirections
 import hr.viewModel.MomcadViewModel
 import kotlinx.android.synthetic.main.fragment_novi_igrac.*
 import kotlinx.android.synthetic.main.fragment_novi_igrac.view.*

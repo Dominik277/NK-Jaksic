@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import hr.updateDelete.UpdateRasporedFragmentArgs
+import hr.fragmenti.updateDelete.UpdateRasporedFragmentArgs
 import hr.viewModel.RasporedViewModel
 import kotlinx.android.synthetic.main.update_raspored_fragment.*
 import kotlinx.android.synthetic.main.update_raspored_fragment.view.*

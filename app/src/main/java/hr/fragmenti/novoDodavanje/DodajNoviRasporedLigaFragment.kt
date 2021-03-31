@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
-import hr.novoDodavanje.DodajNoviRasporedLigaFragmentDirections
+import hr.fragmenti.novoDodavanje.DodajNoviRasporedLigaFragmentDirections
 import hr.viewModel.TablicaRasporedViewModel
 import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.*
 import kotlinx.android.synthetic.main.fragment_novi_raspored_liga.view.*

@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
-import hr.novoDodavanje.DodajNovuTablicuFragmentDirections
+import hr.fragmenti.novoDodavanje.DodajNovuTablicuFragmentDirections
 import hr.viewModel.TablicaTablicaViewModel
 import kotlinx.android.synthetic.main.fragment_nova_tablica.*
 import kotlinx.android.synthetic.main.fragment_nova_tablica.view.*

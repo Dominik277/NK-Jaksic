@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import hr.dominik.nkjaki.R
-import hr.fragmenti.TablicaFragmentDirections
+import hr.fragmenti.fragmenti.TablicaFragmentDirections
 import kotlinx.android.synthetic.main.fragment_tablica.view.*
 
 class TablicaFragment: Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater,

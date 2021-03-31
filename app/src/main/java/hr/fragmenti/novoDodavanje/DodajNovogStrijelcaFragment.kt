@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
-import hr.novoDodavanje.DodajNovogStrijelcaFragmentDirections
+import hr.fragmenti.novoDodavanje.DodajNovogStrijelcaFragmentDirections
 import hr.viewModel.NajboljiStrijelciViewModel
 import kotlinx.android.synthetic.main.fragment_novi_strijelac.*
 import kotlinx.android.synthetic.main.fragment_novi_strijelac.view.*

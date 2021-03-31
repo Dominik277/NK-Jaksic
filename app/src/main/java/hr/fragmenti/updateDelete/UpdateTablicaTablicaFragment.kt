@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaTablica
 import hr.dominik.nkjaki.R
-import hr.updateDelete.UpdateTablicaTablicaFragmentArgs
+import hr.fragmenti.updateDelete.UpdateTablicaTablicaFragmentArgs
 import hr.viewModel.TablicaTablicaViewModel
 import kotlinx.android.synthetic.main.update_tablica_tablica_fragment.*
 import kotlinx.android.synthetic.main.update_tablica_tablica_fragment.view.*

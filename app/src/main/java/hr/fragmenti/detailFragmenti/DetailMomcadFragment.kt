@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import hr.detailFragmenti.DetailMomcadFragmentArgs
+import hr.fragmenti.detailFragmenti.DetailMomcadFragmentArgs
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.detail_momcad_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi

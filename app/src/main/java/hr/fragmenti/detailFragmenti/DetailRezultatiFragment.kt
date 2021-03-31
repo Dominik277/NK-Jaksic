@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import hr.detailFragmenti.DetailRezultatiFragmentArgs
+import hr.fragmenti.detailFragmenti.DetailRezultatiFragmentArgs
 import hr.dominik.nkjaki.R
 import kotlinx.android.synthetic.main.detail_rezultati_fragment.view.*
 import kotlinx.coroutines.InternalCoroutinesApi

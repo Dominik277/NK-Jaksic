@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
-import hr.novoDodavanje.DodajNovuVijestDirections
+import hr.fragmenti.novoDodavanje.DodajNovuVijestDirections
 import hr.viewModel.VijestiViewModel
 import kotlinx.android.synthetic.main.fragment_nova_vijest.*
 import kotlinx.android.synthetic.main.fragment_nova_vijest.view.*

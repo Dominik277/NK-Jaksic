@@ -9,7 +9,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
-import hr.fragmenti.VijestiFragmentDirections
+import hr.fragmenti.fragmenti.VijestiFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_vijesti.view.*
 
 class VijestiAdapter: RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {

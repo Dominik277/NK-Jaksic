@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Rezultat
 import hr.dominik.nkjaki.R
-import hr.novoDodavanje.DodajNoviRezultatFragmentDirections
+import hr.fragmenti.novoDodavanje.DodajNoviRezultatFragmentDirections
 import hr.viewModel.RezultatViewModel
 import kotlinx.android.synthetic.main.fragment_novi_rezultat.*
 import kotlinx.android.synthetic.main.fragment_novi_rezultat.view.*

@@ -9,7 +9,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import hr.fragmenti.RasporedFragmentDirections
+import hr.fragmenti.fragmenti.RasporedFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_raspored.view.*
 
 class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {

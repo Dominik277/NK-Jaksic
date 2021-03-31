@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.TablicaRaspored
 import hr.database.table.TablicaRezultati
 import hr.dominik.nkjaki.R
-import hr.fragmenti.TablicaRezultatiFragmentDirections
+import hr.fragmenti.fragmenti.TablicaRezultatiFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_tablica_rezultati.view.*
 
 class TablicaRezultatiAdapter: RecyclerView.Adapter<TablicaRezultatiAdapter.ViewHolder>() {

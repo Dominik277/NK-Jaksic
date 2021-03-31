@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Vijesti
 import hr.dominik.nkjaki.R
-import hr.updateDelete.UpdateVijestiFragmentArgs
+import hr.fragmenti.updateDelete.UpdateVijestiFragmentArgs
 import hr.viewModel.VijestiViewModel
 import kotlinx.android.synthetic.main.update_vijesti_fragment.*
 import kotlinx.android.synthetic.main.update_vijesti_fragment.view.*

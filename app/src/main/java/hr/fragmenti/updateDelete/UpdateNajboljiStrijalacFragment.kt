@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.NajboljiStrijelci
 import hr.dominik.nkjaki.R
-import hr.updateDelete.UpdateNajboljiStrijalacFragmentArgs
+import hr.fragmenti.updateDelete.UpdateNajboljiStrijalacFragmentArgs
 import hr.viewModel.NajboljiStrijelciViewModel
 import kotlinx.android.synthetic.main.update_strijelci_fragment.*
 import kotlinx.android.synthetic.main.update_strijelci_fragment.view.*

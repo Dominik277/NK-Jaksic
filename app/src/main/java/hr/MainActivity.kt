@@ -14,7 +14,6 @@ import androidx.navigation.ui.*
 import dagger.hilt.android.AndroidEntryPoint
 import hr.dominik.nkjaki.R
 import hr.fragmenti.*
-import hr.novoDodavanje.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint

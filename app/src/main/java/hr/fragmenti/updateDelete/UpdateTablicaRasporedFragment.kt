@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.TablicaRaspored
 import hr.dominik.nkjaki.R
-import hr.updateDelete.UpdateTablicaRasporedFragmentArgs
+import hr.fragmenti.updateDelete.UpdateTablicaRasporedFragmentArgs
 import hr.viewModel.TablicaRasporedViewModel
 import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.*
 import kotlinx.android.synthetic.main.update_tablica_raspored_fragment.view.*

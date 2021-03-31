@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.NajboljiStrijelci
 import hr.database.table.Raspored
 import hr.dominik.nkjaki.R
-import hr.fragmenti.NajboljiStrijelciFragmentDirections
+import hr.fragmenti.fragmenti.NajboljiStrijelciFragmentDirections
 import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.*
 
 class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {

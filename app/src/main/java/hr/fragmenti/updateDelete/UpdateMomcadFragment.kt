@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import hr.database.table.Igraci
 import hr.dominik.nkjaki.R
-import hr.updateDelete.UpdateMomcadFragmentArgs
+import hr.fragmenti.updateDelete.UpdateMomcadFragmentArgs
 import hr.viewModel.MomcadViewModel
 import kotlinx.android.synthetic.main.update_momcad_fragment.*
 import kotlinx.android.synthetic.main.update_momcad_fragment.view.*
