@@ -24,6 +24,7 @@ class RasporedFragment : Fragment(R.layout.fragment_raspored) {
     @InternalCoroutinesApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentRasporedBinding.bind(view)
 
         //RecyclerView
         val adapter = RasporedAdapter()

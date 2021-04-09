@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_momcad"
         android:name="hr.fragmenti.fragmenti.MomcadFragment"
-        android:label="MomcadFragment"
+        android:label="Momčad"
         tools:layout="@layout/fragment_momcad">
         <action
             android:id="@+id/action_momcadFragment_to_updateMomcadFragment"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/najboljiStrijelciFragment"
         android:name="hr.fragmenti.fragmenti.NajboljiStrijelciFragment"
-        android:label="NajboljiStrijelciFragment"
+        android:label="Najbolji Strijelci"
         tools:layout="@layout/fragment_najbolji_strijelci">
         <action
             android:id="@+id/action_najboljiStrijelciFragment_to_updateNajboljiStrijalacFragment"
@@ -29,12 +29,12 @@
     <fragment
         android:id="@+id/nav_pocetnaStranica"
         android:name="hr.fragmenti.fragmenti.PocetnaStranicaFragment"
-        android:label="PocetnaStranicaFragment"
+        android:label="Početna stranica"
         tools:layout="@layout/fragment_pocetna_stranica"/>
     <fragment
         android:id="@+id/nav_raspored"
         android:name="hr.fragmenti.fragmenti.RasporedFragment"
-        android:label="RasporedFragment"
+        android:label="Raspored"
         tools:layout="@layout/fragment_raspored">
         <action
             android:id="@+id/action_rasporedFragment_to_updateRasporedFragment"
@@ -46,7 +46,7 @@
     <fragment
         android:id="@+id/nav_rezultati"
         android:name="hr.fragmenti.fragmenti.RezultatiFragment"
-        android:label="RezultatiFragment"
+        android:label="Rezultati"
         tools:layout="@layout/fragment_rezultati">
         <action
             android:id="@+id/action_rezultatiFragment_to_updateRezultatFragment"
@@ -58,7 +58,7 @@
     <fragment
         android:id="@+id/nav_tablica"
         android:name="hr.fragmenti.fragmenti.TablicaFragment"
-        android:label="TablicaFragment"
+        android:label="Tablica"
         tools:layout="@layout/fragment_tablica">
         <action
             android:id="@+id/action_nav_tablica_to_najboljiStrijelciFragment"
@@ -76,7 +76,7 @@
     <fragment
         android:id="@+id/tablicaRasporedFragment"
         android:name="hr.fragmenti.fragmenti.TablicaRasporedFragment"
-        android:label="TablicaRasporedFragment"
+        android:label="Raspored u ligi"
         tools:layout="@layout/tablica_fragment_raspored">
         <action
             android:id="@+id/action_tablicaRasporedFragment_to_updateTablicaRasporedFragment"
@@ -85,7 +85,7 @@
     <fragment
         android:id="@+id/tablicaRezultatiFragment"
         android:name="hr.fragmenti.fragmenti.TablicaRezultatiFragment"
-        android:label="TablicaRezultatiFragment"
+        android:label="Rezultati u ligi"
         tools:layout="@layout/novi_fragment_rezultati">
         <action
             android:id="@+id/action_tablicaRezultatiFragment_to_updateTablicaRezultatFragment"
@@ -94,7 +94,7 @@
     <fragment
         android:id="@+id/tablicaTablicaFragment"
         android:name="hr.fragmenti.fragmenti.TablicaTablicaFragment"
-        android:label="TablicaTablicaFragment"
+        android:label="Tablica"
         tools:layout="@layout/tablica_fragment_tablica">
         <action
             android:id="@+id/action_tablicaTablicaFragment_to_updateTablicaTablicaFragment"
@@ -103,7 +103,7 @@
     <fragment
         android:id="@+id/nav_vijesti"
         android:name="hr.fragmenti.fragmenti.VijestiFragment"
-        android:label="VijestiFragment"
+        android:label="Vijesti"
         tools:layout="@layout/fragment_vijesti">
         <action
             android:id="@+id/action_nav_vijesti_to_updateVijestiFragment"
@@ -115,7 +115,7 @@
     <fragment
         android:id="@+id/updateNajboljiStrijalacFragment"
         android:name="hr.fragmenti.updateDelete.UpdateNajboljiStrijalacFragment"
-        android:label="UpdateNajboljiStrijalacFragment"
+        android:label="Ažuiraj strijelca"
         tools:layout="@layout/update_strijelci_fragment">
         <action
             android:id="@+id/action_updateNajboljiStrijalacFragment_to_najboljiStrijelciFragment"
@@ -127,7 +127,7 @@
     <fragment
         android:id="@+id/updateRasporedFragment"
         android:name="hr.fragmenti.updateDelete.UpdateRasporedFragment"
-        android:label="UpdateRasporedFragment"
+        android:label="Ažuriraj raspored"
         tools:layout="@layout/update_raspored_fragment">
         <action
             android:id="@+id/action_updateRasporedFragment_to_rasporedFragment"
@@ -138,7 +138,7 @@
     <fragment
         android:id="@+id/updateTablicaTablicaFragment"
         android:name="hr.fragmenti.updateDelete.UpdateTablicaTablicaFragment"
-        android:label="UpdateTablicaTablicaFragment"
+        android:label="Ažuriraj tablicu"
         tools:layout="@layout/update_tablica_tablica_fragment">
         <action
             android:id="@+id/action_updateTablicaTablicaFragment_to_tablicaTablicaFragment"
@@ -149,7 +149,7 @@
     <fragment
         android:id="@+id/updateRezultatFragment"
         android:name="hr.fragmenti.updateDelete.UpdateRezultatFragment"
-        android:label="UpdateRezultatFragment"
+        android:label="Ažuriraj rezultat"
         tools:layout="@layout/update_rezultat_fragment">
         <action
             android:id="@+id/action_updateRezultatFragment_to_rezultatiFragment"
@@ -161,7 +161,7 @@
     <fragment
         android:id="@+id/updateMomcadFragment"
         android:name="hr.fragmenti.updateDelete.UpdateMomcadFragment"
-        android:label="UpdateMomcadFragment"
+        android:label="Ažuriraj momčad"
         tools:layout="@layout/update_momcad_fragment">
         <action
             android:id="@+id/action_updateMomcadFragment_to_momcadFragment"
@@ -173,7 +173,7 @@
     <fragment
         android:id="@+id/updateTablicaRezultatFragment"
         android:name="hr.fragmenti.updateDelete.UpdateTablicaRezultatFragment"
-        android:label="UpdateTablicaRezultatFragment"
+        android:label="Ažuriraj rezultate u ligi"
         tools:layout="@layout/update_tablica_rezultat_fragment">
         <action
             android:id="@+id/action_updateTablicaRezultatFragment_to_tablicaRezultatiFragment"
@@ -185,7 +185,7 @@
     <fragment
         android:id="@+id/updateTablicaRasporedFragment"
         android:name="hr.fragmenti.updateDelete.UpdateTablicaRasporedFragment"
-        android:label="UpdateTablicaRasporedFragment"
+        android:label="Ažuriraj raspored u ligi"
         tools:layout="@layout/update_tablica_raspored_fragment">
         <action
             android:id="@+id/action_updateTablicaRasporedFragment_to_tablicaRasporedFragment"
@@ -197,7 +197,7 @@
     <fragment
         android:id="@+id/dodajNoviRaspored"
         android:name="hr.fragmenti.novoDodavanje.DodajNoviRasporedFragment"
-        android:label="DodajNoviRasporedFragment"
+        android:label="Dodaj novi raspored"
         tools:layout="@layout/fragment_novi_raspored">
         <action
             android:id="@+id/action_dodajNoviRasporedFragment_to_rasporedFragment"
@@ -206,7 +206,7 @@
     <fragment
         android:id="@+id/dodajNovogStrijelca"
         android:name="hr.fragmenti.novoDodavanje.DodajNovogStrijelcaFragment"
-        android:label="DodajNovogStrijelcaFragment"
+        android:label="Dodaj novog strijelca"
         tools:layout="@layout/fragment_novi_strijelac">
         <action
             android:id="@+id/action_dodajNovogStrijelcaFragment_to_najboljiStrijelciFragment"
@@ -215,7 +215,7 @@
     <fragment
         android:id="@+id/dodajTablicuRapored"
         android:name="hr.fragmenti.novoDodavanje.DodajNoviRasporedLigaFragment"
-        android:label="DodajNoviRasporedLigaFragment"
+        android:label="Dodaj novi raspored u ligi"
         tools:layout="@layout/fragment_novi_raspored_liga">
         <action
             android:id="@+id/action_dodajNoviRasporedLigaFragment_to_tablicaRasporedFragment"
@@ -224,7 +224,7 @@
     <fragment
         android:id="@+id/dodajNoviRezultat"
         android:name="hr.fragmenti.novoDodavanje.DodajNoviRezultatFragment"
-        android:label="DodajNoviRezultatFragment"
+        android:label="Dodaj novi rezultat u ligi"
         tools:layout="@layout/fragment_novi_rezultat">
         <action
             android:id="@+id/action_dodajNoviRezultatFragment_to_rezultatiFragment"
@@ -233,7 +233,7 @@
     <fragment
         android:id="@+id/dodajNovogIgraca"
         android:name="hr.fragmenti.novoDodavanje.DodajNovogIgraca"
-        android:label="DodajNovogIgraca"
+        android:label="Dodaj novog igrača"
         tools:layout="@layout/fragment_novi_igrac">
         <action
             android:id="@+id/action_dodajNovogIgraca2_to_momcadFragment"
@@ -242,7 +242,7 @@
     <fragment
         android:id="@+id/dodajTablicuRezultat"
         android:name="hr.fragmenti.novoDodavanje.DodajNoviRezultatLigaFragment"
-        android:label="DodajNoviRezultatLigaFragment"
+        android:label="Dodaj novi rezultat u ligi"
         tools:layout="@layout/fragment_novi_rezultati_liga">
         <action
             android:id="@+id/action_dodajNoviRezultatLigaFragment_to_tablicaRezultatiFragment"
@@ -251,7 +251,7 @@
     <fragment
         android:id="@+id/dodajNovuTablicu"
         android:name="hr.fragmenti.novoDodavanje.DodajNovuTablicuFragment"
-        android:label="DodajNovuTablicuFragment"
+        android:label="Dodaj novu Tablicu"
         tools:layout="@layout/fragment_nova_tablica">
         <action
             android:id="@+id/action_dodajNovuTablicu_to_tablicaTablicaFragment"
@@ -260,7 +260,7 @@
     <fragment
         android:id="@+id/dodajNovuVijest"
         android:name="hr.fragmenti.novoDodavanje.DodajNovuVijest"
-        android:label="DodajNovuVijest"
+        android:label="Dodaj novu vijest"
         tools:layout="@layout/fragment_nova_vijest">
         <action
             android:id="@+id/action_dodajNovuVijest2_to_vijestiFragment"
@@ -269,7 +269,7 @@
     <fragment
         android:id="@+id/updateVijestiFragment"
         android:name="hr.fragmenti.updateDelete.UpdateVijestiFragment"
-        android:label="UpdateVijestiFragment"
+        android:label="Ažuriraj vijesti"
         tools:layout="@layout/update_vijesti_fragment">
         <action
             android:id="@+id/action_updateVijestiFragment_to_nav_vijesti"
@@ -281,7 +281,7 @@
     <fragment
         android:id="@+id/detailVijestiFragment"
         android:name="hr.fragmenti.detailFragmenti.DetailVijestiFragment"
-        android:label="DetailVijestiFragment"
+        android:label="Detalji o vijesti"
         tools:layout="@layout/detail_vijesti_fragment">
         <argument
             android:name="detailVijestiArgs"
@@ -290,7 +290,7 @@
     <fragment
         android:id="@+id/detailRasporedFragment"
         android:name="hr.fragmenti.detailFragmenti.DetailRasporedFragment"
-        android:label="DetailRasporedFragment"
+        android:label="Detalji o rasporedu"
         tools:layout="@layout/detail_raspored_fragment">
         <argument
             android:name="detailRasporedArgs"
@@ -299,7 +299,7 @@
     <fragment
         android:id="@+id/detailMomcadFragment"
         android:name="hr.fragmenti.detailFragmenti.DetailMomcadFragment"
-        android:label="DetailMomcadFragment"
+        android:label="Detalji o momčadi"
         tools:layout="@layout/detail_momcad_fragment">
         <argument
             android:name="detailMomcadArgs"
@@ -308,7 +308,7 @@
     <fragment
         android:id="@+id/detailRezultatiFragment"
         android:name="hr.fragmenti.detailFragmenti.DetailRezultatiFragment"
-        android:label="DetailRezultatiFragment"
+        android:label="Detalji o rezultatima"
         tools:layout="@layout/detail_rezultati_fragment">
         <argument
             android:name="detailRezultatArgs"
