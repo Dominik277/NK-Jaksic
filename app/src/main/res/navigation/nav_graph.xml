@@ -11,9 +11,6 @@
         android:label="Momčad"
         tools:layout="@layout/fragment_momcad">
         <action
-            android:id="@+id/action_momcadFragment_to_updateMomcadFragment"
-            app:destination="@id/updateMomcadFragment" />
-        <action
             android:id="@+id/action_nav_momcad_to_detailMomcadFragment"
             app:destination="@id/detailMomcadFragment" />
     </fragment>
@@ -21,11 +18,7 @@
         android:id="@+id/najboljiStrijelciFragment"
         android:name="hr.fragmenti.fragmenti.NajboljiStrijelciFragment"
         android:label="Najbolji Strijelci"
-        tools:layout="@layout/fragment_najbolji_strijelci">
-        <action
-            android:id="@+id/action_najboljiStrijelciFragment_to_updateNajboljiStrijalacFragment"
-            app:destination="@id/updateNajboljiStrijalacFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_najbolji_strijelci"/>
     <fragment
         android:id="@+id/nav_pocetnaStranica"
         android:name="hr.fragmenti.fragmenti.PocetnaStranicaFragment"
@@ -37,9 +30,6 @@
         android:label="Raspored"
         tools:layout="@layout/fragment_raspored">
         <action
-            android:id="@+id/action_rasporedFragment_to_updateRasporedFragment"
-            app:destination="@id/updateRasporedFragment" />
-        <action
             android:id="@+id/action_nav_raspored_to_detailRasporedFragment"
             app:destination="@id/detailRasporedFragment" />
     </fragment>
@@ -48,9 +38,6 @@
         android:name="hr.fragmenti.fragmenti.RezultatiFragment"
         android:label="Rezultati"
         tools:layout="@layout/fragment_rezultati">
-        <action
-            android:id="@+id/action_rezultatiFragment_to_updateRezultatFragment"
-            app:destination="@id/updateRezultatFragment" />
         <action
             android:id="@+id/action_nav_rezultati_to_detailRezultatiFragment"
             app:destination="@id/detailRezultatiFragment" />
@@ -77,37 +64,22 @@
         android:id="@+id/tablicaRasporedFragment"
         android:name="hr.fragmenti.fragmenti.TablicaRasporedFragment"
         android:label="Raspored u ligi"
-        tools:layout="@layout/tablica_fragment_raspored">
-        <action
-            android:id="@+id/action_tablicaRasporedFragment_to_updateTablicaRasporedFragment"
-            app:destination="@id/updateTablicaRasporedFragment" />
-    </fragment>
+        tools:layout="@layout/tablica_fragment_raspored"/>
     <fragment
         android:id="@+id/tablicaRezultatiFragment"
         android:name="hr.fragmenti.fragmenti.TablicaRezultatiFragment"
         android:label="Rezultati u ligi"
-        tools:layout="@layout/novi_fragment_rezultati">
-        <action
-            android:id="@+id/action_tablicaRezultatiFragment_to_updateTablicaRezultatFragment"
-            app:destination="@id/updateTablicaRezultatFragment" />
-    </fragment>
+        tools:layout="@layout/novi_fragment_rezultati"/>
     <fragment
         android:id="@+id/tablicaTablicaFragment"
         android:name="hr.fragmenti.fragmenti.TablicaTablicaFragment"
         android:label="Tablica"
-        tools:layout="@layout/tablica_fragment_tablica">
-        <action
-            android:id="@+id/action_tablicaTablicaFragment_to_updateTablicaTablicaFragment"
-            app:destination="@id/updateTablicaTablicaFragment" />
-    </fragment>
+        tools:layout="@layout/tablica_fragment_tablica"/>
     <fragment
         android:id="@+id/nav_vijesti"
         android:name="hr.fragmenti.fragmenti.VijestiFragment"
         android:label="Vijesti"
         tools:layout="@layout/fragment_vijesti">
-        <action
-            android:id="@+id/action_nav_vijesti_to_updateVijestiFragment"
-            app:destination="@id/updateVijestiFragment" />
         <action
             android:id="@+id/action_nav_vijesti_to_detailVijestiFragment"
             app:destination="@id/detailVijestiFragment" />
