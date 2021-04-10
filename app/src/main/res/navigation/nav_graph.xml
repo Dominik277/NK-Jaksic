@@ -13,12 +13,19 @@
         <action
             android:id="@+id/action_nav_momcad_to_detailMomcadFragment"
             app:destination="@id/detailMomcadFragment" />
+        <action
+            android:id="@+id/action_nav_momcad_to_adminPrijavaMomcad"
+            app:destination="@id/adminPrijavaMomcad" />
     </fragment>
     <fragment
         android:id="@+id/najboljiStrijelciFragment"
         android:name="hr.fragmenti.fragmenti.NajboljiStrijelciFragment"
         android:label="Najbolji Strijelci"
-        tools:layout="@layout/fragment_najbolji_strijelci"/>
+        tools:layout="@layout/fragment_najbolji_strijelci">
+        <action
+            android:id="@+id/action_najboljiStrijelciFragment_to_adminPrijavaStrijelci"
+            app:destination="@id/adminPrijavaStrijelci" />
+    </fragment>
     <fragment
         android:id="@+id/nav_pocetnaStranica"
         android:name="hr.fragmenti.fragmenti.PocetnaStranicaFragment"
@@ -32,6 +39,9 @@
         <action
             android:id="@+id/action_nav_raspored_to_detailRasporedFragment"
             app:destination="@id/detailRasporedFragment" />
+        <action
+            android:id="@+id/action_nav_raspored_to_adminPrijavaRaspored"
+            app:destination="@id/adminPrijavaRaspored" />
     </fragment>
     <fragment
         android:id="@+id/nav_rezultati"
@@ -41,6 +51,9 @@
         <action
             android:id="@+id/action_nav_rezultati_to_detailRezultatiFragment"
             app:destination="@id/detailRezultatiFragment" />
+        <action
+            android:id="@+id/action_nav_rezultati_to_adminPrijavaRezultati"
+            app:destination="@id/adminPrijavaRezultati" />
     </fragment>
     <fragment
         android:id="@+id/nav_tablica"
@@ -64,17 +77,29 @@
         android:id="@+id/tablicaRasporedFragment"
         android:name="hr.fragmenti.fragmenti.TablicaRasporedFragment"
         android:label="Raspored u ligi"
-        tools:layout="@layout/tablica_fragment_raspored"/>
+        tools:layout="@layout/tablica_fragment_raspored">
+        <action
+            android:id="@+id/action_tablicaRasporedFragment_to_adminPrijavaRasporedLiga"
+            app:destination="@id/adminPrijavaRasporedLiga" />
+    </fragment>
     <fragment
         android:id="@+id/tablicaRezultatiFragment"
         android:name="hr.fragmenti.fragmenti.TablicaRezultatiFragment"
         android:label="Rezultati u ligi"
-        tools:layout="@layout/novi_fragment_rezultati"/>
+        tools:layout="@layout/novi_fragment_rezultati">
+        <action
+            android:id="@+id/action_tablicaRezultatiFragment_to_adminPrijavaRezultatiLiga"
+            app:destination="@id/adminPrijavaRezultatiLiga" />
+    </fragment>
     <fragment
         android:id="@+id/tablicaTablicaFragment"
         android:name="hr.fragmenti.fragmenti.TablicaTablicaFragment"
         android:label="Tablica"
-        tools:layout="@layout/tablica_fragment_tablica"/>
+        tools:layout="@layout/tablica_fragment_tablica">
+        <action
+            android:id="@+id/action_tablicaTablicaFragment_to_adminPrijavaTablica"
+            app:destination="@id/adminPrijavaTablica" />
+    </fragment>
     <fragment
         android:id="@+id/nav_vijesti"
         android:name="hr.fragmenti.fragmenti.VijestiFragment"
@@ -83,6 +108,9 @@
         <action
             android:id="@+id/action_nav_vijesti_to_detailVijestiFragment"
             app:destination="@id/detailVijestiFragment" />
+        <action
+            android:id="@+id/action_nav_vijesti_to_adminPrijavaVijesti"
+            app:destination="@id/adminPrijavaVijesti" />
     </fragment>
     <fragment
         android:id="@+id/updateNajboljiStrijalacFragment"
@@ -285,5 +313,69 @@
         <argument
             android:name="detailRezultatArgs"
             app:argType="hr.database.table.Rezultat" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaRezultati"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaRezultati"
+        android:label="AdminPrijavaRezultati" >
+        <action
+            android:id="@+id/action_adminPrijavaRezultati_to_updateRezultatFragment"
+            app:destination="@id/updateRezultatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaMomcad"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaMomcad"
+        android:label="AdminPrijavaMomcad" >
+        <action
+            android:id="@+id/action_adminPrijavaMomcad_to_updateMomcadFragment"
+            app:destination="@id/updateMomcadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaVijesti"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaVijesti"
+        android:label="AdminPrijavaVijesti" >
+        <action
+            android:id="@+id/action_adminPrijavaVijesti_to_updateVijestiFragment"
+            app:destination="@id/updateVijestiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaRaspored"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaRaspored"
+        android:label="AdminPrijavaRaspored" >
+        <action
+            android:id="@+id/action_adminPrijavaRaspored_to_updateRasporedFragment"
+            app:destination="@id/updateRasporedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaRezultatiLiga"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaRezultatiLiga"
+        android:label="AdminPrijavaRezultatiLiga" >
+        <action
+            android:id="@+id/action_adminPrijavaRezultatiLiga_to_updateTablicaRezultatFragment"
+            app:destination="@id/updateTablicaRezultatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaRasporedLiga"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaRasporedLiga"
+        android:label="AdminPrijavaRasporedLiga" >
+        <action
+            android:id="@+id/action_adminPrijavaRasporedLiga_to_updateTablicaRasporedFragment"
+            app:destination="@id/updateTablicaRasporedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaStrijelci"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaStrijelci"
+        android:label="AdminPrijavaStrijelci" >
+        <action
+            android:id="@+id/action_adminPrijavaStrijelci_to_updateNajboljiStrijalacFragment"
+            app:destination="@id/updateNajboljiStrijalacFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPrijavaTablica"
+        android:name="hr.fragmenti.adminPrijava.AdminPrijavaTablica"
+        android:label="AdminPrijavaTablica" >
+        <action
+            android:id="@+id/action_adminPrijavaTablica_to_updateTablicaTablicaFragment"
+            app:destination="@id/updateTablicaTablicaFragment" />
     </fragment>
 </navigation>
