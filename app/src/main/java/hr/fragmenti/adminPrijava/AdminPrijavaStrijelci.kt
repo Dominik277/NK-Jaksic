@@ -1,4 +1,10 @@
 package hr.fragmenti.adminPrijava
 
-class AdminPrijavaStrijelci {
+import androidx.fragment.app.Fragment
+import hr.dominik.nkjaki.R
+
+class AdminPrijavaStrijelci: Fragment(R.layout.admin_prijava_strijelci) {
+
+
+
 }
