@@ -317,7 +317,8 @@
     <fragment
         android:id="@+id/adminPrijavaRezultati"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaRezultati"
-        android:label="AdminPrijavaRezultati" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_rezultati">
         <action
             android:id="@+id/action_adminPrijavaRezultati_to_updateRezultatFragment"
             app:destination="@id/updateRezultatFragment" />
@@ -325,7 +326,8 @@
     <fragment
         android:id="@+id/adminPrijavaMomcad"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaMomcad"
-        android:label="AdminPrijavaMomcad" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_momcad">
         <action
             android:id="@+id/action_adminPrijavaMomcad_to_updateMomcadFragment"
             app:destination="@id/updateMomcadFragment" />
@@ -333,7 +335,8 @@
     <fragment
         android:id="@+id/adminPrijavaVijesti"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaVijesti"
-        android:label="AdminPrijavaVijesti" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_vijesti">
         <action
             android:id="@+id/action_adminPrijavaVijesti_to_updateVijestiFragment"
             app:destination="@id/updateVijestiFragment" />
@@ -341,7 +344,8 @@
     <fragment
         android:id="@+id/adminPrijavaRaspored"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaRaspored"
-        android:label="AdminPrijavaRaspored" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_raspored">
         <action
             android:id="@+id/action_adminPrijavaRaspored_to_updateRasporedFragment"
             app:destination="@id/updateRasporedFragment" />
@@ -349,7 +353,8 @@
     <fragment
         android:id="@+id/adminPrijavaRezultatiLiga"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaRezultatiLiga"
-        android:label="AdminPrijavaRezultatiLiga" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_rezultati_liga">
         <action
             android:id="@+id/action_adminPrijavaRezultatiLiga_to_updateTablicaRezultatFragment"
             app:destination="@id/updateTablicaRezultatFragment" />
@@ -357,7 +362,8 @@
     <fragment
         android:id="@+id/adminPrijavaRasporedLiga"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaRasporedLiga"
-        android:label="AdminPrijavaRasporedLiga" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_rezultati_liga">
         <action
             android:id="@+id/action_adminPrijavaRasporedLiga_to_updateTablicaRasporedFragment"
             app:destination="@id/updateTablicaRasporedFragment" />
@@ -365,7 +371,8 @@
     <fragment
         android:id="@+id/adminPrijavaStrijelci"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaStrijelci"
-        android:label="AdminPrijavaStrijelci" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_strijelci">
         <action
             android:id="@+id/action_adminPrijavaStrijelci_to_updateNajboljiStrijalacFragment"
             app:destination="@id/updateNajboljiStrijalacFragment" />
@@ -373,7 +380,8 @@
     <fragment
         android:id="@+id/adminPrijavaTablica"
         android:name="hr.fragmenti.adminPrijava.AdminPrijavaTablica"
-        android:label="AdminPrijavaTablica" >
+        android:label="Admin"
+        tools:layout="@layout/admin_prijava_tablica">
         <action
             android:id="@+id/action_adminPrijavaTablica_to_updateTablicaTablicaFragment"
             app:destination="@id/updateTablicaTablicaFragment" />
