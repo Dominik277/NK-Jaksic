@@ -28,7 +28,7 @@ class MomcadAdapter: RecyclerView.Adapter<MomcadAdapter.ViewHolder>() {
         holder.itemView.momcadPrezime.text = currentItem.prezime
 
         holder.itemView.jedanRedMomcad.setOnLongClickListener {
-            val action = MomcadFragmentDirections.actionMomcadFragmentToUpdateMomcadFragment(currentItem)
+            val action = MomcadFragmentDirections.actionNavMomcadToAdminPrijavaMomcad(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }

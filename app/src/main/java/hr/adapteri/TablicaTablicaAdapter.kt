@@ -30,7 +30,7 @@ class TablicaTablicaAdapter : RecyclerView.Adapter<TablicaTablicaAdapter.ViewHol
         holder.itemView.tablica_tablica_bodovi.text = currentItem.bodovi
 
         holder.itemView.jedanRedTablicaTablica.setOnLongClickListener {
-            val action = TablicaTablicaFragmentDirections.actionTablicaTablicaFragmentToUpdateTablicaTablicaFragment(currentItem)
+            val action = TablicaTablicaFragmentDirections.actionTablicaTablicaFragmentToAdminPrijavaTablica(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }

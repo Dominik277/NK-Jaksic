@@ -30,7 +30,7 @@ class RasporedAdapter: RecyclerView.Adapter<RasporedAdapter.ViewHolder>() {
         holder.itemView.rasporedVrijeme.text = currentItem.vrijeme
 
         holder.itemView.jedanRedRaspored.setOnLongClickListener {
-            val action = RasporedFragmentDirections.actionRasporedFragmentToUpdateRasporedFragment(currentItem)
+            val action = RasporedFragmentDirections.actionNavRasporedToAdminPrijavaRaspored(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }

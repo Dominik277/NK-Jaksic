@@ -27,7 +27,7 @@ class VijestiAdapter: RecyclerView.Adapter<VijestiAdapter.ViewHolder>() {
         holder.itemView.textViewVijestiVrijeme.text = currentItem.vrijeme
 
         holder.itemView.jedanRedVijesti.setOnLongClickListener {
-            val action = VijestiFragmentDirections.actionNavVijestiToUpdateVijestiFragment(currentItem)
+            val action = VijestiFragmentDirections.actionNavVijestiToAdminPrijavaVijesti(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }

@@ -29,7 +29,7 @@ class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.Vi
         holder.itemView.najboljiStrijelciGolovi.text = currentItem.brojGolova
 
         holder.itemView.jedanRedStrijelci.setOnLongClickListener {
-            val action = NajboljiStrijelciFragmentDirections.actionNajboljiStrijelciFragmentToUpdateNajboljiStrijalacFragment(currentItem)
+            val action = NajboljiStrijelciFragmentDirections.actionNajboljiStrijelciFragmentToAdminPrijavaStrijelci(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }

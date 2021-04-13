@@ -30,7 +30,7 @@ class RezultatiAdapter: RecyclerView.Adapter<RezultatiAdapter.ViewHolder>() {
         holder.itemView.ishodRezultati.text = currentItem.ishodRezultat
 
         holder.itemView.jedanRedRezultat.setOnLongClickListener {
-            val action = RezultatiFragmentDirections.actionRezultatiFragmentToUpdateRezultatFragment(currentItem)
+            val action = RezultatiFragmentDirections.actionNavRezultatiToAdminPrijavaRezultati(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }

@@ -53,7 +53,7 @@ class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHo
         holder.itemView.tablicaRaspored_vrijemeSedmaUtakmica.text = currentItem.sedmaUtakmicaVrijeme
 
         holder.itemView.jedanRedTablicaRaspored.setOnLongClickListener {
-            val action = TablicaRasporedFragmentDirections.actionTablicaRasporedFragmentToUpdateTablicaRasporedFragment(currentItem)
+            val action = TablicaRasporedFragmentDirections.actionTablicaRasporedFragmentToAdminPrijavaRasporedLiga(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }

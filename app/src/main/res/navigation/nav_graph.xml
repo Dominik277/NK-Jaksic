@@ -322,6 +322,9 @@
         <action
             android:id="@+id/action_adminPrijavaRezultati_to_updateRezultatFragment"
             app:destination="@id/updateRezultatFragment" />
+        <argument
+            android:name="currentRezultatArgs"
+            app:argType="hr.database.table.Rezultat" />
     </fragment>
     <fragment
         android:id="@+id/adminPrijavaMomcad"
@@ -331,6 +334,9 @@
         <action
             android:id="@+id/action_adminPrijavaMomcad_to_updateMomcadFragment"
             app:destination="@id/updateMomcadFragment" />
+        <argument
+            android:name="currentMomcadArgs"
+            app:argType="hr.database.table.Igraci" />
     </fragment>
     <fragment
         android:id="@+id/adminPrijavaVijesti"
@@ -340,6 +346,9 @@
         <action
             android:id="@+id/action_adminPrijavaVijesti_to_updateVijestiFragment"
             app:destination="@id/updateVijestiFragment" />
+        <argument
+            android:name="currentVijestiArgs"
+            app:argType="hr.database.table.Vijesti" />
     </fragment>
     <fragment
         android:id="@+id/adminPrijavaRaspored"
@@ -349,6 +358,9 @@
         <action
             android:id="@+id/action_adminPrijavaRaspored_to_updateRasporedFragment"
             app:destination="@id/updateRasporedFragment" />
+        <argument
+            android:name="currentRasporedArgs"
+            app:argType="hr.database.table.Raspored" />
     </fragment>
     <fragment
         android:id="@+id/adminPrijavaRezultatiLiga"
@@ -358,6 +370,9 @@
         <action
             android:id="@+id/action_adminPrijavaRezultatiLiga_to_updateTablicaRezultatFragment"
             app:destination="@id/updateTablicaRezultatFragment" />
+        <argument
+            android:name="currentRezultatiLigaArgs"
+            app:argType="hr.database.table.TablicaRezultati" />
     </fragment>
     <fragment
         android:id="@+id/adminPrijavaRasporedLiga"
@@ -367,6 +382,9 @@
         <action
             android:id="@+id/action_adminPrijavaRasporedLiga_to_updateTablicaRasporedFragment"
             app:destination="@id/updateTablicaRasporedFragment" />
+        <argument
+            android:name="currentRasporedLigaArgs"
+            app:argType="hr.database.table.TablicaRaspored" />
     </fragment>
     <fragment
         android:id="@+id/adminPrijavaStrijelci"
@@ -376,6 +394,9 @@
         <action
             android:id="@+id/action_adminPrijavaStrijelci_to_updateNajboljiStrijalacFragment"
             app:destination="@id/updateNajboljiStrijalacFragment" />
+        <argument
+            android:name="currentStrijelciArgs"
+            app:argType="hr.database.table.NajboljiStrijelci" />
     </fragment>
     <fragment
         android:id="@+id/adminPrijavaTablica"
@@ -385,5 +406,8 @@
         <action
             android:id="@+id/action_adminPrijavaTablica_to_updateTablicaTablicaFragment"
             app:destination="@id/updateTablicaTablicaFragment" />
+        <argument
+            android:name="currentTablicaArgs"
+            app:argType="hr.database.table.TablicaTablica" />
     </fragment>
 </navigation>

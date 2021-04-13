@@ -53,7 +53,7 @@ class TablicaRezultatiAdapter: RecyclerView.Adapter<TablicaRezultatiAdapter.View
         holder.itemView.tablicaRezultati_rezultatSedmaUtakmica.text = currentItem.novi_sedmaUtakmicaRezultat
 
         holder.itemView.setOnLongClickListener {
-            val action = TablicaRezultatiFragmentDirections.actionTablicaRezultatiFragmentToUpdateTablicaRezultatFragment(currentItem)
+            val action = TablicaRezultatiFragmentDirections.actionTablicaRezultatiFragmentToAdminPrijavaRezultatiLiga(currentItem)
             holder.itemView.findNavController().navigate(action)
             true
         }
