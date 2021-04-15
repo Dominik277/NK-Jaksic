@@ -1,277 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/noviRezultatLigaBrojKola"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginRight="150dp"
-        android:hint="Broj kola"
-        android:inputType="number" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <EditText
-            android:id="@+id/noviRezultatLigaPrviDatum"
+            android:id="@+id/noviRezultatLigaBrojKola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="150dp"
+            android:hint="Broj kola"
+            android:inputType="number" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum" />
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/noviRezultatLigaPrviDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
+            <EditText
+                android:id="@+id/noviRezultatLigaPrviDatum"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Datum" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaPrviGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
+            <EditText
+                android:id="@+id/noviRezultatLigaPrviDomacin"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Domacin" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaPrviRezultat"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Rezultat"
-            android:textSize="17dp"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/noviRezultatLigaPrviGost"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Gost" />
+
+            <EditText
+                android:id="@+id/noviRezultatLigaPrviRezultat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Rezultat"
+                android:textSize="17dp" />
+        </LinearLayout>
+        </HorizontalScrollView>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRezultatLigaDrugiDatum"
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum"/>
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/noviRezultatLigaDrugiDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
+            <EditText
+                android:id="@+id/noviRezultatLigaDrugiDatum"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Datum" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaDrugiGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
+            <EditText
+                android:id="@+id/noviRezultatLigaDrugiDomacin"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Domacin" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaDrugiRezultat"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Rezultat"
-            android:textSize="17dp"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/noviRezultatLigaDrugiGost"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Gost" />
+
+            <EditText
+                android:id="@+id/noviRezultatLigaDrugiRezultat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Rezultat"
+                android:textSize="17dp" />
+        </LinearLayout>
+        </HorizontalScrollView>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRezultatLigaTreciDatum"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/noviRezultatLigaTreciDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
+            <EditText
+                android:id="@+id/noviRezultatLigaTreciDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Datum" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaTreciGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
+            <EditText
+                android:id="@+id/noviRezultatLigaTreciDomacin"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Domacin" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaTreciRezultat"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Rezultat"
-            android:textSize="17dp"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/noviRezultatLigaTreciGost"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Gost" />
+
+            <EditText
+                android:id="@+id/noviRezultatLigaTreciRezultat"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Rezultat"
+                android:textSize="17dp" />
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRezultatLigaCetvrtiDatum"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/noviRezultatLigaCetvrtiDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
+            <EditText
+                android:id="@+id/noviRezultatLigaCetvrtiDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Datum" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaCetvrtiGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
+            <EditText
+                android:id="@+id/noviRezultatLigaCetvrtiDomacin"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Domacin" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaCetvrtiRezultat"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Rezultat"
-            android:textSize="17dp"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/noviRezultatLigaCetvrtiGost"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Gost" />
+
+            <EditText
+                android:id="@+id/noviRezultatLigaCetvrtiRezultat"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Rezultat"
+                android:textSize="17dp" />
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRezultatLigaPetiDatum"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/noviRezultatLigaPetiDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
+            <EditText
+                android:id="@+id/noviRezultatLigaPetiDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Datum" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaPetiGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
+            <EditText
+                android:id="@+id/noviRezultatLigaPetiDomacin"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Domacin" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaPetiRezultat"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Rezultat"
-            android:textSize="17dp"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/noviRezultatLigaPetiGost"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Gost" />
+
+            <EditText
+                android:id="@+id/noviRezultatLigaPetiRezultat"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Rezultat"
+                android:textSize="17dp" />
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRezultatLigaSestiDatum"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum"/>
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/noviRezultatLigaSestiDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
+            <EditText
+                android:id="@+id/noviRezultatLigaSestiDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Datum" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaSestiGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
+            <EditText
+                android:id="@+id/noviRezultatLigaSestiDomacin"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Domacin" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaSestiRezultat"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Rezultat"
-            android:textSize="17dp"/>
-    </LinearLayout>
+            <EditText
+                android:id="@+id/noviRezultatLigaSestiGost"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Gost" />
+
+            <EditText
+                android:id="@+id/noviRezultatLigaSestiRezultat"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Rezultat"
+                android:textSize="17dp" />
+        </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/noviRezultatLigaSedmiDatum"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Datum" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/noviRezultatLigaSedmiDomacin"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Domacin" />
+            <EditText
+                android:id="@+id/noviRezultatLigaSedmiDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Datum" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaSedmiGost"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Gost" />
+            <EditText
+                android:id="@+id/noviRezultatLigaSedmiDomacin"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Domacin" />
 
-        <EditText
-            android:id="@+id/noviRezultatLigaSedmiRezultat"
-            android:layout_width="70dp"
+            <EditText
+                android:id="@+id/noviRezultatLigaSedmiGost"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Gost" />
+
+            <EditText
+                android:id="@+id/noviRezultatLigaSedmiRezultat"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Rezultat"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/gumbSpremiTablicaRezultat"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:hint="Rezultat"
-            android:textSize="17dp"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="Spremi" />
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/gumbSpremiTablicaRezultat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="Spremi" />
-
-</LinearLayout>
+</ScrollView>
