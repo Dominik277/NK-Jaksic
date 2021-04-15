@@ -74,14 +74,14 @@
             android:id="@+id/gumbUpdateMomcad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update"/>
+            android:text="Ažuriraj"/>
 
         <Button
             android:id="@+id/gumbDeleteMomcad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="170dp"
-            android:text="Delete"/>
+            android:text="Obriši"/>
 
     </LinearLayout>
 
