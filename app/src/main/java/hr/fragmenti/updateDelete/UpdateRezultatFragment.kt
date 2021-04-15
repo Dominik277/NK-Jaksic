@@ -50,14 +50,14 @@ class UpdateRezultatFragment : Fragment(R.layout.update_rezultat_fragment) {
     @InternalCoroutinesApi
     private fun deleteItemRezultat() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setPositiveButton("Da") { _, _ ->
             mRezultatiViewModel.deleteRezultat(args.updateRezultatiArgs)
             Toast.makeText(requireContext(), "Brisanje uspješno!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateRezultatFragment_to_rezultatiFragment)
         }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete ${args.updateRezultatiArgs.domacinRezultat}?")
-        builder.setMessage("Are you sure you want to delete ${args.updateRezultatiArgs.domacinRezultat}?")
+        builder.setNegativeButton("Ne") { _, _ -> }
+        builder.setTitle("Obrisati ${args.updateRezultatiArgs.domacinRezultat}?")
+        builder.setMessage("Jeste li sigurni da želite obrisati ${args.updateRezultatiArgs.domacinRezultat}?")
         builder.create().show()
     }
 

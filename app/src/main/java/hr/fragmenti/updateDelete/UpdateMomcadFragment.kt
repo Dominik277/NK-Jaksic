@@ -52,14 +52,14 @@ class UpdateMomcadFragment : Fragment(R.layout.update_momcad_fragment) {
     @InternalCoroutinesApi
     private fun deleteItemMomcad() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setPositiveButton("Da") { _, _ ->
             mMomcadViewModel.deleteMomcad(args.updateMomcadArgs)
             Toast.makeText(requireContext(), "Brisanje uspješno!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateMomcadFragment_to_momcadFragment)
         }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete ${args.updateMomcadArgs.ime}?")
-        builder.setMessage("Are you sure you want to delete ${args.updateMomcadArgs.ime}?")
+        builder.setNegativeButton("Ne") { _, _ -> }
+        builder.setTitle("Obrisati ${args.updateMomcadArgs.ime}?")
+        builder.setMessage("Jeste li sigurni da želite obrisati ${args.updateMomcadArgs.ime}?")
         builder.create().show()
     }
 

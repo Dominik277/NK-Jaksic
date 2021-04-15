@@ -80,14 +80,14 @@ class UpdateTablicaRezultatFragment : Fragment(R.layout.update_tablica_rezultat_
     @InternalCoroutinesApi
     private fun deleteItemTablicaRezultat() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setPositiveButton("Da") { _, _ ->
             mTablicaRezultat.deleteTablicaRezultat(args.updateRezultatiLigaArgs)
             Toast.makeText(requireContext(), "Brisanje uspješno!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateTablicaRezultatFragment_to_tablicaRezultatiFragment)
         }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete ?")
-        builder.setMessage("Are you sure you want to delete ?")
+        builder.setNegativeButton("Ne") { _, _ -> }
+        builder.setTitle("Obrisati?")
+        builder.setMessage("Jeste li sigurni da želite obrisati?")
         builder.create().show()
     }
 

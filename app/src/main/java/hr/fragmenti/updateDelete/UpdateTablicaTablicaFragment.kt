@@ -47,14 +47,14 @@ class UpdateTablicaTablicaFragment : Fragment(R.layout.update_tablica_tablica_fr
     @InternalCoroutinesApi
     private fun deleteItemTablica() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setPositiveButton("Da") { _, _ ->
             mTablicaTablicaViewModel.deleteTablicaTablica(args.updateTablicaArgs)
             Toast.makeText(requireContext(), "Brisanje uspješno!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateTablicaTablicaFragment_to_tablicaTablicaFragment)
         }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete ?")
-        builder.setMessage("Are you sure you want to delete ?")
+        builder.setNegativeButton("Ne") { _, _ -> }
+        builder.setTitle("Obrisati?")
+        builder.setMessage("Jeste li sigurni da želite obrisati?")
         builder.create().show()
     }
 

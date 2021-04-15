@@ -49,14 +49,14 @@ class UpdateRasporedFragment : Fragment(R.layout.update_raspored_fragment) {
     @InternalCoroutinesApi
     private fun deleteItemRaspored() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setPositiveButton("Da") { _, _ ->
             mRasporedViewModel.deleteRaspored(args.updateRasporedArgs)
             Toast.makeText(requireContext(), "Brisanje uspješno!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateRasporedFragment_to_rasporedFragment)
         }
-        builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete ${args.updateRasporedArgs.domacin}?")
-        builder.setMessage("Are you sure you want to delete ${args.updateRasporedArgs.domacin}?")
+        builder.setNegativeButton("Ne") { _, _ -> }
+        builder.setTitle("Obrisati ${args.updateRasporedArgs.domacin}?")
+        builder.setMessage("Jeste li sigurni da želite obrisati ${args.updateRasporedArgs.domacin}?")
         builder.create().show()
     }
 
