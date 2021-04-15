@@ -1,84 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/noviIgracIme"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ovdje upišite ime igrača" />
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/noviIgracPrezime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite prezime igrača" />
+        <EditText
+            android:id="@+id/noviIgracIme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Ovdje upišite ime igrača" />
 
-    <EditText
-        android:id="@+id/noviIgracPozicija"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite poziciju igrača" />
+        <EditText
+            android:id="@+id/noviIgracPrezime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite prezime igrača" />
 
-    <EditText
-        android:id="@+id/noviIgracOdigraniSusreti"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite odigrane susrete" />
+        <EditText
+            android:id="@+id/noviIgracPozicija"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite poziciju igrača" />
 
-    <EditText
-        android:id="@+id/noviIgracGolovi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite broj golova" />
+        <EditText
+            android:id="@+id/noviIgracOdigraniSusreti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite odigrane susrete" />
 
-    <EditText
-        android:id="@+id/noviIgracAsistencije"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite broj asistencija" />
+        <EditText
+            android:id="@+id/noviIgracGolovi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite broj golova" />
 
-    <EditText
-        android:id="@+id/noviIgracOdigraneMinute"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite odigrane minute" />
+        <EditText
+            android:id="@+id/noviIgracAsistencije"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite broj asistencija" />
 
-    <EditText
-        android:id="@+id/noviIgracZutiKartoni"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite žute kartone" />
+        <EditText
+            android:id="@+id/noviIgracOdigraneMinute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite odigrane minute" />
 
-    <EditText
-        android:id="@+id/noviIgracCrveniKartoni"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite crvene kartone" />
+        <EditText
+            android:id="@+id/noviIgracZutiKartoni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite žute kartone" />
 
-    <EditText
-        android:id="@+id/noviIgracBroj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ovdje upišite broj igrača"
-        android:inputType="number" />
+        <EditText
+            android:id="@+id/noviIgracCrveniKartoni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite crvene kartone" />
 
-    <EditText
-        android:id="@+id/noviIgracOpis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="Ovdje upišite opis igraca" />
+        <EditText
+            android:id="@+id/noviIgracBroj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Ovdje upišite broj igrača"
+            android:inputType="number" />
 
-    <Button
-        android:id="@+id/gumbSpremiNoviIgrac"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Spremi" />
+        <EditText
+            android:id="@+id/noviIgracOpis"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:hint="Ovdje upišite opis igraca" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/gumbSpremiNoviIgrac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Spremi" />
+
+    </LinearLayout>
+</ScrollView>
