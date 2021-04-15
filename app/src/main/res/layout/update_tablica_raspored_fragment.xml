@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <EditText
         android:id="@+id/updateRasporedLigaBrojKola"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="150dp"
         android:layout_marginRight="150dp"
         android:hint="Broj kola"
@@ -267,15 +272,15 @@
             android:id="@+id/gumbUpdateTablicaRaspored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             android:text="Ažuriraj" />
         <Button
             android:id="@+id/gumbDeleteTablicaRaspored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="170dp"
+            android:layout_marginLeft="80dp"
             android:text="Obriši"/>
 
     </LinearLayout>
-
 </LinearLayout>
+</ScrollView>

@@ -10,28 +10,33 @@
         android:id="@+id/updateTablicaPozicija"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:hint="Pozicija" />
 
     <EditText
         android:id="@+id/updateTablicaImeTima"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:hint="Ime Tima" />
 
     <EditText
         android:id="@+id/updateTablicaOdigraniSusreti"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:hint="Odigrani susreti" />
     <EditText
         android:id="@+id/updateTablicaGolRazlika"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:hint="Gol razlika" />
     <EditText
         android:id="@+id/updateTablicaBodovi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:hint="Bodovi" />
 
     <LinearLayout
@@ -43,13 +48,14 @@
             android:id="@+id/gumbUpdateTablica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:text="Ažuriraj"/>
 
         <Button
             android:id="@+id/gumbDeleteTablica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="170dp"
+            android:layout_marginLeft="80dp"
             android:text="Obriši"/>
 
     </LinearLayout>
