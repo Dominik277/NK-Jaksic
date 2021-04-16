@@ -108,28 +108,28 @@
 
             <EditText
                 android:id="@+id/noviRezultatLigaTreciDatum"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Datum" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaTreciDomacin"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Domacin" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaTreciGost"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Gost" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaTreciRezultat"
-                android:layout_width="70dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Rezultat"
@@ -148,28 +148,28 @@
 
             <EditText
                 android:id="@+id/noviRezultatLigaCetvrtiDatum"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Datum" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaCetvrtiDomacin"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Domacin" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaCetvrtiGost"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Gost" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaCetvrtiRezultat"
-                android:layout_width="70dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Rezultat"
@@ -188,28 +188,28 @@
 
             <EditText
                 android:id="@+id/noviRezultatLigaPetiDatum"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Datum" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaPetiDomacin"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Domacin" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaPetiGost"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Gost" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaPetiRezultat"
-                android:layout_width="70dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Rezultat"
@@ -228,28 +228,28 @@
 
             <EditText
                 android:id="@+id/noviRezultatLigaSestiDatum"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Datum" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaSestiDomacin"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Domacin" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaSestiGost"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Gost" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaSestiRezultat"
-                android:layout_width="70dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Rezultat"
