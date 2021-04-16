@@ -28,7 +28,11 @@
         tools:layout="@layout/fragment_najbolji_strijelci">
         <action
             android:id="@+id/action_najboljiStrijelciFragment_to_adminPrijavaStrijelci"
-            app:destination="@id/adminPrijavaStrijelci" />
+            app:destination="@id/adminPrijavaStrijelci"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/nav_pocetnaStranica"
@@ -49,7 +53,11 @@
             app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_raspored_to_adminPrijavaRaspored"
-            app:destination="@id/adminPrijavaRaspored" />
+            app:destination="@id/adminPrijavaRaspored"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/nav_rezultati"
@@ -65,7 +73,11 @@
             app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_rezultati_to_adminPrijavaRezultati"
-            app:destination="@id/adminPrijavaRezultati" />
+            app:destination="@id/adminPrijavaRezultati"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/nav_tablica"
@@ -74,16 +86,32 @@
         tools:layout="@layout/fragment_tablica">
         <action
             android:id="@+id/action_nav_tablica_to_najboljiStrijelciFragment"
-            app:destination="@id/najboljiStrijelciFragment" />
+            app:destination="@id/najboljiStrijelciFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_tablica_to_tablicaRezultatiFragment"
-            app:destination="@id/tablicaRezultatiFragment" />
+            app:destination="@id/tablicaRezultatiFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_tablica_to_tablicaTablicaFragment"
-            app:destination="@id/tablicaTablicaFragment" />
+            app:destination="@id/tablicaTablicaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_tablica_to_tablicaRasporedFragment"
-            app:destination="@id/tablicaRasporedFragment" />
+            app:destination="@id/tablicaRasporedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/tablicaRasporedFragment"
@@ -92,7 +120,11 @@
         tools:layout="@layout/tablica_fragment_raspored">
         <action
             android:id="@+id/action_tablicaRasporedFragment_to_adminPrijavaRasporedLiga"
-            app:destination="@id/adminPrijavaRasporedLiga" />
+            app:destination="@id/adminPrijavaRasporedLiga"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/tablicaRezultatiFragment"
@@ -101,7 +133,11 @@
         tools:layout="@layout/novi_fragment_rezultati">
         <action
             android:id="@+id/action_tablicaRezultatiFragment_to_adminPrijavaRezultatiLiga"
-            app:destination="@id/adminPrijavaRezultatiLiga" />
+            app:destination="@id/adminPrijavaRezultatiLiga"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/tablicaTablicaFragment"
@@ -110,7 +146,11 @@
         tools:layout="@layout/tablica_fragment_tablica">
         <action
             android:id="@+id/action_tablicaTablicaFragment_to_adminPrijavaTablica"
-            app:destination="@id/adminPrijavaTablica" />
+            app:destination="@id/adminPrijavaTablica"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/nav_vijesti"
@@ -126,7 +166,11 @@
             app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_vijesti_to_adminPrijavaVijesti"
-            app:destination="@id/adminPrijavaVijesti" />
+            app:destination="@id/adminPrijavaVijesti"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/updateNajboljiStrijalacFragment"
@@ -337,7 +381,11 @@
         tools:layout="@layout/admin_prijava_rezultati">
         <action
             android:id="@+id/action_adminPrijavaRezultati_to_updateRezultatFragment"
-            app:destination="@id/updateRezultatFragment" />
+            app:destination="@id/updateRezultatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentRezultatArgs"
             app:argType="hr.database.table.Rezultat" />
@@ -349,7 +397,11 @@
         tools:layout="@layout/admin_prijava_momcad">
         <action
             android:id="@+id/action_adminPrijavaMomcad_to_updateMomcadFragment"
-            app:destination="@id/updateMomcadFragment" />
+            app:destination="@id/updateMomcadFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentMomcadArgs"
             app:argType="hr.database.table.Igraci" />
