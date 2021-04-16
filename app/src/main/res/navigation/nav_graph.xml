@@ -324,7 +324,11 @@
         tools:layout="@layout/fragment_novi_rezultat">
         <action
             android:id="@+id/action_dodajNoviRezultatFragment_to_rezultatiFragment"
-            app:destination="@id/nav_rezultati" />
+            app:destination="@id/nav_rezultati"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/dodajNovogIgraca"
@@ -333,7 +337,11 @@
         tools:layout="@layout/fragment_novi_igrac">
         <action
             android:id="@+id/action_dodajNovogIgraca2_to_momcadFragment"
-            app:destination="@id/nav_momcad" />
+            app:destination="@id/nav_momcad"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/dodajTablicuRezultat"
@@ -342,7 +350,11 @@
         tools:layout="@layout/fragment_novi_rezultati_liga">
         <action
             android:id="@+id/action_dodajNoviRezultatLigaFragment_to_tablicaRezultatiFragment"
-            app:destination="@id/tablicaRezultatiFragment" />
+            app:destination="@id/tablicaRezultatiFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/dodajNovuTablicu"
@@ -351,7 +363,11 @@
         tools:layout="@layout/fragment_nova_tablica">
         <action
             android:id="@+id/action_dodajNovuTablicu_to_tablicaTablicaFragment"
-            app:destination="@id/tablicaTablicaFragment" />
+            app:destination="@id/tablicaTablicaFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/dodajNovuVijest"
@@ -360,7 +376,11 @@
         tools:layout="@layout/fragment_nova_vijest">
         <action
             android:id="@+id/action_dodajNovuVijest2_to_vijestiFragment"
-            app:destination="@id/nav_vijesti" />
+            app:destination="@id/nav_vijesti"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/updateVijestiFragment"
@@ -369,7 +389,11 @@
         tools:layout="@layout/update_vijesti_fragment">
         <action
             android:id="@+id/action_updateVijestiFragment_to_nav_vijesti"
-            app:destination="@id/nav_vijesti" />
+            app:destination="@id/nav_vijesti"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
         <argument
             android:name="updateVijestiArgs"
             app:argType="hr.database.table.Vijesti" />
