@@ -98,6 +98,9 @@
         </HorizontalScrollView>
 
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,8 +135,12 @@
                 android:hint="Rezultat"
                 android:textSize="17dp" />
         </LinearLayout>
+        </HorizontalScrollView>
 
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -168,8 +175,12 @@
                 android:hint="Rezultat"
                 android:textSize="17dp" />
         </LinearLayout>
+        </HorizontalScrollView>
 
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -204,8 +215,12 @@
                 android:hint="Rezultat"
                 android:textSize="17dp" />
         </LinearLayout>
+        </HorizontalScrollView>
 
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -240,8 +255,12 @@
                 android:hint="Rezultat"
                 android:textSize="17dp" />
         </LinearLayout>
+        </HorizontalScrollView>
 
 
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -249,33 +268,34 @@
 
             <EditText
                 android:id="@+id/noviRezultatLigaSedmiDatum"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Datum" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaSedmiDomacin"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Domacin" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaSedmiGost"
-                android:layout_width="115dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Gost" />
 
             <EditText
                 android:id="@+id/noviRezultatLigaSedmiRezultat"
-                android:layout_width="70dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Rezultat"
                 android:textSize="17dp" />
         </LinearLayout>
+        </HorizontalScrollView>
 
         <Button
             android:id="@+id/gumbSpremiTablicaRezultat"
