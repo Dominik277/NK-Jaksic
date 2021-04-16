@@ -38,7 +38,7 @@
 
         <TextView
             android:id="@+id/datumRezultati"
-            android:layout_width="65dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:text="21.09."
             android:layout_marginLeft="5dp"
@@ -46,30 +46,23 @@
             android:textSize="19dp"/>
         <TextView
             android:id="@+id/domacinRezultati"
-            android:layout_width="130dp"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text="NK Jakšić"
             android:textColor="#000"
             android:textSize="19dp"/>
         <TextView
             android:id="@+id/gostRezultati"
-            android:layout_width="130dp"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text="NK Kuzmica"
             android:textColor="#000"
             android:textSize="19dp"/>
         <TextView
             android:id="@+id/rezultatRezultati"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="4:1"
-            android:textColor="#000"
-            android:textSize="19dp"/>
-        <TextView
-            android:id="@+id/ishodRezultati"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:text="P"
             android:textColor="#000"
             android:textSize="19dp"/>
 
