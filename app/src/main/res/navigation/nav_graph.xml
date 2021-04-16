@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_momcad">
         <action
             android:id="@+id/action_nav_momcad_to_detailMomcadFragment"
-            app:destination="@id/detailMomcadFragment" />
+            app:destination="@id/detailMomcadFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_momcad_to_adminPrijavaMomcad"
             app:destination="@id/adminPrijavaMomcad" />
@@ -38,7 +42,11 @@
         tools:layout="@layout/fragment_raspored">
         <action
             android:id="@+id/action_nav_raspored_to_detailRasporedFragment"
-            app:destination="@id/detailRasporedFragment" />
+            app:destination="@id/detailRasporedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_raspored_to_adminPrijavaRaspored"
             app:destination="@id/adminPrijavaRaspored" />
@@ -50,7 +58,11 @@
         tools:layout="@layout/fragment_rezultati">
         <action
             android:id="@+id/action_nav_rezultati_to_detailRezultatiFragment"
-            app:destination="@id/detailRezultatiFragment" />
+            app:destination="@id/detailRezultatiFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_rezultati_to_adminPrijavaRezultati"
             app:destination="@id/adminPrijavaRezultati" />
@@ -107,7 +119,11 @@
         tools:layout="@layout/fragment_vijesti">
         <action
             android:id="@+id/action_nav_vijesti_to_detailVijestiFragment"
-            app:destination="@id/detailVijestiFragment" />
+            app:destination="@id/detailVijestiFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_nav_vijesti_to_adminPrijavaVijesti"
             app:destination="@id/adminPrijavaVijesti" />
