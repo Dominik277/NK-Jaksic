@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             app:titleTextColor="@color/white"
             android:fitsSystemWindows="true"
-            android:background="?attr/colorPrimary"/>
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_main"
