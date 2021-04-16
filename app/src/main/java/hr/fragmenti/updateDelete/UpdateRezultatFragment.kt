@@ -33,7 +33,6 @@ class UpdateRezultatFragment : Fragment(R.layout.update_rezultat_fragment) {
         binding.updateRezultatDomacin.setText(args.updateRezultatiArgs.domacinRezultat)
         binding.updateRezultatGost.setText(args.updateRezultatiArgs.gostRezultat)
         binding.updateRezultatRezultat.setText(args.updateRezultatiArgs.rezultatUtakmice)
-        binding.updateRezultatIshod.setText(args.updateRezultatiArgs.ishodRezultat)
         binding.updateRezultatPostave.setText(args.updateRezultatiArgs.postaveRezultati)
         binding.updateRezultatDetalji.setText(args.updateRezultatiArgs.detaljiRezultati)
         binding.updateRezultatClanak.setText(args.updateRezultatiArgs.clanakRezultat)
@@ -69,14 +68,13 @@ class UpdateRezultatFragment : Fragment(R.layout.update_rezultat_fragment) {
         val rezultatDomacin = binding.updateRezultatDomacin.text.toString()
         val rezultatGost = binding.updateRezultatGost.text.toString()
         val rezultatRezultat = binding.updateRezultatRezultat.text.toString()
-        val rezultatIshod = binding.updateRezultatIshod.text.toString()
         val rezultatPostave = binding.updateRezultatPostave.text.toString()
         val rezultatDetalji = binding.updateRezultatDetalji.text.toString()
         val rezultatClanak = binding.updateRezultatClanak.text.toString()
 
         val updateRezultat = Rezultat(
             args.updateRezultatiArgs.id, rezultatNatjecanje, rezultatDatum,
-            rezultatDomacin, rezultatGost, rezultatRezultat, rezultatIshod,
+            rezultatDomacin, rezultatGost, rezultatRezultat,
             rezultatPostave, rezultatDetalji, rezultatClanak
         )
         mRezultatiViewModel.updateRezultati(updateRezultat)

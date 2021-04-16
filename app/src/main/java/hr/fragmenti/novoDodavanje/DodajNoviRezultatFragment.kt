@@ -40,7 +40,6 @@ class DodajNoviRezultatFragment : Fragment(R.layout.fragment_novi_rezultat) {
         val noviRezultatDomacin = binding.noviRezultatDomacin.text.toString()
         val noviRezultatGost = binding.noviRezultatGost.text.toString()
         val noviRezultatRezultat = binding.noviRezultatRezultat.text.toString()
-        val noviRezultatIshod = binding.noviRezultatIshod.text.toString()
         val noviRezultatPostave = binding.noviRezultatPostave.text.toString()
         val noviRezultatDetalji = binding.noviRezultatDetalji.text.toString()
         val noviRezultatClanak = binding.noviRezultatClanak.text.toString()
@@ -53,7 +52,6 @@ class DodajNoviRezultatFragment : Fragment(R.layout.fragment_novi_rezultat) {
             noviRezultatDomacin,
             noviRezultatGost,
             noviRezultatRezultat,
-            noviRezultatIshod,
             noviRezultatPostave,
             noviRezultatDetalji,
             noviRezultatClanak

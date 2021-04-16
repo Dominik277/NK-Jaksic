@@ -10,8 +10,14 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
 @Database(
-    entities = [Igraci::class, Vijesti::class, TablicaTablica::class, NajboljiStrijelci::class, Raspored::class, Rezultat::class, TablicaRaspored::class, TablicaRezultati::class],
-    version = 24
+    entities = [Igraci::class,
+                Vijesti::class,
+                TablicaTablica::class,
+                NajboljiStrijelci::class,
+                Raspored::class, Rezultat::class,
+                TablicaRaspored::class,
+                TablicaRezultati::class],
+                version = 25
 )
 abstract class NKJaksicDatabase : RoomDatabase() {
 
@@ -24,6 +30,7 @@ abstract class NKJaksicDatabase : RoomDatabase() {
     abstract fun tablicaRasporedDao(): TablicaRasporedDao
     abstract fun tablicaRezultatiDao(): TablicaRezultatiDao
 
+    /*
     companion object {
         @Volatile
         private var INSTANCE: NKJaksicDatabase? = null
@@ -47,4 +54,5 @@ abstract class NKJaksicDatabase : RoomDatabase() {
             }
         }
     }
+     */
 }

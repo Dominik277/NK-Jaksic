@@ -27,7 +27,6 @@ class RezultatiAdapter: RecyclerView.Adapter<RezultatiAdapter.ViewHolder>() {
         holder.itemView.domacinRezultati.text = currentItem.domacinRezultat
         holder.itemView.gostRezultati.text = currentItem.gostRezultat
         holder.itemView.rezultatRezultati.text = currentItem.rezultatUtakmice
-        holder.itemView.ishodRezultati.text = currentItem.ishodRezultat
 
         holder.itemView.jedanRedRezultat.setOnLongClickListener {
             val action = RezultatiFragmentDirections.actionNavRezultatiToAdminPrijavaRezultati(currentItem)

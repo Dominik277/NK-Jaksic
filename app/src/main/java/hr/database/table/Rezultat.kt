@@ -28,9 +28,6 @@ data class Rezultat (
     @ColumnInfo(name = "rezultat_utakmice")
     val rezultatUtakmice: String,
 
-    @ColumnInfo(name = "ishod_rezultat")
-    val ishodRezultat: String,
-
     @ColumnInfo(name = "postave")
     val postaveRezultati: String,
 

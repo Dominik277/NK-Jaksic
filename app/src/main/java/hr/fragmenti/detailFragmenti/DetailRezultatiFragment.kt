@@ -21,7 +21,6 @@ class DetailRezultatiFragment : Fragment(R.layout.detail_rezultati_fragment) {
         binding.detailRezultatDomacin.setText(args.detailRezultatArgs.domacinRezultat)
         binding.detailRezultatGost.setText(args.detailRezultatArgs.gostRezultat)
         binding.detailRezultatRezultat.setText(args.detailRezultatArgs.rezultatUtakmice)
-        binding.detailRezultatIshod.setText(args.detailRezultatArgs.ishodRezultat)
         binding.detailRezultatPostave.setText(args.detailRezultatArgs.postaveRezultati)
         binding.detailRezultatDetalji.setText(args.detailRezultatArgs.detaljiRezultati)
         binding.detailRezultatClanak.setText(args.detailRezultatArgs.clanakRezultat)
