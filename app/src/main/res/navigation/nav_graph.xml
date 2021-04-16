@@ -179,7 +179,11 @@
         tools:layout="@layout/update_strijelci_fragment">
         <action
             android:id="@+id/action_updateNajboljiStrijalacFragment_to_najboljiStrijelciFragment"
-            app:destination="@id/najboljiStrijelciFragment" />
+            app:destination="@id/najboljiStrijelciFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
         <argument
             android:name="updateStrijelciArgs"
             app:argType="hr.database.table.NajboljiStrijelci" />
@@ -191,7 +195,11 @@
         tools:layout="@layout/update_raspored_fragment">
         <action
             android:id="@+id/action_updateRasporedFragment_to_rasporedFragment"
-            app:destination="@id/nav_raspored" />
+            app:destination="@id/nav_raspored"
+            app:enterAnim="@anim/slide_out_right"
+            app:exitAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_out_left"
+            app:popExitAnim="@anim/slide_in_right"/>
         <argument android:name="updateRasporedArgs"
             app:argType="hr.database.table.Raspored" />
     </fragment>
@@ -202,7 +210,11 @@
         tools:layout="@layout/update_tablica_tablica_fragment">
         <action
             android:id="@+id/action_updateTablicaTablicaFragment_to_tablicaTablicaFragment"
-            app:destination="@id/tablicaTablicaFragment" />
+            app:destination="@id/tablicaTablicaFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
         <argument android:name="updateTablicaArgs"
             app:argType="hr.database.table.TablicaTablica" />
     </fragment>
@@ -213,7 +225,11 @@
         tools:layout="@layout/update_rezultat_fragment">
         <action
             android:id="@+id/action_updateRezultatFragment_to_rezultatiFragment"
-            app:destination="@id/nav_rezultati" />
+            app:destination="@id/nav_rezultati"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
         <argument
             android:name="updateRezultatiArgs"
             app:argType="hr.database.table.Rezultat" />
@@ -225,7 +241,11 @@
         tools:layout="@layout/update_momcad_fragment">
         <action
             android:id="@+id/action_updateMomcadFragment_to_momcadFragment"
-            app:destination="@id/nav_momcad" />
+            app:destination="@id/nav_momcad"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
         <argument
             android:name="updateMomcadArgs"
             app:argType="hr.database.table.Igraci" />
@@ -237,7 +257,11 @@
         tools:layout="@layout/update_tablica_rezultat_fragment">
         <action
             android:id="@+id/action_updateTablicaRezultatFragment_to_tablicaRezultatiFragment"
-            app:destination="@id/tablicaRezultatiFragment" />
+            app:destination="@id/tablicaRezultatiFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
         <argument
             android:name="updateRezultatiLigaArgs"
             app:argType="hr.database.table.TablicaRezultati" />
@@ -249,7 +273,11 @@
         tools:layout="@layout/update_tablica_raspored_fragment">
         <action
             android:id="@+id/action_updateTablicaRasporedFragment_to_tablicaRasporedFragment"
-            app:destination="@id/tablicaRasporedFragment" />
+            app:destination="@id/tablicaRasporedFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
         <argument
             android:name="updateRasporedLigaArgs"
             app:argType="hr.database.table.TablicaRaspored" />
@@ -261,7 +289,11 @@
         tools:layout="@layout/fragment_novi_raspored">
         <action
             android:id="@+id/action_dodajNoviRasporedFragment_to_rasporedFragment"
-            app:destination="@id/nav_raspored" />
+            app:destination="@id/nav_raspored"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/dodajNovogStrijelca"
@@ -279,7 +311,11 @@
         tools:layout="@layout/fragment_novi_raspored_liga">
         <action
             android:id="@+id/action_dodajNoviRasporedLigaFragment_to_tablicaRasporedFragment"
-            app:destination="@id/tablicaRasporedFragment" />
+            app:destination="@id/tablicaRasporedFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/dodajNoviRezultat"
@@ -413,7 +449,11 @@
         tools:layout="@layout/admin_prijava_vijesti">
         <action
             android:id="@+id/action_adminPrijavaVijesti_to_updateVijestiFragment"
-            app:destination="@id/updateVijestiFragment" />
+            app:destination="@id/updateVijestiFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentVijestiArgs"
             app:argType="hr.database.table.Vijesti" />
@@ -425,7 +465,11 @@
         tools:layout="@layout/admin_prijava_raspored">
         <action
             android:id="@+id/action_adminPrijavaRaspored_to_updateRasporedFragment"
-            app:destination="@id/updateRasporedFragment" />
+            app:destination="@id/updateRasporedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentRasporedArgs"
             app:argType="hr.database.table.Raspored" />
@@ -437,7 +481,11 @@
         tools:layout="@layout/admin_prijava_rezultati_liga">
         <action
             android:id="@+id/action_adminPrijavaRezultatiLiga_to_updateTablicaRezultatFragment"
-            app:destination="@id/updateTablicaRezultatFragment" />
+            app:destination="@id/updateTablicaRezultatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentRezultatiLigaArgs"
             app:argType="hr.database.table.TablicaRezultati" />
@@ -449,7 +497,11 @@
         tools:layout="@layout/admin_prijava_rezultati_liga">
         <action
             android:id="@+id/action_adminPrijavaRasporedLiga_to_updateTablicaRasporedFragment"
-            app:destination="@id/updateTablicaRasporedFragment" />
+            app:destination="@id/updateTablicaRasporedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentRasporedLigaArgs"
             app:argType="hr.database.table.TablicaRaspored" />
@@ -461,7 +513,11 @@
         tools:layout="@layout/admin_prijava_strijelci">
         <action
             android:id="@+id/action_adminPrijavaStrijelci_to_updateNajboljiStrijalacFragment"
-            app:destination="@id/updateNajboljiStrijalacFragment" />
+            app:destination="@id/updateNajboljiStrijalacFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentStrijelciArgs"
             app:argType="hr.database.table.NajboljiStrijelci" />
@@ -473,7 +529,11 @@
         tools:layout="@layout/admin_prijava_tablica">
         <action
             android:id="@+id/action_adminPrijavaTablica_to_updateTablicaTablicaFragment"
-            app:destination="@id/updateTablicaTablicaFragment" />
+            app:destination="@id/updateTablicaTablicaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <argument
             android:name="currentTablicaArgs"
             app:argType="hr.database.table.TablicaTablica" />
