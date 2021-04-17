@@ -57,7 +57,7 @@ class DodajNoviRezultatFragment : Fragment(R.layout.fragment_novi_rezultat) {
             noviRezultatClanak
         )
         mRezultatiViewModel.addRezultat(rezultat)
-        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "Uspješno dodano!", Toast.LENGTH_LONG).show()
 
     }
 }

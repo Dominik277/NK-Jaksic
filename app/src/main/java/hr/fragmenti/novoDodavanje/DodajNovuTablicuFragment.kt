@@ -46,6 +46,6 @@ class DodajNovuTablicuFragment : Fragment(R.layout.fragment_nova_tablica) {
             novaTablicaOdigraniSusreti, novaTablicaGolRazlika, novaTablicaBodovi
         )
         mTablicaTablicaViewModel.addTablicaTablica(tablicaTablica)
-        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "Uspješno dodano!", Toast.LENGTH_LONG).show()
     }
 }

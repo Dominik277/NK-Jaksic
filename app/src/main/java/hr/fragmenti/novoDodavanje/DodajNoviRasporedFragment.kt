@@ -55,7 +55,7 @@ class DodajNoviRasporedFragment : Fragment(R.layout.fragment_novi_raspored) {
             noviRasporedClanak
         )
         mRasporedViewModel.addRaspored(raspored)
-        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "Uspješno dodano", Toast.LENGTH_LONG).show()
 
     }
 }

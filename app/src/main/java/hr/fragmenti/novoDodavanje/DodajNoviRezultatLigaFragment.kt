@@ -108,7 +108,7 @@ class DodajNoviRezultatLigaFragment : Fragment(R.layout.fragment_novi_rezultati_
         )
 
         mTablicaRezultatViewModel.addTablicaRezultat(tablicaRezultat)
-        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "Uspješno dodano", Toast.LENGTH_LONG).show()
 
     }
 }

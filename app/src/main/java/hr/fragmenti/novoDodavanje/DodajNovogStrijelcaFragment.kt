@@ -46,6 +46,6 @@ class DodajNovogStrijelcaFragment : Fragment(R.layout.fragment_novi_strijelac) {
             noviStrijelacBrojGolova
         )
         mNajboljiStrijelacViewModel.addNajboljiStrijelac(najboljiStrijelac)
-        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "Uspješno dodano!", Toast.LENGTH_LONG).show()
     }
 }

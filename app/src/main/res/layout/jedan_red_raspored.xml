@@ -44,14 +44,14 @@
                 android:textSize="19dp"/>
             <TextView
                 android:id="@+id/rasporedDomacin"
-                android:layout_width="135dp"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:text="NK Jakšić"
                 android:textSize="19dp"
                 android:textColor="#000"/>
             <TextView
                 android:id="@+id/rasporedGost"
-                android:layout_width="135dp"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:text="NK Kuzmica"
                 android:textColor="#000"

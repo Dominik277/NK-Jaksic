@@ -109,7 +109,7 @@ class DodajNoviRasporedLigaFragment : Fragment(R.layout.fragment_novi_raspored_l
         )
 
         mTablicaRasporedViewModel.addTablicaRaspored(tablicaRaspored)
-        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
+        Toast.makeText(requireContext(), "Uspješno dodano", Toast.LENGTH_LONG).show()
 
     }
 }
