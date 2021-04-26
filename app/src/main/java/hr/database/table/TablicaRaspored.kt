@@ -1,11 +1,10 @@
 package hr.database.table
 
 import android.os.Parcelable
-import android.text.Editable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 @Entity(tableName = "tablica_raspored")

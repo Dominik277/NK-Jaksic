@@ -3,45 +3,47 @@ package hr
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
 import dagger.hilt.android.AndroidEntryPoint
 import hr.dominik.nkjaki.R
-import hr.fragmenti.*
-import kotlinx.android.synthetic.main.activity_main.*
+import hr.dominik.nkjaki.databinding.ActivityMainBinding
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_main) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_main) as NavHostFragment
         navController = navHostFragment.findNavController()
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_momcad,R.id.nav_pocetnaStranica,
-            R.id.nav_raspored,R.id.nav_tablica,R.id.nav_vijesti),
-            main_drawer_layout
+            setOf(
+                R.id.nav_momcad, R.id.nav_pocetnaStranica,
+                R.id.nav_raspored, R.id.nav_tablica, R.id.nav_vijesti
+            ),
+            binding.mainDrawerLayout
         )
-        setSupportActionBar(toolbar)
-        setupActionBarWithNavController(navController,appBarConfiguration)
+        setSupportActionBar(binding.toolbar)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
-        navigation_drawer.setupWithNavController(navController)
+        binding.navigationDrawer.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu,menu)
+        menuInflater.inflate(R.menu.main_menu, menu)
         return true
     }
 
