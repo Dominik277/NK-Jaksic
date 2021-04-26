@@ -1,52 +1,57 @@
 package hr.adapteri
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import hr.database.table.Raspored
 import hr.database.table.TablicaTablica
-import hr.dominik.nkjaki.R
+import hr.dominik.nkjaki.databinding.JedanRedTablicaTablicaBinding
 import hr.fragmenti.fragmenti.TablicaTablicaFragmentDirections
-import kotlinx.android.synthetic.main.jedan_red_tablica_tablica.view.*
 
-class TablicaTablicaAdapter : RecyclerView.Adapter<TablicaTablicaAdapter.ViewHolder>(){
+class TablicaTablicaAdapter : RecyclerView.Adapter<TablicaTablicaAdapter.ViewHolder>() {
 
     private var tablicaTablicaList = emptyList<TablicaTablica>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_tablica_tablica, parent, false)
-        return ViewHolder(view)
+        return ViewHolder(
+            JedanRedTablicaTablicaBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = tablicaTablicaList[position]
-        holder.itemView.tablica_tablica_pozicija.text = currentItem.pozicija
-        holder.itemView.tablica_tablica_ime.text = currentItem.imeTima
-        holder.itemView.tablica_tablica_susreti.text = currentItem.odigraniSusreti
-        holder.itemView.tablica_tablica_golovi.text = currentItem.golRazlika
-        holder.itemView.tablica_tablica_bodovi.text = currentItem.bodovi
+        holder.binding.tablicaTablicaGolovi.text = currentItem.pozicija
+        holder.binding.tablicaTablicaIme.text = currentItem.imeTima
+        holder.binding.tablicaTablicaSusreti.text = currentItem.odigraniSusreti
+        holder.binding.tablicaTablicaGolovi.text = currentItem.golRazlika
+        holder.binding.tablicaTablicaBodovi.text = currentItem.bodovi
 
-        holder.itemView.jedanRedTablicaTablica.setOnLongClickListener {
-            val action = TablicaTablicaFragmentDirections.actionTablicaTablicaFragmentToAdminPrijavaTablica(currentItem)
+        holder.binding.jedanRedTablicaTablica.setOnLongClickListener {
+            val action =
+                TablicaTablicaFragmentDirections.actionTablicaTablicaFragmentToAdminPrijavaTablica(
+                    currentItem
+                )
             holder.itemView.findNavController().navigate(action)
             true
         }
 
     }
 
-    override fun getItemCount(): Int{
+    override fun getItemCount(): Int {
         return tablicaTablicaList.size
     }
 
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(val binding: JedanRedTablicaTablicaBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
     }
 
-    fun setData(tablicaTablica: List<TablicaTablica>){
+    fun setData(tablicaTablica: List<TablicaTablica>) {
         this.tablicaTablicaList = tablicaTablica
         notifyDataSetChanged()
     }
