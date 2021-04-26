@@ -1,74 +1,80 @@
 package hr.adapteri
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import hr.database.table.Raspored
 import hr.database.table.TablicaRaspored
-import hr.dominik.nkjaki.R
+import hr.dominik.nkjaki.databinding.JedanRedTablicaRasporedBinding
 import hr.fragmenti.fragmenti.TablicaRasporedFragmentDirections
-import kotlinx.android.synthetic.main.jedan_red_tablica_raspored.view.*
 
-class TablicaRasporedAdapter: RecyclerView.Adapter<TablicaRasporedAdapter.ViewHolder>() {
+class TablicaRasporedAdapter : RecyclerView.Adapter<TablicaRasporedAdapter.ViewHolder>() {
 
     private var tablicaRasporedList = emptyList<TablicaRaspored>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_tablica_raspored, parent, false)
-        return ViewHolder(view)
+        return ViewHolder(
+            JedanRedTablicaRasporedBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = tablicaRasporedList[position]
-        holder.itemView.tablicaRaspored_brojKola.text = currentItem.brojKola
-        holder.itemView.tablicaRaspored_prvaUtakmica_datum.text = currentItem.prvaUtakmicaDatum
-        holder.itemView.tablicaRaspored_domacinPrvaUtakmica.text = currentItem.prvaUtakmicaDomacin
-        holder.itemView.tablicaRaspored_gostPrvaUtakmica.text = currentItem.prvaUtakmicaGost
-        holder.itemView.tablicaRaspored_vrijemePrvaUtakmica.text = currentItem.prvaUtakmicaVrijeme
-        holder.itemView.tablicaRaspored_drugaUtakmica_datum.text = currentItem.drugaUtakmicaDatum
-        holder.itemView.tablicaRaspored_domacinDrugaUtakmica.text = currentItem.drugaUtakmicaDomacin
-        holder.itemView.tablicaRaspored_gostDrugaUtakmica.text = currentItem.drugaUtakmicaGost
-        holder.itemView.tablicaRaspored_vrijemeDrugaUtakmica.text = currentItem.drugaUtakmicaVrijeme
-        holder.itemView.tablicaRaspored_trecaUtakmica_datum.text = currentItem.trecaUtakmicaDatum
-        holder.itemView.tablicaRaspored_domacinTrecaUtakmica.text = currentItem.trecaUtakmicaDomacin
-        holder.itemView.tablicaRaspored_gostTrecaUtakmica.text = currentItem.trecaUtakmicaGost
-        holder.itemView.tablicaRaspored_vrijemeTrecaUtakmica.text = currentItem.trecaUtakmicaVrijeme
-        holder.itemView.tablicaRaspored_cetvrtaUtakmica_datum.text = currentItem.cetvrtaUtakmicaDatum
-        holder.itemView.tablicaRaspored_domacinCetvrtaUtakmica.text = currentItem.cetvrtaUtakmicaDomacin
-        holder.itemView.tablicaRaspored_gostCetvrtaUtakmica.text = currentItem.cetvrtaUtakmicaGost
-        holder.itemView.tablicaRaspored_vrijemeCetvrtaUtakmica.text = currentItem.cetvrtaUtakmicaVrijeme
-        holder.itemView.tablicaRaspored_petaUtakmica_datum.text = currentItem.petaUtakmicaDatum
-        holder.itemView.tablicaRaspored_domacinPetaUtakmica.text = currentItem.petaUtakmicaDomacin
-        holder.itemView.tablicaRaspored_gostPetaUtakmica.text = currentItem.petaUtakmicaGost
-        holder.itemView.tablicaRaspored_vrijemePetaUtakmica.text = currentItem.petaUtakmicaVrijeme
-        holder.itemView.tablicaRaspored_sestaUtakmica_datum.text = currentItem.sestaUtakmicaDatum
-        holder.itemView.tablicaRaspored_domacinSestaUtakmica.text = currentItem.sestaUtakmicaDomacin
-        holder.itemView.tablicaRaspored_gostSestaUtakmica.text = currentItem.sestaUtakmicaGost
-        holder.itemView.tablicaRaspored_vrijemeSestaUtakmica.text = currentItem.sestaUtakmicaVrijeme
-        holder.itemView.tablicaRaspored_sedmaUtakmica_datum.text = currentItem.sedmaUtakmicaDatum
-        holder.itemView.tablicaRaspored_domacinSedmaUtakmica.text = currentItem.sedmaUtakmicaDomacin
-        holder.itemView.tablicaRaspored_gostSedmaUtakmica.text = currentItem.sedmaUtakmicaGost
-        holder.itemView.tablicaRaspored_vrijemeSedmaUtakmica.text = currentItem.sedmaUtakmicaVrijeme
+        holder.binding.tablicaRasporedBrojKola.text = currentItem.brojKola
+        holder.binding.tablicaRasporedPrvaUtakmicaDatum.text = currentItem.prvaUtakmicaDatum
+        holder.binding.tablicaRasporedDomacinPrvaUtakmica.text = currentItem.prvaUtakmicaDomacin
+        holder.binding.tablicaRasporedGostPrvaUtakmica.text = currentItem.prvaUtakmicaGost
+        holder.binding.tablicaRasporedVrijemePrvaUtakmica.text = currentItem.prvaUtakmicaVrijeme
+        holder.binding.tablicaRasporedDrugaUtakmicaDatum.text = currentItem.drugaUtakmicaDatum
+        holder.binding.tablicaRasporedDomacinDrugaUtakmica.text = currentItem.drugaUtakmicaDomacin
+        holder.binding.tablicaRasporedGostDrugaUtakmica.text = currentItem.drugaUtakmicaGost
+        holder.binding.tablicaRasporedVrijemeDrugaUtakmica.text = currentItem.drugaUtakmicaVrijeme
+        holder.binding.tablicaRasporedTrecaUtakmicaDatum.text = currentItem.trecaUtakmicaDatum
+        holder.binding.tablicaRasporedDomacinTrecaUtakmica.text = currentItem.trecaUtakmicaDomacin
+        holder.binding.tablicaRasporedGostTrecaUtakmica.text = currentItem.trecaUtakmicaGost
+        holder.binding.tablicaRasporedVrijemeTrecaUtakmica.text = currentItem.trecaUtakmicaVrijeme
+        holder.binding.tablicaRasporedCetvrtaUtakmicaDatum.text = currentItem.cetvrtaUtakmicaDatum
+        holder.binding.tablicaRasporedDomacinCetvrtaUtakmica.text = currentItem.cetvrtaUtakmicaDomacin
+        holder.binding.tablicaRasporedGostCetvrtaUtakmica.text = currentItem.cetvrtaUtakmicaGost
+        holder.binding.tablicaRasporedVrijemeCetvrtaUtakmica.text = currentItem.cetvrtaUtakmicaVrijeme
+        holder.binding.tablicaRasporedPetaUtakmicaDatum.text = currentItem.petaUtakmicaDatum
+        holder.binding.tablicaRasporedDomacinPetaUtakmica.text = currentItem.petaUtakmicaDomacin
+        holder.binding.tablicaRasporedGostPetaUtakmica.text = currentItem.petaUtakmicaGost
+        holder.binding.tablicaRasporedVrijemePetaUtakmica.text = currentItem.petaUtakmicaVrijeme
+        holder.binding.tablicaRasporedSestaUtakmicaDatum.text = currentItem.sestaUtakmicaDatum
+        holder.binding.tablicaRasporedDomacinSestaUtakmica.text = currentItem.sestaUtakmicaDomacin
+        holder.binding.tablicaRasporedGostSestaUtakmica.text = currentItem.sestaUtakmicaGost
+        holder.binding.tablicaRasporedVrijemeSestaUtakmica.text = currentItem.sestaUtakmicaVrijeme
+        holder.binding.tablicaRasporedSedmaUtakmicaDatum.text = currentItem.sedmaUtakmicaDatum
+        holder.binding.tablicaRasporedDomacinSedmaUtakmica.text = currentItem.sedmaUtakmicaDomacin
+        holder.binding.tablicaRasporedGostSedmaUtakmica.text = currentItem.sedmaUtakmicaGost
+        holder.binding.tablicaRasporedVrijemeSedmaUtakmica.text = currentItem.sedmaUtakmicaVrijeme
 
-        holder.itemView.jedanRedTablicaRaspored.setOnLongClickListener {
-            val action = TablicaRasporedFragmentDirections.actionTablicaRasporedFragmentToAdminPrijavaRasporedLiga(currentItem)
+        holder.binding.jedanRedTablicaRaspored.setOnLongClickListener {
+            val action =
+                TablicaRasporedFragmentDirections.actionTablicaRasporedFragmentToAdminPrijavaRasporedLiga(
+                    currentItem
+                )
             holder.itemView.findNavController().navigate(action)
             true
         }
 
     }
 
-    override fun getItemCount(): Int{
+    override fun getItemCount(): Int {
         return tablicaRasporedList.size
     }
 
-    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(val binding: JedanRedTablicaRasporedBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
     }
 
-    fun setData(tablicaRaspored: List<TablicaRaspored>){
+    fun setData(tablicaRaspored: List<TablicaRaspored>) {
         this.tablicaRasporedList = tablicaRaspored
         notifyDataSetChanged()
     }
