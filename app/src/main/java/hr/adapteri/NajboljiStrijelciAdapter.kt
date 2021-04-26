@@ -1,49 +1,54 @@
 package hr.adapteri
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import hr.database.table.NajboljiStrijelci
-import hr.database.table.Raspored
-import hr.dominik.nkjaki.R
+import hr.dominik.nkjaki.databinding.JedanRedNajboljiStrijelciBinding
 import hr.fragmenti.fragmenti.NajboljiStrijelciFragmentDirections
-import kotlinx.android.synthetic.main.jedan_red_najbolji_strijelci.view.*
 
-class NajboljiStrijelciAdapter: RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {
+class NajboljiStrijelciAdapter : RecyclerView.Adapter<NajboljiStrijelciAdapter.ViewHolder>() {
 
     private var najboljiStrijelciList = emptyList<NajboljiStrijelci>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.jedan_red_najbolji_strijelci, parent, false)
-        return ViewHolder(itemView)
+        return ViewHolder(
+            JedanRedNajboljiStrijelciBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = najboljiStrijelciList[position]
-        holder.itemView.najboljiStrijelciPozicija.text = currentItem.pozicijaPoGolovima
-        holder.itemView.najboljiStrijelciIme.text = currentItem.imeIgraca
-        holder.itemView.najboljiStrijelciGolovi.text = currentItem.brojGolova
+        holder.binding.najboljiStrijelciPozicija.text = currentItem.pozicijaPoGolovima
+        holder.binding.najboljiStrijelciIme.text = currentItem.imeIgraca
+        holder.binding.najboljiStrijelciGolovi.text = currentItem.brojGolova
 
-        holder.itemView.jedanRedStrijelci.setOnLongClickListener {
-            val action = NajboljiStrijelciFragmentDirections.actionNajboljiStrijelciFragmentToAdminPrijavaStrijelci(currentItem)
+        holder.binding.jedanRedStrijelci.setOnLongClickListener {
+            val action =
+                NajboljiStrijelciFragmentDirections.actionNajboljiStrijelciFragmentToAdminPrijavaStrijelci(
+                    currentItem
+                )
             holder.itemView.findNavController().navigate(action)
             true
         }
     }
 
-    override fun getItemCount(): Int{
-        return  najboljiStrijelciList.size
+    override fun getItemCount(): Int {
+        return najboljiStrijelciList.size
     }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(val binding: JedanRedNajboljiStrijelciBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
     }
 
-    fun setData(najboljiStrijelac: List<NajboljiStrijelci>){
+    fun setData(najboljiStrijelac: List<NajboljiStrijelci>) {
         this.najboljiStrijelciList = najboljiStrijelac
         notifyDataSetChanged()
     }
