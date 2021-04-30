@@ -24,6 +24,7 @@ class TablicaTablicaFragment : Fragment(R.layout.tablica_fragment_tablica) {
     @InternalCoroutinesApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = TablicaFragmentTablicaBinding.bind(view)
 
         //RecyclerView
         val adapter = TablicaTablicaAdapter()
