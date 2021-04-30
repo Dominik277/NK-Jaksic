@@ -32,11 +32,13 @@ class TablicaFragment : Fragment(R.layout.fragment_tablica) {
         binding.viewPager.adapter = adapter
 
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabs))
+        /*
         tabLayout!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 binding.viewPager!!.currentItem = tab.position
             }
         })
+         */
 
     }
 /*
