@@ -22,23 +22,33 @@ class TablicaFragment : Fragment(R.layout.fragment_tablica) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTablicaBinding.bind(view)
 
-        binding.tabs.addTab(tabLayout!!.newTab().setText("Tablica"))
-        binding.tabs.addTab(tabLayout!!.newTab().setText("Raspored"))
-        binding.tabs.addTab(tabLayout!!.newTab().setText("Rezultati"))
-        binding.tabs.addTab(tabLayout!!.newTab().setText("Strijelci"))
-        tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
+        tabLayout?.newTab()?.setText("Tablica")?.let { binding.tabs.addTab(it) }
+        tabLayout?.newTab()?.setText("Raspored")?.let { binding.tabs.addTab(it) }
+        tabLayout?.newTab()?.setText("Rezultati")?.let { binding.tabs.addTab(it) }
+        tabLayout?.newTab()?.setText("Strijelci")?.let { binding.tabs.addTab(it) }
+        tabLayout?.tabGravity = TabLayout.GRAVITY_FILL
 
         val adapter = ViewPagerAdapter(childFragmentManager)
         binding.viewPager.adapter = adapter
 
-        viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabs))
-        /*
-        tabLayout!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+        viewPager?.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabs))
+
+        tabLayout?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                binding.viewPager!!.currentItem = tab.position
+                if (tab != null) {
+                    viewPager!!.currentItem = tab.position
+                }
             }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+            }
+
         })
-         */
 
     }
 /*
