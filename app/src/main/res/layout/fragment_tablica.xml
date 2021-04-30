@@ -13,10 +13,9 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabBackground="@color/cardview_dark_background"
+            app:tabMode="scrollable"
             app:tabGravity="fill"
             app:tabInlineLabel="true"
-            app:tabMode="fixed"
             app:tabTextAppearance="@style/CustomTabStlye"
             app:tabTextColor="@color/white" />
 

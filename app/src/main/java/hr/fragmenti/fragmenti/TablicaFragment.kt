@@ -28,11 +28,8 @@ class TablicaFragment : Fragment(R.layout.fragment_tablica) {
         adapter.addFragment(TablicaRasporedFragment(), "Raspored")
         adapter.addFragment(TablicaRezultatiFragment(), "Rezultati")
         adapter.addFragment(NajboljiStrijelciFragment(), "Strijelci")
+        adapter.addFragment(TablicaFragment(), "Strijelci")
         binding.viewPager.adapter = adapter
         binding.tabs.setupWithViewPager(binding.viewPager)
-
-        binding.tabs.getTabAt(0)!!.setIcon(R.drawable.background_round_padded)
-        binding.tabs.getTabAt(1)!!.setIcon(R.drawable.background_round_padded)
-        binding.tabs.getTabAt(2)!!.setIcon(R.drawable.background_round_padded)
     }
 }
