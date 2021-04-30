@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import hr.adapteri.ViewPagerAdapter
 import hr.dominik.nkjaki.R
 import hr.dominik.nkjaki.databinding.FragmentTablicaBinding
 
@@ -18,25 +19,20 @@ class TablicaFragment : Fragment(R.layout.fragment_tablica) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTablicaBinding.bind(view)
 
-        binding.gumbNajboljiStrijelci.setOnClickListener {
-            val action = TablicaFragmentDirections.actionNavTablicaToNajboljiStrijelciFragment()
-            findNavController().navigate(action)
-        }
+        setUpTabs()
 
+    }
 
-        binding.gumbTablica.setOnClickListener {
-            val action = TablicaFragmentDirections.actionNavTablicaToTablicaTablicaFragment()
-            findNavController().navigate(action)
-        }
+    private fun setUpTabs() {
+        val adapter = ViewPagerAdapter(childFragmentManager)
+        adapter.addFragment(TablicaRasporedFragment(), "Raspored")
+        adapter.addFragment(TablicaRezultatiFragment(), "Rezultati")
+        adapter.addFragment(NajboljiStrijelciFragment(), "Strijelci")
+        binding.viewPager.adapter = adapter
+        binding.tabs.setupWithViewPager(binding.viewPager)
 
-        binding.gumbRezultati.setOnClickListener {
-            val action = TablicaFragmentDirections.actionNavTablicaToTablicaRezultatiFragment()
-            findNavController().navigate(action)
-        }
-
-        binding.gumbRaspored.setOnClickListener {
-            val action = TablicaFragmentDirections.actionNavTablicaToTablicaRasporedFragment()
-            findNavController().navigate(action)
-        }
+        binding.tabs.getTabAt(0)!!.setIcon(R.drawable.background_round_padded)
+        binding.tabs.getTabAt(1)!!.setIcon(R.drawable.background_round_padded)
+        binding.tabs.getTabAt(2)!!.setIcon(R.drawable.background_round_padded)
     }
 }
