@@ -15,18 +15,10 @@ import hr.dominik.nkjaki.databinding.FragmentTablicaBinding
 class TablicaFragment : Fragment(R.layout.fragment_tablica) {
 
     private lateinit var binding: FragmentTablicaBinding
-    private lateinit var tabLayout: TabLayout
-    private lateinit var frameLayout: FrameLayout
-    private lateinit var fragment: Fragment
-    var fragmentManager: FragmentManager? = null
-    private lateinit var fragmentTransaction: FragmentTransaction
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTablicaBinding.bind(view)
-
-        fragment = TablicaTablicaFragment()
-        fragmentManager = supp
 
     }
 }
