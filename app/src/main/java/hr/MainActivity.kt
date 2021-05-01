@@ -1,5 +1,6 @@
 package hr
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -48,6 +49,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nav_tablica -> {
+                val intent = Intent(this,TablicaActivity::class.java)
+                startActivity(intent)
+            }
+        }
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
