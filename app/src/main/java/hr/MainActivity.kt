@@ -49,12 +49,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.nav_tablica -> {
-                val intent = Intent(this,TablicaActivity::class.java)
-                startActivity(intent)
-            }
-        }
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
